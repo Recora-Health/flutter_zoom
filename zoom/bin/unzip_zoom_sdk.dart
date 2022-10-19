@@ -36,7 +36,6 @@ void main(List<String> args) async {
 
   await checkAndDownloadSDK(location);
   print('Complete');
-  exit(0);
 }
 
 Future<void> checkAndDownloadSDK(String location) async {

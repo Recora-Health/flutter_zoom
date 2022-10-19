@@ -5,6 +5,7 @@ import java.util.List;
 
 import io.flutter.plugin.common.EventChannel;
 import us.zoom.sdk.MeetingError;
+import us.zoom.sdk.MeetingParameter;
 import us.zoom.sdk.MeetingService;
 import us.zoom.sdk.MeetingServiceListener;
 import us.zoom.sdk.MeetingStatus;
@@ -34,6 +35,9 @@ public class StatusStreamHandler implements EventChannel.StreamHandler {
 
                 events.success(getMeetingStatusMessage(meetingStatus));
             }
+
+            @Override
+            public void onMeetingParameterNotification​(MeetingParameter meetingParameter){}
         };
 
         this.meetingService.addListener(statusListener);
