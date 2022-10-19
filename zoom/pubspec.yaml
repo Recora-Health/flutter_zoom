@@ -10,7 +10,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  zoom_platform_interface: ^1.0.0
+  zoom_platform_interface:
+    git:
+      url: git@github.com:Recora-Health/flutter_zoom.git
+      ref: main
+      path: zoom/zoom_platform_interface
 
 dev_dependencies:
   flutter_test:
