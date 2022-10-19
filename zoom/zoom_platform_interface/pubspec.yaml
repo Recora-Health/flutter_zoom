@@ -1,6 +1,6 @@
 name: zoom_platform_interface
 description: A common platform interface for the flutter_zoom plugin.
-version: 1.0.3+4
+version: 1.0.0
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
