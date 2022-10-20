@@ -61,6 +61,9 @@ class MethodChannelZoom extends ZoomPlatform {
     if (options.meetingViewOptions != null) {
       optionMap.putIfAbsent("meetingViewOptions", () => options.meetingViewOptions!.toString());
     }
+    if (options.webToken != null) {
+      optionMap.putIfAbsent("webToken", () => options.webToken!);
+    }
 
     return channel.invokeMethod<bool>('join', optionMap).then<bool>((bool? value) => value ?? false);
   }
