@@ -35,6 +35,8 @@ class ZoomMeetingOptions {
   String disableShare;
   String noDisconnectAudio;
   String noAudio;
+  String noVideo;
+  String noShare;
   int? meetingViewOptions;
   String? webToken;
 
@@ -51,6 +53,8 @@ class ZoomMeetingOptions {
     required this.disableShare,
     required this.noDisconnectAudio,
     required this.noAudio,
+    required this.noVideo,
+    required this.noShare,
     this.meetingViewOptions,
     this.webToken,
   });

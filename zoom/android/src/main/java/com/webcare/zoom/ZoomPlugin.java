@@ -139,6 +139,9 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
 
         final MeetingService meetingService = zoomSDK.getMeetingService();
 
+        sdk.meetingSettingsHelper.disableShowVideoPreviewWhenJoinMeeting(true);
+        sdk.meetingSettingsHelper.setAutoConnectVoIPWhenJoinMeeting(true);
+
         JoinMeetingOptions opts = new JoinMeetingOptions();
         opts.no_invite = parseBoolean(options, "disableInvite", false);
         opts.no_share = parseBoolean(options, "disableShare", false);
@@ -146,6 +149,8 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         opts.no_dial_in_via_phone = parseBoolean(options, "disableDialIn", false);
         opts.no_disconnect_audio = parseBoolean(options, "noDisconnectAudio", false);
         opts.no_audio = parseBoolean(options, "noAudio", false);
+        opts.no_video = parseBoolean(options, "noVideo", false);
+        opts.no_share = parseBoolean(options, "noShare", false);
         opts.meeting_views_options = parseInt(options, "meetingViewOptions", 0); 
         JoinMeetingParams params = new JoinMeetingParams();
 
