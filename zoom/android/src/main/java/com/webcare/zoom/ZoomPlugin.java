@@ -137,11 +137,6 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
             return;
         }
 
-        final MeetingService meetingService = zoomSDK.getMeetingService();
-
-        sdk.meetingSettingsHelper.disableShowVideoPreviewWhenJoinMeeting(true);
-        sdk.meetingSettingsHelper.setAutoConnectVoIPWhenJoinMeeting(true);
-
         JoinMeetingOptions opts = new JoinMeetingOptions();
         opts.no_invite = parseBoolean(options, "disableInvite", false);
         opts.no_share = parseBoolean(options, "disableShare", false);
@@ -159,7 +154,12 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         params.password = options.get("meetingPassword");
         params.webinarToken = options.get("webToken");
 
+        final MeetingService meetingService = zoomSDK.getMeetingService();
         meetingService.joinMeetingWithParams(context, params, opts);
+
+        final MeetingSettingsHelper meetingSettingsHelper = zoomSDK.getMeetingSettingsHelper();
+        meetingSettingsHelper.disableShowVideoPreviewWhenJoinMeeting(true);
+        meetingSettingsHelper.setAutoConnectVoIPWhenJoinMeeting(true);
 
         result.success(true);
     }
