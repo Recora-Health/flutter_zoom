@@ -19,6 +19,7 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 import us.zoom.sdk.JoinMeetingOptions;
 import us.zoom.sdk.JoinMeetingParams;
 import us.zoom.sdk.MeetingService;
+import us.zoom.sdk.MeetingSettingsHelper;
 import us.zoom.sdk.MeetingStatus;
 import us.zoom.sdk.StartMeetingOptions;
 import us.zoom.sdk.StartMeetingParamsWithoutLogin;
