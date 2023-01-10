@@ -116,7 +116,8 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             
             meetingSettings?.disableDriveMode(parseBoolean(data: arguments["disableDrive"]!, defaultValue: false))
             meetingSettings?.disableCall(in: parseBoolean(data: arguments["disableDialIn"]!, defaultValue: false))
-            meetingSettings?.setAutoConnectInternetAudio(parseBoolean(data: arguments["noDisconnectAudio"]!, defaultValue: false))
+            meetingSettings?.setAutoConnectInternetAudio(true)
+            meetingSettings?.disableShowVideoPreviewWhenJoinMeeting(true)
             meetingSettings?.setMuteAudioWhenJoinMeeting(parseBoolean(data: arguments["noAudio"]!, defaultValue: false))
             meetingSettings?.meetingShareHidden = parseBoolean(data: arguments["disableShare"]!, defaultValue: false)
             meetingSettings?.meetingInviteHidden = parseBoolean(data: arguments["disableDrive"]!, defaultValue: false)
@@ -153,12 +154,10 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             let joinMeetingParameters = MobileRTCMeetingJoinParam()
             joinMeetingParameters.userName = arguments["userId"]!!
             joinMeetingParameters.meetingNumber = arguments["meetingId"]!!
-           
-            
-            let hasPassword = arguments["meetingPassword"]! != nil
-            if hasPassword {
-                joinMeetingParameters.password = arguments["meetingPassword"]!!
-            }
+            joinMeetingParameters.password = arguments["meetingPassword"]!!
+            joinMeetingParameters.webinarToken = arguments["webToken"]!!
+            joinMeetingParameters.noAudio = parseBoolean(data: arguments["noAudio"]!, defaultValue: false)
+            joinMeetingParameters.noVideo = parseBoolean(data: arguments["noVideo"]!, defaultValue: false)
             
             let response = meetingService?.joinMeeting(with: joinMeetingParameters)
             
