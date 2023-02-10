@@ -44,6 +44,8 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             self.startMeeting(call: call, result: result)
         case "meeting_status":
             self.meetingStatus(call: call, result: result)
+        case "leave":
+            self.leaveMeeting(call: call, result: result)
         default:
             result(FlutterMethodNotImplemented)
         }
@@ -61,6 +63,8 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             self.startMeeting(call: call, result: result)
         case "meeting_status":
             self.meetingStatus(call: call, result: result)
+         case "leave":
+            self.leaveMeeting(call: call, result: result)
         default:
             result(FlutterMethodNotImplemented)
         }
@@ -102,6 +106,17 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             result(getStateMessage(meetingState))
         } else {
             result(["MEETING_STATUS_UNKNOWN", ""])
+        }
+    }
+
+    public func leaveMeeting(call: FlutterMethodCall, result: FlutterResult) {
+        
+        let meetingService = MobileRTC.shared().getMeetingService()
+        if meetingService != nil {
+            meetingService.leaveMeeting(with: LeaveMeetingCmd.leave)
+            result(true)
+        } else {
+            result(false)
         }
     }
     
