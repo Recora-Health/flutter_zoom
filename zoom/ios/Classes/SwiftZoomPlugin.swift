@@ -113,7 +113,7 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
         
         let meetingService = MobileRTC.shared().getMeetingService()
         if meetingService != nil {
-            meetingService.leaveMeeting(with: LeaveMeetingCmd.leave)
+            meetingService?.leaveMeeting(with: LeaveMeetingCmd.leave)
             result(true)
         } else {
             result(false)
