@@ -46,7 +46,7 @@ void main(List<String> args) async {
 Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   var androidCommonLibFile = location + '/android/libs/commonlib.aar';
   var androidRTCLibFile = location + '/android/libs/mobilertc.aar';
-  var iosSDKFile = location + '/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/MobileRTC';
+  var iosSDKFile = location + '/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/MobileRTC';
   var iosSimulateSDKFile =
       location + '/ios/MobileRTC.xcframework/ios-i386_x86_64-simulator/MobileRTC.framework/MobileRTC';
   var iosSimulateArm64SDKFile = location +
