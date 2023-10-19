@@ -65,13 +65,13 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
         Uri.parse('https://www.dropbox.com/scl/fi/sfyd8lkf2s4wmzkkz95qh/arm64-MobileRTC?rlkey=7d5k049phuyjjcs7fyqg3hn55&dl=1'), iosSDKFile, isUpdate);
   }
 
-  var iosSimulateSDKFile =
-      location + '/ios/MobileRTC.xcframework/ios-i386_x86_64-simulator/MobileRTC.framework/MobileRTC';
-  exists = await File(iosSimulateSDKFile).exists();
-  if (!exists || isUpdate) {
-    await downloadFile(Uri.parse('https://www.dropbox.com/scl/fi/lt8s3od90ar8i76a3yag9/x86_64-simulator-MobileRTC?rlkey=3ereax8bqjetgao8zyfgwhqv6&dl=1'),
-        iosSimulateSDKFile, isUpdate);
-  }
+  // var iosSimulateSDKFile =
+  //     location + '/ios/MobileRTC.xcframework/ios-i386_x86_64-simulator/MobileRTC.framework/MobileRTC';
+  // exists = await File(iosSimulateSDKFile).exists();
+  // if (!exists || isUpdate) {
+  //   await downloadFile(Uri.parse('https://www.dropbox.com/scl/fi/lt8s3od90ar8i76a3yag9/x86_64-simulator-MobileRTC?rlkey=3ereax8bqjetgao8zyfgwhqv6&dl=1'),
+  //       iosSimulateSDKFile, isUpdate);
+  // }
 
   var iosSimulateArm64SDKFile = location +
       '/ios/MobileRTC.xcframework/ios-arm64_x86_64-simulator/MobileRTC.framework/MobileRTC';
@@ -87,6 +87,7 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
 
 Future<void> downloadFile(Uri uri, String savePath, bool isUpdate) async {
   print('${isUpdate ? 'Updating' : 'Downloading'} ${uri.toString()} to $savePath');
+  print(Directory.current.path);
   File destinationFile = await File(savePath).create(recursive: true);
   final request = await HttpClient().getUrl(uri);
   final response = await request.close();
