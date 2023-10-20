@@ -87,22 +87,6 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
         if let jwtToken = arguments["jwtToken"] {
             auth?.jwtToken = jwtToken
         }
-        if let sdkKey = arguments["sdkKey"] {
-            if let sdkSecret = arguments["sdkSecret"] {
-                auth?.jwtToken = ""
-            }
-        }
-        if let appKey = arguments["appKey"] {
-            // @TODO: replace with new auth
-            // https://devforum.zoom.us/t/meeting-sdk-upgrade-issue/90596/18
-            // https://ioscruncher.blogspot.com/2023/06/solving-zoom-meeting-sdk-upgrade-issue.html
-            // https://devsupport.zoom.us/hc/en-us/articles/360059893552-How-to-create-a-sample-JWT-for-the-Meeting-SDK
-            // auth?.clientKey = appKey
-        }
-        if let appSecret = arguments["appSecret"] {
-            // Same
-            // auth?.clientSecret = appSecret
-        }
         
         auth?.sdkAuth()
     }

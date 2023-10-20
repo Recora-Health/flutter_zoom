@@ -9,18 +9,6 @@ class MethodChannelZoom extends ZoomPlatform {
   @override
   Future<List> initZoom(ZoomOptions options) async {
     var optionMap = new Map<String, String>();
-    if (options.appKey != null) {
-      optionMap.putIfAbsent("appKey", () => options.appKey!);
-    }
-    if (options.appSecret != null) {
-      optionMap.putIfAbsent("appSecret", () => options.appSecret!);
-    }
-    if (options.sdkKey != null) {
-      optionMap.putIfAbsent("sdkKey", () => options.sdkKey!);
-    }
-    if (options.sdkSecret != null) {
-      optionMap.putIfAbsent("sdkSecret", () => options.sdkSecret!);
-    }
     if (options.jwtToken != null) {
       optionMap.putIfAbsent("jwtToken", () => options.jwtToken!);
     }

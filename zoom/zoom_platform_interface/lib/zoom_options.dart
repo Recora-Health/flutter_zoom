@@ -1,18 +1,10 @@
 class ZoomOptions {
   String domain;
   String? jwtToken;
-  String? appKey;
-  String? appSecret;
-  String? sdkKey;
-  String? sdkSecret;
 
   ZoomOptions({
     required this.domain,
     this.jwtToken,
-    this.appKey,
-    this.appSecret,
-    this.sdkKey,
-    this.sdkSecret,
   });
 }
 
