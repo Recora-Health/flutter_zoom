@@ -103,6 +103,8 @@ class _JoinWidgetState extends State<JoinWidget> {
         disableInvite: "true",
         disableShare: "true",
         noAudio: "false",
+        noVideo: "false",
+        noShare: "true",
         noDisconnectAudio: "false",
         meetingViewOptions: ZoomMeetingOptions.NO_TEXT_PASSWORD +
             ZoomMeetingOptions.NO_TEXT_MEETING_ID +
