@@ -3,9 +3,9 @@ A Flutter plugin for the Zoom Client SDK.
 
 ## Zoom SDK Versions
 
-Android: zoom-sdk-android-5.13.1.11014
+Android: zoom-sdk-android-5.13.10.12577
  
-iOS: zoom-sdk-ios-5.13.1.6095
+iOS: zoom-sdk-ios-5.13.10.7064
 
 ## Installation from pub.dev
 https://pub.dev/packages/zoom
