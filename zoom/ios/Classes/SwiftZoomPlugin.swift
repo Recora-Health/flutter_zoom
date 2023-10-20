@@ -87,12 +87,12 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
         if let jwtToken = arguments["jwtToken"] {
             auth?.jwtToken = jwtToken
         }
-        // if let appKey = arguments["appKey"] {
-        //     auth?.clientKey = appKey
-        // }
-        // if let appSecret = arguments["appSecret"] {
-        //     auth?.clientSecret = appSecret
-        // }
+        if let appKey = arguments["appKey"] {
+            auth?.clientKey = appKey
+        }
+        if let appSecret = arguments["appSecret"] {
+            auth?.clientSecret = appSecret
+        }
         
         auth?.sdkAuth()
     }
