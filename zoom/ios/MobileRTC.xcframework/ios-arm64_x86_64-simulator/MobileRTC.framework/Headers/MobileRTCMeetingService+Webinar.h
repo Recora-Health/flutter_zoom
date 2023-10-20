@@ -440,4 +440,17 @@
  @return poll anonymous legal notices explained.
  */
 - (NSString *_Nullable)getPollAnonymousLegalNoticesExplained;
+
+/**
+ * @brief Get annotation over share legal notices prompt.
+ * @return annotation over share legal notices prompt.
+ */
+- (NSString *_Nullable)getWebinarRegistrationLegalNoticesPrompt;
+
+/**
+ * @brief Get annotation over share legal notices explained.
+ * @return annotation over share legal notices explained.
+ */
+- (MobileRTCWebinarRegistLegalNoticeContent *_Nullable)getWebinarRegistrationLegalNoticesExplained;
+
 @end

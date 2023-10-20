@@ -65,7 +65,7 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   // If the files do not exist or we are updating, then download the latest version
   if (!exists || isUpdate) {
     await downloadFile(
-        Uri.parse('https://www.dropbox.com/scl/fi/uqytqkxhdnkpd301h8bbi/commonlib.aar?rlkey=qkzawxgblv20vk6m9m0wg070v&dl=1'), androidCommonLibFile, isUpdate);
+        Uri.parse('https://www.dropbox.com/scl/fi/s2j0drth0446ukpl2xsht/commonlib.aar?rlkey=94lfhuk6smdtyn43nazvtk2go&dl=1'), androidCommonLibFile, isUpdate);
   }
   
   // Check if the Android MobileRTC SDK files exist
@@ -77,7 +77,7 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   // If the files do not exist or we are updating, then download the latest version
   if (!exists || isUpdate) {
     await downloadFile(
-        Uri.parse('https://www.dropbox.com/scl/fi/h15xaempqwtnninzn870d/mobilertc.aar?rlkey=g09z68btzplixa2rnxiwhzjoo&dl=1'), androidRTCLibFile, isUpdate);
+        Uri.parse('https://www.dropbox.com/scl/fi/memra2091eqf54rxebc78/mobilertc.aar?rlkey=xvwrdsdm8jltk8f0hyss5yfpd&dl=1'), androidRTCLibFile, isUpdate);
   }
 
   // Check if the iOS MobileRTC SDK files exist
@@ -89,7 +89,7 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   // If the files do not exist or we are updating, then download the latest version
   if (!exists || isUpdate) {
     await downloadFile(
-        Uri.parse('https://www.dropbox.com/scl/fi/sfyd8lkf2s4wmzkkz95qh/arm64-MobileRTC?rlkey=7d5k049phuyjjcs7fyqg3hn55&dl=1'), iosSDKFile, isUpdate);
+        Uri.parse('https://www.dropbox.com/scl/fi/d1uk5j6am2bepbvcpl7vv/arm64-MobileRTC?rlkey=c0rw3tnrsvxhy4w0ypnvpty0w&dl=1'), iosSDKFile, isUpdate);
   }
 
   //  Check if the i386 iOS Emulator SDK files exist
@@ -109,7 +109,7 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   if (!exists || isUpdate) {
     await downloadFile(
         Uri.parse(
-            'https://www.dropbox.com/scl/fi/lt8s3od90ar8i76a3yag9/x86_64-simulator-MobileRTC?rlkey=3ereax8bqjetgao8zyfgwhqv6&dl=1'),
+            'https://www.dropbox.com/scl/fi/4hujrxquahtej4fwz0j2o/x86_64-simulator-MobileRTC?rlkey=nrvjqy8ocp8r80ahpkn697pvb&dl=1'),
         iosSimulateArm64SDKFile,
         isUpdate);
   }

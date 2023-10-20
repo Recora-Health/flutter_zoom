@@ -10,6 +10,36 @@
 #import "MobileRTCConstants.h"
 #import "MobileRTCLiveTranscriptionLanguage.h"
 
+@interface MobileRTCLiveTranscriptionMessageInfo : NSObject
+/*!
+@brief message id of transcription message
+*/
+@property (nonatomic, copy)NSString *messageID;
+/*!
+@brief speaker id of transcription message
+*/
+@property (nonatomic, assign)NSInteger speakerID;
+/*!
+@brief speak name  of transcription message
+*/
+@property (nonatomic, copy)NSString *speakerName;
+/*!
+@brief message content  of transcription message
+*/
+@property (nonatomic, copy)NSString *messageContent;
+/*!
+@brief time stamp  of transcription message
+*/
+@property (nonatomic, assign)NSInteger timeStamp;
+/*!
+@brief message tpye  of transcription message
+*/
+@property (nonatomic, assign)MobileRTCLiveTranscriptionOperationType messageType;
+
+@end
+
+
+
 @interface MobileRTCMeetingService (LiveTranscription)
 
 /*!
@@ -25,7 +55,7 @@
 - (BOOL)canDisableCaptions;
 
 /*!
- @return Enable or disable captions.
+ @brief Enable or disable captions.
  @param bEnable YES means that captions are enabled.  NO means that captions are disabled.
  @return If the function succeeds, the return value is MobileRTCSDKError_Success.  Otherwise the function  returns a calling error. For more details, see \link MobileRTCSDKError \endlink enum.
  */

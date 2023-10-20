@@ -46,6 +46,16 @@
  */
 @property (nullable, nonatomic, retain, readwrite) NSString * meetingNumber;
 
+/**
+ * @brief <Optional> Is my voice in the mixed audio raw data?
+ */
+@property (nonatomic, assign, readwrite) BOOL isMyVoiceInMix;
+
+/**
+ * @brief <Optional>Set the invitation ID for automatic meeting invitation.
+ */
+@property(nullable, nonatomic, copy) NSString *inviteContactID;
+
 @end
 
 /**
@@ -134,6 +144,11 @@
  * @brief Token to join a meeting.
  */
 @property (nullable, nonatomic, retain, readwrite) NSString * join_token;
+
+/**
+ * @brief <Optional> Is my voice in the mixed audio raw data?
+ */
+@property (nonatomic, assign, readwrite) BOOL isMyVoiceInMix;
 
 @end
 
@@ -275,17 +290,5 @@
  * @warning This method can only be called after auth ready and before join or start meeting.
  */
 - (BOOL)setCustomizedInvitationDomain:(NSString *_Nonnull)invitationDomain;
-
-/**
- * @brief Get annotation over share legal notices prompt.
- * @return annotation over share legal notices prompt.
- */
-- (NSString *_Nullable)getWebinarRegistrationLegalNoticesPrompt;
-
-/**
- * @brief Get annotation over share legal notices explained.
- * @return annotation over share legal notices explained.
- */
-- (MobileRTCWebinarRegistLegalNoticeContent *_Nullable)getWebinarRegistrationLegalNoticesExplained;
 
 @end

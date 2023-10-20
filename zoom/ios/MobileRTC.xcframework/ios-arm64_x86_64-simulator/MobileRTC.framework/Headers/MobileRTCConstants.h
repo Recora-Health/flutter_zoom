@@ -83,7 +83,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCLoginFailReason) {
     ///login is successful.
     MobileRTCLoginFailReason_Success,
     ///Email login disabled.
-    MobileRTCLoginFailReason_EmailLoginDiable,
+    MobileRTCLoginFailReason_EmailLoginDisable,
     ///User not exist.
     MobileRTCLoginFailReason_UserNotExist,
     ///Password is wrong.
@@ -310,11 +310,11 @@ typedef NS_ENUM(NSUInteger, DialOutStatus) {
     DialOutStatus_ZoomCancelCallFail,
     ///The call is not answered.
     DialOutStatus_NoAnswer,
-    ///Disable the function of international outgoing call before the host joins the meeting.
+    ///Disable the international call-out function before the host joins the meeting.
     DialOutStatus_BlockNoHost,
     ///The call-out is blocked by the system due to high cost.
     DialOutStatus_BlockHighRate,
-    ///All the invitees invited by the call should press the button one(1) to join the meeting. In case that many invitees do not press the button that leads to time out, the call invitation for this meeting shall be banned.
+    ///All the users invited by the call should press one (1) to join the meeting. If many invitees do not press the button and instead are timed out, the call invitation for this meeting is blocked.
     DialOutStatus_BlockTooFrequent,
 };
 
@@ -735,11 +735,18 @@ typedef NS_ENUM(NSUInteger, MobileRTCVideoResolution) {
 };
 
 /*!
- @brief MobileRTCVideoResolution An enumeration of video raw data format.
+ @brief MobileRTCVideoRawDataFormat An enumeration of video raw data format.
  */
 typedef NS_ENUM(NSUInteger, MobileRTCVideoRawDataFormat) {
     MobileRTCVideoRawDataFormatI420            = 1,
-    MobileRTCVideoRawDataFormatI420_Limit,
+} DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCFrameDataFormat instead");
+
+/*!
+ @brief MobileRTCFrameDataFormat An enumeration of raw data frame format.
+ */
+typedef NS_ENUM(NSUInteger, MobileRTCFrameDataFormat) {
+    MobileRTCFrameDataFormat_I420            = 1,
+    MobileRTCFrameDataFormat_I420_Limit,
 };
 
 /*!
@@ -783,7 +790,9 @@ typedef NS_ENUM(NSUInteger,MobileRTCRawDataError)
     MobileRTCRawData_Audio_Module_Not_Ready,
     MobileRTCRawData_Audio_Module_Error,
     MobileRTCRawData_No_Audio_Data,
-    MobileRTCRawData_Send_Too_Frequently
+    MobileRTCRawData_Send_Too_Frequently,
+    MobileRTCRawData_Can_Not_Change_Virtual_Device,
+    MobileRTCRawData_Not_Join_Audio
 };
 
 /*!
@@ -873,6 +882,16 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOControllerError) {
     MobileRTCBOControllerError_UPLOAD_FAIL,
     MobileRTCBOControllerError_NO_ONE_HAS_BEEN_ASSIGNED,
     MobileRTCBOControllerError_UNKNOWN = 100
+};
+
+/*!
+ @brief PreAssign BO Data Status
+ */
+typedef NS_ENUM(NSUInteger, MobileRTCBOPreAssignBODataStatus) {
+    MobileRTCBOPreAssignBODataStatus_None = 0,       ///<initial status, no request was sent
+    MobileRTCBOPreAssignBODataStatus_Downloading,    ///<download in progress
+    MobileRTCBOPreAssignBODataStatus_Download_Ok,    ///<download success
+    MobileRTCBOPreAssignBODataStatus_Download_Fail   ///<download fail
 };
 
 /*!
@@ -1080,8 +1099,6 @@ typedef NS_ENUM(NSUInteger, MobileRTCLiveTranscriptionOperationType) {
     MobileRTC_LiveTranscription_OperationType_Complete          = 4,
     /// Live transcription operation type is not suppported.
     MobileRTC_LiveTranscription_OperationType_NotSupported      = 5,
-    /// Live transcription operation type is no translation.
-    MobileRTC_LiveTranscription_OperationType_NoTranslation     = 6,
 };
 
 typedef NS_ENUM(NSInteger,MobileRTCSignInterpretationStatus)
@@ -1103,6 +1120,15 @@ typedef NS_ENUM(NSInteger, MobileRTCNotificationServiceStatus) {
 };
 
 /*!
+ @brief Enumerations of the type for in meeting audio type.
+ */
+typedef NS_ENUM(NSInteger, MobileRTCInMeetingSupportAudioType) {
+    MobileRTCInMeetingSupportAudioType_None = 0,
+    MobileRTCInMeetingSupportAudioType_Voip = 1,
+    MobileRTCInMeetingSupportAudioType_Telephone = 1 << 1
+};
+
+/*!
  @brief Enumerations of webinar attendee view mode, Only host can set.
  */
 typedef NS_ENUM(NSInteger, MobileRTCAttendeeViewMode){
@@ -1115,11 +1141,80 @@ typedef NS_ENUM(NSInteger, MobileRTCAttendeeViewMode){
     MobileRTCAttendeeViewMode_Sharing_SidebysideGallery
 };
 
-/*!
- @brief Enumerations of the type for in meeting audio type.
- */
-typedef NS_ENUM(NSInteger, MobileRTCInMeetingSupportAudioType) {
-    MobileRTCInMeetingSupportAudioType_None = 0,
-    MobileRTCInMeetingSupportAudioType_Voip = 1,
-    MobileRTCInMeetingSupportAudioType_Telephone = 1 << 1
+typedef NS_ENUM(NSUInteger, MobileRTCLocalRecordingRequestPrivilegeStatus) {
+    MobileRTCLocalRecordingRequestPrivilege_None,
+    ///allow participant to send request privilege.
+    MobileRTCLocalRecordingRequestPrivilege_AllowRequest,
+    ///host auto allow all privilege request.
+    MobileRTCLocalRecordingRequestPrivilege_AutoGrant,
+    ///host auto deny all privilege request
+    MobileRTCLocalRecordingRequestPrivilege_AutoDeny,
+};
+
+typedef NS_ENUM(NSUInteger, MobileRTCReminderType) {
+    /// Disclaimer type of login.
+    MobileRTCReminderType_Login,
+    /// Disclaimer type of start or join meeting.
+    MobileRTCReminderType_StartOrJoinMeeting,
+    /// Disclaimer type of record reminder.
+    MobileRTCReminderType_RecordReminder,
+    /// Disclaimer type of record disclaimer.
+    MobileRTCReminderType_RecordDisclaimer,
+    /// Disclaimer type of live stream disclaimer.
+    MobileRTCReminderType_LiveStreamDisclaimer,
+    /// Disclaimer type of archive disclaimer.
+    MobileRTCReminderType_ArchiveDisclaimer,
+    /// Disclaimer type of join webinar as panelist.
+    MobileRTCReminderType_WebinarAsPanelistJoin,
+    /// Disclaimer type of .terms or service
+    MobileRTCReminderType_TermsOfService,
+};
+
+typedef NS_ENUM(NSInteger, MobileRTCInviteMeetingStatus) {
+    /// Meeting invitation accepted .
+    MobileRTCInviteMeetingStatus_Accepted,
+    /// Meeting invitation declined .
+    MobileRTCInviteMeetingStatus_Declined,
+    /// Meeting invitation canceled.
+    MobileRTCInviteMeetingStatus_Canceled,
+    /// Meeting invitation timeout
+    MobileRTCInviteMeetingStatus_Timeout
+};
+
+typedef NS_ENUM(NSInteger, MobileRTCPresenceStatus) {
+    /// Presence status none
+    MobileRTCPresenceStatus_None,
+    /// Presence status available
+    MobileRTCPresenceStatus_Available,
+    /// Presence status unavailable
+    MobileRTCPresenceStatus_UnAvailable,
+    /// Presence status in meeting
+    MobileRTCPresenceStatus_InMeeting,
+    /// Presence status busy
+    MobileRTCPresenceStatus_Busy,
+    /// Presence status do not disturb
+    MobileRTCPresenceStatus_DoNotDisturb,
+    /// Presence status away
+    MobileRTCPresenceStatus_Away,
+    /// Presence status phone call
+    MobileRTCPresenceStatus_PhoneCall,
+    /// Presence status presenting
+    MobileRTCPresenceStatus_Presenting,
+    /// Presence status calendar
+    MobileRTCPresenceStatus_Calendar,
+    /// Presence status out of office
+    MobileRTCPresenceStatus_OutOfOffice
+};
+
+typedef NS_ENUM(NSInteger, MobileRTCAutoFramingMode) {
+    MobileRTCAutoFramingMode_None,               ///<No use of the auto-framing.
+    MobileRTCAutoFramingMode_CenterCoordinates, ///<use the video frame’s center point as the center to zoom.
+    MobileRTCAutoFramingMode_FaceRecognition    ///<use the detected face in the video frame as the center to zoom in.
+};
+
+typedef NS_ENUM(NSInteger, MobileRTCFaceRecognitionFailStrategy) {
+    MobileRTCFaceRecognitionFailStrategy_None,                      ///<No use of the fail strategy
+    MobileRTCFaceRecognitionFailStrategy_Remain,                   ///<After face recognition fails, do nothing until face recognition succeed again.
+    MobileRTCFaceRecognitionFailStrategy_UsingCenterCoordinates, ///<After face recognition fails, use the video frame’s center point as the center for zoom in.
+    MobileRTCFaceRecognitionFailStrategy_UsingOriginalVideo      ///<After face recognition fails, use original video.
 };

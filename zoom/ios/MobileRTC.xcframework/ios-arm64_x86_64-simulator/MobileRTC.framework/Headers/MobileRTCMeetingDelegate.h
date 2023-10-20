@@ -26,6 +26,7 @@
 @class MobileRTCRequestLocalRecordingPrivilegeHandler;
 @class MobileRTCMeetingInviteActionItem;
 @class MobileRTCMeetingShareActionItem;
+@class MobileRTCLiveTranscriptionMessageInfo;
 
 #pragma mark - MobileRTCMeetingServiceDelegate
 /*!
@@ -140,18 +141,6 @@
  @brief Camera access permission was denied.
  */
 - (void)onCameraNoPrivilege;
-
-/*!
- @brief The free meeting ends in 10 minutes.
- @param host If YES, the user is the original host of the meeting.
- @param freeUpgrade If YES, the meeting can be upgraded and the free meeting limitation is removed.
- @param first If YES, this is the first meeting which can ignore the limitation.
- @param completion The SDK calls the module to upgrade the current meeting if the parameter UPGRADE is YES.
- */
-- (void)onFreeMeetingReminder:(BOOL)host
-               canFreeUpgrade:(BOOL)freeUpgrade
-                  isFirstGift:(BOOL)first
-                   completion:(void (^_Nonnull)(BOOL upgrade))completion DEPRECATED_ATTRIBUTE;
 
 /*!
  @brief The result of a free meeting upgrade attempt has been received.
@@ -352,6 +341,59 @@
 @param handler the host admit or decline the request through this handler.
 */
 - (void)onRequestLocalRecordingPrivilegeReceived:(MobileRTCRequestLocalRecordingPrivilegeHandler * _Nullable)handler;
+
+/**
+* Callback event when a meeting is suspended.
+*/
+- (void)onSuspendParticipantsActivities;
+
+/**
+* Sink the event that lets participants start a video
+*
+* @param allow YES allow. if NO disallow
+*/
+- (void)onAllowParticipantsStartVideoNotification:(BOOL)allow;
+
+/**
+* Sink the event that lets participants rename them
+*
+* @param allow YES allow.If NO,participants may not rename themselves
+*/
+- (void)onAllowParticipantsRenameNotification:(BOOL)allow;
+
+/**
+* Sink the event that lets participants unmute them
+*
+* @param allow YES allow. If NO, participants may not unmute themselves
+*/
+- (void)onAllowParticipantsUnmuteSelfNotification:(BOOL)allow;
+
+/**
+* Sink the event that lets participants share a new white board
+*
+* @param  allow YES allow.if NO.participants may not share new white boards
+*/
+- (void)onAllowParticipantsShareWhiteBoardNotification:(BOOL)allow;
+
+/**
+ * Sink the event that lets participants allow to share
+ *
+ * @param allow YES allow.if NO.participants may not share
+ */
+- (void)onAllowParticipantsShareStatusNotification:(BOOL)allow;
+/**
+* Sink the event that allow a meeting lock status change
+*
+* @param isLock YES, the status is locked. If NO, the status is unlocked.
+*/
+- (void)onMeetingLockStatus:(BOOL)isLock;
+
+/*!
+ @brief Callback event that the request local recording privilege changes.
+ @param status Value of request local recording privilege status {@link  LocalRecordingRequestPrivilegeStatus}
+ */
+- (void)onRequestLocalRecordingPriviligeChanged:(MobileRTCLocalRecordingRequestPrivilegeStatus)status;
+
 @end
 
 #pragma mark - MobileRTCAudioServiceDelegate
@@ -416,7 +458,7 @@
 
 
 /*!
- @brief A participant's video status has changed. To get their updated status, check {@link MobileRTCMeetingUserInfo.videoStatus} for the associated user.
+ @brief A participant's video status has changed. To get their updated status, check {@link MobileRTCMeetingUserInfo.videoStatus} for the associated user. Valid for both normal user and webinar attendee.
  @param userID The ID of the user whose video status has changed.
  */
 - (void)onSinkMeetingVideoStatusChange:(NSUInteger)userID;
@@ -443,7 +485,7 @@
  @brief The list of spotlit users has changed.
  @param spotlightedUserList The users who are currently spotlit.
  */
-- (void)onSpotlightVideoUserChange:(NSArray <NSNumber *>* _Nonnull)spotlightedUserList;
+- (void)onSpotlightVideoUserChange:(NSArray <NSNumber *>* _Nullable)spotlightedUserList;
 
 /*!
  @brief The SDK has stopped the current user's video preview.
@@ -516,13 +558,18 @@
 - (void)onInMeetingUserUpdated;
 
 /*!
- @brief A user joins the meeting.
+ @brief The user avatar path is updated in the meeting
+ */
+- (void)onInMeetingUserAvatarPathUpdated:(NSInteger)userID;
+
+/*!
+ @brief Callback event of notification of users who are in the meeting.
  @param userID The ID of the user who joins the meeting.
  */
 - (void)onSinkMeetingUserJoin:(NSUInteger)userID;
 
 /*!
- @brief A user leaves the meeting.
+ @brief Callback event of notification of user who leaves the meeting.
  @param userID The ID of the user who leaves the meeting.
  */
 - (void)onSinkMeetingUserLeft:(NSUInteger)userID;
@@ -543,13 +590,6 @@
  @brief A host or cohost lowers all hands.
  */
 - (void)onSinkLowerAllHands;
-
-/*!
- @brief A user changes their screen name.
- @param userID Specify the user ID whose screen name changes.
- @param userName The new screen name displayed.
- */
-- (void)onSinkUserNameChanged:(NSUInteger)userID userName:(NSString *_Nonnull)userName DEPRECATED_ATTRIBUTE;
 
 /*!
  @brief A user changes their screen name.
@@ -588,21 +628,6 @@
  @brief A meeting starts by sharing.
  */
 - (void)onAppShareSplash;
-
-/*!
- @brief The sharing starts.
- @param userID The presenter's user ID.
- @warning userID == 0 means that the user stopped sharing.
- @deprecated replace with {@link onSinkSharingStatus:userID:}
- */
-- (void)onSinkMeetingActiveShare:(NSUInteger)userID DEPRECATED_ATTRIBUTE;
-
-/*!
- @brief The sharing content changes.
- @param userID The presenter's user ID.
- @deprecated replace with {@link onSinkSharingStatus:userID:}
- */
-- (void)onSinkMeetingShareReceiving:(NSUInteger)userID DEPRECATED_ATTRIBUTE;
 
 /*!
  @brief The share status changes.
@@ -718,11 +743,6 @@
  @param handler A pointer to the ZoomSDKSignInterpterToTalkHander. For more details, see {@link ZoomSDKSignInterpterToTalkHander} object.
  */
 - (void)onRequestSignInterpreterToTalk;
-
-/*!
- @brief The host blocks the sign interpreter from talking (mutes them).
- */
-- (void)onDisallowSignInterpreterToTalk DEPRECATED_MSG_ATTRIBUTE("Use -onTalkPrivilegeChanged:(BOOL)hasPrivilege instead");
 
 /*!
  @brief Callback event for the user talk privilege changed. When the interpreter role changed, host changed, host allow or disallow interpreter talk, this will be triggered, and only the sign interpreter itself can get the event.
@@ -956,7 +976,18 @@
  @param speakerId The speaker ID of the received live transcription message.
  @param type The live transcription operation type. For more details, see MobileRTCLiveTranscriptionOperationType.
 */
-- (void)onSinkLiveTranscriptionMsgReceived:(NSString *_Nonnull)msg speakerId:(NSUInteger)speakerId type:(MobileRTCLiveTranscriptionOperationType)type;
+- (void)onSinkLiveTranscriptionMsgReceived:(NSString *_Nonnull)msg speakerId:(NSUInteger)speakerId type:(MobileRTCLiveTranscriptionOperationType)type DEPRECATED_MSG_ATTRIBUTE("Use -onLiveTranscriptionMsgInfoReceived: instead");
+/*
+@brief live transcription message received callback.
+@param messageInfo The live transcription message, see \link MobileRTCLiveTranscriptionMessageInfo \endlink.
+*/
+- (void)onLiveTranscriptionMsgInfoReceived:(MobileRTCLiveTranscriptionMessageInfo*_Nullable)messageInfo;
+
+/*
+@brief original language message received callback.
+@param messageInfo The spoken language message, see \link MobileRTCLiveTranscriptionMessageInfo \endlink.
+ */
+- (void)onOriginalLanguageMsgReceived:(MobileRTCLiveTranscriptionMessageInfo*_Nullable)messageInfo;
 
 /*!
  @brief Translation message error callback.
@@ -1344,6 +1375,11 @@
 */
 - (void)onUnAssignedUserUpdated;
 
+/*!
+ @brief The BO list info updated.
+*/
+- (void)onBOListInfoUpdated;
+
 @end
 
 #pragma mark - MobileRTCBOServiceDelegate
@@ -1400,4 +1436,9 @@
 */
 - (void)onBOCreateSuccess:(NSString *_Nullable)BOID;
 
+/*!
+ @brief When the pre-assigned data download status changes, you will receive the event.
+ @param status download status, for more details, see [MobileRTCBOPreAssignBODataStatus]].
+*/
+- (void)onWebPreAssignBODataDownloadStatusChanged:(MobileRTCBOPreAssignBODataStatus)status;
 @end
