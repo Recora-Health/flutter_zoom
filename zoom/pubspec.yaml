@@ -13,7 +13,7 @@ dependencies:
   zoom_platform_interface:
     git:
       url: git@github.com:Recora-Health/flutter_zoom.git
-      ref: main
+      ref: 5.14.11
       path: zoom/zoom_platform_interface
 
 dev_dependencies:
