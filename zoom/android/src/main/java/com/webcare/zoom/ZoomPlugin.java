@@ -91,7 +91,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         }
         if(options.containsKey("sdkKey") && options.containsKey("sdkSecret")){
             // await get JWT token
-            initParams.jwtToken = ""
+            initParams.jwtToken = "";
         }
         // if(options.containsKey("appKey")){
         //     initParams.appKey = options.get("appKey");
