@@ -78,7 +78,7 @@ flutter pub run zoom:unzip_zoom_sdk
 Change the minimum Android sdk version to at the minimum 21 in your `android/app/build.gradle` file.
 
 ```
-minSdkVersion 23
+minSdkVersion 28
 ```
 
 Disable shrinkResources for release buid
