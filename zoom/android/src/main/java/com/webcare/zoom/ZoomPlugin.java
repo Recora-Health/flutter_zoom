@@ -16,6 +16,7 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
+import us.zoom.sdk.SDKNotificationServiceError;
 import us.zoom.sdk.JoinMeetingOptions;
 import us.zoom.sdk.JoinMeetingParams;
 import us.zoom.sdk.MeetingService;
@@ -233,9 +234,9 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
 
     }
 
-    // public void onNotificationServiceStatus(SDKNotificationServiceStatus status, SDKNotificationServiceError error) {
+    public void onNotificationServiceStatus(SDKNotificationServiceStatus status, SDKNotificationServiceError error) {
 
-    // }
+    }
 
     @Override
     public void onAttachedToActivity(@NonNull ActivityPluginBinding binding) {
