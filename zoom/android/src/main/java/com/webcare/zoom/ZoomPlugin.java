@@ -233,9 +233,9 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
 
     }
 
-    public void onNotificationServiceStatus(SDKNotificationServiceStatus status, SDKNotificationServiceError error) {
+    // public void onNotificationServiceStatus(SDKNotificationServiceStatus status, SDKNotificationServiceError error) {
 
-    }
+    // }
 
     @Override
     public void onAttachedToActivity(@NonNull ActivityPluginBinding binding) {
