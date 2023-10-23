@@ -184,6 +184,9 @@ typedef NS_ENUM(NSUInteger, MobileRTCMeetError) {
     MobileRTCMeetError_RemovedByHost                    = 61,
     ///Forbidden to join meeting.
     MobileRTCMeetError_HostDisallowOutsideUserJoin      = 62,
+    ///To join a meeting hosted by an external Zoom account, your SDK app has to be published on Zoom Marketplace.
+    ///You can refer to Section 6.1 of Zoom's API License Terms of Use.
+    MobileRTCMeetError_UnableToJoinExternalMeeting      = 63,
     ///Invalid arguments.
     MobileRTCMeetError_InvalidArguments                 = MobileRTCMeetError_WriteConfigFile + 100,
     ///Invalid user Type.
@@ -924,6 +927,18 @@ typedef NS_ENUM(NSUInteger, MobileRTCEmojiReactionType) {
 };
 
 /*!
+@brief emoji feedback type.
+*/
+typedef NS_ENUM(NSUInteger, MobileRTCEmojiFeedbackType) {
+    MobileRTCEmojiFeedbackType_None,    /// none
+    MobileRTCEmojiFeedbackType_Yes,    /// yes
+    MobileRTCEmojiFeedbackType_No, /// no
+    MobileRTCEmojiFeedbackType_SpeedUp, /// Speed Up
+    MobileRTCEmojiFeedbackType_SlowDown, /// Slow Down
+    MobileRTCEmojiFeedbackType_Away  /// Away
+};
+
+/*!
 @brief emoji reaction skin tone.
 */
 typedef NS_ENUM(NSUInteger, MobileRTCEmojiReactionSkinTone) {
@@ -1119,6 +1134,19 @@ typedef NS_ENUM(NSInteger, MobileRTCNotificationServiceStatus) {
     MobileRTCNotificationServiceStatus_Closed
 };
 
+
+typedef NS_ENUM(NSInteger, MobileRTCNotificationServiceError)
+{
+    MobileRTCNotificationServiceError_Success = 0,
+    MobileRTCNotificationServiceError_Unknow, //Unknown error.
+    MobileRTCNotificationServiceError_Internal_Error, //Internal error, need retry.
+    MobileRTCNotificationServiceError_Invalid_Token, //Invalid token.
+    MobileRTCNotificationServiceError_Multi_Connect, //Use same user login again, the previous device will receive it.
+    MobileRTCNotificationServiceError_Network_Issue, //Network issue.
+    MobileRTCNotificationServiceError_Max_Duration, //Server disconnects the connection if client stayed connected with server for more than 24 hours. Client need to reconnect/login again.
+    MobileRTCNotificationServiceError_App_Background, // App switch to background
+};
+
 /*!
  @brief Enumerations of the type for in meeting audio type.
  */
@@ -1168,6 +1196,14 @@ typedef NS_ENUM(NSUInteger, MobileRTCReminderType) {
     MobileRTCReminderType_WebinarAsPanelistJoin,
     /// Disclaimer type of .terms or service
     MobileRTCReminderType_TermsOfService,
+    /// Disclaimer type of Smart Summary Disclaimer
+    MobileRTCReminderType_SmartSummaryDisclaimer,
+    /// Disclaimer type of of smart summary enable request
+    MobileRTCReminderType_SmartSummaryEnableRequestReminder,
+    /// Disclaimer type  of query disclaimer
+    MobileRTCReminderType_QueryDisclaimer,
+    /// Disclaimer type of query enable request
+    MobileRTCReminderType_QueryEnableRequestReminder,
 };
 
 typedef NS_ENUM(NSInteger, MobileRTCInviteMeetingStatus) {
@@ -1217,4 +1253,9 @@ typedef NS_ENUM(NSInteger, MobileRTCFaceRecognitionFailStrategy) {
     MobileRTCFaceRecognitionFailStrategy_Remain,                   ///<After face recognition fails, do nothing until face recognition succeed again.
     MobileRTCFaceRecognitionFailStrategy_UsingCenterCoordinates, ///<After face recognition fails, use the video frame’s center point as the center for zoom in.
     MobileRTCFaceRecognitionFailStrategy_UsingOriginalVideo      ///<After face recognition fails, use original video.
+};
+
+typedef NS_ENUM(NSInteger, MobileRTCAudioChannel) {
+    MobileRTCAudioChannel_Mono,         /// mono
+    MobileRTCAudioChannel_Stereo,       /// stereo
 };

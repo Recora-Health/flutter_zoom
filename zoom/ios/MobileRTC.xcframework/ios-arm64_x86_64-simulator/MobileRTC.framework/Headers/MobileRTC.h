@@ -87,6 +87,8 @@
  @brief [Optional] If you use direct screen share, you need create replaykit bundle identifier in your apple developer account, and setup here.
  */
 @property (nonatomic, copy) NSString                        * _Nullable replaykitBundleIdentifier;
+
+@property (nonatomic, assign) NSInteger                     wrapperType;
 @end
 
 /*!
@@ -277,6 +279,12 @@
  @warning It is necessary to call the method in AppDelegate "- (void)applicationWillTerminate:(UIApplication *)application".
  */
 - (void)appWillTerminate;
+
+/*!
+ @brief cleanup the SDK.
+ @warning user will clean up the SDK when no longer need the SDK instance, only can call this method after initialized.
+ */
+- (void)cleanup;
 
 /*!
 @brief Notify MobileRTC when the root UIViewController's traitCollection will change

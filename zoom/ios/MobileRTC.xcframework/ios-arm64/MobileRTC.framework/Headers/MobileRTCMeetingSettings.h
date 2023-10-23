@@ -523,4 +523,28 @@
  @param bHide YES indicates to display the tab. No not.
 */
 - (void)hideRequestRecordPrivilegeDialog:(BOOL)bHide;
+
+/*!
+ @brief Get the flag of auto enter Picture-in-Picture Mode for video calls.
+ */
+- (BOOL)videoCallPictureInPictureEnabled;
+
+/*!
+ @brief Set the flag of auto enter Picture-in-Picture Mode for video calls.
+ @param enable YES to follow Zoom VoIP Meeting Picture-in-Picture logic.
+ @warning only works in ZoomUI.
+ */
+- (void)enableVideoCallPictureInPicture:(BOOL)enable;
+
+/*!
+ @brief Call this method to enable or disable the auto adjust input of mic.
+ @param enable YES to enable auto adjust input or false to disable it.
+ */
+- (void)enableAutoAdjustMic:(BOOL)enable;
+
+/*!
+ @brief Determine whether the original input of the microphone is enabled.
+ @return YES if auto adjust input  is enabled, otherwise false.
+ */
+- (BOOL)isAutoAdjustMicEnable;
 @end

@@ -97,7 +97,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCCustomWaitingRoomDataStatus) {
 /*!
  @brief Waiting Room service delegate.
  */
-@property (nullable, assign, nonatomic) id<MobileRTCWaitingRoomServiceDelegate> delegate;
+@property (weak, nonatomic) id<MobileRTCWaitingRoomServiceDelegate> _Nullable delegate;
 
 /*!
  @brief Is this meeting support Waiting Room feature.

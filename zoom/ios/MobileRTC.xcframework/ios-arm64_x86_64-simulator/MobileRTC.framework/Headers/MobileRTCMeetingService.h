@@ -233,12 +233,12 @@
 /**
  * @brief Callback to receive meeting events.
  */
-@property (nullable, assign, nonatomic) id<MobileRTCMeetingServiceDelegate> delegate;
+@property (weak, nonatomic) id<MobileRTCMeetingServiceDelegate> _Nullable delegate;
 
 /**
  * @brief Callback for custom UI meeting events. Custom UI features enable you to customize the user interface instead of using the default client view.
  */
-@property (nullable, assign, nonatomic) id<MobileRTCCustomizedUIMeetingDelegate> customizedUImeetingDelegate;
+@property (weak, nonatomic) id<MobileRTCCustomizedUIMeetingDelegate> _Nullable customizedUImeetingDelegate;
 
 /**
  * @brief Start a meeting with MobileRTCMeetingStartParam parameter.

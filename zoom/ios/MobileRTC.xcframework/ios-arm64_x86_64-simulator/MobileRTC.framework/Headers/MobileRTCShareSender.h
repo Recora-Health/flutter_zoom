@@ -18,7 +18,7 @@
  @param height The height of the data to send.
  @param frameLength The length of the data to send.
  */
-- (void)sendShareFrameBuffer:(char *)frameBuffer width:(NSUInteger)width height:(NSUInteger)height frameLength:(NSUInteger)dataLength DEPRECATED_MSG_ATTRIBUTE("Use -sendShareFrameBuffer: width: height: frameLength: format: instead");
+- (void)sendShareFrameBuffer:(char *)frameBuffer width:(NSUInteger)width height:(NSUInteger)height frameLength:(NSUInteger)dataLength DEPRECATED_MSG_ATTRIBUTE("Use -sendShareFrameBuffer:width:height:frameLength:format:instead");
 
 /*!
  @brief Send share raw data in meeting.

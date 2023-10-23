@@ -289,7 +289,23 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 @return YES indicates success, otherwise fail.
 */
 - (BOOL)inviteBOUserReturnToMainSession:(NSString * _Nonnull)boUserId;
+/*!
+ @brief Query if the current meeting supports broadcasting host's voice to BO.
+ @return YES means that the meeting supports this, otherwise it's not supported.
+ */
+- (BOOL)isBroadcastVoiceToBOSupport;
 
+/*!
+ @brief Query if the host now has the ability to broadcast voice to BO.
+ @return true means that the host now has the ability, otherwise the host does not.
+ */
+- (BOOL)canBroadcastVoiceToBO;
+/*!
+ @brief start or stop broadcasting voice to BO.
+ @param bStart YES for start and NO for stop.
+ @return YES means that the invocation succeeds., Otherwise, it fails.
+ */
+- (BOOL)broadcastVoiceToBO:(BOOL)bStart;
 @end
 
 @interface MobileRTCBOAssistant : NSObject

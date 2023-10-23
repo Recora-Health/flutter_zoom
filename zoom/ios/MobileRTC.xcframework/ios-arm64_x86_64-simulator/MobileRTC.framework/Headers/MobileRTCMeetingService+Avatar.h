@@ -31,6 +31,12 @@
  @brief Get the index of current image.
  */
 @property (nonatomic, assign) NSInteger index;
+
+/*!
+ @brief Determine if it is the most recently used image.
+ */
+@property(nonatomic,assign) BOOL isLastUsed;
+
 @end
 
 
@@ -77,5 +83,18 @@
  @return YES indicates the meeting is showing the avatar.
  */
 - (BOOL)isShowAvatar;
+
+/*!
+ @brief Enable or disable 3D avatar effect when join meeting
+ @param enable Ture if enable 3D avatar effect, otherwise false
+ @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed, returns calling error. For more details, see [MobileRTCSDKError].
+*/
+- (MobileRTCSDKError)enable3DAvatarEffectForAllMeeting:(BOOL)enable;
+
+/*!
+ @brief Determine whether 3D avatar is enabled when the join meeting
+ @return True if enabled, otherwise false.
+ */
+- (BOOL)is3DAvatarEffectForAllMeetingEnabled;
 @end
 

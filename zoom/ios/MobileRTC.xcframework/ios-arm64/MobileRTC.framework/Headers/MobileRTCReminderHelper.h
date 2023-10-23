@@ -82,7 +82,7 @@
 /**
  * @brief Callback to receive reminder events.
  */
-@property (nullable, assign, nonatomic) id<MobileRTCReminderDelegate> reminderDelegate;
+@property (weak, nonatomic) id<MobileRTCReminderDelegate> _Nullable reminderDelegate;
 
 @end
 

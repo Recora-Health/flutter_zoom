@@ -15,7 +15,7 @@
  @brief Query if the user has the privilege to prompt or demote users in the webinar. 
  @return YES means that user owns the privilege, otherwise not.
  */
-- (BOOL)hasPromptAndDePromptPrivilige;
+- (BOOL)hasPromptAndDePromptPrivilege;
 
 /*!
  @brief Prompt Attendee to Panelist in Webinar.
