@@ -20,6 +20,7 @@
 #import "MobileRTCRawLiveStreamInfo.h"
 #import "MobileRTCRequestRawLiveStreamPrivilegeHandler.h"
 #import "MobileRTCShareAudioSender.h"
+#import "MobileRTCMeetingChat.h"
 
 @class MobileRTCInterpretationLanguage;
 @class MobileRTCMeetingParameter;
@@ -250,7 +251,13 @@
  @brief An in-meeting chat message has been received.
  @param messageID The message ID.
  */
-- (void)onInMeetingChat:(NSString * _Nonnull)messageID;
+- (void)onInMeetingChat:(NSString * _Nonnull)messageID DEPRECATED_MSG_ATTRIBUTE("Use -onChatMessageNotification: instead");;
+
+/*!
+ @brief An in-meeting chat message has been received.
+ @param chatInfo  The meeting chat information.
+ */
+- (void)onChatMessageNotification:(MobileRTCMeetingChat * _Nullable)chatInfo;
 
 /*!
  @brief A chat message has been deleted.

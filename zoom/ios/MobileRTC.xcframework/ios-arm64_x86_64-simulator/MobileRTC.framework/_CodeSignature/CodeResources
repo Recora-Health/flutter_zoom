@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/MobileRTCAnnotationService.h</key>
 		<data>
-		ek5lRYT9D0VPzlkL3L6o6P8RkS8=
+		pt8vFiGbCW9qsGhSiSunEpXkLw0=
 		</data>
 		<key>Headers/MobileRTCAudioRawData.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/MobileRTCBORole.h</key>
 		<data>
-		zr2jIxmUkNi/eor3308vSYERNiE=
+		uDuIEXxLozYi5TRU6Cbx/fgCqGA=
 		</data>
 		<key>Headers/MobileRTCCallCountryCode.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/MobileRTCConstants.h</key>
 		<data>
-		dYa5/oZd1vkQYcbO5sSNIfWVjC4=
+		XiprSdLWmdyqgOSyzca5hvTZ628=
 		</data>
 		<key>Headers/MobileRTCDirectShareService.h</key>
 		<data>
@@ -70,11 +70,11 @@
 		</data>
 		<key>Headers/MobileRTCMeetingChat.h</key>
 		<data>
-		FubsDz3u+ywOrHHsOMjipG8Qk+M=
+		uC9HF3NNNA5zbK8+erpyqH/NmD4=
 		</data>
 		<key>Headers/MobileRTCMeetingDelegate.h</key>
 		<data>
-		RsElA3PdKKGmAfLv/aUWLcStGyc=
+		XYkTp0BHpIPYWdnXPJYbIlDo7uk=
 		</data>
 		<key>Headers/MobileRTCMeetingService+AppShare.h</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Headers/MobileRTCMeetingService+Chat.h</key>
 		<data>
-		mJS+0r2QIyONahG/j50ApXd93jA=
+		pvz/62Fd89MCklVX9MYvtZe2HXQ=
 		</data>
 		<key>Headers/MobileRTCMeetingService+Customize.h</key>
 		<data>
@@ -150,7 +150,7 @@
 		</data>
 		<key>Headers/MobileRTCMeetingUserInfo.h</key>
 		<data>
-		3KKYnwPzUfnVAuYfGnpCdqLWtxc=
+		O9ivYwh5UvDMDkNxprh5zNkRlhM=
 		</data>
 		<key>Headers/MobileRTCNotificationServiceHelper.h</key>
 		<data>
@@ -238,7 +238,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hawlRByILKr6+IL1mrVyv/ivX1I=
+		azE463wR+7iAhAmgHN4f6+h4kDc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -262,7 +262,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			R5DllJNoNBpnjK9nLTAffJQAIEGwqO/h3IrPf9zNrGc=
+			DpbE4+p1O4Ktx4spZDlRtqMm7GHschNvVThJjgcBpP0=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCAudioRawData.h</key>
@@ -311,7 +311,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hcUii+jcE3Gj12NOoEdGZrkTbNM4j+GCrjrbtccUI3Q=
+			CmIUADSyNbF/jXgJeq5X2PZBb9c50Cf13mEij8ntrJc=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCCallCountryCode.h</key>
@@ -325,7 +325,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SVJd72r7jjjNL/SFqtcLDbD9m1zXbJY8G9z8TQsLsRw=
+			EMYTIylXv0nLoqcihavZdVq0mmIUO3n5FVRfkF8uHak=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCDirectShareService.h</key>
@@ -367,14 +367,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8Ez6FKQTLKlqk8CB3iUogwgoWxtgHw/f+sbLHTIa6DI=
+			IMjgR8lse0UiGwzftE6MymprdKel96qMkC8SqRMq1Sc=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingDelegate.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NVye6r5n+xjNP6lImXAlziDIbMaErstGDuXM+hRJGvc=
+			denmj/ZCGRlU2R3tq55VQXSJRkkB+mnxOMLDIaNN5JY=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService+AppShare.h</key>
@@ -409,7 +409,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			l7Hrbm1c8EG7qq0kNZlWIkjsX2WB1fXLyuBKLcgjOak=
+			MhmSfT52evPX+/D7sulDciIgKdNoOKiHb0BtEaAn794=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService+Customize.h</key>
@@ -507,7 +507,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gNySDqsQGEyN4TBF9rJsQu4nSK3jdk9mF2SUiL901E0=
+			Ed3zWNbzS+l1LiOjtP4+wajrRgsLQFgYKgRvyjzaDfk=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCNotificationServiceHelper.h</key>

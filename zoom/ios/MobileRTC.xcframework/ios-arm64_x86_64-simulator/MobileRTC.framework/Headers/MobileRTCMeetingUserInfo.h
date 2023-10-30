@@ -152,6 +152,10 @@ typedef NS_ENUM(NSUInteger, MobileRTCFeedbackType) {
  */
 @property (nonatomic, assign) BOOL             handRaised;
 /*!
+ @brief Query if the participant has a camera.
+ */
+@property (nonatomic, assign) BOOL             hasCamera;
+/*!
  @brief User enter the waiting room when joins the meeting.
  */
 @property (nonatomic, assign) BOOL             inWaitingRoom;

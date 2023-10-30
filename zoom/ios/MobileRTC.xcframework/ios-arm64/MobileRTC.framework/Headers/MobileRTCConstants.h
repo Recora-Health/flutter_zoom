@@ -233,7 +233,6 @@ typedef NS_ENUM(NSUInteger, MobileRTCMeetingState) {
     MobileRTCMeetingState_Reconnecting,///<Reconnecting meeting server status.
     MobileRTCMeetingState_Failed,///<Failed to connect the meeting server.
     MobileRTCMeetingState_Ended,///<Meeting ends.
-    MobileRTCMeetingState_Unknow,///<Unknown status.
     MobileRTCMeetingState_Locked,///<Meeting is locked to prevent the further participants to join the meeting.
     MobileRTCMeetingState_Unlocked,///<Meeting is open and participants can join the meeting.
     MobileRTCMeetingState_InWaitingRoom,///<Participants who join the meeting before the start are in the waiting room.
@@ -1259,3 +1258,24 @@ typedef NS_ENUM(NSInteger, MobileRTCAudioChannel) {
     MobileRTCAudioChannel_Mono,         /// mono
     MobileRTCAudioChannel_Stereo,       /// stereo
 };
+
+/**
+@brief Enumerations of the content font style type for chat message.
+ */
+typedef NS_ENUM(NSInteger, MobileRTCRichTextStyle) {
+    MobileRTCRichTextStyle_None, ///Chat message content font style normal.
+    MobileRTCRichTextStyle_Bold,
+    MobileRTCRichTextStyle_Italic,
+    MobileRTCRichTextStyle_Strikethrough,
+    MobileRTCRichTextStyle_BulletedList,
+    MobileRTCRichTextStyle_NumberedList,
+    MobileRTCRichTextStyle_Underline,
+    MobileRTCRichTextStyle_FontSize,
+    MobileRTCRichTextStyle_FontColor,
+    MobileRTCRichTextStyle_BackgroundColor,
+    MobileRTCRichTextStyle_Indent,
+    MobileRTCRichTextStyle_Paragraph,
+    MobileRTCRichTextStyle_Quote, ///Chat message content font style quote.
+    MobileRTCRichTextStyle_InsertLink
+};
+
