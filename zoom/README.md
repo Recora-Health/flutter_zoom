@@ -84,6 +84,13 @@ Change the minimum Android sdk version to at the minimum 21 in your `android/app
 minSdkVersion 28
 ```
 
+Update Material Design version to 1.5.0 in your `android/app/build.gradle` file.
+
+```
+implementation "com.google.android.material:material:1.5.0"
+```
+
+
 Disable shrinkResources for release buid
 ```
    buildTypes {
