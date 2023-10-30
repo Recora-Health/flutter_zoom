@@ -1,8 +1,7 @@
 # Flutter Zoom
 A Flutter plugin for the Zoom Client SDK.
 
-# WIP: !The 5.15.12 version is still under development!
-## iOS appears to work fine, but Android is still a work in progress.
+## iOS appears to work fine, Android reqires a Material Design update.
 
 ## Zoom SDK Versions
 
