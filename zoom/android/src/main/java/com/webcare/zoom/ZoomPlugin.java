@@ -132,15 +132,15 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         }
 
         JoinMeetingOptions opts = new JoinMeetingOptions();
-        opts.no_invite = parseBoolean(options, "disableInvite", false);
-        opts.no_share = parseBoolean(options, "disableShare", false);
-        opts.no_driving_mode = parseBoolean(options, "disableDrive", false);
-        opts.no_dial_in_via_phone = parseBoolean(options, "disableDialIn", false);
-        opts.no_disconnect_audio = parseBoolean(options, "noDisconnectAudio", false);
-        opts.no_audio = parseBoolean(options, "noAudio", false);
-        opts.no_video = parseBoolean(options, "noVideo", false);
-        opts.no_share = parseBoolean(options, "noShare", false);
-        opts.meeting_views_options = parseInt(options, "meetingViewOptions", 0); 
+        opts.no_invite = true; // parseBoolean(options, "disableInvite", false);
+        opts.no_share = true; // parseBoolean(options, "disableShare", false);
+        opts.no_driving_mode = true; //  parseBoolean(options, "disableDrive", false);
+        opts.no_dial_in_via_phone = true; //  parseBoolean(options, "disableDialIn", false);
+        opts.no_disconnect_audio = true; //  parseBoolean(options, "noDisconnectAudio", false);
+        opts.no_audio = false; //parseBoolean(options, "noAudio", false);
+        opts.no_video = false; //parseBoolean(options, "noVideo", false);
+        opts.no_share =  true; // parseBoolean(options, "noShare", false);
+        opts.meeting_views_options = 0 ; // parseInt(options, "meetingViewOptions", 0); 
         JoinMeetingParams params = new JoinMeetingParams();
 
         params.displayName = options.get("userId");
@@ -154,6 +154,10 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         final MeetingSettingsHelper meetingSettingsHelper = zoomSDK.getMeetingSettingsHelper();
         meetingSettingsHelper.disableShowVideoPreviewWhenJoinMeeting(true);
         meetingSettingsHelper.setAutoConnectVoIPWhenJoinMeeting(true);
+
+        // new
+        meetingSettingsHelper.setAlwaysShowMeetingToolbar(true);
+
 
         result.success(true);
     }
