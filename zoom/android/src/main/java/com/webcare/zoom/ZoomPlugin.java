@@ -156,7 +156,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         meetingSettingsHelper.setAutoConnectVoIPWhenJoinMeeting(true);
 
         // new
-        meetingSettingsHelper.setAlwaysShowMeetingToolbar(true);
+        meetingSettingsHelper.setAlwaysShowMeetingToolbarEnabled(true);
 
 
         result.success(true);
