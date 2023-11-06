@@ -12,7 +12,7 @@ class JoinWidget extends StatefulWidget {
 class _JoinWidgetState extends State<JoinWidget> {
   TextEditingController meetingIdController = TextEditingController();
   TextEditingController meetingPasswordController = TextEditingController();
-  Timer timer;
+  late Timer timer;
   @override
   Widget build(BuildContext context) {
     // new page needs scaffolding!
@@ -115,7 +115,7 @@ class _JoinWidgetState extends State<JoinWidget> {
         zoom.onMeetingStateChanged.listen((status) {
           print("Meeting Status Stream: " + status[0] + " - " + status[1]);
           if (_isMeetingEnded(status[0])) {
-            timer?.cancel();
+            timer.cancel();
           }
         });
         zoom.joinMeeting(meetingOptions).then((joinMeetingResult) {
