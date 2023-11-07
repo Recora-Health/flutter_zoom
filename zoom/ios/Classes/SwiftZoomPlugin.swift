@@ -130,8 +130,11 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             meetingSettings?.setMuteAudioWhenJoinMeeting(parseBoolean(data: arguments["noAudio"]!, defaultValue: false))
             meetingSettings?.meetingShareHidden = parseBoolean(data: arguments["disableShare"]!, defaultValue: false)
             meetingSettings?.meetingInviteHidden = parseBoolean(data: arguments["disableDrive"]!, defaultValue: false)
-            // meetingSettings?.meetingChatHidden = parseBoolean(data: arguments["disableChat"]!, defaultValue: true);
+            meetingSettings?.meetingChatHidden = true; // parseBoolean(data: arguments["disableChat"]!, defaultValue: true);
             // meetingSettings?.hideReactionsOnMeetingUI(parseBoolean(data: arguments["hideReactions"]!, defaultValue: true));
+
+            meetingSettings?.topBarHidden = false;
+            meetingSettings?.bottomBarHidden = false;
 
             if  arguments["meetingViewOptions"] != nil{
                 let meetingViewOptions = parseInt(data: arguments["meetingViewOptions"]!, defaultValue: 0)
@@ -174,9 +177,9 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             let response = meetingService?.joinMeeting(with: joinMeetingParameters)
 
             meetingService?.showMeetingControlBar()
-            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-                meetingService?.showMeetingControlBar()
-            }
+            // Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            //     meetingService?.showMeetingControlBar()
+            // }
 
             if let response = response {
                 print("Got response from join: \(response)")
