@@ -130,8 +130,8 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             meetingSettings?.setMuteAudioWhenJoinMeeting(parseBoolean(data: arguments["noAudio"]!, defaultValue: false))
             meetingSettings?.meetingShareHidden = parseBoolean(data: arguments["disableShare"]!, defaultValue: false)
             meetingSettings?.meetingInviteHidden = parseBoolean(data: arguments["disableDrive"]!, defaultValue: false)
-            meetingSettings?.meetingChatHidden = parseBoolean(data: arguments["disableChat"]!, defaultValue: true);
-            meetingSettings?.hideReactions(parseBoolean(data: arguments["hideReactions"]!, defaultValue: true));
+            // meetingSettings?.meetingChatHidden = parseBoolean(data: arguments["disableChat"]!, defaultValue: true);
+            // meetingSettings?.hideReactions(parseBoolean(data: arguments["hideReactions"]!, defaultValue: true));
 
             if  arguments["meetingViewOptions"] != nil{
                 let meetingViewOptions = parseInt(data: arguments["meetingViewOptions"]!, defaultValue: 0)
