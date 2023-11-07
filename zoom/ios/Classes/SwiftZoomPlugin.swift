@@ -131,7 +131,7 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             meetingSettings?.meetingShareHidden = parseBoolean(data: arguments["disableShare"]!, defaultValue: false)
             meetingSettings?.meetingInviteHidden = parseBoolean(data: arguments["disableDrive"]!, defaultValue: false)
             // meetingSettings?.meetingChatHidden = parseBoolean(data: arguments["disableChat"]!, defaultValue: true);
-            // meetingSettings?.hideReactions(parseBoolean(data: arguments["hideReactions"]!, defaultValue: true));
+            // meetingSettings?.hideReactionsOnMeetingUI(parseBoolean(data: arguments["hideReactions"]!, defaultValue: true));
 
             if  arguments["meetingViewOptions"] != nil{
                 let meetingViewOptions = parseInt(data: arguments["meetingViewOptions"]!, defaultValue: 0)
@@ -172,7 +172,12 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             joinMeetingParameters.noVideo = parseBoolean(data: arguments["noVideo"]!, defaultValue: false)
 
             let response = meetingService?.joinMeeting(with: joinMeetingParameters)
+
             
+            Timer.scheduledTimer(withTimeInterval: 4.0, repeats: true) { timer in
+                meetingService?.showMeetingControlBar()
+            }
+
             if let response = response {
                 print("Got response from join: \(response)")
             }
