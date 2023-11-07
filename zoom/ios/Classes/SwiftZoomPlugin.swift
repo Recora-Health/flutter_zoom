@@ -173,7 +173,7 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
 
             let response = meetingService?.joinMeeting(with: joinMeetingParameters)
 
-            
+            meetingService?.showMeetingControlBar()
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                 meetingService?.showMeetingControlBar()
             }
