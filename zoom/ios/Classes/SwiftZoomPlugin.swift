@@ -131,7 +131,7 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             meetingSettings?.meetingShareHidden = parseBoolean(data: arguments["disableShare"]!, defaultValue: false)
             meetingSettings?.meetingInviteHidden = parseBoolean(data: arguments["disableDrive"]!, defaultValue: false)
             meetingSettings?.meetingChatHidden = parseBoolean(data: arguments["disableChat"]!, defaultValue: true);
-            meetingSettings?.hideReactionsOnMeetingUI(parseBoolean(data: arguments["hideReactions"]!, defaultValue: true));
+            meetingSettings?.hideReactions(parseBoolean(data: arguments["hideReactions"]!, defaultValue: true));
 
             if  arguments["meetingViewOptions"] != nil{
                 let meetingViewOptions = parseInt(data: arguments["meetingViewOptions"]!, defaultValue: 0)
