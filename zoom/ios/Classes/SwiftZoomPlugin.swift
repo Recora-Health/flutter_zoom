@@ -132,7 +132,6 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             meetingSettings?.meetingInviteHidden = parseBoolean(data: arguments["disableDrive"]!, defaultValue: false)
             meetingSettings?.meetingChatHidden = parseBoolean(data: arguments["disableChat"]!, defaultValue: true);
             meetingSettings?.hideReactionsOnMeetingUI();
-            meetingSettings?.setAlwaysShowMeetingToolbarEnabled(true);
 
             if  arguments["meetingViewOptions"] != nil{
                 let meetingViewOptions = parseInt(data: arguments["meetingViewOptions"]!, defaultValue: 0)
