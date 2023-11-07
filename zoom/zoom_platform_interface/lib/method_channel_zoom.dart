@@ -25,7 +25,7 @@ class MethodChannelZoom extends ZoomPlatform {
     optionMap.putIfAbsent("displayName", () => options.displayName!);
     optionMap.putIfAbsent("meetingId", () => options.meetingId);
     optionMap.putIfAbsent("meetingPassword", () => options.meetingPassword);
-    // optionMap.putIfAbsent("zoomToken", () => options.zoomToken);
+    optionMap.putIfAbsent("disableChat", () => options.disableChat);
     optionMap.putIfAbsent("zoomAccessToken", () => options.zoomAccessToken!);
     optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn);
     optionMap.putIfAbsent("disableDrive", () => options.disableDrive);
@@ -46,6 +46,7 @@ class MethodChannelZoom extends ZoomPlatform {
     optionMap.putIfAbsent("userId", () => options.userId);
     optionMap.putIfAbsent("meetingId", () => options.meetingId);
     optionMap.putIfAbsent("meetingPassword", () => options.meetingPassword);
+    optionMap.putIfAbsent("disableChat", () => options.disableChat);
     optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn);
     optionMap.putIfAbsent("disableDrive", () => options.disableDrive);
     optionMap.putIfAbsent("disableInvite", () => options.disableInvite);

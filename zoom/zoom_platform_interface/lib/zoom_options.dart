@@ -35,6 +35,7 @@ class ZoomMeetingOptions {
   String noShare;
   int? meetingViewOptions;
   String? webToken;
+  String disableChat;
 
   ZoomMeetingOptions({
     required this.userId,
@@ -53,5 +54,6 @@ class ZoomMeetingOptions {
     required this.noShare,
     this.meetingViewOptions,
     this.webToken,
+    this.disableChat,
   });
 }
