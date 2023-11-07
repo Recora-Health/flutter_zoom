@@ -155,12 +155,12 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         meetingSettingsHelper.disableShowVideoPreviewWhenJoinMeeting(true);
         meetingSettingsHelper.setAutoConnectVoIPWhenJoinMeeting(true);
 
-        // new
-        meetingSettingsHelper.setAlwaysShowMeetingToolbarEnabled(true);
-        meetingSettingsHelper.setMuteMyMicrophoneWhenJoinMeeting​(false);
-        meetingSettingsHelper.disableChatUI​(true);
-        meetingSettingsHelper.enableForceAutoStartMyVideoWhenJoinMeeting​(true);
-        meetingSettingsHelper.enableAutoAdjustMicVolume​(true);
+        // New Overrides to make sure the meeting UI is as we want it
+        meetingSettingsHelper.setAlwaysShowMeetingToolbarEnabled(parseBoolean(options, "alwaysShowToolbar", true));
+        meetingSettingsHelper.disableChatUI​(parseBoolean(options, "disableChat", true));
+        meetingSettingsHelper.setMuteMyMicrophoneWhenJoinMeeting​(opts.no_audio);
+        meetingSettingsHelper.enableForceAutoStartMyVideoWhenJoinMeeting​(!opts.no_video);
+        meetingSettingsHelper.enableAutoAdjustMicVolume​(!opts.no_audio);
 
         result.success(true);
     }

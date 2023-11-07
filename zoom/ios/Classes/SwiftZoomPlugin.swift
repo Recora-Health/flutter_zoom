@@ -130,6 +130,10 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             meetingSettings?.setMuteAudioWhenJoinMeeting(parseBoolean(data: arguments["noAudio"]!, defaultValue: false))
             meetingSettings?.meetingShareHidden = parseBoolean(data: arguments["disableShare"]!, defaultValue: false)
             meetingSettings?.meetingInviteHidden = parseBoolean(data: arguments["disableDrive"]!, defaultValue: false)
+            meetingSettings?.meetingChatHidden = parseBoolean(data: arguments["disableChat"]!, defaultValue: true);
+            meetingSettings?.hideReactionsOnMeetingUI();
+            meetingSettings?.setAlwaysShowMeetingToolbarEnabled(true);
+
             if  arguments["meetingViewOptions"] != nil{
                 let meetingViewOptions = parseInt(data: arguments["meetingViewOptions"]!, defaultValue: 0)
                 if (meetingViewOptions & MeetingViewOptions.NO_BUTTON_AUDIO) != 0 {
@@ -167,7 +171,7 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             joinMeetingParameters.webinarToken = arguments["webToken"]!!
             joinMeetingParameters.noAudio = parseBoolean(data: arguments["noAudio"]!, defaultValue: false)
             joinMeetingParameters.noVideo = parseBoolean(data: arguments["noVideo"]!, defaultValue: false)
-            
+
             let response = meetingService?.joinMeeting(with: joinMeetingParameters)
             
             if let response = response {
@@ -229,8 +233,6 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             user.userType = .apiUser
             user.meetingNumber = arguments["meetingId"]!!
             user.userName = arguments["displayName"]!!
-           // user.userToken = arguments["zoomToken"]!!
-           // user.userID = arguments["userId"]!!
             user.zak = arguments["zoomAccessToken"]!!
 
             let param: MobileRTCMeetingStartParam = user
