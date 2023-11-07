@@ -54,6 +54,6 @@ class ZoomMeetingOptions {
     required this.noShare,
     this.meetingViewOptions,
     this.webToken,
-    this.disableChat,
+    required this.disableChat,
   });
 }
