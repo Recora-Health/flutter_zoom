@@ -86,8 +86,6 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         }
 
         ZoomSDKInitParams initParams = new ZoomSDKInitParams();
-        initParams.disableCallIn = true;
-        initParams.disableCallOut = true;
         initParams.domain = options.get("domain");
         if(options.containsKey("jwtToken")){
             initParams.jwtToken = options.get("jwtToken");
@@ -158,8 +156,8 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         meetingSettingsHelper.setAutoConnectVoIPWhenJoinMeeting(true);
         meetingSettingsHelper.setMuteVideoWhenJoinMeeting(false);
         meetingSettingsHelper.disableGalleryView(true);
-        meetingSettingsHelper.disableCallIn(true);
-        meetingSettingsHelper.disableCallOut(true);
+        meetingSettingsHelper.setNoInviteH323RoomCallInEnabled(true);
+        meetingSettingsHelper.setNoInviteH323RoomCallOutEnabled(true);
 
         // New Overrides to make sure the meeting UI is as we want it
         meetingSettingsHelper.disableChatUI​(parseBoolean(options, "disableChat", true));
