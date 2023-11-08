@@ -154,8 +154,6 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         final MeetingSettingsHelper meetingSettingsHelper = zoomSDK.getMeetingSettingsHelper();
         meetingSettingsHelper.disableShowVideoPreviewWhenJoinMeeting(true);
         meetingSettingsHelper.setAutoConnectVoIPWhenJoinMeeting(true);
-        meetingSettingsHelper.setMuteVideoWhenJoinMeeting(false);
-        meetingSettingsHelper.disableGalleryView(true);
         meetingSettingsHelper.setNoInviteH323RoomCallInEnabled(true);
         meetingSettingsHelper.setNoInviteH323RoomCallOutEnabled(true);
 
