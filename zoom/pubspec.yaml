@@ -1,6 +1,6 @@
 name: zoom
 description: A Flutter plugin for the Zoom Client SDK.
-version: 1.0.8
+version: 1.0.9
 publish_to: none
 
 environment:
