@@ -128,7 +128,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCFeedbackType) {
  */
 @property (nonatomic, assign) BOOL             isMySelf;
 /*!
- @brief The value of customerKey.
+ @brief The customer key that need the app intergrated with sdk to specify. The SDK will set this value when the associated settings are turned on. The max length of customer_key is 35.
  */
 @property (nonatomic, retain) NSString* _Nullable       customerKey;
 /*!

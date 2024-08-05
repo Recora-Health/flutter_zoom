@@ -29,6 +29,7 @@
 @class MobileRTCMeetingInviteActionItem;
 @class MobileRTCMeetingShareActionItem;
 @class MobileRTCLiveTranscriptionMessageInfo;
+@class MobileRTCSmartSummaryPrivilegeHandler;
 
 #pragma mark - MobileRTCMeetingServiceDelegate
 /*!
@@ -408,6 +409,32 @@
  */
 - (void)onRequestLocalRecordingPrivilegeChanged:(MobileRTCLocalRecordingRequestPrivilegeStatus)status;
 
+#pragma mark -- smart summary --
+/*!
+ * @brief Callback event when smart summary status changes.
+ * @param isStarted true means that the smart summary is started. False means it has not.
+ */
+- (void)onSmartSummaryStatusChange:(BOOL)isStarted;
+
+/*!
+ * @brief Callback event when a user requests the host to start smart summary.
+ * @param userId The user who requests the host to start smart summary.
+ * @param handler The handler to handle the smart summary start request.
+ */
+- (void)onSmartSummaryPrivilegeRequested:(NSInteger)userId handler:(MobileRTCSmartSummaryPrivilegeHandler *_Nullable)handler;
+
+/*!
+ * @brief Callback event when the host handle the smart summary request.
+ * @param timeout true means the host doesn't handle the request until timeout.
+ * @param decline true means the host declines the request, false means the host agrees to the request.
+ */
+- (void)onSmartSummaryStartReqResponse:(BOOL)timeout decline:(BOOL)isDecline;
+
+/*!
+ * @brief Sink the event that AI Companion active status changed.
+ * @param active True means the AI Companion is active
+ */
+- (void)onAICompanionActiveChangeNotice:(BOOL)isActive;
 @end
 
 #pragma mark - MobileRTCAudioServiceDelegate

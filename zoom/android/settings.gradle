@@ -1,1 +1,4 @@
-rootProject.name = 'zoom'
+include ':commonlib'
+include ':mobilertc'
+include ':sample'
+include ':example2'

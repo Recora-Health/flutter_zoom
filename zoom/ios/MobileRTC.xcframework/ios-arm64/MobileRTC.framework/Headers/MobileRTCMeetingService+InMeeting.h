@@ -352,6 +352,19 @@
  */
 - (MobileRTCANNError)hideAANPanel;
 
+/*!
+ * @brief Show the dynamic notice for the AI Companion panel view.
+ * @param containerView Show the AI Companion panel's dynamic notice in this view.
+ * @param originXY the origin point which the panel placed in the containerView.
+ * @return If invoke succeeds, the return value is SDKERR_SUCCESS. Otherwise failed, for more details, see {@link MobileRTCSDKError}.
+ */
+- (MobileRTCSDKError)showDynamicNoticeForAICompanionPanel:(UIView *_Nullable)containerView originPoint:(CGPoint)originXY;
+
+/*!
+ * @brief Hide dynamic notice for AI Companion panel view.
+ * @return If invoke succeeds, the return value is SDKERR_SUCCESS. Otherwise failed, for more details, see {@link MobileRTCSDKError}.
+ */
+- (MobileRTCSDKError)hideDynamicNoticeForAICompanionPanel;
 
 #pragma mark - Q&A Related
 /*!

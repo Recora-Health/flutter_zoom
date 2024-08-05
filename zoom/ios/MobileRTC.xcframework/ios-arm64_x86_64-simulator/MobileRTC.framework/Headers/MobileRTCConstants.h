@@ -74,6 +74,8 @@ typedef NS_ENUM(NSUInteger, MobileRTCAuthError) {
     MobileRTCAuthError_ClientIncompatible,
     ///The jwt token to authenticate is wrong
     MobileRTCAuthError_TokenWrong,
+    ///The authentication rate limit is exceeded
+    MobileRTCAuthError_LimitExceededException,
 };
 
 /*!
@@ -1203,6 +1205,8 @@ typedef NS_ENUM(NSUInteger, MobileRTCReminderType) {
     MobileRTCReminderType_QueryDisclaimer,
     /// Disclaimer type of query enable request
     MobileRTCReminderType_QueryEnableRequestReminder,
+    /// eminder type of enable smart summary
+    MobileRTCReminderType_EnableSmartSummaryReminder,
 };
 
 typedef NS_ENUM(NSInteger, MobileRTCInviteMeetingStatus) {
