@@ -88,11 +88,11 @@ dependencies {
 
 configurations.all {
 
-    dependencyLocking {
-        lockMode = LockMode.STRICT
-        lockFile = file("$projectDir/gradle.lockfile")
-        lockAllConfigurations()
-    }
+    // dependencyLocking {
+    //     lockMode = LockMode.STRICT
+    //     lockFile = file("$projectDir/gradle.lockfile")
+    //     lockAllConfigurations()
+    // }
 
     resolutionStrategy.failOnVersionConflict()
     resolutionStrategy {
