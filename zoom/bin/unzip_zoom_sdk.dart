@@ -69,7 +69,7 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   // }
   
   // Check if the Android MobileRTC SDK files exist
-  exists = await File(androidRTCLibFile).exists();
+  var exists = await File(androidRTCLibFile).exists();
   // If the files exist and we are updating, then delete the previous version
   if (exists && isUpdate) {
     await File(androidRTCLibFile).delete();
