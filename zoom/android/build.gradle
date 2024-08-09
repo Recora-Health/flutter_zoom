@@ -72,6 +72,5 @@ dependencies {
 
     implementation "androidx.fragment:fragment-ktx:1.4.1"
 
-    api(name: 'commonlib', ext: 'aar')
     api(name: 'mobilertc', ext: 'aar')
 }

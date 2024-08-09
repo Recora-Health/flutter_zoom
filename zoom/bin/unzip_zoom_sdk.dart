@@ -45,28 +45,15 @@ void main(List<String> args) async {
 
 Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   // Setup the SDK destinations
-  // The commonlib.aar and mobilertc.aar are the same for all architectures
+  // The mobilertc.aar are the same for all architectures
   // The MobileRTC.framework is different for each architecture, device vs emulator
   // The iosSimulateSDKFile is depreciated and will be removed when isUpdate is true
-  // var androidCommonLibFile = location + '/android/libs/commonlib.aar';  // No longer exists in the Zoom SDK
   var androidRTCLibFile = location + '/android/libs/mobilertc.aar';
   var iosSDKFile = location + '/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/MobileRTC';
   var iosSimulateSDKFile =
       location + '/ios/MobileRTC.xcframework/ios-i386_x86_64-simulator/MobileRTC.framework/MobileRTC';
   var iosSimulateArm64SDKFile = location +
       '/ios/MobileRTC.xcframework/ios-arm64_x86_64-simulator/MobileRTC.framework/MobileRTC';
-
-  // Check if the Android Common SDK files exist
-  // var exists = await File(androidCommonLibFile).exists();
-  // // If the files exist and we are updating, then delete the previous version
-  // if (exists && isUpdate) {
-  //   await File(androidCommonLibFile).delete();
-  // }
-  // If the files do not exist or we are updating, then download the latest version
-  // if (!exists || isUpdate) {
-  //   await downloadFile(
-  //       Uri.parse('https://www.dropbox.com/scl/fi/i2z6ula02hh14tj78jjvs/commonlib.aar?rlkey=0cwie04z7duwjfjsrwp7j4zvz&st=40byoz4u&dl=1'), androidCommonLibFile, isUpdate);
-  // }
   
   // Check if the Android MobileRTC SDK files exist
   var exists = await File(androidRTCLibFile).exists();
