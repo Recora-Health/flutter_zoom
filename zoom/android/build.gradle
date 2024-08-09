@@ -16,6 +16,7 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
+        jcenter()
 
         flatDir {
             dirs project(':zoom').file('libs')
