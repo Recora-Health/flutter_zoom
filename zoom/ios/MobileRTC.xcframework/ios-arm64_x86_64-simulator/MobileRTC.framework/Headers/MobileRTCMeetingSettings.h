@@ -181,11 +181,6 @@
 @property (assign, nonatomic) BOOL proximityMonitoringDisable;
 
 /*!
- @brief Enable Custom In-Meeting UI in meeting.
- */
-@property (assign, nonatomic) BOOL enableCustomMeeting;
-
-/*!
  @brief hide feedback button on cloud whiteboard.
  */
 @property (assign, nonatomic) BOOL hideFeedbackButtonOnCloudWhiteboard;
@@ -547,4 +542,41 @@
  @return YES if auto adjust input  is enabled, otherwise false.
  */
 - (BOOL)isAutoAdjustMicEnable;
+
+/*!
+ @brief Query if this device supports CenterStage Mode.
+ @return YES means supported, otherwise not.
+ */
+- (BOOL)isCenterStageModeSupported;
+
+/*!
+ @brief Enable or disable CenterStage Mode. This is disable by default.
+ @param enable YES means enabled, otherwise not.
+ @return YES means supported, otherwise not.
+ */
+- (BOOL)enableCenterStageMode:(BOOL)enable;
+
+/*!
+ @brief Query if CenterStage Mode is enable by MobileRTC.
+ @return YES indicates enable. Otherwise not.
+ */
+- (BOOL)isEnabledCenterStageMode;
+/**
+ * @brief Enable echo cancellation.
+ * @param enable true means enabled, false disabled.
+ * @return error code {@link MobileRTCSDKError}
+ */
+- (MobileRTCSDKError)enableEchoCancellation:(BOOL)enable;
+
+/**
+ * @brief Determine if echo cancellation is enabled or not.
+ * @return true means supported, otherwise not.
+ */
+- (BOOL)isEchoCancellationOn;
+
+/**
+ * @brief Determine if the meeting supports echo cancellation.
+ * @return true means supported, otherwise not.
+ */
+- (BOOL)isSupportEchoCancellation;
 @end

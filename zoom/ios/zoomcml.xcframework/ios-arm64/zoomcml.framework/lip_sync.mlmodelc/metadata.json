@@ -43,6 +43,7 @@
     "availability" : {
       "macOS" : "10.13",
       "tvOS" : "11.0",
+      "visionOS" : "1.0",
       "watchOS" : "4.0",
       "iOS" : "11.0",
       "macCatalyst" : "11.0"
@@ -64,7 +65,7 @@
     "userDefinedMetadata" : {
 
     },
-    "generatedClassName" : "lipsync",
+    "generatedClassName" : "lip_sync",
     "inputSchema" : [
       {
         "hasShapeFlexibility" : "0",
