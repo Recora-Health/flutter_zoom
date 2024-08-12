@@ -47,11 +47,8 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   // Setup the SDK destinations
   // The mobilertc.aar are the same for all architectures
   // The MobileRTC.framework is different for each architecture, device vs emulator
-  // The iosSimulateSDKFile is depreciated and will be removed when isUpdate is true
   var androidRTCLibFile = location + '/android/libs/mobilertc.aar';
   var iosSDKFile = location + '/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/MobileRTC';
-  var iosSimulateSDKFile =
-      location + '/ios/MobileRTC.xcframework/ios-i386_x86_64-simulator/MobileRTC.framework/MobileRTC';
   var iosSimulateArm64SDKFile = location +
       '/ios/MobileRTC.xcframework/ios-arm64_x86_64-simulator/MobileRTC.framework/MobileRTC';
   
@@ -79,13 +76,6 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
         Uri.parse('https://www.dropbox.com/scl/fi/vwv2q914r7ptcvx7w8752/arm64-MobileRTC?rlkey=i5ny2wzd8y2wydz2fni4ava3u&st=d527vvcl&dl=1'), iosSDKFile, isUpdate);
   }
 
-  //  Check if the i386 iOS Emulator SDK files exist
-  exists = await File(iosSimulateSDKFile).exists();
-  // If the files exist and we are updating, then delete the previous version
-  if (exists && isUpdate) {
-    await File(iosSimulateSDKFile).delete();
-  }
-
   // Check if the Arm64 iOS Embulator SDK files exist
   exists = await File(iosSimulateArm64SDKFile).exists();
   // If the files exist and we are updating, then delete the previous version
@@ -96,7 +86,7 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   if (!exists || isUpdate) {
     await downloadFile(
         Uri.parse(
-            'https://www.dropbox.com/scl/fi/bozc374h3z17z50l2f736/x86_64-simulator-MobileRTC?rlkey=62qt1hdtgzeub72wkq8xyxh35&st=bq2npi6u&dl=1'),
+            'https://www.dropbox.com/scl/fi/bci6dqs19wymri3cqt53v/x86_64-simulator-MobileRTC?rlkey=itsic3yj0k4s63auplfwtvxwf&st=a85lv33q&dl=1'),
         iosSimulateArm64SDKFile,
         isUpdate);
   }
