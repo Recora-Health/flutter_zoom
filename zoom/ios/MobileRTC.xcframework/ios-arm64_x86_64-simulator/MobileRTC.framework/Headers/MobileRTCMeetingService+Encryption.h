@@ -23,7 +23,7 @@
  @brief Get E2EE meeting security code.
  @return If the function succeeds, it will return 40-digit security code. Otherwise failed.
  */
-- (NSString*)getE2EEMeetingSecurityCode;
+- (NSString* _Nullable)getE2EEMeetingSecurityCode;
 
 /*!
  @brief Get security code passed seconds.
@@ -48,12 +48,12 @@
  @brief Get unencrypted exception info.
  @return If the function succeeds, it will return unencrypted exception details. Otherwise failed.
  */
-- (NSString*)getUnencryptedExceptionInfo;
+- (NSString* _Nonnull)getUnencryptedExceptionInfo;
 
 /*!
  @brief Get data center info.
  @return If the function succeeds, it will return data center details. Otherwise failed.
  */
-- (NSString*)getInMeetingDataCenterInfo;
+- (NSString* _Nonnull)getInMeetingDataCenterInfo;
 
 @end

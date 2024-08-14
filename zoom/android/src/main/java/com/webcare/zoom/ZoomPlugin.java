@@ -29,7 +29,9 @@ import us.zoom.sdk.ZoomSDK;
 import us.zoom.sdk.ZoomSDKAuthenticationListener;
 import us.zoom.sdk.ZoomSDKInitParams;
 import us.zoom.sdk.ZoomSDKInitializeListener;
+import us.zoom.sdk.ZoomSDKRawDataMemoryMode;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
+
 /** ZoomPlugin */
 public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAware, ZoomSDKAuthenticationListener {
     /// The MethodChannel that will the communication between Flutter and native Android

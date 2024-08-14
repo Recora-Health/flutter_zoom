@@ -8,7 +8,7 @@
 
 
 #import <MobileRTC/MobileRTC.h>
-#import "MobileRTCBORole.h"
+#import <MobileRTC/MobileRTCBORole.h>
 
 /*!
  @brief Creates Breakout Room meetings-related objects and fetches Breakout Room-related status information.
@@ -72,7 +72,7 @@
  @return The value is join bo name which you are going to.
  @note When you enter a BO or are switched to another BO by the host, maybe you need the BO name to display on transfer UI.
  */
-- (NSString *)getJoiningBOName;
+- (NSString * _Nullable)getJoiningBOName;
 
 @end
 

@@ -7,7 +7,6 @@
 //
 
 #import <MobileRTC/MobileRTC.h>
-#import "MobileRTCConstants.h"
 
 /**
  * @brief interface to handle start smart summary request
@@ -18,19 +17,19 @@
  * @return if the function succeeds, the return value is MobileRTCSDKError_Success.
  * Otherwise the function fails. For more details, see {@link MobileRTCSDKError}.
  */
-- (MobileRTCSDKError)accept;
+- (MobileRTCSDKError)accept DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelper instead");
 
 /**
  * @brief Decline the start smart summary request.
  * @return if the function succeeds, the return value is MobileRTCSDKError_Success.
  * Otherwise the function fails. For more details, see {@link MobileRTCSDKError}.
  */
-- (MobileRTCSDKError)decline;
+- (MobileRTCSDKError)decline DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelper instead");
 
 /**
  * Ignore the start smart summary request.
  */
-- (void)ignore;
+- (void)ignore DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelper instead");
 @end
 
 @interface MobileRTCMeetingService (SmartSummary)
@@ -39,49 +38,49 @@
  * @brief Determine if current meeting support smart summary feature.
  * @return true means the current meeting supports the smart summary feature, false means the feature is not supported.
  */
-- (BOOL)isSmartSummarySupported;
+- (BOOL)isSmartSummarySupported DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelper instead");
 
 /**
  * @brief Determine if the smart summary feature is enabled in the meeting.
  * @return true means smart summary feature is enabled.
  */
-- (BOOL)isSmartSummaryEnabled;
+- (BOOL)isSmartSummaryEnabled DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelper instead");
 
 /**
  * @brief Whether the current user can request the host to start the smart summary for the current meeting.
  * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise the function fails. For more details, see {@link MobileRTCSDKError}.
  */
-- (MobileRTCSDKError)canRequestStartSmartSummary;
+- (MobileRTCSDKError)canRequestStartSmartSummary DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelper instead");
 
 /**
  * @brief Request the host to start the smart summary for the current meeting.
  * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise the function fails. For more details, see {@link MobileRTCSDKError}.
  */
-- (MobileRTCSDKError)requestStartSmartSummary;
+- (MobileRTCSDKError)requestStartSmartSummary DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelper instead");
 
 /**
  * @brief Whether the current user is able to start smart summary.
  * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise the function fails. For more details, see {@link MobileRTCSDKError}.
  */
-- (MobileRTCSDKError)canStartSmartSummary;
+- (MobileRTCSDKError)canStartSmartSummary DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelper instead");
 
 /**
  * @brief Start smart summary.
  * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise the function fails. For more details, see {@link MobileRTCSDKError}.
  */
-- (MobileRTCSDKError)startSmartSummary;
+- (MobileRTCSDKError)startSmartSummary DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelper instead");
 
 /**
  * @brief Stop smart summary.
  * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise the function fails. For more details, see {@link MobileRTCSDKError}.
  */
-- (MobileRTCSDKError)stopSmartSummary;
+- (MobileRTCSDKError)stopSmartSummary DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelper instead");
 
 /**
  * @brief Query whether smart summary is started.
  * @return true means smart summary is started, false means it has not.
  */
-- (BOOL)isSmartSummaryStarted;
+- (BOOL)isSmartSummaryStarted DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelper instead");
 
 @end
 

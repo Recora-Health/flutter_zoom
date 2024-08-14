@@ -8,6 +8,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCConstants.h>
+#import <MobileRTC/MobileRTCMeetingUserInfo.h>
+#import <MobileRTC/MobileRTCRoomDevice.h>
 #import <MobileRTC/MobileRTCAuthService.h>
 #import <MobileRTC/MobileRTCMeetingService.h>
 #import <MobileRTC/MobileRTCAutoFramingParameter.h>
@@ -20,6 +22,7 @@
 #import <MobileRTC/MobileRTCMeetingService+Chat.h>
 #import <MobileRTC/MobileRTCMeetingService+Avatar.h>
 #import <MobileRTC/MobileRTCMeetingService+Webinar.h>
+#import <MobileRTC/MobileRTCMeetingService+QA.h>
 #import <MobileRTC/MobileRTCMeetingService+VirtualBackground.h>
 #import <MobileRTC/MobileRTCMeetingService+Interpretation.h>
 #import <MobileRTC/MobileRTCMeetingService+BO.h>
@@ -28,18 +31,19 @@
 #import <MobileRTC/MobileRTCMeetingService+RawArchiving.h>
 #import <MobileRTC/MobileRTCMeetingService+Phone.h>
 #import <MobileRTC/MobileRTCMeetingService+SmartSummary.h>
+#import <MobileRTC/MobileRTCMeetingService+AICompanion.h>
 #import <MobileRTC/MobileRTCMeetingService+Whiteboard.h>
 #import <MobileRTC/MobileRTCMeetingService+Polling.h>
+#import <MobileRTC/MobileRTCMeetingService+Encryption.h>
 #import <MobileRTC/MobileRTCMeetingSettings.h>
 #import <MobileRTC/MobileRTCInviteHelper.h>
-#import <MobileRTC/MobileRTCRoomDevice.h>
-#import <MobileRTC/MobileRTCMeetingUserInfo.h>
 #import <MobileRTC/MobileRTCMeetingChat.h>
 #import <MobileRTC/MobileRTCMeetingDelegate.h>
 #import <MobileRTC/MobileRTCVideoView.h>
 #import <MobileRTC/MobileRTCMeetingActionItem.h>
 #import <MobileRTC/MobileRTCAnnotationService.h>
 #import <MobileRTC/MobileRTCRemoteControlService.h>
+#import <MobileRTC/MobileRTCCameraControlService.h>
 #import <MobileRTC/MobileRTCWaitingRoomService.h>
 #import <MobileRTC/MobileRTCRenderer.h>
 #import <MobileRTC/MobileRTCAudioRawDataHelper.h>
@@ -101,7 +105,7 @@
 @end
 
 /*!
- @class MobileRTC
+ MobileRTC
  @brief Initialize the class to acquire all the services. 
  @warning Access to the class and all the other components of the MobileRTC by merging <MobileRTC/MobileRTC.h> into source code.
  @warning The user can only obtain SDK configuration by initializing the class.  
@@ -220,6 +224,18 @@
  @return The preconfigured remote control service. 
  */
 - (MobileRTCRemoteControlService * _Nullable)getRemoteControlService;
+
+/*!
+ @brief Get the default MobileRTC camera control service.
+ @return The preconfigured camera control service.
+ */
+- (MobileRTCCameraControlService * _Nullable)getCameraControlService:(NSInteger)userId;
+
+/*!
+ @brief Revoke camera control privilege.
+ @return If the function succeeds, the return value is MobileRTCSDKError_Success.
+ */
+- (MobileRTCSDKError)revokeCameraControlPrivilege;
 
 /*!
  @brief Get the default MobileRTC waiting room service.

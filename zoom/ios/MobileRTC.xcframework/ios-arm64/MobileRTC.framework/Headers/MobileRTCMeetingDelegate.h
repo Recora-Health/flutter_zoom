@@ -7,35 +7,46 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MobileRTCVideoRawData.h"
-#import "MobileRTCAudioRawData.h"
-#import "MobileRTCBORole.h"
-#import "MobileRTCReturnToMainSessionHandler.h"
-#import "MobileRTCPreProcessRawData.h"
-#import "MobileRTCAudioSender.h"
-#import "MobileRTCVideoSender.h"
-#import "MobileRTCShareSender.h"
-#import "MobileRTCVideoCapabilityItem.h"
-#import "MobileRTCLiveTranscriptionLanguage.h"
-#import "MobileRTCRawLiveStreamInfo.h"
-#import "MobileRTCRequestRawLiveStreamPrivilegeHandler.h"
-#import "MobileRTCShareAudioSender.h"
-#import "MobileRTCMeetingChat.h"
+#import <MobileRTC/MobileRTCVideoRawData.h>
+#import <MobileRTC/MobileRTCAudioRawData.h>
+#import <MobileRTC/MobileRTCBORole.h>
+#import <MobileRTC/MobileRTCReturnToMainSessionHandler.h>
+#import <MobileRTC/MobileRTCPreProcessRawData.h>
+#import <MobileRTC/MobileRTCAudioSender.h>
+#import <MobileRTC/MobileRTCVideoSender.h>
+#import <MobileRTC/MobileRTCShareSender.h>
+#import <MobileRTC/MobileRTCVideoCapabilityItem.h>
+#import <MobileRTC/MobileRTCLiveTranscriptionLanguage.h>
+#import <MobileRTC/MobileRTCRawLiveStreamInfo.h>
+#import <MobileRTC/MobileRTCRequestRawLiveStreamPrivilegeHandler.h>
+#import <MobileRTC/MobileRTCShareAudioSender.h>
+#import <MobileRTC/MobileRTCMeetingChat.h>
+#import <MobileRTC/MobileRTCWebinarInputScreenNameHandler.h>
+#import <MobileRTC/MobileRTCArchiveConfrimHandle.h>
+#import <MobileRTC/MobileRTCMeetingChat.h>
+
 
 @class MobileRTCInterpretationLanguage;
 @class MobileRTCMeetingParameter;
 @class MobileRTCSignInterpreterLanguage;
 @class MobileRTCRequestLocalRecordingPrivilegeHandler;
+@class MobileRTCRequestStartCloudRecordingPrivilegeHandler;
 @class MobileRTCMeetingInviteActionItem;
 @class MobileRTCMeetingShareActionItem;
 @class MobileRTCLiveTranscriptionMessageInfo;
 @class MobileRTCSmartSummaryPrivilegeHandler;
+@class MobileRTCWebinarBODisclaimerHandler;
+@class MobileRTCInputUserInfoHandler;
+@class MobileRTCShareAction;
+@class MobileRTCAICompanionTurnOnAgainHandler;
+@class MobileRTCAICompanionSwitchHandler;
+@class MobileRTCIndicatorHandler;
 
 #pragma mark - MobileRTCMeetingServiceDelegate
 /*!
  @protocol MobileRTCMeetingServiceDelegate
  @brief Delegate containing callbacks related to meeting state updates.
- */  
+ */
 @protocol MobileRTCMeetingServiceDelegate <NSObject>
 @optional
 /*!
@@ -58,6 +69,12 @@
 - (void)onMeetingParameterNotification:(MobileRTCMeetingParameter *_Nullable)meetingParam;
 
 /*!
+ @brief The function is be invoked when a user joins a meeting that needs their  username and email.
+ @param handler Configure information or leave meeting, see  [MobileRTCInputUserInfoHandler].
+ */
+- (void)onJoinMeetingNeedUserInfo:(MobileRTCInputUserInfoHandler *_Nullable)handler;
+
+/*!
  @brief The meeting has been joined successfully.
  */
 - (void)onJoinMeetingConfirmed;
@@ -74,32 +91,6 @@
 - (void)onJBHWaitingWithCmd:(JBHCmd)cmd;
 
 /*!
- @brief Determine if the current user has cloud recording privileges.
- @param result The result of checking CMR privilege.
- */
-- (void)onCheckCMRPrivilege:(MobileRTCCMRError)result;
-
-/*!
- @brief @brief The cloud recording status has changed.
- @param status The new recording status.
- */
-- (void)onRecordingStatus:(MobileRTCRecordingStatus)status;
-
-/*!
- @brief The local recording status has changed.
- @param userId The ID of the user who caused the change.
- @param status The new recording status.
- */
-- (void)onLocalRecordingStatus:(NSInteger)userId status:(MobileRTCRecordingStatus)status;
-
-/*!
- @brief An event sink that the cloud recording storage is full.
- @param gracePeriodDate A point in time, in milliseconds in, UTC.
- @warning You can use the cloud recording storage until the gracePeriodDate.
- */
-- (void)onCloudRecordingStorageFull:(long)gracePeriodDate;
-
-/*!
  @brief The meeting has ended.
  @param reason The reason why the meeting has ended. See [MobileRTCMeetingEndReason].
  */
@@ -113,18 +104,26 @@
 
 /*!
  @brief The user's microphone has encountered an error.
- @param errror The error. See [MobileRTCMicropohoneError]
+ @param error The error. See [MobileRTCMicropohoneError]
  */
 - (void)onMicrophoneStatusError:(MobileRTCMicrophoneError)error;
 
 /*!
  @brief The user must provide additional information before joining the meeting.
- @param displayName A name to be displayed in the meeting.
- @param password The meeting passcode.
- @param cancel If YES, the attempt to join the meeting is cancelled.
+ @param info the information need for join meeting.
+ @param completion the block for input the information
+ displayName A name to be displayed in the meeting.
+ password The meeting passcode.
+ cancel If YES, the attempt to join the meeting is cancelled.
  */
 - (void)onJoinMeetingInfo:(MobileRTCJoinMeetingInfo)info
                completion:(void (^_Nonnull)(NSString * _Nonnull displayName, NSString * _Nonnull password, BOOL cancel))completion;
+
+/*!
+@brief Callback event for the meeting topic changed.
+@param meetingTopic The new meeting topic.
+*/
+- (void)onMeetingTopicChanged:(NSString *_Nullable)meetingTopic;
 
 /*!
  @brief The user must provide proxy information.
@@ -137,8 +136,9 @@
          completion:(void (^_Nonnull)(NSString * _Nonnull host, NSUInteger port, NSString *_Nonnull username, NSString * _Nonnull password, BOOL cancel))completion;
 
 /*!
- @brief The user needs to end another ongoing meeting.
+ @brief Callback event when joining a meeting while the meeting is ongoing.
  @param completion Ask the user to end another ongoing meeting.
+ @warning completion(YES) means leave or end current meeting. completion(NO) means end other meeting to continue current join meeting flow.
  */
 - (void)onAskToEndOtherMeeting:(void (^_Nonnull)(BOOL cancel))completion;
 
@@ -257,12 +257,6 @@
 
 /*!
  @brief An in-meeting chat message has been received.
- @param messageID The message ID.
- */
-- (void)onInMeetingChat:(NSString * _Nonnull)messageID DEPRECATED_MSG_ATTRIBUTE("Use -onChatMessageNotification: instead");;
-
-/*!
- @brief An in-meeting chat message has been received.
  @param chatInfo  The meeting chat information.
  */
 - (void)onChatMessageNotification:(MobileRTCMeetingChat * _Nullable)chatInfo;
@@ -293,7 +287,7 @@
 
 /*!
  @brief Another user’s raw live streaming privilege has changed.
- @param userid The ID of the user whose privilege has changed.
+ @param userId The ID of the user whose privilege has changed.
  @param hasPrivilege Whether the user has privilege.
  */
 - (void)onUserRawLiveStreamPrivilegeChanged:(NSUInteger)userId hasPrivilege:(bool)hasPrivilege;
@@ -428,26 +422,88 @@
  */
 - (void)onParticipantProfilePictureStatusChange:(BOOL)hidden;
 
+/*!
+ * @brief  when new indicator item is received.
+ * @param inMeetingIndicatorHandler the handle to show/hide the indicator panel.
+*/
+- (void)onIndicatorItemReceived:(MobileRTCIndicatorHandler* _Nullable)inMeetingIndicatorHandler;
+
+/*!
+ * @brief when the indicator item is removed
+ * @param inMeetingIndicatorHandler the handle will be removed, should not be used anymore.
+*/
+- (void)onIndicatorItemRemoved:(MobileRTCIndicatorHandler* _Nullable)inMeetingIndicatorHandler;
+
+#pragma mark - MobileRTC Recording Delegate
+
+/*!
+ @brief Determine if the current user has cloud recording privileges.
+ @param result The result of checking CMR privilege.
+ */
+- (void)onCheckCMRPrivilege:(MobileRTCCMRError)result;
+
+/*!
+ @brief The cloud recording status has changed.
+ @param status The new recording status.
+ */
+- (void)onRecordingStatus:(MobileRTCRecordingStatus)status;
+
+/*!
+ @brief The local recording status has changed.
+ @param userId The ID of the user who caused the change.
+ @param status The new recording status.
+ */
+- (void)onLocalRecordingStatus:(NSInteger)userId status:(MobileRTCRecordingStatus)status;
+
+/*!
+ @brief An event sink that the cloud recording storage is full.
+ @param gracePeriodDate A point in time, in milliseconds in, UTC.
+ @warning You can use the cloud recording storage until the gracePeriodDate.
+ */
+- (void)onCloudRecordingStorageFull:(long)gracePeriodDate;
+
+/*!
+ @brief Callback event for when the host responds to a cloud recording permission request.
+ @param status Value of request host to start cloud recording response status. For more details,
+*/
+- (void)onRequestCloudRecordingResponse:(MobileRTCRequestStartCloudRecordingStatus)status;
+
+ /*!
+  @brief Callback event received only by the host when a user requests to start cloud recording.
+  @param handler A pointer to the MobileRTCRequestStartCloudRecordingPrivilegeHandler.
+  */
+- (void)onStartCloudRecordingRequested:(MobileRTCRequestStartCloudRecordingPrivilegeHandler*_Nullable) handler;
+
+ /*!
+  @brief Callback event that lets participants request hots to start cloud recording.
+  @param allow True allow. If false, disallow.
+ */
+- (void)onAllowParticipantsRequestCloudRecording:(BOOL)allow;
+
 #pragma mark -- smart summary --
+
 /*!
  * @brief Callback event when smart summary status changes.
  * @param isStarted true means that the smart summary is started. False means it has not.
  */
-- (void)onSmartSummaryStatusChange:(BOOL)isStarted;
+- (void)onSmartSummaryStatusChange:(BOOL)isStarted 
+DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelperDelegate instead");
 
 /*!
  * @brief Callback event when a user requests the host to start smart summary.
  * @param userId The user who requests the host to start smart summary.
  * @param handler The handler to handle the smart summary start request.
  */
-- (void)onSmartSummaryPrivilegeRequested:(NSInteger)userId handler:(MobileRTCSmartSummaryPrivilegeHandler *_Nullable)handler;
+- (void)onSmartSummaryPrivilegeRequested:(NSInteger)userId handler:(MobileRTCSmartSummaryPrivilegeHandler *_Nullable)handler 
+DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelperDelegate instead");
 
 /*!
  * @brief Callback event when the host handle the smart summary request.
  * @param timeout true means the host doesn't handle the request until timeout.
- * @param decline true means the host declines the request, false means the host agrees to the request.
+ * @param isDecline true means the host declines the request, false means the host agrees to the request.
  */
-- (void)onSmartSummaryStartReqResponse:(BOOL)timeout decline:(BOOL)isDecline;
+- (void)onSmartSummaryStartReqResponse:(BOOL)timeout decline:(BOOL)isDecline
+DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCAICompanionSmartSummaryHelperDelegate instead");
 
 /*!
  * @brief Sink the event that AI Companion active status changed.
@@ -495,7 +551,7 @@
 
 /*!
  * @brief Polling elapsed time callback.
- * @param questionID Specify the polling question's ID.
+ * @param pollingID Specify the polling question's ID.
  * @param uElapsedtime Specify the polling elapsed time in milliseconds.
  * @warning This is triggered when a host starts a poll or a user changes to host from non host.
  */
@@ -511,11 +567,16 @@
  * @brief polling inactive callback. When the user starts a meeting in another device by same account, this callback is triggered. Then call CanDoPolling return false.
  */
 - (void)onPollingInactive;
+/*!
+ @brief Callback event of alpha channel mode changes.
+ @param alphaChannelOn YES means it's in alpha channel mode. Otherwise, it's not.
+ */
+- (void)onVideoAlphaChannelStatusChanged:(BOOL)alphaChannelOn;
 
 #pragma mark - MobileRTCAudioServiceDelegate
 /*!
- @brief @brief A user's audio status has changed. To get their updated status, check [MobileRTCMeetingUserInfo.audioStatus] for the associated user.
- @param UserID The ID of user whose audio status has changed.
+ @brief A user's audio status has changed. To get their updated status, check [MobileRTCMeetingUserInfo.audioStatus] for the associated user.
+ @param userID The ID of user whose audio status has changed.
  */
 - (void)onSinkMeetingAudioStatusChange:(NSUInteger)userID;
 
@@ -530,9 +591,21 @@
  */
 - (void)onSinkMeetingAudioTypeChange:(NSUInteger)userID;
 
+/**
+ * @brief Callback event that requests to join third party telephony audio.
+ * @param audioInfo Instruction on how to join the meeting with third party audio.
+ */
+ - (void)onSinkJoin3rdPartyTelephonyAudio:(NSString * _Nullable)audioInfo;
+
+/**
+@brief Callback event for the mute on entry status changed.
+@param bEnabled Specify whether the mute on entry is enabled or not.
+ */
+- (void)onMuteOnEntryStatusChange:(BOOL)bEnabled;
+
 /*!
  @brief A user's audio status has changed.
- @param UserID The ID of the user whose audio status has changed.
+ @param userID The ID of the user whose audio status has changed.
  @param audioStatus The new audio status of the user.
 */
 - (void)onSinkMeetingAudioStatusChange:(NSUInteger)userID audioStatus:(MobileRTC_AudioStatus)audioStatus;
@@ -600,7 +673,14 @@
  @brief The active video user has changed.
  @param userID The ID of the newly displayed user.
  */
-- (void)onSinkMeetingActiveVideoForDeck:(NSUInteger)userID;
+- (void)onSinkMeetingActiveVideoForDeck:(NSUInteger)userID
+DEPRECATED_MSG_ATTRIBUTE("Use onActiveSpeakerVideoUserChanged: instead");
+
+/*!
+ @brief The active video user has changed.
+ @param userID The ID of the newly displayed user.
+ */
+- (void)onActiveSpeakerVideoUserChanged:(NSUInteger)userID;
 
 /*!
  @brief The video quality of a user has changed.
@@ -740,6 +820,20 @@
 */
 - (void)onSinkSharingStatus:(MobileRTCSharingStatus)status userID:(NSUInteger)userID;
 
+/**
+ * @brief Notification of shared content is changed.
+ * @param shareContentType The shared content,
+ */
+- (void)onShareContentChanged:(MobileRTCShareContentType)shareContentType;
+
+/*!
+ @brief You will receive this event when you are in a breakout room, and someone shares from the main session to the breakout room
+ @param sharingID The sharing ID.
+ @param status The sharing status. For more details, see \link MobileRTCDirectShareStatus \endlink enum.
+ @param shareAction The pointer of share action object. For more details, see \link MobileRTCShareAction \endlink.
+ */
+- (void)onShareFromMainSession:(NSUInteger)sharingID shareStatus:(MobileRTCSharingStatus)status shareAction:(MobileRTCShareAction *_Nullable)shareAction;
+
 /*!
  @brief The sharing settings change.
  @param shareSettingType The share setting type of current meeting.
@@ -799,7 +893,7 @@
 
 /*!
  @brief Indicates a change in the list of available languages that interpreters can hear. When the list of available languages that interpreters can hear in a meeting changes, all interpreters in the meeting get this event.
- @param interpreterAvailableListenLanList The list of available languages that interpreters can hear.
+ @param availableLanguages The list of available languages that interpreters can hear.
 */
 - (void)onInterpreterLanguagesUpdated:(NSArray <MobileRTCInterpretationLanguage *> *_Nullable)availableLanguages;
 
@@ -831,8 +925,7 @@
 - (void)onAvailableSignLanguageListUpdated:(NSArray<MobileRTCSignInterpreterLanguage *> *_Nullable)availableSignLanguageList;
 
 /*!
- @brief Callback event of the requirement to unmute the audio from the host.
- @param handler A pointer to the ZoomSDKSignInterpterToTalkHander. For more details, see {@link ZoomSDKSignInterpterToTalkHander} object.
+ @brief Callback event of the requirement to unmute sign interpreter's audio from the host.
  */
 - (void)onRequestSignInterpreterToTalk;
 
@@ -841,6 +934,19 @@
  @param hasPrivilege Specify whether the user has talk privilege or not
  */
 - (void)onTalkPrivilegeChanged:(BOOL)hasPrivilege;
+
+/**
+ @brief Callback event of meeting QA feature status changes.
+ *@param isMeetingQAFeatureOn YES means meeting QA feature is on, otherwise not.
+ */
+- (void)onMeetingQAStatusChanged:(BOOL)isMeetingQAFeatureOn;
+
+/*!
+ @brief Notify host/cohost has changed the status of ask question.
+ @param bEnabled Can ask question or not.
+*/
+-(void)onAllowAskQuestionStatus:(BOOL)bEnabled;
+
 
 #pragma mark - MobileRTCWebinarServiceDelegate
 /*!
@@ -894,7 +1000,7 @@
 
 /*!
  @brief Callback event when a new answer is received.
- @param questionID The question ID.
+ @param answerID The question ID.
  */
 - (void)onSinkReceiveAnswer:(NSString *_Nonnull)answerID;
 
@@ -913,14 +1019,14 @@
 /*!
  @brief Callback event when the question is upvoted.
  @param questionID The question ID.
- @param order_changed Order changed.
+ @param orderChanged Order changed.
  */
 - (void)onSinkVoteupQuestion:(NSString *_Nonnull)questionID orderChanged:(BOOL)orderChanged;
 
 /*!
  @brief Callback event when the question upvote is revoked.
  @param questionID The question ID.
- @param order_changed Order changed.
+ @param orderChanged Order changed.
  */
 - (void)onSinkRevokeVoteupQuestion:(NSString *_Nonnull)questionID orderChanged:(BOOL)orderChanged;
 
@@ -1001,8 +1107,8 @@
 
 /*!
  @brief When attendee agrees or declines the promote invitation, the host receives this callback.
- @param agree, If attendee agrees, return true. Otherwise, return false.
- @param userid, The attendee user ID.
+ @param agree If attendee agrees, return true. Otherwise, return false.
+ @param userId The attendee user ID.
  */
 - (void)onSinkAttendeePromoteConfirmResult:(BOOL)agree userId:(NSUInteger)userId;
 
@@ -1024,7 +1130,7 @@
 
 /*!
  @brief Invoke this function when the attendee is allow or not allow to using raise hand.
- @param canReaction If the raise hand is allowed, the result is YES, otherwise NO.
+ @param canRaiseHand If the raise hand is allowed, the result is YES, otherwise NO.
 */
 - (void)onAllowAttendeeRaiseHandStatusChanged:(BOOL)canRaiseHand;
 
@@ -1034,6 +1140,11 @@
 */
 - (void)onAllowAttendeeViewTheParticipantCountStatusChanged:(BOOL)canViewParticipantCount;
 
+/*!
+ @brief When joining the webinar, this callback is triggered if the user needs to input a username.
+ @param handler An object used by user to complete all the related operations.
+ */
+- (void)onWebinarNeedInputScreenName:(MobileRTCWebinarInputScreenNameHandler*_Nullable)handler;
 #pragma mark - MobileRTCLiveTranscriptionServiceDelegate
 
 /**
@@ -1069,8 +1180,8 @@
 
 /*!
  @brief Translation message error callback.
- @param speakingLanguage: an object of the speak message language.
- @param translationLanguage: an object of the message language you want to translate.
+ @param speakLanguage an object of the speak message language.
+ @param transcriptLanguage an object of the message language you want to translate.
  */
 - (void)onLiveTranscriptionMsgError:(MobileRTCLiveTranscriptionLanguage * _Nullable)speakLanguage
                  transcriptLanguage:(MobileRTCLiveTranscriptionLanguage * _Nullable)transcriptLanguage;
@@ -1306,7 +1417,71 @@
  */
 - (void)onE2EEMeetingSecurityCodeChanged;
 
-@end
+#pragma mark - Focus mode delegate -
+/*!
+ * @brief The focus mode state was changed by the host or co-host.
+ * @param on YES means the focus mode on.
+ */
+- (void)onFocusModeStateChanged:(BOOL)on;
+
+/*!
+ * @brief The focus mode share type was changed by the host or co-Host.
+ * @param shareType share type change.
+ */
+- (void)onFocusModeShareTypeChanged:(MobileRTCFocusModeShareType)shareType;
+
+
+
+#pragma mark - ArchiveConfrim  -
+
+/*!
+ * @brief callback event when join meeting if the admin has set the user can choose to archive the meeting.
+ * @param handler the handler for the user to choose whether archive the meeting when join the meeting.
+ */
+- (void)onUserConfirmToStartArchive:(MobileRTCArchiveConfrimHandle * _Nullable)handler;
+
+#pragma mark - AICompanion  
+/**
+ * @brief Callback the event when the auto start AI Companion feature is turned off by an attendee before the host joins. Only the host or cohost can receive the callback.
+ * @param handler The handler to turn on again the AI feature or leave the feature turned off.
+ */
+- (void)onAICompanionFeatureTurnOffByParticipant:(MobileRTCAICompanionTurnOnAgainHandler * _Nullable)handler;
+
+/**
+ * @brief Callback the event when the host receives the request to turn the AI Companion features on or off.
+ * @param handler Tthe handler to turn the AI Companions features on or off.
+ */
+- (void)onAICompanionFeatureSwitchRequested:(MobileRTCAICompanionSwitchHandler *_Nullable)handler;
+/**
+ * @brief Callback the event when the host handles the request to turn the AI Companion features on or off.
+ * @param timeout The host will not handle the request until timeout.
+ * @param agree the host agrees to the request to turn the AI Companion features on or off.
+ * @param turnOn True means the request is to turn the AI Ccompanion features on. False means turn the AI Companion features off.
+ */
+- (void)onAICompanionFeatureSwitchRequestResponse:(BOOL)timeout agree:(BOOL)agree turn:(BOOL)turnOn;
+/**
+ * @brief Callback the event when the started AI Companion feature can't be turned off.
+ * @param featuresArr The AI features that can't be turned off. see {@link MobileRTCAICompanionType}.
+ */
+- (void)onAICompanionFeatureCanNotBeTurnedOff:(NSArray <NSNumber*> *_Nullable)featuresArr;
+
+#pragma mark - File Transfer -
+/**
+ @brief Invoked when start send file.
+ @param sender The class to sendfile object.
+ */
+- (void)onFileSendStart:(MobileRTCFileSender * _Nullable)sender;
+/**
+ @brief Invoked when receiving a file from another user.
+ @param receiver The class to receive file object.
+ */
+- (void)onFileReceived:(MobileRTCFileReceiver * _Nullable)receiver;
+/**
+ @brief Invoked when send or receive file status change.
+ @param info The class to basic transfer information.
+ */
+- (void)onFileTransferProgress:(MobileRTCFileTransferInfo * _Nullable)info;
+ @end
 
 #pragma mark - MobileRTCCustomizedUIMeetingDelegate
 /*!
@@ -1314,16 +1489,16 @@
  @brief The class that conform to the MobileRTCCustomizedUIMeetingDelegate protocol can provide
         methods for tracking the In-Meeting Event and determining policy for each event.
  @discussion The MobileRTCCustomizedUIMeetingDelegate protocol is required in the custom meeting UI view.
- */ 
+ */
 @protocol MobileRTCCustomizedUIMeetingDelegate <NSObject>
 @required
 /*!
- @brief Notify user to create a custom in-meeting UI. 
+ @brief Notify user to create a custom in-meeting UI.
  */
 - (void)onInitMeetingView;
 
 /*!
- @brief Notify user to destroy the custom in-meeting UI. 
+ @brief Notify user to destroy the custom in-meeting UI.
  */
 - (void)onDestroyMeetingView;
 
@@ -1389,7 +1564,7 @@
 
 /*!
  @brief Notify to receive the share audio raw data.
- @param data The received audio raw data.
+ @param rawData The received audio raw data.
  */
 - (void)onShareAudioRawDataReceived:(MobileRTCAudioRawData *_Nonnull)rawData;
 @end
@@ -1457,7 +1632,6 @@
 
 /*!
  @brief Send data for initialization.
- @param rawDataSender See MobileRTCVideoSender.
  @param supportCapabilityArray Support capability list.
  @param suggestCapabilityItem Suggest capability.
 */
@@ -1530,13 +1704,15 @@
 
 /*!
  @brief Notify support country list for send SMS, privacy URL, and send SMS handle.
- @param supportCountryList, privacyUrl, retrieveHandle
+ @param supportCountryList the country list which need real name auth.
+ @param privacyUrl the url of real name auth.
+ @param handle the real name auth handle.
  */
 - (void)onNeedRealNameAuth:(NSArray<MobileRTCRealNameCountryInfo *> * _Nonnull)supportCountryList privacyURL:(NSString * _Nonnull)privacyUrl retrieveHandle:(MobileRTCRetrieveSMSHandler * _Nonnull)handle;
 
 /*!
  @brief Notify the result of send SMS, and verify SMS handle.
- @param result, verifyHandle
+ @param result verifyHandle
  */
 - (void)onRetrieveSMSVerificationCodeResultNotification:(MobileRTCSMSRetrieveResult)result verifyHandle:(MobileRTCVerifySMSHandler * _Nonnull)handler;
 
@@ -1547,3 +1723,4 @@
 - (void)onVerifySMSVerificationCodeResultNotification:(MobileRTCSMSVerifyResult)result;
 
 @end
+

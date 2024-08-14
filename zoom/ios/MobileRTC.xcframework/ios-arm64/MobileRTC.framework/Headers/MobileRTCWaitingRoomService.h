@@ -52,14 +52,14 @@ typedef NS_ENUM(NSUInteger, MobileRTCCustomWaitingRoomDataStatus) {
 @end
 
 /*!
- @class MobileRTCWaitingRoomServiceDelegate
+ MobileRTCWaitingRoomServiceDelegate
  @brief Meeting host enabled the waiting room feature, then the delegate will receive this notification  #only for custom UI#.
  */
 @protocol MobileRTCWaitingRoomServiceDelegate <NSObject>
 @optional
 
 /*!
- @protocol MobileRTCWaitingRoomServiceDelegate
+ MobileRTCWaitingRoomServiceDelegate
  @brief Meeting host enabled the waiting room feature, then the delegate will receive this notification  #only for custom UI#.
          onWaitingRoomUserJoin: will notify the host someone entery the waiting room.
          onWaitingRoomUserLeft: will notify the host someone left from waiting room.

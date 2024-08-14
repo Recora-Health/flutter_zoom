@@ -7,7 +7,7 @@
 //
 
 #import <MobileRTC/MobileRTC.h>
-#import "MobileRTCConstants.h"
+
 
 @interface MobileRTCPollingItem : NSObject
 - (NSString *_Nullable)getPollingID;
@@ -43,6 +43,7 @@
 @interface MobileRTCPollingAnswerResultItem : NSObject
 - (NSString *_Nullable)getPollingID;
 - (NSString *_Nullable)getPollingQuestionID;
+- (NSString *_Nullable)getPollingSubQuestionID;
 - (NSString *_Nullable)getPollingAnswerID;
 - (NSString *_Nullable)getPollingAnswerName;
 - (NSInteger)getSelectedCount;
@@ -81,7 +82,6 @@
 /*!
  * @brief Get the list of polling question or subquestion's right answer.
  * @param pollingID Specify the right answer's polling ID.
- * @param questionID Specify the right answer's question ID
  * @return If the function succeeds, the return value is NSArray<MobileRTCPollingAnswerItem*>. Otherwise, the return value is nil.
  */
 - (NSArray <MobileRTCPollingAnswerItem *> * _Nullable)getPollingRightAnswerItemList:(NSString *_Nullable)pollingID;
@@ -96,15 +96,13 @@
 /*!
  * @brief Get the list of polling answer result item.
  * @param pollingID Specify the right answer's polling ID.
- * @param questionID Specify the right answer's question ID
  * @return If the function succeeds, the return value is NSArray<MobileRTCPollingAnswerResultItem*>. Otherwise, the return value is nil.
  */
-- (NSArray <MobileRTCPollingAnswerResultItem *> * _Nullable)getPollingAnswerResultItemList:(NSString *_Nullable)pollingID questionID:(NSString *_Nullable)questionID;
+- (NSArray <MobileRTCPollingAnswerResultItem *> * _Nullable)getPollingAnswerResultItemList:(NSString *_Nullable)pollingID;
 
 /*!
  * @brief Get the polling item object of specified polling ID.
  * @param pollingID Specify the polling ID for which you want to get the information.
- * @param questionID Specify the right answer's question ID.
  * @return If the function succeeds, the return value is MobileRTCPollingItem. Otherwise, the return value is nil.
  */
 - (MobileRTCPollingItem * _Nullable)getPollingItemByID:(NSString *_Nullable)pollingID;

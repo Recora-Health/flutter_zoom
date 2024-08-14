@@ -232,7 +232,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 
 /*!
 @brief Set BO option.
-@param option, the option that you want to set.
+ @param option the option that you want to set.
 @return if success the return value is YES, otherwise NO.
 */
 - (BOOL)setBOOption:(MobileRTCBOOption *_Nonnull)option;

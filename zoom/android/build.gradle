@@ -42,7 +42,7 @@ android {
         versionName "1.0"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
-        consumerProguardFiles 'proguard.txt'
+        consumerProguardFiles 'proguard.cfg'
     }
     lintOptions {
         checkReleaseBuilds false
