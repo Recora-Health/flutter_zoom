@@ -17,9 +17,9 @@ rootProject.allprojects {
         google()
         jcenter()
 
-        // flatDir {
-        //     dirs project(':zoom').file('libs')
-        // }
+        flatDir {
+            dirs project(':zoom').file('libs')
+        }
     }
 }
 
@@ -63,7 +63,7 @@ android {
 dependencies {
 
     // Added for 6.1.5
-    implementation (files('libs/mobilertc.aar', 'zoom'))
+    // implementation (files("libs/mobilertc.aar", ))
     implementation  'androidx.appcompat:appcompat:1.6.1'
     implementation  'com.google.android.material:material:1.9.0'
     implementation  'com.google.android:flexbox:2.0.1'
