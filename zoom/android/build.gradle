@@ -63,9 +63,11 @@ android {
 
 dependencies {
 
+    api project(':zoom')
+	api files('./libs/mobilertc.aar')
     // implementation project(':mobilertc')
     // implementation project(':zoom')
-    implementation (files("libs/mobilertc.aar"))
+    // implementation (files("libs/mobilertc.aar"))
 
     // Added for 6.1.5
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -143,6 +145,7 @@ dependencies {
     implementation 'androidx.fragment:fragment-ktx:1.4.1'
     implementation 'androidx.core:core-splashscreen:1.0.1'
 
-    api(name: 'mobilertc', ext: 'aar')
+
+    // api(name: 'mobilertc', ext: 'aar')
 }
 
