@@ -64,7 +64,7 @@ android {
 dependencies {
 
     // implementation project(':mobilertc')
-    // implementation project(':zoom')
+    implementation project(':zoom')
 
     // Added for 6.1.5
     implementation 'androidx.appcompat:appcompat:1.6.1'
