@@ -63,8 +63,8 @@ android {
 
 dependencies {
 
-    api project(':flutter_zoom')
-	api files('./libs/mobilertc.aar')
+    api project(':zoom')
+	// api files('./libs/mobilertc.aar')
     // implementation project(':mobilertc')
     // implementation project(':zoom')
     // implementation (files("libs/mobilertc.aar"))
@@ -146,6 +146,6 @@ dependencies {
     implementation 'androidx.core:core-splashscreen:1.0.1'
 
 
-    // api(name: 'mobilertc', ext: 'aar')
+    api(name: 'mobilertc', ext: 'aar')
 }
 
