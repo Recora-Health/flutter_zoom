@@ -62,7 +62,7 @@ android {
 
 dependencies {
 
-    implementation project(':mobilertc')
+    // implementation project(':mobilertc')
     implementation project(':zoom')
 
     // Added for 6.1.5
