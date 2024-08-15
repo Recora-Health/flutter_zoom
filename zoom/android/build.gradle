@@ -125,7 +125,6 @@ dependencies {
     implementation "androidx.fragment:fragment-ktx:1.4.1"
     implementation "androidx.core:core-splashscreen:1.0.1"
 
-    api files('./libs/mobilertc.aar')
     api(name: 'mobilertc', ext: 'aar')
 }
 
