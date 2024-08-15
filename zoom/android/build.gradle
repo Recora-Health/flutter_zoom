@@ -17,9 +17,9 @@ rootProject.allprojects {
         google()
         jcenter()
 
-        // flatDir {
-        //     dirs project(':zoom').file('libs')
-        // }
+        flatDir {
+            dirs project(':zoom').file('libs')
+        }
     }
 }
 
@@ -29,12 +29,12 @@ android {
     compileSdkVersion 34
     buildToolsVersion = "30.0.3"
 
-    sourceSets {
-        main {
-            // jniLibs.srcDirs = ['libs']
-            main.java.srcDirs += 'libs'
-        }
-    }
+    // sourceSets {
+    //     main {
+    //         // jniLibs.srcDirs = ['libs']
+    //         main.java.srcDirs += 'libs'
+    //     }
+    // }
 
     viewBinding {
         enabled = true
@@ -63,7 +63,7 @@ android {
 
 dependencies {
 
-    api project(':zoom')
+    // api project(':zoom')
 	// api files('./libs/mobilertc.aar')
     // implementation project(':mobilertc')
     // implementation project(':zoom')
