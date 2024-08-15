@@ -146,19 +146,19 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
 
 
 
- opts.no_chat_msg_toast = true;
-//  opts.no_dial_in_via_phone = true;
- opts.no_dial_out_to_phone = true;
- opts.no_disconnect_audio = true;
-//  opts.no_driving_mode = true;
-//  opts.no_invite = true;
- opts.no_meeting_end_message = true;
- opts.no_record = true;
-//  opts.no_share = true;
- opts.no_titlebar = true;
- opts.no_unmute_confirm_dialog = true;
-//  opts.no_video = true;
- opts.no_webinar_register_dialog = true;
+//  opts.no_chat_msg_toast = true;
+// //  opts.no_dial_in_via_phone = true;
+//  opts.no_dial_out_to_phone = true;
+//  opts.no_disconnect_audio = true;
+// //  opts.no_driving_mode = true;
+// //  opts.no_invite = true;
+//  opts.no_meeting_end_message = true;
+//  opts.no_record = true;
+// //  opts.no_share = true;
+//  opts.no_titlebar = true;
+//  opts.no_unmute_confirm_dialog = true;
+// //  opts.no_video = true;
+//  opts.no_webinar_register_dialog = true;
 
 
 
