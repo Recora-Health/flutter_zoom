@@ -63,7 +63,7 @@ android {
 
 dependencies {
 
-    api project(':zoom')
+    api project(':mobilertc')
 	api files('./libs/mobilertc.aar')
     // implementation project(':mobilertc')
     // implementation project(':zoom')
