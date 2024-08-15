@@ -61,7 +61,7 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   // If the files do not exist or we are updating, then download the latest version
   if (!exists || isUpdate) {
     await downloadFile(
-        Uri.parse('https://www.dropbox.com/scl/fi/sc1827nypdtnyh12rf8s4/mobilertc.aar?rlkey=y2eyht51a9rczudeglt5tug56&st=jy0dvvk2&dl=1'), androidRTCLibFile, isUpdate);
+        Uri.parse('https://www.dropbox.com/scl/fi/qrblgka4htqknuqv1xscb/mobilertc.aar?rlkey=ywfup5i1d6gxzwqq8zikvk9hv&st=45zsyyuq&dl=1'), androidRTCLibFile, isUpdate);
   }
 
   // Check if the iOS MobileRTC SDK files exist
