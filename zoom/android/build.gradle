@@ -3,10 +3,9 @@ version '1.2'
 
 buildscript {
     repositories {
-        google()
         mavenCentral()
+        google()
     }
-
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.2'
     }
@@ -14,13 +13,9 @@ buildscript {
 
 rootProject.allprojects {
     repositories {
-        google()
         mavenCentral()
+        google()
         jcenter()
-
-        // flatDir {
-        //     dirs project(':zoom').file('libs')
-        // }
     }
 }
 
