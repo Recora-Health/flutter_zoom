@@ -1,8 +1,6 @@
 # Flutter Zoom
 A Flutter plugin for the Zoom Client SDK.
 
-## iOS Simulator is not working in this version
-
 ## Zoom SDK Versions
 
 Android: zoom-sdk-android-6.1.5.23231
