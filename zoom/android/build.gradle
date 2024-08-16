@@ -63,13 +63,6 @@ android {
 }
 
 dependencies {
-
-    // api project(':zoom')
-	// api files('./libs/mobilertc.aar')
-    // implementation project(':mobilertc')
-    // implementation project(':zoom')
-    // implementation (files("libs/mobilertc.aar"))
-
     // Added for 6.1.5
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
