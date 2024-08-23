@@ -4,7 +4,6 @@ version '1.2'
 buildscript {
     repositories {
         google()
-        // jcenter()
         mavenCentral()
         maven { url "https://maven.aliyun.com/repository/jcenter" }
     }
@@ -17,7 +16,6 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
-        // jcenter()
         maven { url "https://maven.aliyun.com/repository/jcenter" }
 
         flatDir {
@@ -31,13 +29,6 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 34
     buildToolsVersion = "30.0.3"
-
-    // sourceSets {
-    //     main {
-    //         // jniLibs.srcDirs = ['libs']
-    //         main.java.srcDirs += 'libs'
-    //     }
-    // }
 
     viewBinding {
         enabled = true
