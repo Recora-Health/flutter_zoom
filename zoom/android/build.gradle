@@ -4,8 +4,9 @@ version '1.2'
 buildscript {
     repositories {
         google()
-        jcenter()
+        // jcenter()
         mavenCentral()
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.2'
@@ -14,9 +15,10 @@ buildscript {
 
 rootProject.allprojects {
     repositories {
-        mavenCentral()
         google()
-        jcenter()
+        mavenCentral()
+        // jcenter()
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
 
         flatDir {
             dirs project(':zoom').file('libs')
