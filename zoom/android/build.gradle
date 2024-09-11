@@ -1,5 +1,5 @@
 group 'com.webcare.zoom'
-version '1.2'
+version '1.3.0'
 
 buildscript {
     repositories {
@@ -56,6 +56,10 @@ android {
 }
 
 dependencies {
+    // Updates for 6.1.10
+
+
+
     // Added for 6.1.5
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
