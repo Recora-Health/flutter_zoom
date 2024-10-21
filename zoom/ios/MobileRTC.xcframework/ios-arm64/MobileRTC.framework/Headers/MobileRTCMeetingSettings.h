@@ -563,18 +563,6 @@
 - (BOOL)isHideMeetingInputUserInfoWindow;
 
 /*!
- @brief Call this method to enable or disable the auto adjust input of mic.
- @param enable YES to enable auto adjust input or false to disable it.
- */
-- (void)enableAutoAdjustMic:(BOOL)enable DEPRECATED_MSG_ATTRIBUTE("Not maintain anymore");
-
-/*!
- @brief Determine whether the original input of the microphone is enabled.
- @return YES if auto adjust input  is enabled, otherwise false.
- */
-- (BOOL)isAutoAdjustMicEnable DEPRECATED_MSG_ATTRIBUTE("Not maintain anymore");
-
-/*!
  @brief Query if this device supports CenterStage Mode.
  @return YES means supported, otherwise not.
  @warning only iPad of os version above 14.5 can using this feature.

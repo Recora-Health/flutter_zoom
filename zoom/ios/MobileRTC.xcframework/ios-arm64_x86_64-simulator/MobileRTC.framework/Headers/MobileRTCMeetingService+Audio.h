@@ -70,13 +70,6 @@
 - (BOOL)isMuteOnEntryOn;
 
 /*!
- @brief Set if attendees join the meeting with audio muted. 
- @return YES means muted, otherwise not.
- @warning Only meeting host/co-host can run the function.
- */
-- (BOOL)muteOnEntry:(BOOL)on DEPRECATED_MSG_ATTRIBUTE("Use enableMuteOnEntry:allowUnmuteBySelf: instead");
-
-/*!
  @brief Query if the user's audio is muted.
  @param userID The ID of user to be checked.
  @return YES means muted, otherwise not.

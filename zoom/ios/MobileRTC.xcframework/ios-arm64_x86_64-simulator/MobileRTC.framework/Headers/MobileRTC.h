@@ -300,10 +300,10 @@
 - (void)appDidBecomeActive;
 
 /*!
- @brief Notify common layer that application did enter background. Call the appDidEnterBackgroud via applicationDidEnterBackground.
+ @brief Notify common layer that application did enter background. Call the appDidEnterBackground via applicationDidEnterBackground.
  @warning It is necessary to call the method in AppDelegate "- (void)applicationDidEnterBackground:(UIApplication *)application".
  */
-- (void)appDidEnterBackgroud;
+- (void)appDidEnterBackground;
 
 /*!
  @brief Notify common layer that application will terminate. Call the appWillTerminate via applicationWillTerminate.

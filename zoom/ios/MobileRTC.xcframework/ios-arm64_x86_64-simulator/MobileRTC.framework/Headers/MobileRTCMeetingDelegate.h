@@ -440,7 +440,7 @@
  @brief Determine if the current user has cloud recording privileges.
  @param result The result of checking CMR privilege.
  */
-- (void)onCheckCMRPrivilege:(MobileRTCCMRError)result;
+- (void)onCheckCMRPrivilege:(MobileRTCCMRError)result DEPRECATED_MSG_ATTRIBUTE("Not maintain anymore");
 
 /*!
  @brief The cloud recording status has changed.
@@ -745,7 +745,7 @@ DEPRECATED_MSG_ATTRIBUTE("Use onActiveSpeakerVideoUserChanged: instead");
 /*!
  @brief The user state is updated in the meeting.
  */
-- (void)onInMeetingUserUpdated;
+- (void)onInMeetingUserUpdated DEPRECATED_MSG_ATTRIBUTE("Will delete later, if you need this API, please contact us");
 
 /*!
  @brief The user avatar path is updated in the meeting
@@ -1159,13 +1159,6 @@ DEPRECATED_MSG_ATTRIBUTE("Use onActiveSpeakerVideoUserChanged: instead");
 */
 - (void)onSinkLiveTranscriptionStatus:(MobileRTCLiveTranscriptionStatus)status;
 
-/*!
- @brief Sink the event of receive the live transcription message.
- @param msg The received live transcription message.
- @param speakerId The speaker ID of the received live transcription message.
- @param type The live transcription operation type. For more details, see MobileRTCLiveTranscriptionOperationType.
-*/
-- (void)onSinkLiveTranscriptionMsgReceived:(NSString *_Nonnull)msg speakerId:(NSUInteger)speakerId type:(MobileRTCLiveTranscriptionOperationType)type DEPRECATED_MSG_ATTRIBUTE("Use -onLiveTranscriptionMsgInfoReceived: instead");
 /*
 @brief live transcription message received callback.
 @param messageInfo The live transcription message, see \link MobileRTCLiveTranscriptionMessageInfo \endlink.

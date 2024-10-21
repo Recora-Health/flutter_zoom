@@ -798,7 +798,7 @@ typedef NS_ENUM(NSUInteger,MobileRTCRawDataError)
     MobileRTCRawData_Invalid_Param,
     MobileRTCRawData_Not_In_Meeting,
     MobileRTCRawData_No_License,
-    MobileRTCRawData_Unknow,
+    MobileRTCRawData_Unknown,
     
     MobileRTCRawData_Video_Module_Not_Ready,
     MobileRTCRawData_Video_Module_Error,
@@ -1220,7 +1220,7 @@ typedef NS_ENUM(NSInteger, MobileRTCNotificationServiceStatus) {
 typedef NS_ENUM(NSInteger, MobileRTCNotificationServiceError)
 {
     MobileRTCNotificationServiceError_Success = 0,
-    MobileRTCNotificationServiceError_Unknow, //Unknown error.
+    MobileRTCNotificationServiceError_Unknown, //Unknown error.
     MobileRTCNotificationServiceError_Internal_Error, //Internal error, need retry.
     MobileRTCNotificationServiceError_Invalid_Token, //Invalid token.
     MobileRTCNotificationServiceError_Multi_Connect, //Use same user login again, the previous device will receive it.
@@ -1298,7 +1298,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCReminderType) {
     MobileRTCReminderTypeClosedCaptionDisclaimer,
     /// Reminder type of disclaimers combination.
     MobileRTCReminderType_MultiDisclaimer,
-    /// Reminder type for a join meeting connector with guest mode.
+    /// Reminder type of join meeting Connector with guest mode.
     MobileRTCReminderType_JoinMeetingConnectorAsGuestReminder,
     /// Reminder type of common disclaimer.
     MobileRTCReminderType_CommonDisclaimer,

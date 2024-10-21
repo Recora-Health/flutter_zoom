@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef enum : NSUInteger {
-    BOUserStatusUnknow      = 0,//the breakout meeting status is unknow.
+    BOUserStatusUnknown      = 0,//the breakout meeting status is unknown.
     BOUserStatusUnassigned  = 1, //User is in main conference, not assigned to BO
     BOUserStatusNotJoin     = 2, //User is assigned to BO, but not join
     BOUserStatusInBO        = 3, //User is already in BO
