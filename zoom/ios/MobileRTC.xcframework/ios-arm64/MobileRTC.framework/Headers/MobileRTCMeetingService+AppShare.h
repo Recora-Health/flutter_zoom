@@ -2,8 +2,8 @@
 //  MobileRTCMeetingService+AppShare.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2017/2/27.
-//  Copyright © 2019年 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2017/2/27.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <MobileRTC/MobileRTC.h>
@@ -60,6 +60,33 @@
 */
 - (MobileRTCSDKError)unsubscribe;
 
+@end
+
+/*!
+ @brief ZOOM share information class.
+ */
+@interface MobileRTCSSharingSourceInfo: NSObject
+
+/**
+ * @brief Get the User ID of the sharing Source Info.
+ * @return If the function succeeds, the return value is the User ID. Otherwise the function fails, and the return value is ZERO (0).
+ */
+- (NSUInteger)getUserID;
+/**
+ * @brief Get the ID of the sharing Source Source Info.
+ * @return If the function succeeds, the return value is the sharing Source ID. Otherwise the function fails, and the return value is ZERO (0).
+ */
+- (NSUInteger)getShareSourceID;
+/**
+ * @brief Get the Content Type of the sharing Source Info.
+ * @return If the function succeeds, the return value is the sharing Source Info Content Type . Otherwise the function fails, and the return value is ZERO (0).
+ */
+- (MobileRTCShareContentType)getContentType;
+/**
+ * @brief Get the Status of the sharing Source Info.
+ * @return If the function succeeds, the return value is the sharing Source Info Status. Otherwise the function fails, and the return value is ZERO (0).
+ */
+- (MobileRTCSharingStatus)getStatus;
 @end
 
 /*!
@@ -155,4 +182,25 @@
 * @return YES: allow, NO: disallow
 */
 - (BOOL)isParticipantsShareWhiteBoardAllowed;
+
+/**
+ * @brief Get the list of sharing source info.
+ * @param userID The user who is sharing.
+ * @return If the function succeeds, the return value is a pointer to the NSArray<MobileRTCSSharingSourceInfo*>, Otherwise, the return value is nil.
+ */
+- (NSArray <MobileRTCSSharingSourceInfo*> *_Nullable)getSharingSourceInfoList:(NSInteger)userID;
+
+/**
+ * @brief Set sharing types for the host or co-host in meeting.
+ * @param shareType Custom setting types of ZOOM SDK sharing.
+ * @return If the function succeeds, it will return MobileRTCSDKError_Success, otherwise not.
+ */
+-(MobileRTCSDKError)setShareSettingType:(MobileRTCShareSettingType)shareType;
+
+/**
+ * @brief Get the sharing types for the host or co-host in meeting.
+ * @return If the function succeeds, it will return MobileRTCShareSettingType, otherwise not.
+ */
+- (MobileRTCShareSettingType)getShareSettingType;
+
 @end

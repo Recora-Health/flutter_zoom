@@ -2,8 +2,8 @@
 //  MobileRTCMeetingService.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 8/7/14.
-//  Copyright (c) 2019 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 8/7/14.
+//  Copyright (c) Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -144,6 +144,11 @@
  * @brief The user's Zoom Access Key (ZAK) token.
  */
 @property (nullable, nonatomic, copy, readwrite) NSString * zak;
+
+/**
+ * @brief On behalf token.
+ */
+@property (nullable, nonatomic, copy, readwrite) NSString * onBehalfToken;
 
 /**
  * @brief Token that provides privileges when a user joins a meeting, for example, local recording permissions, streaming to raw, or archiving to raw.
@@ -347,5 +352,21 @@
  * @warning This method can only be called after auth ready and before join or start meeting.
  */
 - (BOOL)setCustomizedInvitationDomain:(NSString *_Nonnull)invitationDomain;
+
+/*!
+ @Return if production studio mode is supported
+*/
+- (BOOL)isSupportPSMode;
+
+/*!
+ * Determine if you have permission to start production studio mode. Only the host or /cohost can start production studio mode.
+ * @return If you have permission to start production studio mode, return true., Ootherwise, return false.
+*/
+- (BOOL)isPSModeStarted;
+
+/*!
+ @Return the production studio user's user ID.
+ */
+- (NSUInteger)getPSUserID;
 
 @end

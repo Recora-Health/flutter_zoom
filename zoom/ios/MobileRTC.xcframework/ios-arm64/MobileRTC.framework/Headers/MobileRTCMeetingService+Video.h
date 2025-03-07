@@ -2,11 +2,24 @@
 //  MobileRTCMeetingService+Video.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2018/6/6.
-//  Copyright © 2019 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2018/6/6.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <MobileRTC/MobileRTC.h>
+#import <AVFoundation/AVFoundation.h>
+
+@interface MobileRTCCameraDevice : NSObject
+@property (nonatomic, readonly, nullable, copy) NSString* deviceId;         /// camera device ID.
+@property (nonatomic, readonly, nullable, copy) NSString* deviceName;       /// camera name.
+@property (nonatomic, readonly, assign)         BOOL isSelectDevice;        /// is current use.
+@property (nonatomic, readonly, assign)         AVCaptureDevicePosition position;   /// camera position.
+@property (nonatomic, readonly, nullable, copy) AVCaptureDeviceType deviceType; /// camera device type.
+@property (nonatomic, readonly, assign)         CGFloat maxZoomFactor;  // camera maximum zoom factor. Maximum supported is 10.
+@property (nonatomic, readonly, assign)         CGFloat videoZoomFactorUpscaleThreshold;/// the maximum optical zoom factor.
+
+@end
+
 
 @interface MobileRTCMeetingService (Video)
 
@@ -123,6 +136,33 @@
  @return The result of operation. 
  */
 - (MobileRTCCameraError)switchMyCamera;
+
+/*!
+ @brief Get the camera device list.
+ @return The list of cameras.
+ @warning Only iOS 17.0 or above and iPad device can get the external camera devices.
+ */
+- (NSArray <MobileRTCCameraDevice *>* _Nullable)getCameraDeviceList;
+
+/*!
+ @brief Switch camera by camera ID.
+ @param cameraId The target camera ID.
+ @return Yes means it successfully switched camera, otherwise not.
+ */
+- (BOOL)switchCamera:(NSString * _Nullable)cameraId;
+
+/*!
+ @brief Get the current camera device in use.
+ @return return the current camra device in use.
+ */
+- (MobileRTCCameraDevice * _Nullable)getSelectedCamera;
+
+/*!
+ @brief Zoom the camera in or out.
+ @return Yes means zooming succeeded, otherwise if failed.
+ @warning Please refer to the MobileRTCCameraDevice class. The value of maxZoomFactor means the camera's maximum zoom factor. The value of videoZoomFactorUpscaleThreshold means the maximum scale of optical zoom factor.
+ */
+- (BOOL)zoomCamera:(CGFloat)velocity;
 
 /*!
  @brief Qurry if the account support follow host video order feature or not.

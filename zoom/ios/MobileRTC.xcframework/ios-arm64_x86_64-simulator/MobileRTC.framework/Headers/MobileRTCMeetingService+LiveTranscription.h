@@ -2,8 +2,8 @@
 //  MobileRTCMeetingService+LiveTranscription.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2021/10/27.
-//  Copyright © 2021 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2021/10/27.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <MobileRTC/MobileRTC.h>
@@ -37,7 +37,50 @@
 
 @end
 
+/**
+* The helper to handle the requested of start captions.
+* When isRequestTranslationOn is YES, use {@link -[MobileRTCCaptionsControlOnHandler approveStartCaptionsRequest ]} to approve start captions request.
+* When isRequestTranslationOn is NO,  use {@link -[MobileRTCCaptionsControlOnHandler approveStartCaptionsRequest:(NSInteger)languageId] } to approve start captions request.
+*/
 
+@interface MobileRTCCaptionsControlHandler : NSObject
+
+/**
+ * Decline the request  start captions.
+ * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise fails. For more details, see {@link MobileRTCSDKError}.
+ */
+-(MobileRTCSDKError)deny;
+
+/**
+ * @return The user ID of the user who send request to start captions.
+ */
+-(NSUInteger)getSenderUserId;
+
+/**
+ * @return YES means request to start captions with translation on. Otherwise NO.
+ */
+-(BOOL)isRequestTranslationOn;
+
+@end
+
+@interface MobileRTCCaptionsControlOnHandler : MobileRTCCaptionsControlHandler
+/**
+ * Approve the start captions request.
+ * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise fails. For more details, see {@link MobileRTCSDKError}.
+ */
+-(MobileRTCSDKError)approveStartCaptionsRequest;
+
+@end
+
+
+@interface MobileRTCCaptionsControlOffHandler : MobileRTCCaptionsControlHandler
+/**
+ * Approve the start captions request.
+ * @param languageId The language to be set for all participants in meeting.
+ * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise fails. For more details, see {@link MobileRTCSDKError}.
+ */
+-(MobileRTCSDKError)approveStartCaptionsRequest:(NSInteger)languageId;
+@end
 
 @interface MobileRTCMeetingService (LiveTranscription)
 
@@ -65,6 +108,25 @@
  @return YES  means that captions are enabled.
 */
 - (BOOL)isCaptionsEnabled;
+
+/**
+ @brief Determine whether users can request to start captions.
+ @return True indicates users can request to start captions. Otherwise False.
+  */
+- (BOOL)isSupportRequestCaptions;
+
+/**
+ * @brief  Request the host to start captions. If the host approves your request, you receive the callback {@link -[MobileRTCMeetingServiceDelegate onStartCaptionsRequestApproved]},and you should start captions or translation there.
+ * @param enableTranslation True indicates to enable translation at the same time.
+ * @return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise fails. For more details, see {@link MobileRTCSDKError}.
+ */
+- (MobileRTCSDKError)requestToStartCaptions:(BOOL)enableTranslation;
+
+/**
+ @brief Determine if translation is available when users request to start captions.
+ @return True indicates translation is available when users request to start captions. Otherwise False.
+ */
+- (BOOL)isSupportTranslationWhenRequestToStartCaptions;
 
 /*!
  @brief Query if the user is can be assigned to send closed caption.
@@ -188,7 +250,15 @@
  @param languageID the speak language id.
  @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
  */
-- (BOOL)setMeetingSpokenLanguage:(NSInteger)languageID;
+- (BOOL)setMeetingSpokenLanguage:(NSInteger)languageID DEPRECATED_MSG_ATTRIBUTE("Use setMeetingSpokenLanguage:isForAll: instead");;
+
+/*!
+ @brief Set the current user's spoken language
+ @param languageID the speak language ID.
+ @param isForAll True means set spoken language for all users. False means only set for myself.
+ @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+ */
+- (MobileRTCSDKError)setMeetingSpokenLanguage:(NSInteger)languageID isForAll:(BOOL)isForAll;
 
 /*!
  @brief Get the spoken language of the current user.

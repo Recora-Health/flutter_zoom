@@ -2,8 +2,8 @@
 //  MobileRTCMeetingService+Webinar.h
 //  MobileRTC
 //
-//  Created by chaobai admin on 07/08/2018.
-//  Copyright © 2019 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom on 07/08/2018.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <MobileRTC/MobileRTC.h>

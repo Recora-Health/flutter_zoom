@@ -2,8 +2,8 @@
 //  MobileRTCAuthService.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 8/8/14.
-//  Copyright (c) 2019 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 8/8/14.
+//  Copyright (c) Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

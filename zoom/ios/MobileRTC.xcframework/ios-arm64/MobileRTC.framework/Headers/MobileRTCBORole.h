@@ -2,8 +2,8 @@
 //  MobileRTCBORole.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2020/2/11.
-//  Copyright © 2020 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2020/2/11.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -185,7 +185,17 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 @param boName the BO name.
 @return bo meeting id.
 */
-- (NSString * _Nullable)createBO:(NSString * _Nonnull)boName;
+- (NSString * _Nullable)createBO:(NSString * _Nonnull)boName DEPRECATED_MSG_ATTRIBUTE("Use createBreakoutRoom: instead");
+
+/*!
+@brief create a breakout room.
+@note 1. This function is compatible with meeting breakout room and webinar breakout room.
+@note 2. This function is asynchronous, the callback is: 'onCreateBOResponse:BOID:'.
+@note 3. Webinar breakout room only support in Zoomui Mode
+@param boName the BO name.
+@return if success the return value is YES, otherwise NO.
+*/
+- (BOOL)createBreakoutRoom:(NSString * _Nonnull)boName;
 
 /*!
 @brief create bo meetings in batches.
@@ -195,14 +205,14 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 - (BOOL)createGroupBO:(NSArray<NSString*> * _Nonnull)boNameList;
 
 /**
- *@brief Creator webinar breakout meeting.
+ *@brief Creator webinar breakout meeting, available only For Zoomui Mode.
  *@param boNameList Breakout meeting name list，the element of nameList should less than 50 characters.
  *@return If the function succeeds,will return YES.
  */
 - (BOOL)createWebinarBO:(NSArray<NSString*> * _Nonnull)boNameList;
 
 /*!
-@brief update bo meeting name with bo id.
+@brief update bo meeting name with bo id, the callback is: 'onUpdateBONameResponse:BOID'.
 @param boId the BO id.
 @param boName the BO name.
 @return update success or not.
@@ -210,7 +220,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 - (BOOL)updateBO:(NSString * _Nonnull)boId name:(NSString * _Nonnull)boName;
 
 /*!
-@brief remove a bo meeting.
+@brief remove a bo meeting, the callback is: 'onRemoveBOResponse:BOID:'.
 @param boId the BO id.
 @return remove bo meting success or not.
 */
@@ -265,13 +275,13 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 
 @interface MobileRTCBOAdmin : NSObject
 /*!
-@brief start bo meeting which assigned.
+@brief start bo meeting which assigned,  the callback is: 'onStartBOResponse:'.
 @return start success or not
 */
 - (BOOL)startBO;
 
 /*!
-@brief stop bo meeting which assigned.
+@brief stop bo meeting which assigned, the callback is:' onStopBOResponse:'.
 @return stop success or not
 */
 - (BOOL)stopBO;

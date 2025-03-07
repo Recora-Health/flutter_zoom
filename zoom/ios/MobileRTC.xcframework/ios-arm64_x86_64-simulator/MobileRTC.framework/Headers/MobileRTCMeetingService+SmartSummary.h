@@ -2,8 +2,8 @@
 //  MobileRTCMeetingService+SmartSummary.h
 //  MobileRTC
 //
-//  Created by Jackie Chen on 10/10/23.
-//  Copyright © 2023 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom on 10/10/23.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <MobileRTC/MobileRTC.h>

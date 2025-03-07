@@ -3,7 +3,7 @@
 //  MobileRTC
 //
 //  Created by Zoom on 2022/11/16.
-//  Copyright © 2022 Zoom Video Communications, Inc. All rights reserved.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -17,6 +17,7 @@
 
 /*!
  @brief Callback event that the device for users to attend the meeting has changed.
+ @warning If the user uses -[MobileRTCAuthService registerNotificationService:] interface to connect to the service,they can't get in this callback webinar meeting list.
  @param deviceList A list of meeting info with active meetings.
  */
 - (void)onMeetingDeviceListChanged:(NSArray<MobileRTCInMeetingDeviceInfo*>*_Nullable)deviceList;

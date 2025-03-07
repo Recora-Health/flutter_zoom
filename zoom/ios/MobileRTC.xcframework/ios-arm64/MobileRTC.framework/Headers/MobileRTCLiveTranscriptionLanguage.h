@@ -3,7 +3,7 @@
 //  MobileRTC
 //
 //  Created by Zoom on 2022/5/30.
-//  Copyright © 2022 Zoom Video Communications, Inc. All rights reserved.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

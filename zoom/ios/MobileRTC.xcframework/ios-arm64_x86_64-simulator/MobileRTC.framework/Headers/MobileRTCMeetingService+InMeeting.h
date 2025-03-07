@@ -2,8 +2,8 @@
 //  MobileRTCMeetingService+InMeeting.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2017/2/27.
-//  Copyright © 2019年 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2017/2/27.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <MobileRTC/MobileRTC.h>
@@ -100,6 +100,26 @@
 
 @end
 
+@interface MobileRTCLiveStreamItem : NSObject
+/**
+@brief Get URL of the live stream meeting.
+@return If the function succeeds, the return value is the URL of the live stream meeting.
+ */
+- (NSString *_Nullable)getLiveStreamURL;
+
+/**
+@brief Get the descriptions of live stream.
+@return If the function succeeds, the return value is the description of live stream.
+ */
+- (NSString *_Nullable)getLiveStreamURLDescription;
+/**
+@brief Get t the viewer URL of the live stream meeting.
+@return If the function succeeds, the return value is the viewer URL of the live stream meeting.
+ */
+- (NSString *_Nullable)getLiveStreamViewerURL;
+
+
+@end
 
 /*!
  @brief Set to provide interfaces for meeting events
@@ -142,7 +162,7 @@
  @brief Notify if the share is locked by host. Once the meeting is locked by the host/co-host, other user can not share except the host/co-host.
  @return YES means that the screen share is locked by host, otherwise not.
  */
-- (BOOL)isShareLocked;
+- (BOOL)isShareLocked DEPRECATED_MSG_ATTRIBUTE("Use -[MobileRTCMeetingService getShareSettingType] instead");
 
 #pragma mark - CMR Related
 /*!
@@ -227,7 +247,7 @@
  @return YES means that the method is called successfully, otherwise not.
  @warning Only meeting host/co-host can call the function.
  */
-- (BOOL)lockShare:(BOOL)lock;
+- (BOOL)lockShare:(BOOL)lock DEPRECATED_MSG_ATTRIBUTE("Use -[MobileRTCMeetingService setShareSettingType:] instead");
 
 /*!
  @brief Check in-meeting network status.
@@ -264,6 +284,30 @@
 - (BOOL)configDSCPWithAudioValue:(NSUInteger)audioValue VideoValue:(NSUInteger)videoValue;
 
 #pragma mark Live Stream
+
+/**
+ * Check if the live stream reminder is enabled.
+ * When the live stream reminder is enabled, the new join user is notified that the meeting is at capacity but that they can
+ * watch live stream with the callback {@link -[MobileRTCMeetingServiceDelegate onMeetingFullToWatchLiveStream:]}
+ * when the meeting user has reached the meeting capacity.
+ * @return true means the live stream reminder is enabled.
+ */
+- (BOOL)isLiveStreamReminderEnabled;
+
+/**
+ * Check if the current user can enable/disable the live stream reminder.
+ * @return true means the current user can enable or disable the live stream reminder.
+ */
+- (BOOL)canEnableLiveStreamReminder;
+
+/**
+ * Enable or disable the live stream reminder.
+ * @param enable true means enable the live stream reminder. False means disable the live stream reminder.
+ * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise fails.
+ * To get extended error information, see {@link MobileRTCSDKError}.
+ */
+-(MobileRTCSDKError)enableLiveStreamReminder:(BOOL)enable;
+
 /*!
  @brief Set to start Live Stream.
  @param streamingURL The live stream URL by which you can live the meeting. 
@@ -283,7 +327,19 @@
  For YouTube Live Stream Service, "youtube" as the key in Dictionary.
  For Custom Live Stream Service, "custom" as the key in Dictionary.
  */
-- (nullable NSDictionary*)getLiveStreamURL;
+- (nullable NSDictionary*)getLiveStreamURL DEPRECATED_MSG_ATTRIBUTE("Use getSupportLiveStreamItems instead");;
+
+/**
+@brief Get the list of live stream information items in the current meeting.
+@return If the function succeeds, the return value is the live stream item list. Otherwise failed, the return value is nil. For more details, see \link MobileRTCLiveStreamItem \endlink.
+ */
+- (NSArray <MobileRTCLiveStreamItem*>*_Nullable)getSupportLiveStreamItems;
+
+/**
+@brief Get the current live stream object.
+@return If the function succeeds, the return value is the current live stream object. Otherwise failed, the return value is nil. For more details, see \link MobileRTCLiveStreamItem \endlink.
+ */
+- (MobileRTCLiveStreamItem *_Nullable)getCurrentLiveStreamItem;
 
 /*!
  @brief Set to stop live streaming.
@@ -614,4 +670,27 @@
  * @return Success means interface all success.
  */
 - (MobileRTCSDKError)setFocusModeShareType:(MobileRTCFocusModeShareType)shareType;
+
+#pragma mark - virtual name tag -
+/**
+ * @brief Determine if there is support for the virtual name tag feature.
+ * @return YES means supports the virtual name tag feature. NO means not supported.
+ */
+- (BOOL)isSupportVirtualNameTag;
+
+/**
+ * @brief Enable the virtual name tag feature for the account.
+ * @param bEnabled YES means enabled. Otherwise not.
+ * @return If the function succeeds, it return MobileRTCSDKError_Success.
+ */
+- (MobileRTCSDKError)enableVirtualNameTag:(BOOL)bEnabled;
+
+/**
+ * @brief Update the virtual name tag roster infomation for the account.
+ * @param userRoster The virtual name tag roster info list for specify user. For more details, see {@link MobileRTCVirtualNameTag} object.
+ * @note The maximum size of userRoster should less 20. User should sepcify the tagName and tagID of each MobileRTCVirtualNameTag object. The range of tagID is 0-1024.
+ * @return If the function succeeds, it return MobileRTCSDKError_Success.
+ */
+- (MobileRTCSDKError)updateVirtualNameTagRosterInfo:(NSArray<MobileRTCVirtualNameTag*>* _Nullable)userRoster;
+
 @end

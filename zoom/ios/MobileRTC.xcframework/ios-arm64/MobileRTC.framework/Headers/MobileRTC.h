@@ -2,8 +2,8 @@
 //  MobileRTC.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 8/7/14.
-//  Copyright (c) 2019 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 8/7/14.
+//  Copyright (c) Zoom Communications, Inc. All rights reserved.
 //
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
@@ -114,17 +114,17 @@
 /*!
  @brief MobileRTC domain, read-only.  
  */
-@property (retain, nonatomic, readonly) NSString * _Nullable mobileRTCDomain;
+@property (copy, nonatomic, readonly) NSString * _Nullable mobileRTCDomain;
 
 /*!
  @brief The path of MobileRTC Resources Bundle, read-only. 
  */
-@property (retain, nonatomic, readonly) NSString * _Nullable mobileRTCResPath;
+@property (copy, nonatomic, readonly) NSString * _Nullable mobileRTCResPath;
 
 /*!
  @brief The name of APP Localizable file for MobileRTC, read-only.
  */
-@property (retain, nonatomic, readonly) NSString * _Nullable mobileRTCCustomLocalizableName;
+@property (copy, nonatomic, readonly) NSString * _Nullable mobileRTCCustomLocalizableName;
 
 /*!
  @brief Call the function to get the MobileRTC client.

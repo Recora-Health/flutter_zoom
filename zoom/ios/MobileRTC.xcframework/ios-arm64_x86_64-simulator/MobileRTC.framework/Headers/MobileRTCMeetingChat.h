@@ -2,8 +2,8 @@
 //  MobileRTCMeetingChat.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2017/9/15.
-//  Copyright © 2019年 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2017/9/15.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -2,8 +2,8 @@
 //  MobileRTCReturnToMainSessionHandler.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2021/5/31.
-//  Copyright © 2021 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2021/5/31.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -2,8 +2,8 @@
 //  MobileRTCMeetingService+Whiteboard.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2023/11/23.
-//  Copyright © 2023 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2023/11/23.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <MobileRTC/MobileRTC.h>
@@ -28,7 +28,15 @@
  @warning The function only for Custom UI. This method is a prerequisite for using whiteboard. Suggest to call this function in "onMeetingStateChange:" for inMeeting status.
  @return If the function succeeds, the return value is MobileRTCSDKError_Success.
  */
-- (MobileRTCSDKError)setParentViewCtroller:(UIViewController* _Nonnull)parentVC;
+- (MobileRTCSDKError)setParentViewCtroller:(UIViewController* _Nonnull)parentVC DEPRECATED_MSG_ATTRIBUTE("Not maintain anymore,Use showWhiteboardByParentViewCtroller instead");
+
+/*!
+ @brief show whiteboard  by  parent view ctroller when MobileRTCWhiteboardStatus_Started.
+ @param parentVC which use to present ViewController
+ @warning The function only for Custom UI. This method is a prerequisite for using whiteboard. Suggest to call this function in "onWhiteboardStatusChanged:" for whiteboard status.
+ @return If the function succeeds, the return value is MobileRTCSDKError_Success.
+ */
+- (MobileRTCSDKError)showWhiteboardByParentViewCtroller:(UIViewController* _Nonnull)parentVC;
 
 /*!
  @brief Show the dashboard web view window.
@@ -36,6 +44,12 @@
  @return If the function succeeds, the return value is MobileRTCSDKError_Success.
  */
 - (MobileRTCSDKError)showDashboardView;
+
+/*!
+ @brief dismiss Whiteboard or Dashboard
+ @warning The function only for Custom UI.
+ */
+- (void)dismissWhiteboardOrDashboard;
 
 /*!
  @brief Set the option for who can share a whiteboard.

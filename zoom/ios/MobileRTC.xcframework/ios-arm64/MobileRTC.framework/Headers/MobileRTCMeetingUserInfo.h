@@ -2,8 +2,8 @@
 //  MobileRTCMeetingUserInfo.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2017/2/27.
-//  Copyright © 2019年 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2017/2/27.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -58,6 +58,17 @@ typedef NS_ENUM(NSUInteger, MobileRTCAudioType) {
  */
 @property (nonatomic, assign) MobileRTCAudioType  audioType;
 
+@end
+
+@interface MobileRTCVirtualNameTag : NSObject
+/*!
+ @brief Tag ID. tagID is the unique identifier. The range of tagID is 0-1024.
+ */
+@property (nonatomic, assign)       NSInteger tagID;
+/*!
+ @brief Tag name.
+ */
+@property (nonatomic, copy)         NSString * _Nullable tagName;
 @end
 
 /*!
@@ -166,6 +177,43 @@ typedef NS_ENUM(NSUInteger, MobileRTCAudioType) {
  @return YES indicates that the user is the sender of Closed Caption.
 */
 @property (nonatomic, assign) BOOL       isClosedCaptionSender;
+
+/**
+ @return whether the user is production studio user
+ */
+@property (nonatomic, assign) BOOL  isProductionStudioUser;
+
+/**
+ @return the ID of the parent user of this production user
+*/
+@property (nonatomic, assign) NSInteger  productionStudioParent;
+/*!
+ @brief Determine whether the user specified by the current information is in the webinar backstage or not.
+ @return YES indicates that the specified user is in the webinar backstage.
+*/
+@property (nonatomic, assign) BOOL  isInWebinarBackstage;
+
+/*!
+ * @brief Determine whether the user specified by the current information is robot user or not.
+ */
+@property (nonatomic, assign) BOOL isRobotUser;
+
+/*!
+ @brief Get the robot brand name.
+ */
+@property (nonatomic, copy) NSString* _Nullable        robotBrandName;
+
+/*!
+ *@brief Query if the participant enabled virtual name tag.
+ *@return YES means enabled. Otherwise not.
+ */
+- (BOOL)isVirtualNameTagEnabled;
+
+/*!
+ * @brief Query the virtual name tag roster infomation.
+ * @return If the function succeeds, it return the list of user's virtual name tag roster info. For more details, see {@link MobileRTCVirtualNameTag} object.
+ */
+- (NSArray<MobileRTCVirtualNameTag*> * _Nullable)getVirtualNameTagArray;
 
 @end
 

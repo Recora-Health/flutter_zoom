@@ -2,8 +2,8 @@
 //  MobileRTCVideoView.h
 //  MobileRTC
 //
-//  Created by Robust on 2017/11/15.
-//  Copyright © 2019年 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom on 2017/11/15.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -77,9 +77,9 @@ typedef enum {
 
 /*!
  @brief Designated for Render Share Content.
- @param userID user's shared content will be shown up.
+ @param shareSourceID user's shared content will be shown up.
  */
-- (void)showActiveShareWithUserID:(NSUInteger)userID;
+- (BOOL)showActiveShareWithShareSourceID:(NSUInteger)shareSourceID;
 
 /*!
  @brief Designated for Stop Render Share Content.
@@ -88,8 +88,13 @@ typedef enum {
 
 /*!
  @brief Designated for Render Share Content Scale Change.
- @param userID user's shared content scale change.
+ @param shareSourceID user's shared content scale change.
  */
-- (void)changeShareScaleWithUserID:(NSUInteger)userID;
+- (void)changeShareScaleWithShareSourceID:(NSUInteger)shareSourceID;
+
+/*!
+ @brief Get MobileRTC Active Share View use share souce ID
+ */
+- (NSUInteger)getShareSourceID;
 
 @end

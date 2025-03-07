@@ -2,8 +2,8 @@
 //  MobileRTCRemoteControlService.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2018/6/22.
-//  Copyright © 2019 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2018/6/22.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -33,23 +33,27 @@ typedef enum
 @property (weak, nonatomic) id<MobileRTCRemoteControlDelegate> _Nullable delegate;
 
 /*!
- @brief Query if current user have control privilege. You can have this right after be assigned to the remote control.
- @return YES means that the user got the remote control privilege. Otherwise not.
+ @brief Query if current user have control privilege. You can have this  after be assigned to have  remote control privilege.
+ @param remoteShareView The remote shared view.
+ @return YES means that the user got  remote control privilege. Otherwise not.
+ @warning In ZoomUI Mode, If remoteShareView is nil ,That means the currently active Zoom Subscribe Share View.
  */
-- (BOOL)isHaveRemoteControlRight;
+- (BOOL)isHaveRemoteControlRight:(MobileRTCActiveShareView * _Nonnull)remoteShareView;
 
 /*!
- @brief Query if the current user gets the remote control privilege.
- @return YES means that the user got the remote control privilege. Otherwise not.
+ @brief Query if the current user gets  remote control privilege.
+ @param remoteShareView The remote shared view.
+ @return YES means that the user got  remote control privilege. Otherwise not.
+ @warning In ZoomUI Mode, If remoteShareView is nil ,That means the currently active Zoom Subscribe Share View.
  */
-- (BOOL)isRemoteController;
+- (BOOL)isRemoteController:(MobileRTCActiveShareView * _Nonnull)remoteShareView;
 
 /*!
  @brief Set to enable remote control. User should tap the screen icon once received the privilege to control one's screen remotely.  
  @param remoteShareView The remote shared view.
  @return The result of grabbing the remote control.
  */
-- (MobileRTCRemoteControlError)grabRemoteControl:(UIView * _Nonnull)remoteShareView;
+- (MobileRTCRemoteControlError)grabRemoteControlView:(MobileRTCActiveShareView * _Nonnull)remoteShareView;
 
 /*!
  @brief Simulate a mouse click with a finger clicking once on the screen.
@@ -133,13 +137,24 @@ typedef enum
  @brief Callback event of the following values when the privilege of remote control changes.
  @param isMyControl YES means that the current user got the remote control privilege. Otherwise not. 
  */
-- (void)remoteControlPrivilegeChanged:(BOOL)isMyControl;
+- (void)remoteControlPrivilegeChanged:(BOOL)isMyControl DEPRECATED_MSG_ATTRIBUTE("Use onRemoteControlPrivilegeChanged instead");
+/*!
+ @brief Callback event of these values when the privilege of  changes.
+ @param isMyControl YES means that the current user got the remote control privilege. Otherwise not.
+ */
+- (void)onRemoteControlPrivilegeChanged:(BOOL)isMyControl;
 
 /*!
  @brief Callback event of the following values when remote control starts.
  @param resultValue A value of MobileRTCRemoteControlError enumeration.
  */
-- (void)startRemoteControlCallBack:(MobileRTCRemoteControlError)resultValue;
+- (void)startRemoteControlCallBack:(MobileRTCRemoteControlError)resultValue DEPRECATED_MSG_ATTRIBUTE("Use onEnterOrLeaveRemoteControllingStatus instead");
+
+/*!
+ @brief Callback event of these values when remote control starts.
+ @param isEnter YES means that grab Remote Control View success . Otherwise not.
+ */
+- (void)onEnterOrLeaveRemoteControllingStatus:(BOOL)isEnter;
 
 @end
 

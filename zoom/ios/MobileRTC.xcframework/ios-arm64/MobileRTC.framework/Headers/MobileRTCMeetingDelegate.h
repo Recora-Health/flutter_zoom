@@ -3,7 +3,7 @@
 //  MobileRTC
 //
 //  Created by Robust on 2017/11/14.
-//  Copyright © 2019年 Zoom Video Communications, Inc. All rights reserved.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -41,6 +41,8 @@
 @class MobileRTCAICompanionTurnOnAgainHandler;
 @class MobileRTCAICompanionSwitchHandler;
 @class MobileRTCIndicatorHandler;
+@class MobileRTCSSharingSourceInfo;
+@class MobileRTCCaptionsControlHandler;
 
 #pragma mark - MobileRTCMeetingServiceDelegate
 /*!
@@ -95,6 +97,13 @@
  @param reason The reason why the meeting has ended. See [MobileRTCMeetingEndReason].
  */
 - (void)onMeetingEndedReason:(MobileRTCMeetingEndReason)reason;
+
+/**
+ * Calback event that the meeting users have reached the meeting capacity.
+ * The new join user can not join meeting, but they can watch the meeting live stream.
+ * @param liveStreamUrl the live stream URL towatch the meeting live stream.
+ */
+-(void)onMeetingFullToWatchLiveStream:(NSString * _Nonnull)liveStreamUrl;
 
 /*!
  @brief The meeting does not have a host and ends.
@@ -303,6 +312,24 @@
  @param liveStreamList A list of users with an active raw live stream.
  */
 - (void)onUserRawLiveStreamingStatusChanged:(NSArray<MobileRTCRawLiveStreamInfo *>*_Nullable)liveStreamList;
+
+/**
+ * Callback event when the live stream reminder enable status changed.
+ * @param enable true means the live stream reminder is enabled.
+ */
+- (void)onLiveStreamReminderStatusChanged:(BOOL)enable;
+
+/**
+ * Callback event when the live stream reminder enable status change failed.
+ */
+- (void)onLiveStreamReminderStatusChangedFailed;
+
+/**
+ * Callback event when the meeting/webinar user has nearly reached the meeting capacity, like 80% or 100% for the meeting/webinar capacity.
+ * The host can start live stream to let unjoined users watch live stream.
+ * @param percent proportion of joined users to the total capacity.
+ */
+- (void)onUserThresholdReachedForLiveStream:(NSUInteger)percent;
 
 /*!
  @brief The ZAK used to authorize the SDK has expired.
@@ -740,7 +767,7 @@ DEPRECATED_MSG_ATTRIBUTE("Use onActiveSpeakerVideoUserChanged: instead");
 /*!
  @brief The current user's hand state changes.
  */
-- (void)onMyHandStateChange;
+- (void)onMyHandStateChange DEPRECATED_MSG_ATTRIBUTE("Not maintain anymore,Use onSinkMeetingUserRaiseHand or onSinkMeetingUserLowerHand instead");
 
 /*!
  @brief The user state is updated in the meeting.
@@ -813,18 +840,23 @@ DEPRECATED_MSG_ATTRIBUTE("Use onActiveSpeakerVideoUserChanged: instead");
  */
 - (void)onAppShareSplash;
 
+/**
+ * @brief Notification of failure to start sharing.
+ */
+- (void)onFailedToStartShare;
+
 /*!
  @brief The share status changes.
- @param status Sharing status.
- @param userID Specify the user ID whose share status changes.
+ @param shareInfo Sharing status.
 */
-- (void)onSinkSharingStatus:(MobileRTCSharingStatus)status userID:(NSUInteger)userID;
+
+- (void)onSinkSharingStatus:(MobileRTCSSharingSourceInfo*_Nonnull)shareInfo;
 
 /**
  * @brief Notification of shared content is changed.
- * @param shareContentType The shared content,
+ * @param shareInfo The shared content,
  */
-- (void)onShareContentChanged:(MobileRTCShareContentType)shareContentType;
+- (void)onShareContentChanged:(MobileRTCSSharingSourceInfo*_Nonnull)shareInfo;
 
 /*!
  @brief You will receive this event when you are in a breakout room, and someone shares from the main session to the breakout room
@@ -1146,12 +1178,28 @@ DEPRECATED_MSG_ATTRIBUTE("Use onActiveSpeakerVideoUserChanged: instead");
  */
 - (void)onWebinarNeedInputScreenName:(MobileRTCWebinarInputScreenNameHandler*_Nullable)handler;
 #pragma mark - MobileRTCLiveTranscriptionServiceDelegate
+/**
+ * Sink the event to start captions.
+ * @param handler The helper to handle the start captions.
+ */
+- (void)onStartCaptionsRequestReceived:(MobileRTCCaptionsControlHandler *_Nullable)handler;
+
+/**
+ * Sink the event to start captions was approved.
+ */
+- (void)onStartCaptionsRequestApproved;
 
 /**
  * @brief Sink the event of captions enabled status changed.
  * @param enable True means the host enables the captions, otherwise means the host disables the captions.
  */
 - (void)onCaptionStatusChanged:(BOOL)enable;
+
+/*!
+ @brief Sink the event of manual captions enable status change.
+ @param bEnabled True means the host enable the manual captions, otherwise, the host disable the manual captions
+*/
+- (void)onManualCaptionStatusChanged:(BOOL)bEnabled;
 
 /*!
  @brief Sink the event of live transcription status.
@@ -1340,6 +1388,18 @@ DEPRECATED_MSG_ATTRIBUTE("Use onActiveSpeakerVideoUserChanged: instead");
  */
 - (void)onBOEndTimerUpdated:(NSUInteger)remaining isTimesUpNotice:(BOOL)isTimesUpNotice;
 
+/*!
+ @brief The callback notification of StartBO.
+ @param success  Indicates whether the startup is actually successful. YES indicates success, and NO indicates failure.
+*/
+- (void)onStartBOResponse:(BOOL)success;
+
+/*!
+ @brief The callback notification of StopBO.
+ @param success Indicates whether the stop is actually successful. True indicates success, and false indicates failure.
+*/
+- (void)onStopBOResponse:(BOOL)success;
+
 #pragma mark - MobileRTCBOAttendeeDelegate
 /*!
  @brief Receive the result of sending a help request.
@@ -1362,7 +1422,28 @@ DEPRECATED_MSG_ATTRIBUTE("Use onActiveSpeakerVideoUserChanged: instead");
  @brief Creator receives breakout identifier when successfully creating the breakout room.
  @param BOID The identifier of the created breakout.
 */
-- (void)onBOCreateSuccess:(NSString *_Nullable)BOID;
+- (void)onBOCreateSuccess:(NSString *_Nullable)BOID DEPRECATED_MSG_ATTRIBUTE("Use onCreateBOResponse:BOID: instead");
+
+/*!
+ @brief The callback notification of CreateBreakoutRoom.
+ @param success Indicate whether the creation is actually successful. True indicates success, false indicates failure.
+ @param BOID If the creation is successful, its value is the breakout room's ID, otherwise the value is nil..
+*/
+- (void)onCreateBOResponse:(BOOL)success BOID:(NSString *_Nullable)BOID;
+
+/*!
+ @brief The callback notification of RemoveBO.
+ @param success Indicates whether the removal was actually successful. YES indicates success, NO indicates failure.
+ @param BOID Identifies which breakout room is being removed.
+*/
+- (void)onRemoveBOResponse:(BOOL)success BOID:(NSString *_Nullable)BOID;
+
+/*!
+ @brief The callback notification of UpdateBOName.
+ @param success Indicates whether the update was actually successful. YES indicates success, NO indicates failure.
+ @param BOID  Identifies which breakout room is being updated.
+*/
+- (void)onUpdateBONameResponse:(BOOL)success BOID:(NSString *_Nullable)BOID;
 
 /*!
  @brief When the pre-assigned data download status changes, you will receive the event.
@@ -1469,11 +1550,47 @@ DEPRECATED_MSG_ATTRIBUTE("Use onActiveSpeakerVideoUserChanged: instead");
  @param receiver The class to receive file object.
  */
 - (void)onFileReceived:(MobileRTCFileReceiver * _Nullable)receiver;
-/**
+/*!
  @brief Invoked when send or receive file status change.
  @param info The class to basic transfer information.
  */
 - (void)onFileTransferProgress:(MobileRTCFileTransferInfo * _Nullable)info;
+
+/**
+ @brief This callback is received when the production studio user starts and stops sending video and audio.
+ @param userId the production studio user's user ID.
+ @param isStart YES means that means the production studio user starts sending video and audio. NO means the production studio user stopped sending video
+*/
+- (void)onPSUserStatusChanged:(NSUInteger)userId isStart:(BOOL)isStart;
+
+#pragma mark - external camera change -
+/**
+ @brief Callback is invoked when external UVC camera status changes.
+ @param status UVC camera status.
+ @warning Only iOS 17.0 or above and iPad device can receive this callback.
+ */
+- (void)onUVCCameraStatusChange:(MobileRTCUVCCameraStatus)status;
+
+#pragma mark - Name Tag -
+/*!
+ * @brief Notification of virtual name tag status change.
+ * @param bOn YES means virtual name tag is turn on. Otherwise not.
+ * @param userID The ID of user who virtual name tag status change.
+ */
+- (void)onVirtualNameTagStatusChanged:(BOOL)bOn userID:(NSUInteger)userID;
+
+/*!
+ * @brief Notification of virtual name tag roster info update.
+ * @param userID The ID of user who virtual name tag status change.
+ */
+- (void)onVirtualNameTagRosterInfoUpdated:(NSUInteger)userID;
+
+/*!
+ * @brief Callback event that the robot relationship changed in the meeting.
+ * @param userID Specify the authorizer user ID.
+ */
+- (void)onRobotRelationChanged:(NSUInteger)userID;
+
  @end
 
 #pragma mark - MobileRTCCustomizedUIMeetingDelegate

@@ -2,8 +2,8 @@
 //  MobileRTCAnnotationService.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2018/6/12.
-//  Copyright © 2019 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2018/6/12.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -56,10 +56,17 @@ typedef NS_ENUM(NSUInteger, MobileRTCAnnoClearType) {
 /*!
 MobileRTCAnnotationServiceDelegate
  @brief the share sender will disable the annotation, this delegate will notify the status change to viewer #only for custom UI#.
+ @warning if support is YES, viewer need call startAnnotationWithSharedView interface to start shareView annotation service
  */
 @protocol MobileRTCAnnotationServiceDelegate <NSObject>
+
+/**
+* @brief Designated for Zoom Meeting notify the sharing user has changed the viewer's annotation privilage.
+* @param support YES means the share source user enabled the viewer to allow annotationse, otherwise not.
+* @param shareSourceID The share source ID  that is sharing.
+*/
 @optional
-- (void)onAnnotationService:(nullable MobileRTCAnnotationService *)service supportStatusChanged:(BOOL)support;
+- (void)onAnnotationService:(nullable MobileRTCAnnotationService *)service supportStatusChanged:(BOOL)support shareSouceID:(NSUInteger)shareSourceID;
 @end
 
 @interface MobileRTCAnnotationService : NSObject
@@ -70,11 +77,19 @@ MobileRTCAnnotationServiceDelegate
 @property (weak, nonatomic) id<MobileRTCAnnotationServiceDelegate> _Nullable delegate;
 
 /*!
- @brief Set to start annotations on the shared view. 
- @param view The shared view. 
+ @brief Check if the current shareView can do annotation or not.
+ @param shareView The shared view.
+ @return Yes if can do the annotation.
+ @warning In ZoomUI Mode, If shareView is nil ,That means the currently active Zoom Subscribe Share View.
+ */
+- (BOOL)canDoAnnotation:(nullable UIView*)shareView;
+
+/*!
+ @brief Set to start annotations on the shared view.
+ @param shareView The shared view.
  @return The result of operation.
  */
-- (MobileRTCAnnotationError)startAnnotationWithSharedView:(nullable UIView*)view;
+- (MobileRTCAnnotationError)startAnnotationWithSharedView:(nullable UIView*)shareView;
 
 /*!
  @brief Set to stop annotations.
@@ -141,6 +156,7 @@ MobileRTCAnnotationServiceDelegate
 /*!
  @brief Check if the current user is the presenter.
  @return Yes if be presenter.
+ @warning that need to start annotation first.
  */
 - (BOOL)isPresenter;
 
@@ -161,12 +177,6 @@ MobileRTCAnnotationServiceDelegate
  @return MobileRTCAnnotationError_Successed if disabled the viewer's annotation success.
  */
 - (MobileRTCAnnotationError)disableViewerAnnotation:(BOOL)isDisable;
-
-/*!
- @brief Check can do annotation or not.
- @return Yes if can do the annotation.
- */
-- (BOOL)canDoAnnotation;
 
 /*!
  @brief Is annotation legal notice available.

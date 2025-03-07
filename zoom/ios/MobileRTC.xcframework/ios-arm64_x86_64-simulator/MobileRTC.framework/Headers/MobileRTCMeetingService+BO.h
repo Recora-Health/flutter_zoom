@@ -2,8 +2,8 @@
 //  MobileRTCMeetingService+BO.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2020/2/11.
-//  Copyright © 2020 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2020/2/11.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 

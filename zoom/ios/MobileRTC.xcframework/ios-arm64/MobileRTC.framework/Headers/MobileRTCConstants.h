@@ -2,8 +2,8 @@
 //  MobileRTCConstants.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 8/7/14.
-//  Copyright (c) 2019 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 8/7/14.
+//  Copyright (c) Zoom Communications, Inc. All rights reserved.
 //
 
 /*!
@@ -146,7 +146,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCMeetError) {
     MobileRTCMeetError_MeetingNotStart                  = 7,
     ///The meeting does not exist.
     MobileRTCMeetError_MeetingNotExist                  = 8,
-    ///The amount of attendees reaches the upper limit.
+    ///The amount of attendees reaches the upper limit, For users that can' t join the meeting.they can go to watch live stream with the interface {@link onMeetingFullToWatchLiveStream) ,if the host has started.
     MobileRTCMeetError_MeetingUserFull                  = 9,
     ///The MobileRTC version is incompatible.
     MobileRTCMeetError_MeetingClientIncompatible        = 10,
@@ -1293,7 +1293,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCReminderType) {
     /// Reminder type of joining a meeting with private mode.
     MobileRTCReminderType_JoinPrivateModeMeetingReminder,
     /// Reminder type of AICompanionPlus disclaimer.
-    MobileRTCReminderType_AICompanionPlusDisclaimer,
+    MobileRTCReminderType_AICompanionPlusDisclaimer DEPRECATED_ATTRIBUTE,
     /// Reminder type of Closed Caption disclaimer.
     MobileRTCReminderTypeClosedCaptionDisclaimer,
     /// Reminder type of disclaimers combination.
@@ -1470,4 +1470,9 @@ typedef NS_ENUM(NSInteger, MobileRTCFileTransferStatus) {
     FileTransferState_Transfering,      /// The file transfer is in progress
     FileTransferState_TransferFailed,   /// The file transfer failed
     FileTransferState_TransferDone,     /// The file transfer completed successfully
+};
+
+typedef NS_ENUM(NSInteger, MobileRTCUVCCameraStatus) {
+    MobileRTCUVCCameraStatus_Attached = 0,        /// UVC camera attached
+    MobileRTCUVCCameraStatus_Detached             /// UVC camera detached.
 };
