@@ -78,7 +78,7 @@ flutter pub run zoom:unzip_zoom_sdk
 Change the minimum Android sdk version to at the minimum 21 in your `android/app/build.gradle` file.
 
 ```
-minSdkVersion 28
+minSdkVersion 35
 ```
 
 Update Material Design version to 1.5.0 in your `android/app/build.gradle` file.
