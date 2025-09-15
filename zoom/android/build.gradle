@@ -57,7 +57,9 @@ android {
 }
 
 dependencies {
-    // Upadates for 6.2.11
+    // Updates for 6.5.10
+    
+    // Updates for 6.2.11
 
     // Updates for 6.2.3
 
