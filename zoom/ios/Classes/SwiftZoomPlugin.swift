@@ -2,7 +2,7 @@ import Flutter
 import UIKit
 import MobileRTC
 
-public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , MobileRTCMeetingServiceDelegate{
+@objc(SwiftZoomPlugin) public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , MobileRTCMeetingServiceDelegate{
   struct MeetingViewOptions { 
     static let NO_BUTTON_AUDIO = 2
     static let NO_BUTTON_LEAVE = 128
