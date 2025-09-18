@@ -2,31 +2,35 @@
 //  MobileRTCCallCountryCode.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2019/7/3.
-//  Copyright © 2019 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2019/7/3.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
+/**
+ * @class MobileRTCCallCountryCode
+ * @brief Provides information of countries that support calling.
+ */
 @interface MobileRTCCallCountryCode : NSObject
-/*!
- @brief Get the ID of the country where a user can dial in.The country ID. (e.g. US, CA, etc.)
+/**
+ * @brief Get the ID of the country where a user can dial in.The country ID. (e.g. US, CA, etc.).
  */
 @property (nonatomic, copy) NSString * _Nullable countryId;
-/*!
- @brief Get the country name.
+/**
+ * @brief Get the country name.
  */
 @property (nonatomic, copy) NSString * _Nullable countryName;
-/*!
- @brief Get the country code.
+/**
+ * @brief Get the country code.
  */
 @property (nonatomic, copy) NSString * _Nullable countryCode;
-/*!
- @brief Get the country number.
+/**
+ * @brief Get the country number.
  */
 @property (nonatomic, copy) NSString * _Nullable countryNumber;
-/*!
- @brief Whether free.
+/**
+ * @brief Whether free.
  */
 @property (nonatomic, assign) BOOL tollFree;
 

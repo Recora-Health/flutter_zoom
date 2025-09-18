@@ -2,12 +2,15 @@
 //  MobileRTCMeetingService+RawArchiving.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2022/7/25.
-//  Copyright © 2022 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2022/7/25.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <MobileRTC/MobileRTC.h>
 
+/**
+ * @brief Interface for managing raw archiving privilege in Zoom SDK.
+ */
 @interface MobileRTCMeetingService (RawArchiving)
 
 /**

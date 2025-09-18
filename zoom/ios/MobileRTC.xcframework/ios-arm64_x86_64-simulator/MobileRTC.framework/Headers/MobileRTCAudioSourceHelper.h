@@ -3,12 +3,16 @@
 //  MobileRTC
 //
 //  Created by Zoom on 2022/7/25.
-//  Copyright © 2022 Zoom Video Communications, Inc. All rights reserved.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 
+/**
+ * @class MobileRTCAudioSourceHelper
+ * @brief Configure external audio source as virtual microphone input.
+ */
 @interface MobileRTCAudioSourceHelper : NSObject
 
 /**

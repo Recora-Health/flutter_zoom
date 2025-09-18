@@ -2,8 +2,8 @@
 //  MobileRTCMeetingService.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 8/7/14.
-//  Copyright (c) 2019 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 8/7/14.
+//  Copyright (c) Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,10 +11,10 @@
 #import <MobileRTC/MobileRTCMeetingDelegate.h>
 
 /**
+ * @class MobileRTCMeetingStartParam
  * @brief Provides settings for starting a meeting, such as enabling screen sharing, microphone, and camera.
- */ 
+ */
 @interface MobileRTCMeetingStartParam : NSObject
-
 /**
  * @brief Start meeting with screen sharing immediately enabled.
  */
@@ -37,7 +37,7 @@
 @property (nullable, nonatomic, copy, readwrite) NSString * customerKey;
 
 /**
- *@brief Special ID for the personal link name in organization URL, like "yourcompany" in yourcompany.zoom.us.
+ * @brief Special ID for the personal link name in organization URL, like "yourcompany" in yourcompany.zoom.us.
  */
 @property (nullable, nonatomic, copy, readwrite) NSString * vanityID;
 
@@ -69,20 +69,20 @@
 @end
 
 /**
+ * @class MobileRTCMeetingStartParam4LoginlUser
  * @brief Provides settings for a logged-in user to start a meeting.
  */
 @interface MobileRTCMeetingStartParam4LoginlUser : MobileRTCMeetingStartParam
-
 @end
 
 /**
+ * @class MobileRTCMeetingStartParam4WithoutLoginUser
  * @brief Provides parameters for a non-logged-in user (an anonymous user) to start a meeting.
  * @warning The ZAK cannot be null.
  */
 @interface MobileRTCMeetingStartParam4WithoutLoginUser : MobileRTCMeetingStartParam
-
 /**
- * @brief User type enum defined in {@link MobileRTCUserType}.
+ * @brief User type.
  */
 @property (nonatomic, assign, readwrite) MobileRTCUserType userType;
 
@@ -100,10 +100,10 @@
 @end
 
 /**
+ * @class MobileRTCMeetingJoinParam
  * @brief Provides settings for joining a meeting, such as start meeting with microphone or camera disabled.
  */
 @interface MobileRTCMeetingJoinParam : NSObject
-
 /**
  * @brief Start meeting with microphone disabled.
  */
@@ -120,7 +120,7 @@
  */
 @property (nullable, nonatomic, copy, readwrite) NSString * customerKey;
 /**
- *  @brief Special ID for the personal link name in the organization URL, like "yourcompany" in yourcompany.zoom.us.
+ * @brief Special ID for the personal link name in the organization URL, like "yourcompany" in yourcompany.zoom.us.
  */
 @property (nullable, nonatomic, copy, readwrite) NSString * vanityID;
 /**
@@ -144,6 +144,11 @@
  * @brief The user's Zoom Access Key (ZAK) token.
  */
 @property (nullable, nonatomic, copy, readwrite) NSString * zak;
+
+/**
+ * @brief On behalf token.
+ */
+@property (nullable, nonatomic, copy, readwrite) NSString * onBehalfToken;
 
 /**
  * @brief Token that provides privileges when a user joins a meeting, for example, local recording permissions, streaming to raw, or archiving to raw.
@@ -174,10 +179,10 @@
 @end
 
 /**
+ * @class MobileRTCWebinarRegistLegalNoticeContent
  * @brief Interface that provides settings for legal notice content for Webinar registration.
  */
 @interface MobileRTCWebinarRegistLegalNoticeContent : NSObject
-
 /**
  * @brief Formatted HTML content string.
  * @note Formatting parameters in order are account owner URL, terms URL, and privacy policy URL.
@@ -190,7 +195,7 @@
 @property (nullable, nonatomic, copy, readwrite) NSString * accountOwnerUrl;
 
 /**
- *@brief Terms URL in formatted HTML content.
+ * @brief Terms URL in formatted HTML content.
  */
 @property (nullable, nonatomic, copy, readwrite) NSString * termsUrl;
 
@@ -202,12 +207,12 @@
 @end
 
 /**
+ * @class MobileRTCMeetingParameter
  * @brief Provides settings for meetings.
  */
 @interface MobileRTCMeetingParameter : NSObject
-
 /**
- * @brief Meeting type. {@link MobileRTCMeetingType}
+ * @brief Meeting type.
  */
 @property (nonatomic, assign) MobileRTCMeetingType meetingType;
 
@@ -244,6 +249,10 @@
 @end
 
 
+/**
+ * @class MobileRTCInputUserInfoHandler
+ * @brief Interface for handling user input when joining a meeting.
+ */
 @interface MobileRTCInputUserInfoHandler : NSObject
 
 /**
@@ -263,30 +272,28 @@
  */
 - (BOOL)isValidEmail:(NSString *_Nonnull)email;
 
-/*！
- @brief input user info.
- @param name The display name to input.
- @param email The email to input.
- @return If the function succeeds, it will return MobileRTCSDKError_Success.
+/**
+ * @brief Input user info.
+ * @param name The display name to input.
+ * @param email The email to input.
+ * @return If the function succeeds, it will return MobileRTCSDKError_Success.
  */
 - (MobileRTCSDKError)inputUserInfo:(NSString *_Nonnull)name email:(NSString *_Nonnull)email;
 
-/*！
- @brief Cancel to join meeting.
+/**
+ * @brief Cancel to join meeting.
  */
 - (void)cancel;
 
 @end
 
-
 @protocol MobileRTCMeetingServiceDelegate;
-
 /**
+ * @class MobileRTCMeetingService
  * @brief Enables the client to start or join a meeting.
  * @warning The meeting service allows only one concurrent operation at a time. Only one API call is in progress at any given time.
  */
 @interface MobileRTCMeetingService : NSObject
-
 /**
  * @brief Callback to receive meeting events.
  */
@@ -299,9 +306,9 @@
 
 /**
  * @brief Start a meeting with MobileRTCMeetingStartParam parameter.
- * @note For a non-logged-in user, create an instance via MobileRTCMeetingStartParam4WithoutLoginUser to pass the parameters. For a logged-in user, create an instance via MobileRTCMeetingStartParam4LoginlUser to pass the parameters.
  * @param param Create an instance with settings via MobileRTCMeetingStartParam.
  * @return The state of the meeting: started or failed.
+ * @note For a non-logged-in user, create an instance via MobileRTCMeetingStartParam4WithoutLoginUser to pass the parameters. For a logged-in user, create an instance via MobileRTCMeetingStartParam4LoginlUser to pass the parameters.
  * @warning A meeting started with wrong parameters will return MobileRTCMeetError_InvalidArguments.
  */
 - (MobileRTCMeetError)startMeetingWithStartParam:(nonnull MobileRTCMeetingStartParam*)param;
@@ -323,13 +330,13 @@
 
 /**
  * @brief Get the current meeting state.
- * @return Current meeting state.  {@link MobileRTCMeetingState}
+ * @return Current meeting state.
  */
 - (MobileRTCMeetingState)getMeetingState;
 
 /**
  * @brief End or leave the current meeting.
- * @param cmd The command for leaving the current meeting. Only a host can end the meeting.  {@link LeaveMeetingCmd}
+ * @param cmd The command for leaving the current meeting. Only a host can end the meeting.
  */
 - (void)leaveMeetingWithCmd:(LeaveMeetingCmd)cmd;
 
@@ -347,5 +354,22 @@
  * @warning This method can only be called after auth ready and before join or start meeting.
  */
 - (BOOL)setCustomizedInvitationDomain:(NSString *_Nonnull)invitationDomain;
+
+/**
+ * @brief If production studio mode is supported.
+ * @return YES means  supported.
+ */
+- (BOOL)isSupportPSMode;
+
+/**
+ * @brief Determine if you have permission to start production studio mode. Only the host or /cohost can start production studio mode.
+ * @return If you have permission to start production studio mode, return true., Ootherwise, return false.
+ */
+- (BOOL)isPSModeStarted;
+
+/**
+ * @return The production studio user's user ID.
+ */
+- (NSUInteger)getPSUserID;
 
 @end

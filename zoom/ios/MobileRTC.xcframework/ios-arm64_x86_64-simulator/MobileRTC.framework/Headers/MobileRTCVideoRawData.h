@@ -2,68 +2,77 @@
 //  MobileRTCVideoRawData.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2019/8/6.
-//  Copyright © 2019 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2019/8/6.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
+/**
+ * @class MobileRTCVideoRawData
+ * @brief Represents raw data received from subscribed video stream.
+ */
 @interface MobileRTCVideoRawData : NSObject
 
-/*!
- @brief The y-data pointer to a video's YUV data.
+/**
+ * @brief The y-data pointer to a video's YUV data.
  */
-@property (nonatomic, assign) char *yBuffer;
+@property (nonatomic, assign, nullable) char *yBuffer;
 
-/*!
- @brief The u-data data pointer to a video's YUV data.
+/**
+ * @brief The u-data data pointer to a video's YUV data.
  */
-@property (nonatomic, assign) char *uBuffer;
+@property (nonatomic, assign) char * _Nullable uBuffer;
 
-/*!
- @brief The v-data data pointer to a video's YUV data.
+/**
+ * @brief The v-data data pointer to a video's YUV data.
  */
-@property (nonatomic, assign) char *vBuffer;
+@property (nonatomic, assign) char * _Nullable vBuffer;
 
-/*!
- @brief The video data's size.
+/**
+ * @brief The video data's size.
  */
 @property (nonatomic, assign) CGSize size;
 
-/*!
- @brief The data pointer to a video's alpha data.
+/**
+ * @brief The data pointer to a video's alpha data.
  */
-@property (nonatomic, assign) char *alphaBuffer;
+@property (nonatomic, assign) char * _Nullable alphaBuffer;
 
-/*!
- @brief the alpha buffer data length
+/**
+ * @brief The alpha buffer data length.
  */
 @property (nonatomic, assign) unsigned int alphaBufferLen;
 
-/*!
- @brief The video data's raw data format defined in {@link MobileRTCVideoRawDataFormat}.
+/**
+ * @brief The video data's raw data format.
  */
 @property (nonatomic, assign) MobileRTCFrameDataFormat format;
 
-/*!
- @brief The video data's rotation defined in {@link MobileRTCVideoRawDataRotation}.
+/**
+ * @brief The video data's rotation.
  */
 @property (nonatomic, assign) MobileRTCVideoRawDataRotation rotation;
 
-/*!
- @brief Whether adding a reference is allowed.
- @return true if allow. Otherwise, false.
+/**
+ * @brief TimeStamp of video data.
+ */
+@property(nonatomic, strong, nullable)  NSDate *timeStamp;
+
+/**
+ * @brief Whether adding a reference is allowed.
+ * @return YES if allow. Otherwise, false.
  */
 - (BOOL)canAddRef;
 
-/*!
- @brief Add to reference count.
- @return true if successfully added. Otherwise, this returns false.
+/**
+ * @brief Add to reference count.
+ * @return YES if successfully added. Otherwise, this returns false.
  */
 - (BOOL)addRef;
 
-/*!
- @brief Subtract from reference count.
+/**
+ * @brief Subtract from reference count.
  */
 - (NSInteger)releaseRef;
 

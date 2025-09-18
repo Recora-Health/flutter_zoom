@@ -2,17 +2,17 @@
 //  MobileRTCQAMessage.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2019/10/11.
-//  Copyright © 2019 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2019/10/11.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-/*!
- @brief The Q&A answer interface.
+/**
+ * @class MobileRTCQAAnswerItem
+ * @brief The Q&A answer interface.
  */
 @interface MobileRTCQAAnswerItem : NSObject
-
 - (NSDate *_Nullable)getTime;
 - (NSString *_Nullable)getText;
 - (NSString *_Nullable)getSenderName;
@@ -25,11 +25,11 @@
 
 @end
 
-/*!
- @brief The Q&A question interface.
+/**
+ * @class MobileRTCQAItem
+ * @brief The Q&A question interface.
  */
 @interface MobileRTCQAItem : NSObject
-
 - (NSString *_Nullable)getQuestionId;
 - (NSDate *_Nullable)getTime;
 

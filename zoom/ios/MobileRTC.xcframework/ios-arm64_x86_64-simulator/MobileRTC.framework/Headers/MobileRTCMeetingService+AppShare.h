@@ -2,12 +2,16 @@
 //  MobileRTCMeetingService+AppShare.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2017/2/27.
-//  Copyright © 2019年 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2017/2/27.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <MobileRTC/MobileRTC.h>
 
+/**
+ * @protocol MobileRTCShareActionDelegate
+ * @brief The delegate protocol to receive events related to share actions.
+ */
 @protocol MobileRTCShareActionDelegate <NSObject>
 @optional
 /**
@@ -17,22 +21,26 @@
 /**
  * @brief The callback is triggered before the shared action is destroyed.
  * @param sharingID Specify the sharing ID.
- * @remark The specified shared action is  destroyed once the function calls end. The user should complete the operations related to the shared action before the function calls end.
+ * @note The specified shared action is  destroyed once the function calls end. The user should complete the operations related to the shared action before the function calls end.
  */
 -(void)onActionBeforeDestroyed:(NSUInteger)sharingID;
 
 @end
 
+/**
+ * @class MobileRTCShareAction
+ * @brief Representing a share action, including subscription and rendering controls.
+ */
 @interface MobileRTCShareAction : NSObject
 /**
  * @brief Set the share action delegate.
-*/
+ */
 
 - (void)setShareActionDelegate:(id<MobileRTCShareActionDelegate>_Nullable)delegate;
 
 /**
- * @brief Get active share view from share action
-*/
+ * @brief Get active share view from share action.
+ */
 
 - (UIView *_Nullable)getActiveShareView;
 /**
@@ -49,110 +57,184 @@
 - (NSString*_Nullable)getSharingUserName;
 /**
  * @brief Subscribe the sharing content.
- * @return If the function succeeds, the return value is SDKErr_Success. Otherwise the function fails. To get extended error information, see \link MobileRTCSDKError \endlink enum.
+ * @return If the function succeeds, the return value is SDKErr_Success. Otherwise the function fails. 
  */
 
 - (MobileRTCSDKError)subscribe;
 
 /**
  * @brief Unsubscribe the sharing content.
- * @return If the function succeeds, the return value is SDKErr_Success. Otherwise the function fails. To get extended error information, see \link MobileRTCSDKError \endlink enum.
-*/
+ * @return If the function succeeds, the return value is SDKErr_Success. Otherwise the function fails. 
+ */
 - (MobileRTCSDKError)unsubscribe;
 
 @end
 
-/*!
- @brief Starts an App share meeting.
+/**
+ * @class MobileRTCSSharingSourceInfo
+ * @brief ZOOM share information class.
+ */
+@interface MobileRTCSSharingSourceInfo: NSObject
+/**
+ * @brief Get the User ID of the sharing Source Info.
+ * @return If the function succeeds, the return value is the User ID. Otherwise the function fails, and the return value is ZERO (0).
+ */
+- (NSUInteger)getUserID;
+/**
+ * @brief Get the ID of the sharing Source Source Info.
+ * @return If the function succeeds, the return value is the sharing Source ID. Otherwise the function fails, and the return value is ZERO (0).
+ */
+- (NSUInteger)getShareSourceID;
+/**
+ * @brief Get the Content Type of the sharing Source Info.
+ * @return If the function succeeds, the return value is the sharing Source Info Content Type . Otherwise the function fails, and the return value is ZERO (0).
+ */
+- (MobileRTCShareContentType)getContentType;
+/**
+ * @brief Get the Status of the sharing Source Info.
+ * @return If the function succeeds, the return value is the sharing Source Info Status. Otherwise the function fails, and the return value is ZERO (0).
+ */
+- (MobileRTCSharingStatus)getStatus;
+/**
+ * @brief Get the Status of the sharing optimzie status.
+ * @return If the function succeeds, the return value is the sharing Source Info Status. Otherwise the function fails, and the return value is ZERO (0).
+ */
+- (BOOL)isEnableOptimizingVideoSharing;
+@end
+
+/**
+ * @brief Starts an App share meeting.
  */
 @interface MobileRTCMeetingService (AppShare)
-
-/*!
- @brief Query if the current meeting was started with App Share.
- @return YES means that meeting was started by App Share, otherwise not.
+/**
+ * @brief Query if the current meeting was started with App Share.
+ * @return YES means that meeting was started by App Share, otherwise not.
  */
 - (BOOL)isDirectAppShareMeeting;
 
-/*!
- @brief Determine whether the current meeting can start sharing.
- @return The reason that no one can start sharing. See [MobileRTCCannotShareReasonType].
+/**
+ * @brief Determine whether the current meeting can start sharing.
+ * @return The reason that no one can start sharing. See [MobileRTCCannotShareReasonType].
  */
 - (MobileRTCCannotShareReasonType)canStartShare;
 
-/*!
- @brief Share content with current view.
- @param view - The view shared.
- @warning view, recommend to pass a single UIView object e.g. UIView, UIImageView or WKWebView.
- @warning The UIView passed should not have any child subviews.
+/**
+ * @brief Share content with current view.
+ * @param view - The view shared.
+ * @warning View, recommend to pass a single UIView object e.g. UIView, UIImageView or WKWebView.
+ * @warning The UIView passed should not have any child subviews.
  */
 - (void)appShareWithView:(nonnull id)view;
 
-/*!
- @brief Set to start App Share.
- @return YES means starting App Share successfully, otherwise not.
+/**
+ * @brief Set to start App Share.
+ * @return YES means starting App Share successfully, otherwise not.
  */
 - (BOOL)startAppShare;
 
-/*!
- @brief Set to stop App Share.
+/**
+ * @brief Set to stop App Share.
  */
 - (void)stopAppShare;
 
-/*!
- @brief Notify the current user if sharing has started.
- @return YES means that the current user is sharing, otherwise not.
+/**
+ * @brief Notify the current user if sharing has started.
+ * @return YES means that the current user is sharing, otherwise not.
  */
 - (BOOL)isStartingShare;
 
-/*!
- @brief Notify the current user if they are currently viewing an App Share.
- @return YES means that user is viewing the share, otherwise not.
+/**
+ * @brief Notify the current user if they are currently viewing an App Share.
+ * @return YES means that user is viewing the share, otherwise not.
  */
 - (BOOL)isViewingShare;
 
-/*!
- @brief Notify the current user if annotation is enabled.
- @return YES if enabled, otherwise not.
+/**
+ * @brief Notify the current user if annotation is enabled.
+ * @return YES if enabled, otherwise not.
  */
 - (BOOL)isAnnotationOff;
 
-/*!
- @brief Suspend App Sharing.
- @param suspend - YES if sharing should be suspended, otherwise resume sharing.
- @return YES means successful, otherwise not.
- @warning When the customer goes to share content, consider the effects on device performance, and use this method to pause sharing when UI changes, and resume sharing when UI changes stop, see WebViewController.m in sample project.
+/**
+ * @brief Suspend App Sharing.
+ * @param suspend - YES if sharing should be suspended, otherwise resume sharing.
+ * @return YES means successful, otherwise not.
+ * @warning When the customer goes to share content, consider the effects on device performance, and use this method to pause sharing when UI changes, and resume sharing when UI changes stop, see WebViewController.m in sample project.
  */
 - (BOOL)suspendSharing:(BOOL)suspend;
+/**
+ * @brief Support  sharing  device  auido.
+ * @return YES means supported.
+ */
 
-/*!
- @brief Enable the sending of device audio.
- @param enableAudio - YES if device audio sharing should be enabled, otherwise disable.
+- (BOOL)isSupportShareAudio;
+/**
+ * @brief Enable the sending of device audio.
+ * @param enableAudio - YES if device audio sharing should be enabled, otherwise disable.
  */
 - (void)setShareAudio:(BOOL)enableAudio;
 
-/*!
- @brief Get state of device audio sharing.
- @return YES if device is currently audio sharing.
+/**
+ * @brief Get state of device audio sharing.
+ * @return YES if device is currently audio sharing.
  */
 - (BOOL)isSharedAudio;
 
-/*!
- @brief Get state of device screen sharing.
- @return YES if device is currently screen sharing.
- @warning When the onSinkMeetingActiveShare callback return. developer nned to judge that share screen state.
+/**
+ * @brief Get state of device screen sharing.
+ * @return YES if device is currently screen sharing.
+ * @warning When the onSinkMeetingActiveShare callback return. developer nned to judge that share screen state.
  */
 - (BOOL)isDeviceSharing;
 
 /**
-* Allow participant to share white board
-* @param allow YES: allow, NO: disallow
-* @return error {@link MobileRTCSDKError}
-*/
+ * @brief Support optimiza share video.
+ * @return YES means supported.
+ */
+
+- (BOOL)isSupportOptimizeForSharedVideo;
+/**
+ * @brief Enable optimize share video.
+ * @return YES means enable suceess.
+ */
+- (BOOL)enableOptimizeForSharedVideo:(BOOL)enableVideo;
+/**
+ * @brief Get state of optimize share video.
+ * @return YES if that optimized share video.
+ */
+- (BOOL)isEnableOptimizeForSharedVideo;
+
+/**
+ * @brief Allow participant to share white board.
+ * @param allow YES: allow, NO: disallow.
+ * @return If the function succeeds, the return value is MobileRTCSDKError_Success.
+ */
 - (MobileRTCSDKError)allowParticipantsToShareWhiteBoard:(BOOL)allow;
 
 /**
-* Query is allow participant to share white board
-* @return YES: allow, NO: disallow
-*/
+ * @brief Query is allow participant to share white board.
+ * @return YES: allow, NO: disallow.
+ */
 - (BOOL)isParticipantsShareWhiteBoardAllowed;
+
+/**
+ * @brief Get the list of sharing source info.
+ * @param userID The user who is sharing.
+ * @return If the function succeeds, the return value is a pointer to the NSArray<MobileRTCSSharingSourceInfo*>, Otherwise, the return value is nil.
+ */
+- (NSArray <MobileRTCSSharingSourceInfo*> *_Nullable)getSharingSourceInfoList:(NSInteger)userID;
+
+/**
+ * @brief Set sharing types for the host or co-host in meeting.
+ * @param shareType Custom setting types of ZOOM SDK sharing.
+ * @return If the function succeeds, it will return MobileRTCSDKError_Success, otherwise not.
+ */
+-(MobileRTCSDKError)setShareSettingType:(MobileRTCShareSettingType)shareType;
+
+/**
+ * @brief Get the sharing types for the host or co-host in meeting.
+ * @return If the function succeeds, it will return MobileRTCShareSettingType, otherwise not.
+ */
+- (MobileRTCShareSettingType)getShareSettingType;
+
 @end

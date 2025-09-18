@@ -2,42 +2,61 @@
 //  MobileRTCRoomDevice.h
 //  MobileRTC
 //
-//  Created by Zoom Video Communications on 2017/2/27.
-//  Copyright © 2019年 Zoom Video Communications, Inc. All rights reserved.
+//  Created by Zoom Communications on 2017/2/27.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-/*!
- @brief MobileRTCDeviceType Enumeration of room device types.
+/**
+ * @brief Enumeration of room device types.
  */
 typedef enum {
-    ///H.323 Device
+    /** H.323 device. */
     MobileRTCDeviceType_H323  = 1,
-    ///SIP Device
+    /** SIP device. */
     MobileRTCDeviceType_SIP,
-    ///Both
+    /** Both H.323 and SIP device. */
     MobileRTCDeviceType_Both,
 }MobileRTCDeviceType;
 
-/*!
- @brief MobileRTCDeviceEncryptType Enumeration of H.323/SIP encryption types.
+/**
+ * @brief Enumeration of H.323/SIP encryption types.
  */
 typedef enum {
-    ///Meeting room system is not encrypted.
+    /** Meeting room system is not encrypted. */
     MobileRTCDeviceEncryptType_None   = 0,
-    ///Meeting room system is encrypted.
+    /** Meeting room system is encrypted. */
     MobileRTCDeviceEncryptType_Encrypt,
-    ///Meeting room system is encrypted automatically.
+    /** Meeting room system is encrypted automatically. */
     MobileRTCDeviceEncryptType_Auto,
 }MobileRTCDeviceEncryptType;
 
+/**
+ * @class MobileRTCRoomDevice
+ * @brief Represents H.323 device information used in Zoom meetings.
+ */
 @interface MobileRTCRoomDevice : NSObject
 
+/**
+ * @brief Get or set the name of the H.323 device.
+ */
 @property (nonatomic, copy) NSString * _Nullable deviceName;
+/**
+ * @brief Get or set the IP address of the H.323 device.
+ */
 @property (nonatomic, copy) NSString * _Nullable ipAddress;
+/**
+ * @brief Get or set the E.164 number of the H.323 device.
+ */
 @property (nonatomic, copy) NSString * _Nullable e164num;
+/**
+ * @brief Get or set the type of the H.323 device.
+ */
 @property (nonatomic, assign) MobileRTCDeviceType deviceType;
+/**
+ * @brief Get or set the encryption type used by the H.323 device.
+ */
 @property (nonatomic, assign) MobileRTCDeviceEncryptType encryptType;
 
 @end

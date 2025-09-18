@@ -3,34 +3,39 @@
 //  MobileRTC
 //
 //  Created by Zoom on 2022/11/17.
-//  Copyright © 2022 Zoom Video Communications, Inc. All rights reserved.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-/*!
- @brief information of meeting device info.
- Here are more detailed structural descriptions..
-*/
-@interface MobileRTCInMeetingDeviceInfo : NSObject
-/*!
- @brief index
+/**
+ * @class MobileRTCInMeetingDeviceInfo
+ * @brief Information of meeting device info.
  */
-@property(nonatomic, assign, readonly) NSInteger index;
-/*!
- @brief device name
+@interface MobileRTCInMeetingDeviceInfo : NSObject
+/**
+ * @brief Index.
+ * @deprecated Please use meetingId instead.
+ */
+@property(nonatomic, assign, readonly) NSInteger index DEPRECATED_MSG_ATTRIBUTE("Please use meetingId instead");
+/**
+ * @brief Device name.
  */
 @property(nonatomic, copy, readonly) NSString * _Nullable deviceName;
-/*!
- @brief meeting topic
+/**
+ * @brief Meeting topic.
  */
 @property(nonatomic, copy, readonly) NSString * _Nullable meetingTopic;
-/*!
- @brief meeting number
+/**
+ * @brief Meeting number.
  */
 @property(nonatomic, assign, readonly) NSUInteger meetingNumber;
-/*!
- @brief meeting id
+/**
+ * @brief Meeting id.
  */
 @property(nonatomic, copy, readonly) NSString * _Nullable meetingId;
+/**
+ * @brief This meeting support joining in companion mode.
+ */
+@property(nonatomic, assign) BOOL isSupportCompanionMode;
 
 @end

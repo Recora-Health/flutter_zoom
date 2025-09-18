@@ -3,7 +3,7 @@
 //  MobileRTC
 //
 //  Created by Zoom on 3/27/23.
-//  Copyright © 2023 Zoom Video Communications, Inc. All rights reserved.
+//  Copyright © Zoom Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,6 +13,7 @@
 @class MobileRTCReminderHandler;
 
 /**
+ * @protocol MobileRTCReminderDelegate
  * @brief Reminder callback event.
  */
 @protocol MobileRTCReminderDelegate <NSObject>
@@ -28,37 +29,37 @@
 @end
 
 /**
+ * @class MobileRTCReminderContent
  * @brief The reminder dialog content.
  */
 @interface MobileRTCReminderContent : NSObject
-
 /**
- *  the type of the reminder.
+ * @brief The type of the reminder.
  */
 @property (nonatomic, assign) MobileRTCReminderType type;
 
 /**
- * the title of the reminder dialog.
+ * @brief The title of the reminder dialog.
  */
 @property (nonatomic, copy, nullable) NSString *title;
 
 /**
- * the detail content of the reminder dialog.
+ * @brief The detail content of the reminder dialog.
  */
 @property (nonatomic, copy, nullable) NSString *content;
 
 /**
- * whether block the user join or stay in the meeting.
+ * @brief Whether block the user join or stay in the meeting.
  */
 @property (nonatomic, assign) BOOL isBlock;
 
 /**
- * Get the type of the action which user should take after receiving this reminder content.
+ * @brief Get the type of the action which user should take after receiving this reminder content.
  */
 @property (nonatomic, assign) MobileRTCReminderActionType actionType;
 
 /**
- * Get a list of reminder’s type.
+ * @brief Get a list of reminder’s type.
  * @return List of the reminder’s type.
  */
 - (NSArray<NSNumber*>*_Nonnull)getMultiReminderTypes;
@@ -66,49 +67,59 @@
 @end
 
 /**
+ * @class MobileRTCReminderHandler
  * @brief The interface to handle the reminder dialog.
  */
 @interface MobileRTCReminderHandler : NSObject
 /**
- * accept the reminder.
+ * @brief accept the reminder.
  */
 - (MobileRTCSDKError)accept;
 
 /**
- * declined the reminder.
+ * @brief Declined the reminder.
  */
 - (MobileRTCSDKError)declined;
 
 /**
- * ignore the reminder.
+ * @brief Ignore the reminder.
  */
 - (MobileRTCSDKError)ignore;
 
 /**
- * Set not show the disclaimer in subsequent meetings.
- * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise the function fails. Fed, for more details, see {@link MobileRTCSDKError}.
+ * @brief Set not show the disclaimer in subsequent meetings.
+ * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise the function fails. Fed,
  */
 - (MobileRTCSDKError)setHideFeatureDisclaimers;
+
+/**
+ * @brief Is need explicit consent for AI custom Disclaimer. Only valid for \link @c MobileRTCReminderType_CustomAICompanionDisclaimer \endlink.
+ * @return YES means explicit consent is required. Before agreeing to AIC disclaimer, the user's video and audio will be blocked. False means explicit consent is not required and video and audio will not be blocked.
+ */
+- (BOOL)isNeedExplicitConsent4AICustomDisclaimer;
 
 @end
 
 
 /**
+ * @class MobileRTCDisclaimerBannerConfig
  * @brief Config for the simplify dislciamer banner.
-
  */
 @interface MobileRTCDisclaimerBannerConfig: NSObject
 /**
- * Center of the simplify disclaimer banner.
+ * @brief Center of the simplify disclaimer banner.
  */
 @property(nonatomic, assign) CGPoint center;
 /**
- * Background of the simplify disclaimer banner.
+ * @brief Background of the simplify disclaimer banner.
  */
 @property(nonatomic, strong) UIColor * _Nullable backgroundColor;
 
 @end
 
+/**
+ * @class MobileRTCReminderHelper
+ */
 @interface MobileRTCReminderHelper : NSObject
 
 /**
