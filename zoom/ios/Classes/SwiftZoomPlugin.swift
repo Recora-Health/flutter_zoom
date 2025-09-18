@@ -353,7 +353,7 @@ import MobileRTC
 }
 
  
-public class AuthenticationDelegate: NSObject, MobileRTCAuthDelegate {
+@objc(SwiftZoomPlugin) public class AuthenticationDelegate: NSObject, MobileRTCAuthDelegate {
     
     private var result: FlutterResult?
     
