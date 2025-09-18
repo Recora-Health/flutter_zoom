@@ -6,31 +6,39 @@
 	<dict>
 		<key>ios-arm64/MobileRTCScreenShare.framework/Headers/MobileRTCScreenShareService.h</key>
 		<data>
-		bHpHeGwhQ+jTXyAnJrYZl+d3i8Y=
+		cJVeNlIP9mBbyCo8y5ylWussYv0=
 		</data>
 		<key>ios-arm64/MobileRTCScreenShare.framework/Info.plist</key>
 		<data>
-		pur1QqbG1GItQcxHdpbd5zmMKH4=
+		WabM1Td/CIPK8VmieFP2+khiyzA=
 		</data>
 		<key>ios-arm64/MobileRTCScreenShare.framework/MobileRTCScreenShare</key>
 		<data>
-		pqR8ecDSVt8RcaNgInuxoQTt4E0=
+		yVnH4pBaYph5bKv+VruR6BaADvA=
+		</data>
+		<key>ios-arm64/MobileRTCScreenShare.framework/PrivacyInfo.xcprivacy</key>
+		<data>
+		aEevFz2jB9d0XJX7ayULozeuML8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/Headers/MobileRTCScreenShareService.h</key>
 		<data>
-		bHpHeGwhQ+jTXyAnJrYZl+d3i8Y=
+		cJVeNlIP9mBbyCo8y5ylWussYv0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/Info.plist</key>
 		<data>
-		Ra4cEuWEfNlAhrGIOuaYsG5h0G4=
+		/d2QrLlpIai+hOsKhYcSbtYDxQU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/MobileRTCScreenShare</key>
 		<data>
-		5AX3k/CfOYPF6sxrNhFafUZ6Or8=
+		aQdXoUOcExVcF4QiMrZsTAJ5SMU=
+		</data>
+		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/PrivacyInfo.xcprivacy</key>
+		<data>
+		aEevFz2jB9d0XJX7ayULozeuML8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		gjuVaHemN0O5F9Uk3M7t8S9BbMo=
+		3lisDYLT3ea0f3B87CU38wt2YnA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -38,11 +46,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		Q0djVf1rmtK7d1UilqNeSS1AIck=
+		m15tg7TslQji3R8aE/swyctCK8c=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/_CodeSignature/CodeResources</key>
 		<data>
-		M0EaA1hyQuUnJ/PZLHBg5BAx794=
+		RSwGtT0Ndp+QsA7/ETz4xjMhlvM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -55,77 +63,99 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bHpHeGwhQ+jTXyAnJrYZl+d3i8Y=
+			cJVeNlIP9mBbyCo8y5ylWussYv0=
 			</data>
 			<key>hash2</key>
 			<data>
-			BooL2gL4rZgHPW3aMhMH+eETKnYhoWjiW2OBcP1ov10=
+			jCIfErY9j3FW9ECV97/6a98P39MbEtlP6wX8yy5kTVw=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTCScreenShare.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pur1QqbG1GItQcxHdpbd5zmMKH4=
+			WabM1Td/CIPK8VmieFP2+khiyzA=
 			</data>
 			<key>hash2</key>
 			<data>
-			K+2lFRN4lbNnERo8lUO72YAeEfANmmJr0VxDLI+Qcsk=
+			VUgecv3OKCoydWTsz75EVLkVS7D3GqYbj4mVvC+4kMU=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTCScreenShare.framework/MobileRTCScreenShare</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pqR8ecDSVt8RcaNgInuxoQTt4E0=
+			yVnH4pBaYph5bKv+VruR6BaADvA=
 			</data>
 			<key>hash2</key>
 			<data>
-			46JYSOznLm1t8Bk4MDB6QUgF/8nqNUxdKjbMCfiVCpM=
+			DZXtnJmV2yBiD1b9BF6Nwc+jytbvZzE5P0906E13Pws=
+			</data>
+		</dict>
+		<key>ios-arm64/MobileRTCScreenShare.framework/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aEevFz2jB9d0XJX7ayULozeuML8=
+			</data>
+			<key>hash2</key>
+			<data>
+			E2feaet/Tgfk+ahm9N3qIQEGflwbswGOkFYBUuk7/dE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/Headers/MobileRTCScreenShareService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bHpHeGwhQ+jTXyAnJrYZl+d3i8Y=
+			cJVeNlIP9mBbyCo8y5ylWussYv0=
 			</data>
 			<key>hash2</key>
 			<data>
-			BooL2gL4rZgHPW3aMhMH+eETKnYhoWjiW2OBcP1ov10=
+			jCIfErY9j3FW9ECV97/6a98P39MbEtlP6wX8yy5kTVw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ra4cEuWEfNlAhrGIOuaYsG5h0G4=
+			/d2QrLlpIai+hOsKhYcSbtYDxQU=
 			</data>
 			<key>hash2</key>
 			<data>
-			SgG9SrEeFKgquNJATdX7PZGiUL5RCntFAyRDeYH5hfk=
+			o1BGKG6nwlhy9yQyzt0DeOhpx12/biPmwHYLQRLRgQg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/MobileRTCScreenShare</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5AX3k/CfOYPF6sxrNhFafUZ6Or8=
+			aQdXoUOcExVcF4QiMrZsTAJ5SMU=
 			</data>
 			<key>hash2</key>
 			<data>
-			cakWQDDX94u/dnLFhTlJAaCAlyk4cdfg/FAUCNTUsPE=
+			bafJ8eJJFZgKFjiltzlkfz8qtRzdgJsNBfGrNJbdbm8=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aEevFz2jB9d0XJX7ayULozeuML8=
+			</data>
+			<key>hash2</key>
+			<data>
+			E2feaet/Tgfk+ahm9N3qIQEGflwbswGOkFYBUuk7/dE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gjuVaHemN0O5F9Uk3M7t8S9BbMo=
+			3lisDYLT3ea0f3B87CU38wt2YnA=
 			</data>
 			<key>hash2</key>
 			<data>
-			tverN2uCl1JSBsnEqrBy/jcVRn9XhmDUxRoSCVidfFs=
+			omvNDcYtt7GDF6T4Jr/F+bOCTINoJvENpk+I02J2YcA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/_CodeSignature/CodeRequirements</key>
@@ -143,22 +173,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Q0djVf1rmtK7d1UilqNeSS1AIck=
+			m15tg7TslQji3R8aE/swyctCK8c=
 			</data>
 			<key>hash2</key>
 			<data>
-			A5Ve6AQ/5gRsLqAwOIvX7AdAKeCO2+LrDSXB2Wzp8MM=
+			fzXIPCGun64E+bCtGQX7NZ8I5+SQJ55XwkkJdiTh8mE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			M0EaA1hyQuUnJ/PZLHBg5BAx794=
+			RSwGtT0Ndp+QsA7/ETz4xjMhlvM=
 			</data>
 			<key>hash2</key>
 			<data>
-			W3pThCAt4imb1Gdo39FSawQD2I/iXpiWXzvciZvE+lc=
+			JV0CleQjhuh+O0cKNcwxqZLxHxbB8NcRhPLobjxiPxg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTCScreenShare.framework/_CodeSignature/CodeSignature</key>
