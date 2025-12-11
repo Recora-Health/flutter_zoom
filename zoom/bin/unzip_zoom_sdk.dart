@@ -61,7 +61,7 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   // If the files do not exist or we are updating, then download the latest version
   if (!exists || isUpdate) {
     await downloadFile(
-        Uri.parse('https://www.dropbox.com/scl/fi/y1kwnlb9now5szf1tvkzn/mobilertc.aar?rlkey=kv7syf345c6w10wn4vqhrfr42&st=o98gh107&dl=1'), androidRTCLibFile, isUpdate);
+        Uri.parse('https://www.dropbox.com/scl/fi/tscqxtowqwy2adjndb4x1/mobilertc.aar?rlkey=xute5uiaae050janebgd36x9c&st=0t13p7q7&dl=1'), androidRTCLibFile, isUpdate);
   }
 
   // Check if the iOS MobileRTC SDK files exist
@@ -73,7 +73,7 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   // If the files do not exist or we are updating, then download the latest version
   if (!exists || isUpdate) {
     await downloadFile(
-        Uri.parse('https://www.dropbox.com/scl/fi/u8cf8wt5vh8n96azvalb1/arm64-MobileRTC?rlkey=t4waybmgya03yoa1u8otltpvf&st=llq6pgyj&dl=1'), iosSDKFile, isUpdate);
+        Uri.parse('https://www.dropbox.com/scl/fi/f57k4z9b92k7nluoh6btw/arm64-MobileRTC?rlkey=wzawulldewkgd8t80r399oa9m&st=k63pk1vo&dl=1'), iosSDKFile, isUpdate);
   }
 
   // Check if the Arm64 iOS Embulator SDK files exist
@@ -86,7 +86,7 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   if (!exists || isUpdate) {
     await downloadFile(
         Uri.parse(
-            'https://www.dropbox.com/scl/fi/99ovvebdi44on0esast4r/x86_64-simulator-MobileRTC?rlkey=qivsd0aflaog3b4ph5kiovkqp&st=tb5xddvo&dl=1'),
+            'https://www.dropbox.com/scl/fi/rp1r32te7gz418f8pln7q/x86_64-simulator-MobileRTC?rlkey=2773cynr2q6wy2m5dlg1il62g&st=ahzspj3p&dl=1'),
         iosSimulateArm64SDKFile,
         isUpdate);
   }
