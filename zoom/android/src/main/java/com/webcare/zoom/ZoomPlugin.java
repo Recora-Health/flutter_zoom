@@ -106,7 +106,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
                         List<Integer> response = Arrays.asList(errorCode, internalErrorCode);
 
                         if (errorCode != ZoomError.ZOOM_ERROR_SUCCESS) {
-                            System.out.println("Failed to initialize Zoom SDK");
+                            System.out.println("ZoomMeeting: Failed to initialize Zoom SDK");
                             result.success(response);
                             return;
                         }
@@ -114,6 +114,18 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
                         ZoomSDK zoomSDK = ZoomSDK.getInstance();
                         MeetingService meetingService = zoomSDK.getMeetingService();
                         meetingStatusChannel.setStreamHandler(new StatusStreamHandler(meetingService));
+
+                        // Set custom meeting UI activity for edge-to-edge support on Android 16
+                        try {
+                            zoomSDK.getZoomUIService().setNewMeetingUI(
+                                com.recorahealth.members.ZoomMeetingActivity.class
+                            );
+                            System.out.println("ZoomMeeting: Custom Zoom meeting UI set successfully");
+                        } catch (Exception e) {
+                            System.out.println("ZoomMeeting: Failed to set custom meeting UI: " + e.getMessage());
+                            e.printStackTrace();
+                        }
+
                         result.success(response);
                     }
                 },
@@ -127,7 +139,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         ZoomSDK zoomSDK = ZoomSDK.getInstance();
 
         if(!zoomSDK.isInitialized()) {
-            System.out.println("Not initialized!!!!!!");
+            System.out.println("ZoomMeeting: Not initialized!!!!!!");
             result.success(false);
             return;
         }
@@ -186,7 +198,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         ZoomSDK zoomSDK = ZoomSDK.getInstance();
 
         if(!zoomSDK.isInitialized()) {
-            System.out.println("Not initialized!!!!!!");
+            System.out.println("ZoomMeeting: Not initialized!!!!!!");
             result.success(Arrays.asList("MEETING_STATUS_UNKNOWN", "SDK not initialized"));
             return;
         }
@@ -207,7 +219,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         ZoomSDK zoomSDK = ZoomSDK.getInstance();
 
         if(!zoomSDK.isInitialized()) {
-            System.out.println("Not initialized!!!!!!");
+            System.out.println("ZoomMeeting: Not initialized!!!!!!");
             result.success(Arrays.asList("MEETING_STATUS_UNKNOWN", "SDK not initialized"));
             return;
         }
