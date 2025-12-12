@@ -116,11 +116,15 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
                         meetingStatusChannel.setStreamHandler(new StatusStreamHandler(meetingService));
 
                         // Set custom meeting UI activity for edge-to-edge support on Android 16
+                        // Use reflection to load the app's custom activity class
                         try {
-                            zoomSDK.getZoomUIService().setNewMeetingUI(
-                                com.recorahealth.members.ZoomMeetingActivity.class
+                            Class<?> customActivityClass = Class.forName(
+                                "com.recorahealth.members.ZoomMeetingActivity"
                             );
+                            zoomSDK.getZoomUIService().setNewMeetingUI(customActivityClass);
                             System.out.println("ZoomMeeting: Custom Zoom meeting UI set successfully");
+                        } catch (ClassNotFoundException e) {
+                            System.out.println("ZoomMeeting: Custom activity class not found: " + e.getMessage());
                         } catch (Exception e) {
                             System.out.println("ZoomMeeting: Failed to set custom meeting UI: " + e.getMessage());
                             e.printStackTrace();
