@@ -121,7 +121,11 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
                             Class<?> customActivityClass = Class.forName(
                                 "com.recorahealth.members.ZoomMeetingActivity"
                             );
-                            zoomSDK.getZoomUIService().setNewMeetingUI(customActivityClass);
+                            // Cast to the expected type for setNewMeetingUI
+                            @SuppressWarnings("unchecked")
+                            Class<? extends us.zoom.sdk.NewMeetingActivity> activityClass =
+                                (Class<? extends us.zoom.sdk.NewMeetingActivity>) customActivityClass;
+                            zoomSDK.getZoomUIService().setNewMeetingUI(activityClass);
                             System.out.println("ZoomMeeting: Custom Zoom meeting UI set successfully");
                         } catch (ClassNotFoundException e) {
                             System.out.println("ZoomMeeting: Custom activity class not found: " + e.getMessage());
