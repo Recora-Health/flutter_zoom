@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+Avatar.h
-//  MobileRTC
-//
-//  Created by Zoom on 10/10/22.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+Avatar.h
+ * @brief Meeting+Avatar service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 

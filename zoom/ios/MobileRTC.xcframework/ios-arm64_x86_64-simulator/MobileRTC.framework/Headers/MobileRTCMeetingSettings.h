@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingSettings.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 7/2/15.
-//  Copyright (c) Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingSettings.h
+ * @brief Configuration settings for meeting behavior and preferences.
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -118,10 +115,16 @@
 @property (assign, nonatomic) BOOL hostLeaveHidden;
 
 /**
- * @brief Show/Hide the hint message in the meeting.
+ * @brief Show/Hide the hint message in the meeting, hint message is on the top bar.
  * @warning The function only in Zoom UI mode.
  */
 @property (assign, nonatomic) BOOL hintHidden;
+
+/**
+ * @brief Show/Hide the tips message in the meeting, tips message is on the bottom of the screen.
+ * @warning The function only in Zoom UI mode.
+ */
+@property (assign, nonatomic) BOOL tipsHidden;
 
 /**
  * @brief Show/Hide the waiting HUD while starting/joining a meeting.
@@ -395,6 +398,7 @@
 
 /**
  * @brief Query reactions on MeetingUI is hidden or not.
+ * @return YES means reactions on MeetingUI is hidden, otherwise not.
  * @warning YES means reactions on MeetingUI is hidden, otherwise not.
  */
 - (BOOL)reactionsOnMeetingUIHidden;
@@ -488,6 +492,7 @@
 /**
  * @brief Set emoji reaction skin tone.
  * @param skinTone The reaction skin tone.
+ * @return If the function succeeds, it will return MobileRTCMeetError_Success. Otherwise the function fails.
  * @warning The function only in Zoom UI mode.
  */
 - (MobileRTCMeetError)setReactionSkinTone:(MobileRTCEmojiReactionSkinTone)skinTone;
@@ -530,6 +535,7 @@
 
 /**
  * @brief Get the flag to enable/disable to hide userself's view.
+ * @return YES means hide self view, otherwise not.
  */
 - (BOOL)isHideSelfViewEnabled;
 
@@ -541,6 +547,7 @@
 
 /**
  * @brief Get the flag of auto enter Picture-in-Picture Mode for video calls.
+ * @return YES means auto enter Picture-in-Picture Mode, otherwise not.
  */
 - (BOOL)videoCallPictureInPictureEnabled;
 

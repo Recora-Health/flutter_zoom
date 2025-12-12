@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+Reaction.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2020/12/3.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+Reaction.h
+ * @brief Meeting+Reaction service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 

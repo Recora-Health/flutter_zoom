@@ -6,291 +6,291 @@
 	<dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTC.h</key>
 		<data>
-		VmhY0P+1dyDISO3J7ff4dDIvveI=
+		BaNhW36XjyDpVABimfb/v2aYVP0=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAICQueryHelper.h</key>
 		<data>
-		DV4Fr8Lg6VRvS0XN75iJsIB0DNk=
+		cl2ULrLWaoM1/HW6MxTT8eJJlTg=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAICSmartSummaryHelper.h</key>
 		<data>
-		z7r+2a+0FtHHh4TspV0qWE5alCs=
+		HdmRVzYxH/9z1PBBz0k22023TGM=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAnnotationService.h</key>
 		<data>
-		3zppIkH5y/QVv4Zc1SlhKF+Tr3w=
+		dySyAHCWbrZ2Oo7574QoJDoYV9A=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCArchiveConfrimHandle.h</key>
 		<data>
-		2FDpOFXUN9o08ynz0jjqii4KNec=
+		GclxcpzbttB1Ln5aS36QBdvv9E4=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAudioRawData.h</key>
 		<data>
-		MGXu59fOc9mbgvnDLnrPkawXfiY=
+		tjuuuF2MTqcuZOD11QGn3N75Z8o=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAudioRawDataHelper.h</key>
 		<data>
-		1dOUJhQb455pnjUuoVR3ud6PWQ0=
+		hX7rl9G256ScuIpVszBLkP83LBk=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAudioSender.h</key>
 		<data>
-		gIa5qBiioYpFkBvknbdHOW2WQUo=
+		Lc4n+Z+lboqtD1tYco5+/zoH1I0=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAudioSourceHelper.h</key>
 		<data>
-		LlWaIHA1AJ+SxOh1/SxWo+alpc8=
+		/YWPJnhzdNbWHWzkrwDgpijyBF0=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAuthService.h</key>
 		<data>
-		xMxknAq/D41PuzX5f6MjRkYk1ow=
+		9QEHAyQJe9EPOIrMa+KQCv9atpw=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAutoFramingParameter.h</key>
 		<data>
-		Xm2ZL3A7r+6+wbBpolkn4DQFchY=
+		uHeej9/HSGQhdoxFd1v1/IS5tP4=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCBORole.h</key>
 		<data>
-		HY7zDJwd7zq7kd3iXrj37BSDpI8=
+		/JyIqNh2dGqZFCy3dw+n8M50a20=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCCallCountryCode.h</key>
 		<data>
-		HcLxe/R3KVusFI3xoB0FkhKksKM=
+		70Bu8WkqagrVrw5t3pQKMfsNWM0=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCCameraControlService.h</key>
 		<data>
-		SIs2EN7sbfIxqvexMDPvDRCXryg=
+		KIZOi+BfNdIornX/L0ntNsAY2Mc=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCConstants.h</key>
 		<data>
-		VwnmgcYFv2/NRJXZkETquOTQwgA=
+		b7BvMYq0G7bIgtcbzgWt9a0RaoE=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCDirectShareService.h</key>
 		<data>
-		hl7afH08g0V+abPuCeTxcBdbseM=
+		ZNEryi46DdOpZnGw7GR9EXy1cXk=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCInMeetingDeviceInfo.h</key>
 		<data>
-		RXSoCRBKeFaxnms28z8FD6b/IBw=
+		EOY2SIjNx43vRXtczDSyxu231jw=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCInviteHelper.h</key>
 		<data>
-		WIzJ1xyOcDR8IJF6EUT7xpMIDRM=
+		e1ND+thOD3hMxFltPb6UvMJPmyo=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCLiveTranscriptionLanguage.h</key>
 		<data>
-		y57QUISZec+gxlDbnR4vtr8R9Yc=
+		MXUP4hZNM3jXJCPO0p5ENDKuJNw=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingActionItem.h</key>
 		<data>
-		Qpt6EWCwgphjIZrbjW/7sfPGu2M=
+		bsTH7Z0yshsEQ0doDOcQpLk6tUU=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingChat.h</key>
 		<data>
-		Zc2dvP/a8MBBRHStjk2RkNfQRPo=
+		vllRQNCekh6/0fAhCjDm8EC+w8Y=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingDelegate.h</key>
 		<data>
-		UCtBWahXF6qLqjDhAKbe6eKj+SE=
+		1GJszpKkc58qDLDir/XVlBhIMXk=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+AICompanion.h</key>
 		<data>
-		Is40wkfAd2LIfkIqvSoPaFMLmUc=
+		aZshdC6NZCX22oQFjJuowQG3oQo=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+AppShare.h</key>
 		<data>
-		jQn1g3/F1KYMDLZJD1Fwyxc6JwI=
+		eyX6ToLKYqOzivo5QblrdO+C4m8=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Audio.h</key>
 		<data>
-		R3Jty2wc1euowTD9h5MdM1DYUJo=
+		FdXdPISYTMnIt5pj6FdLKaUuEPs=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Avatar.h</key>
 		<data>
-		G032cZm2z66HrBt9j5Cs/Ez4V7o=
+		24o0x2gvle5oPEAExmOBV6bxGhs=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+BO.h</key>
 		<data>
-		G3J52J/HLxAjr3/2sTOv7BKZhIo=
+		+Fnq79vnAVGXaQ8LOkX60xfHpjo=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Chat.h</key>
 		<data>
-		AB0KHmKf4m/iWb7zaYAydA6DwuA=
+		z7k5T4+ucHOEv8cVCc2rgWYCrFg=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Customize.h</key>
 		<data>
-		tZTL6zVM2iXyc5b8Z9Za5HD7UVM=
+		QkQ0dn0jcl4MVLT3GnngqG3AjAs=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Docs.h</key>
 		<data>
-		DGB2NGLRzPYDKFBJWLQq9XfYW8k=
+		UzGFXUV8maNLQKqU59yZs7lnS+c=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Encryption.h</key>
 		<data>
-		0N6jkZlMIpcY733U8wIL9jYFYQA=
+		cQmfZ92RZ0DpTdIXo/DzQBvN4FQ=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+InMeeting.h</key>
 		<data>
-		1Vo8jBFYwRaR/NxPR0bvya/uuZQ=
+		O/lsM515vasNwh6NXHEBAQgbGR8=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Interpretation.h</key>
 		<data>
-		2axogkdGLUL+EKgHJuCeIKq62j4=
+		wcifnLSfA2yKoXV5k7TnN5ClY3k=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+LiveTranscription.h</key>
 		<data>
-		esw11cDFZP7D6EtJbxUHGUFMi9A=
+		2X7GAluxqFLBJwjTuuHwRs7wfro=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Phone.h</key>
 		<data>
-		Ab/d9j/YzBw+V0DWUogEr9TuMUs=
+		+ctQalGc1KyebNZVDY6Z9lwTdxQ=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Polling.h</key>
 		<data>
-		0WMGaoF1ICTJcCLSmW/MzlYWIFM=
+		FCKmhjgYx37odbVmdJcd9NWX3fE=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+QA.h</key>
 		<data>
-		cUdK9gkhWYnTaXTn6+8CWU2WnOw=
+		8BENe2Kb+/xeg7swrIGcJGmwuHk=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+RawArchiving.h</key>
 		<data>
-		sbnUP4CHtZLgbnx3NGffLY7UG+0=
+		Zp284avMxBTF0tCsqxFFSvqXXcs=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Reaction.h</key>
 		<data>
-		Qbf+/Qq8raDyExQy9z3jNaf9MaE=
+		zWYR5Gdd5H3UBwn5By2rZNrdhdo=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+SmartSummary.h</key>
 		<data>
-		OcPlTAgabQMhwfeT2RKeXcve984=
+		upoD98GIabL8jA1M+yqrHPGR4XY=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+User.h</key>
 		<data>
-		BPcrPCm8kYQIp3wiZEFrtyL/YwA=
+		G1HTVqQ928blnNfGhfnfX+GbPyk=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Video.h</key>
 		<data>
-		oTVWBjLlwhiFCAqIVUP4/NhF5Io=
+		YxDRNsnP+aomdiuABwSmG6S5xn0=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+VirtualBackground.h</key>
 		<data>
-		U4ggPO0nJdJgDAW3vV1mIyP2H+0=
+		ZdrVYOZ8/e8wmk76QtxxyX49DSw=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Webinar.h</key>
 		<data>
-		rzqbwIVtWxcdVakJ5Bnn3zuAag0=
+		pMVPVGvsQOWfhOoZmJorCzNlM2g=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Whiteboard.h</key>
 		<data>
-		riWMRu/iH+eVitR8/u4PBPiyYjg=
+		XQ4Jc1F91zqviQzfK8fzF+m3fso=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService.h</key>
 		<data>
-		ZFvzEwHKxm06giBi3Det8rHsixQ=
+		mEOgsRyqrv8zxlGejFcXOXglgtA=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingSettings.h</key>
 		<data>
-		j2WqhllOvM/qwz0xMw071Z4G/K0=
+		1ID5bDu1LFmbZ/23dnuyf2XbY0g=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingUserInfo.h</key>
 		<data>
-		zjq80uOeke2wttCXjTvEuYAkxPI=
+		sKjMZ4stwSEC7AprzxKKqccIn+Q=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCNotificationServiceHelper.h</key>
 		<data>
-		0AoKDSEN/pxKDJX2VaNsk+aJF7Q=
+		fxDljAy3l9iGaGQdUvyUMD3CBAI=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCPreProcessRawData.h</key>
 		<data>
-		a5/6Be/TjWHya/xUUn5MKpREEKM=
+		tr2VNDwdlKpyDOIreGlWoMCfKPA=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCPresenceHelper.h</key>
 		<data>
-		oCyOz8JTyDfAN/w1eUfkZdXoofA=
+		O06X1e4LIub+FJiPEyUWuEj57Jo=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCQAItem.h</key>
 		<data>
-		14efgMrcfK/oo15vTS8ySrsM8/I=
+		tuGh1eZn5mVkOziPbf37LajcFkQ=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCRawLiveStreamInfo.h</key>
 		<data>
-		1ikyPMeiOX6oasQtbV/jdYjh/JA=
+		/Za3xCxCDkSdctqdZsB9nXllD+4=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCReminderHelper.h</key>
 		<data>
-		L0rq2NdDV+YaFBZop2PYmrcr+cQ=
+		NIAXYQSGyJ4dnHfhIPYlYXBFddQ=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCRemoteControlService.h</key>
 		<data>
-		rby48tL6dTdEIIDwgE9DaPCWQ/s=
+		IhLeNa2egs88NY+JYboSEH5uvYY=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCRenderer.h</key>
 		<data>
-		GyPG2uKKb9n8QzgIqmV92chq/j4=
+		VyCksAHnTOf0uIgCHw7ZbOIVjB4=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCRequestRawLiveStreamPrivilegeHandler.h</key>
 		<data>
-		3mT6rgqThVBqplxxhpDPLrDwzEo=
+		TF0S/yctEnown9IGiYBe4SkIFDg=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCReturnToMainSessionHandler.h</key>
 		<data>
-		+M2puwfkxUmvURnbEXtL6LAfNiA=
+		2dIAwQAkQJlKYeheJPyK89v8Ipg=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCRoomDevice.h</key>
 		<data>
-		m9K90xu23jggkglL0/gVt/Eevns=
+		VhM6fDdeWIYzINPJIjsBf1pmH5Q=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCSMSService.h</key>
 		<data>
-		xabimbiVeb7vff3RyggNXExLAkM=
+		uvpdf4MvItASz8bac0cLoijgCmw=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCShareAudioSender.h</key>
 		<data>
-		DsPgnpI6ry/7JnTmuhnAt3ti4nY=
+		5jyiPOCgPGi+s4qBrbVisfObSIY=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCShareSender.h</key>
 		<data>
-		bNAnCqAYe0XpEpKGVkBmqcbgLug=
+		b9ZUITA75/368cI0yZ/N/3Dz5jI=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCShareSourceHelper.h</key>
 		<data>
-		1rFfXY9AukL08DlyiUCK56WuQHk=
+		WKaFxEN3z8S/kgklc5ra/MGuoys=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoCapabilityItem.h</key>
 		<data>
-		VmfTVJBCeEgFdS81lbuYImTytW8=
+		xDJanGNsAPvq/m1wWCF9SgmfWKM=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoRawData.h</key>
 		<data>
-		wCG9nJdcoHh9aj5GdIf0Ba7ZzE0=
+		fgmoO+Gin3CFn41hZq4gyqczF2A=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoSender.h</key>
 		<data>
-		GlbkSwWl5v3z5JkiJfLXgo3A1q8=
+		oL8Qg0nvOzXq18aSs0BA/j6DT04=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoSourceHelper.h</key>
 		<data>
-		lVxYmhBB99NfQEdJiQnHUhWIRAY=
+		3/9ghMTYeUFKoRVwh/4ymCbMWog=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoView.h</key>
 		<data>
-		dpFmViQML9N7i3chqOPGDpfBWzY=
+		G7SrKszd1BHgh4b6SEg+WWkn6LQ=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCWaitingRoomService.h</key>
 		<data>
-		l15Zzrvq8mksbZLQnUPT+siBlaY=
+		LYD62P12ACtJhz8fMsyV3HRPgRk=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCWebinarInputScreenNameHandler.h</key>
 		<data>
-		UR2MH26b4z2KMy/4iVz3JZz8YFw=
+		xebcXRxASqvz2cAKT3fMWgVYgu8=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Info.plist</key>
 		<data>
-		7fnj4syqwnBITfhuFdD102NEHDc=
+		hp54KbfKUB8/wFpQ71TaYdiXwxw=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/MobileRTC</key>
 		<data>
-		zGXVeNArbRRpTc3fWZl8T/cFdoc=
+		HnriMiGf1qNulbqFfGpmpHMz9eQ=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -298,15 +298,15 @@
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		goohgtZhTQJosomzTX2jLjirhoI=
+		G2k5094T2OyeyMlPHYaqeFNAqIw=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		2bVbArEeD7PAa0JAzoKYOCKcXD0=
+		/HsIonpKwi4yldZHhQ+2+azXFrU=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		goohgtZhTQJosomzTX2jLjirhoI=
+		G2k5094T2OyeyMlPHYaqeFNAqIw=
 		</data>
 		<key>ios-arm64/MobileRTC.framework/Modules/module.modulemap</key>
 		<data>
@@ -318,295 +318,295 @@
 		</data>
 		<key>ios-arm64/MobileRTC.framework/nydusDefault.metallib</key>
 		<data>
-		VbFRkukMXY7VgabrxPPcl9UYhOE=
+		aUj93qNDaKi/ETXY2P4nLFGAdRI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTC.h</key>
 		<data>
-		VmhY0P+1dyDISO3J7ff4dDIvveI=
+		BaNhW36XjyDpVABimfb/v2aYVP0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAICQueryHelper.h</key>
 		<data>
-		DV4Fr8Lg6VRvS0XN75iJsIB0DNk=
+		cl2ULrLWaoM1/HW6MxTT8eJJlTg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAICSmartSummaryHelper.h</key>
 		<data>
-		z7r+2a+0FtHHh4TspV0qWE5alCs=
+		HdmRVzYxH/9z1PBBz0k22023TGM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAnnotationService.h</key>
 		<data>
-		3zppIkH5y/QVv4Zc1SlhKF+Tr3w=
+		dySyAHCWbrZ2Oo7574QoJDoYV9A=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCArchiveConfrimHandle.h</key>
 		<data>
-		2FDpOFXUN9o08ynz0jjqii4KNec=
+		GclxcpzbttB1Ln5aS36QBdvv9E4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAudioRawData.h</key>
 		<data>
-		MGXu59fOc9mbgvnDLnrPkawXfiY=
+		tjuuuF2MTqcuZOD11QGn3N75Z8o=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAudioRawDataHelper.h</key>
 		<data>
-		1dOUJhQb455pnjUuoVR3ud6PWQ0=
+		hX7rl9G256ScuIpVszBLkP83LBk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAudioSender.h</key>
 		<data>
-		gIa5qBiioYpFkBvknbdHOW2WQUo=
+		Lc4n+Z+lboqtD1tYco5+/zoH1I0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAudioSourceHelper.h</key>
 		<data>
-		LlWaIHA1AJ+SxOh1/SxWo+alpc8=
+		/YWPJnhzdNbWHWzkrwDgpijyBF0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAuthService.h</key>
 		<data>
-		xMxknAq/D41PuzX5f6MjRkYk1ow=
+		9QEHAyQJe9EPOIrMa+KQCv9atpw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAutoFramingParameter.h</key>
 		<data>
-		Xm2ZL3A7r+6+wbBpolkn4DQFchY=
+		uHeej9/HSGQhdoxFd1v1/IS5tP4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCBORole.h</key>
 		<data>
-		HY7zDJwd7zq7kd3iXrj37BSDpI8=
+		/JyIqNh2dGqZFCy3dw+n8M50a20=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCCallCountryCode.h</key>
 		<data>
-		HcLxe/R3KVusFI3xoB0FkhKksKM=
+		70Bu8WkqagrVrw5t3pQKMfsNWM0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCCameraControlService.h</key>
 		<data>
-		SIs2EN7sbfIxqvexMDPvDRCXryg=
+		KIZOi+BfNdIornX/L0ntNsAY2Mc=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCConstants.h</key>
 		<data>
-		VwnmgcYFv2/NRJXZkETquOTQwgA=
+		b7BvMYq0G7bIgtcbzgWt9a0RaoE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCDirectShareService.h</key>
 		<data>
-		hl7afH08g0V+abPuCeTxcBdbseM=
+		ZNEryi46DdOpZnGw7GR9EXy1cXk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCInMeetingDeviceInfo.h</key>
 		<data>
-		RXSoCRBKeFaxnms28z8FD6b/IBw=
+		EOY2SIjNx43vRXtczDSyxu231jw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCInviteHelper.h</key>
 		<data>
-		WIzJ1xyOcDR8IJF6EUT7xpMIDRM=
+		e1ND+thOD3hMxFltPb6UvMJPmyo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCLiveTranscriptionLanguage.h</key>
 		<data>
-		y57QUISZec+gxlDbnR4vtr8R9Yc=
+		MXUP4hZNM3jXJCPO0p5ENDKuJNw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingActionItem.h</key>
 		<data>
-		Qpt6EWCwgphjIZrbjW/7sfPGu2M=
+		bsTH7Z0yshsEQ0doDOcQpLk6tUU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingChat.h</key>
 		<data>
-		Zc2dvP/a8MBBRHStjk2RkNfQRPo=
+		vllRQNCekh6/0fAhCjDm8EC+w8Y=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingDelegate.h</key>
 		<data>
-		UCtBWahXF6qLqjDhAKbe6eKj+SE=
+		1GJszpKkc58qDLDir/XVlBhIMXk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+AICompanion.h</key>
 		<data>
-		Is40wkfAd2LIfkIqvSoPaFMLmUc=
+		aZshdC6NZCX22oQFjJuowQG3oQo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+AppShare.h</key>
 		<data>
-		jQn1g3/F1KYMDLZJD1Fwyxc6JwI=
+		eyX6ToLKYqOzivo5QblrdO+C4m8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Audio.h</key>
 		<data>
-		R3Jty2wc1euowTD9h5MdM1DYUJo=
+		FdXdPISYTMnIt5pj6FdLKaUuEPs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Avatar.h</key>
 		<data>
-		G032cZm2z66HrBt9j5Cs/Ez4V7o=
+		24o0x2gvle5oPEAExmOBV6bxGhs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+BO.h</key>
 		<data>
-		G3J52J/HLxAjr3/2sTOv7BKZhIo=
+		+Fnq79vnAVGXaQ8LOkX60xfHpjo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Chat.h</key>
 		<data>
-		AB0KHmKf4m/iWb7zaYAydA6DwuA=
+		z7k5T4+ucHOEv8cVCc2rgWYCrFg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Customize.h</key>
 		<data>
-		tZTL6zVM2iXyc5b8Z9Za5HD7UVM=
+		QkQ0dn0jcl4MVLT3GnngqG3AjAs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Docs.h</key>
 		<data>
-		DGB2NGLRzPYDKFBJWLQq9XfYW8k=
+		UzGFXUV8maNLQKqU59yZs7lnS+c=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Encryption.h</key>
 		<data>
-		0N6jkZlMIpcY733U8wIL9jYFYQA=
+		cQmfZ92RZ0DpTdIXo/DzQBvN4FQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+InMeeting.h</key>
 		<data>
-		1Vo8jBFYwRaR/NxPR0bvya/uuZQ=
+		O/lsM515vasNwh6NXHEBAQgbGR8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Interpretation.h</key>
 		<data>
-		2axogkdGLUL+EKgHJuCeIKq62j4=
+		wcifnLSfA2yKoXV5k7TnN5ClY3k=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+LiveTranscription.h</key>
 		<data>
-		esw11cDFZP7D6EtJbxUHGUFMi9A=
+		2X7GAluxqFLBJwjTuuHwRs7wfro=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Phone.h</key>
 		<data>
-		Ab/d9j/YzBw+V0DWUogEr9TuMUs=
+		+ctQalGc1KyebNZVDY6Z9lwTdxQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Polling.h</key>
 		<data>
-		0WMGaoF1ICTJcCLSmW/MzlYWIFM=
+		FCKmhjgYx37odbVmdJcd9NWX3fE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+QA.h</key>
 		<data>
-		cUdK9gkhWYnTaXTn6+8CWU2WnOw=
+		8BENe2Kb+/xeg7swrIGcJGmwuHk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+RawArchiving.h</key>
 		<data>
-		sbnUP4CHtZLgbnx3NGffLY7UG+0=
+		Zp284avMxBTF0tCsqxFFSvqXXcs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Reaction.h</key>
 		<data>
-		Qbf+/Qq8raDyExQy9z3jNaf9MaE=
+		zWYR5Gdd5H3UBwn5By2rZNrdhdo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+SmartSummary.h</key>
 		<data>
-		OcPlTAgabQMhwfeT2RKeXcve984=
+		upoD98GIabL8jA1M+yqrHPGR4XY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+User.h</key>
 		<data>
-		BPcrPCm8kYQIp3wiZEFrtyL/YwA=
+		G1HTVqQ928blnNfGhfnfX+GbPyk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Video.h</key>
 		<data>
-		oTVWBjLlwhiFCAqIVUP4/NhF5Io=
+		YxDRNsnP+aomdiuABwSmG6S5xn0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+VirtualBackground.h</key>
 		<data>
-		U4ggPO0nJdJgDAW3vV1mIyP2H+0=
+		ZdrVYOZ8/e8wmk76QtxxyX49DSw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Webinar.h</key>
 		<data>
-		rzqbwIVtWxcdVakJ5Bnn3zuAag0=
+		pMVPVGvsQOWfhOoZmJorCzNlM2g=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Whiteboard.h</key>
 		<data>
-		riWMRu/iH+eVitR8/u4PBPiyYjg=
+		XQ4Jc1F91zqviQzfK8fzF+m3fso=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService.h</key>
 		<data>
-		ZFvzEwHKxm06giBi3Det8rHsixQ=
+		mEOgsRyqrv8zxlGejFcXOXglgtA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingSettings.h</key>
 		<data>
-		j2WqhllOvM/qwz0xMw071Z4G/K0=
+		1ID5bDu1LFmbZ/23dnuyf2XbY0g=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingUserInfo.h</key>
 		<data>
-		zjq80uOeke2wttCXjTvEuYAkxPI=
+		sKjMZ4stwSEC7AprzxKKqccIn+Q=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCNotificationServiceHelper.h</key>
 		<data>
-		0AoKDSEN/pxKDJX2VaNsk+aJF7Q=
+		fxDljAy3l9iGaGQdUvyUMD3CBAI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCPreProcessRawData.h</key>
 		<data>
-		a5/6Be/TjWHya/xUUn5MKpREEKM=
+		tr2VNDwdlKpyDOIreGlWoMCfKPA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCPresenceHelper.h</key>
 		<data>
-		oCyOz8JTyDfAN/w1eUfkZdXoofA=
+		O06X1e4LIub+FJiPEyUWuEj57Jo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCQAItem.h</key>
 		<data>
-		14efgMrcfK/oo15vTS8ySrsM8/I=
+		tuGh1eZn5mVkOziPbf37LajcFkQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCRawLiveStreamInfo.h</key>
 		<data>
-		1ikyPMeiOX6oasQtbV/jdYjh/JA=
+		/Za3xCxCDkSdctqdZsB9nXllD+4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCReminderHelper.h</key>
 		<data>
-		L0rq2NdDV+YaFBZop2PYmrcr+cQ=
+		NIAXYQSGyJ4dnHfhIPYlYXBFddQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCRemoteControlService.h</key>
 		<data>
-		rby48tL6dTdEIIDwgE9DaPCWQ/s=
+		IhLeNa2egs88NY+JYboSEH5uvYY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCRenderer.h</key>
 		<data>
-		GyPG2uKKb9n8QzgIqmV92chq/j4=
+		VyCksAHnTOf0uIgCHw7ZbOIVjB4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCRequestRawLiveStreamPrivilegeHandler.h</key>
 		<data>
-		3mT6rgqThVBqplxxhpDPLrDwzEo=
+		TF0S/yctEnown9IGiYBe4SkIFDg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCReturnToMainSessionHandler.h</key>
 		<data>
-		+M2puwfkxUmvURnbEXtL6LAfNiA=
+		2dIAwQAkQJlKYeheJPyK89v8Ipg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCRoomDevice.h</key>
 		<data>
-		m9K90xu23jggkglL0/gVt/Eevns=
+		VhM6fDdeWIYzINPJIjsBf1pmH5Q=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCSMSService.h</key>
 		<data>
-		xabimbiVeb7vff3RyggNXExLAkM=
+		uvpdf4MvItASz8bac0cLoijgCmw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCShareAudioSender.h</key>
 		<data>
-		DsPgnpI6ry/7JnTmuhnAt3ti4nY=
+		5jyiPOCgPGi+s4qBrbVisfObSIY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCShareSender.h</key>
 		<data>
-		bNAnCqAYe0XpEpKGVkBmqcbgLug=
+		b9ZUITA75/368cI0yZ/N/3Dz5jI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCShareSourceHelper.h</key>
 		<data>
-		1rFfXY9AukL08DlyiUCK56WuQHk=
+		WKaFxEN3z8S/kgklc5ra/MGuoys=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCVideoCapabilityItem.h</key>
 		<data>
-		VmfTVJBCeEgFdS81lbuYImTytW8=
+		xDJanGNsAPvq/m1wWCF9SgmfWKM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCVideoRawData.h</key>
 		<data>
-		wCG9nJdcoHh9aj5GdIf0Ba7ZzE0=
+		fgmoO+Gin3CFn41hZq4gyqczF2A=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCVideoSender.h</key>
 		<data>
-		GlbkSwWl5v3z5JkiJfLXgo3A1q8=
+		oL8Qg0nvOzXq18aSs0BA/j6DT04=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCVideoSourceHelper.h</key>
 		<data>
-		lVxYmhBB99NfQEdJiQnHUhWIRAY=
+		3/9ghMTYeUFKoRVwh/4ymCbMWog=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCVideoView.h</key>
 		<data>
-		dpFmViQML9N7i3chqOPGDpfBWzY=
+		G7SrKszd1BHgh4b6SEg+WWkn6LQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCWaitingRoomService.h</key>
 		<data>
-		l15Zzrvq8mksbZLQnUPT+siBlaY=
+		LYD62P12ACtJhz8fMsyV3HRPgRk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCWebinarInputScreenNameHandler.h</key>
 		<data>
-		UR2MH26b4z2KMy/4iVz3JZz8YFw=
+		xebcXRxASqvz2cAKT3fMWgVYgu8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Info.plist</key>
 		<data>
-		8QFfCxoPorHb1yBD+hwlH2S5+2w=
+		d3mc1Jcj1ChWSfLkYrkTO/IS6eA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/MobileRTC</key>
 		<data>
-		SzKtxOKgvsmR9hHOKrsGVEaArNc=
+		sOSQe8onLs16wao2+cwYLFO5XZw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -614,15 +614,15 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		FxZlU50hv5Y38Ib3eBuVlhmQXBk=
+		Gv0feaqWBeajoqld+ubv6KR2TAA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		HPuU5c1lLPgrpy2RSWCvPt3+ScE=
+		kb8eMB8KumTngl3sRPb5BvW4MT0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		FxZlU50hv5Y38Ib3eBuVlhmQXBk=
+		Gv0feaqWBeajoqld+ubv6KR2TAA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -630,15 +630,15 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		mC77A1HnuU1zKBvoxKItuECMmMs=
+		xcBcQl1/+gtdWecYS4+6bQZpKJY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		r/eYXIlI8L9VJGmtzMuWCv55mFs=
+		iwI/ytWISg1PuhPccl/SbHsFPvU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		mC77A1HnuU1zKBvoxKItuECMmMs=
+		xcBcQl1/+gtdWecYS4+6bQZpKJY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/module.modulemap</key>
 		<data>
@@ -650,11 +650,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/_CodeSignature/CodeResources</key>
 		<data>
-		EwANHYUxDL8oHNSQkZO4ntnDXyY=
+		SJ817CHHVVZTblNvVxXxeYUb8X8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/nydusDefault.metallib</key>
 		<data>
-		zrcCrKXlgrmRddTt3R1YlQSov4A=
+		SiYI9LWdgoVgxKQ3edfPVmaNG1c=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -663,792 +663,792 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VmhY0P+1dyDISO3J7ff4dDIvveI=
+			BaNhW36XjyDpVABimfb/v2aYVP0=
 			</data>
 			<key>hash2</key>
 			<data>
-			OPXyMCWZ8+vM92idzHelY3QQY+laFv5XwtCCzc2v9SI=
+			N8V36Ev1rGPP5Lu9I+myzBYc7XkZvmPYpPLazDq5r8U=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAICQueryHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DV4Fr8Lg6VRvS0XN75iJsIB0DNk=
+			cl2ULrLWaoM1/HW6MxTT8eJJlTg=
 			</data>
 			<key>hash2</key>
 			<data>
-			1qn9NyvZZ1KeKJpa92cBps5BLlUCNnurxlFj/N3bQ4Y=
+			zgfXB3/I01IAsNegWSVr/3yNdld4MCnTzx7K2ZUzwlo=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAICSmartSummaryHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			z7r+2a+0FtHHh4TspV0qWE5alCs=
+			HdmRVzYxH/9z1PBBz0k22023TGM=
 			</data>
 			<key>hash2</key>
 			<data>
-			cioHY2ULmcfw+8/do99psIkyJ7uoG5l3FunAuO7DlWo=
+			sL2JNUa1E6BrsSS/DjbVHX7ElpqdZtMPTrbxVlgDJ7Y=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAnnotationService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3zppIkH5y/QVv4Zc1SlhKF+Tr3w=
+			dySyAHCWbrZ2Oo7574QoJDoYV9A=
 			</data>
 			<key>hash2</key>
 			<data>
-			qeVO9RQ0l9I05DrF7SsmozVnMSZqrnIJGENviZRlTpY=
+			tOGTtGg10rdrisI6AZZjaSUsekUu8yj4VztAy9rwC1w=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCArchiveConfrimHandle.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2FDpOFXUN9o08ynz0jjqii4KNec=
+			GclxcpzbttB1Ln5aS36QBdvv9E4=
 			</data>
 			<key>hash2</key>
 			<data>
-			29VqtNEx2IACFrt0XclBs50mfAzs+4xMNS3g2BcsXMc=
+			t1ewS5o//jC/+E7L15GoWu1aIEd2MXXHDSF9od6or7A=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAudioRawData.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MGXu59fOc9mbgvnDLnrPkawXfiY=
+			tjuuuF2MTqcuZOD11QGn3N75Z8o=
 			</data>
 			<key>hash2</key>
 			<data>
-			7fvdu7srcQAoq2Fwa2FTrL3IHbR2QQL7Bhf1zU0R3XQ=
+			mOLW4fPsGkZC5+lzRpEBP+bf4KcHBMY/2gRrf80rv78=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAudioRawDataHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1dOUJhQb455pnjUuoVR3ud6PWQ0=
+			hX7rl9G256ScuIpVszBLkP83LBk=
 			</data>
 			<key>hash2</key>
 			<data>
-			4jH2rm08IrUEsQ2Hx+pC2gisUoPJ54e5fjMgcXtbNAI=
+			/N07DxINpethX611LNX8WT1zHJV8PWFtP543M2F5tqQ=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAudioSender.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gIa5qBiioYpFkBvknbdHOW2WQUo=
+			Lc4n+Z+lboqtD1tYco5+/zoH1I0=
 			</data>
 			<key>hash2</key>
 			<data>
-			7UJI7kMXKCdmOmIgwziKU8IADc9sK/aBFiL5jhwX1NM=
+			JIhFaPYm3Fregwe+Dw9L5mG1M5FcdNVL83mSGVYgiys=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAudioSourceHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LlWaIHA1AJ+SxOh1/SxWo+alpc8=
+			/YWPJnhzdNbWHWzkrwDgpijyBF0=
 			</data>
 			<key>hash2</key>
 			<data>
-			5OtLMKvaj7TaXrUDd4gFesTKvgEFUhZwUPXxtMWSZmY=
+			R5QeBfEkas84aa8DsIJeajrCvuraoJTwoGa7voeljH8=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAuthService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xMxknAq/D41PuzX5f6MjRkYk1ow=
+			9QEHAyQJe9EPOIrMa+KQCv9atpw=
 			</data>
 			<key>hash2</key>
 			<data>
-			dAWOLxspDVK5sQks4p03pTrkXGjuyG7GLWB0ZvwsXPE=
+			a0v6fCAGAgsjG1Jpg/uzjVH5QG7sw84Fx52vjWxXA5Y=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCAutoFramingParameter.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Xm2ZL3A7r+6+wbBpolkn4DQFchY=
+			uHeej9/HSGQhdoxFd1v1/IS5tP4=
 			</data>
 			<key>hash2</key>
 			<data>
-			CsuJiivoPxrr/qk2YoGbNEBsZ4W7tK7pDHEzOmXN5dY=
+			BqlFTb6JC4uwIZtvf2WgDSgA0S9Fmw+8UagTwsLmW9o=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCBORole.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HY7zDJwd7zq7kd3iXrj37BSDpI8=
+			/JyIqNh2dGqZFCy3dw+n8M50a20=
 			</data>
 			<key>hash2</key>
 			<data>
-			HgTQ41G454u9s2210NNJyIE7kY6QqyMbeVbF1zXJ6p8=
+			gDKw7oO/cddV7jhRFKY4Izgz0U8UnC6iVILp63lQfnM=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCCallCountryCode.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HcLxe/R3KVusFI3xoB0FkhKksKM=
+			70Bu8WkqagrVrw5t3pQKMfsNWM0=
 			</data>
 			<key>hash2</key>
 			<data>
-			xoOkgKx5/zkvlnJydaruytZi3jopiGkJ/MY3ARUJFEk=
+			jqXpNJj9i9/GjUZvXnCl7mlbp4mOBNDKcUoH9F47Dd0=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCCameraControlService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SIs2EN7sbfIxqvexMDPvDRCXryg=
+			KIZOi+BfNdIornX/L0ntNsAY2Mc=
 			</data>
 			<key>hash2</key>
 			<data>
-			QktkQmpvYfsH4g01F53D6JG+kp8POTBdpNz5wI2wRkY=
+			Z7QZGTi7/+TkDfst8kQM2UroNBpn9tchEb09A42Rhiw=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCConstants.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VwnmgcYFv2/NRJXZkETquOTQwgA=
+			b7BvMYq0G7bIgtcbzgWt9a0RaoE=
 			</data>
 			<key>hash2</key>
 			<data>
-			VSpMDbPt2CF6ng5/2OpF1j4c6KuV4E5W3VqxmLROpUk=
+			+A0Xg1nB/Drgja8rms+C4GeoYugEMqKPLYhMWKKy3Rg=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCDirectShareService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hl7afH08g0V+abPuCeTxcBdbseM=
+			ZNEryi46DdOpZnGw7GR9EXy1cXk=
 			</data>
 			<key>hash2</key>
 			<data>
-			1YjSGdhyr4IjPNC+JBFgfNhxSEN6Ok3FIKShBRgYh0A=
+			6p3oi4pQW02WrEEEH20s8x1WfS6B7t69Xyz+GHy1LIo=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCInMeetingDeviceInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RXSoCRBKeFaxnms28z8FD6b/IBw=
+			EOY2SIjNx43vRXtczDSyxu231jw=
 			</data>
 			<key>hash2</key>
 			<data>
-			veqQtRnc/S8rLZPASe7lX1CstaIp0pNCDhq6cuquG1U=
+			FWlwXpUOfBjfIIRgiFR3qgOwFBhReuvxnGenHmHDjL8=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCInviteHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WIzJ1xyOcDR8IJF6EUT7xpMIDRM=
+			e1ND+thOD3hMxFltPb6UvMJPmyo=
 			</data>
 			<key>hash2</key>
 			<data>
-			zrTJWULS9kPaLp/B/ovcduW5ukJxcEJZMgCQCzmzKcg=
+			Luul4OvSrlou682+cSFMnOYlPQzDP3dqAk3k4lFzgEU=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCLiveTranscriptionLanguage.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			y57QUISZec+gxlDbnR4vtr8R9Yc=
+			MXUP4hZNM3jXJCPO0p5ENDKuJNw=
 			</data>
 			<key>hash2</key>
 			<data>
-			PKf/Ti3GctZrZTiIFc5EqWBshc8x0u72hhykysP5Sk8=
+			5ktCVfX+9nm4bJgmpoMi5Ln8HPl8DoOdIQtEpQRSJus=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingActionItem.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Qpt6EWCwgphjIZrbjW/7sfPGu2M=
+			bsTH7Z0yshsEQ0doDOcQpLk6tUU=
 			</data>
 			<key>hash2</key>
 			<data>
-			zseuTmvUQsJF6EJmKeTerH3kAihJROHamkRKP0l/mRE=
+			Jy/RyLadD5PdGSZ8/X84xQdlyESp/nYLbhJoFek7S30=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingChat.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Zc2dvP/a8MBBRHStjk2RkNfQRPo=
+			vllRQNCekh6/0fAhCjDm8EC+w8Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			ATa4nfN+NhZm0frthmIaiHr5VDOj+Gf1KoV11RLqI4U=
+			JqN/ulGylfzkvRjrynx4s4kovi1RJPvaLbEaVvpTq4I=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UCtBWahXF6qLqjDhAKbe6eKj+SE=
+			1GJszpKkc58qDLDir/XVlBhIMXk=
 			</data>
 			<key>hash2</key>
 			<data>
-			LOhICLu8g4a+5RaUfeN/gAkPISbtoScBVIQlerBMfRg=
+			pWfZvYNjxcvk544drKH3E6fNXFSVyYZfmu56BMuHyHU=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+AICompanion.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Is40wkfAd2LIfkIqvSoPaFMLmUc=
+			aZshdC6NZCX22oQFjJuowQG3oQo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z00UVOoqWJsLB/zzksO8qTYQIy3blJ9S2wvUHW29KE0=
+			mCOPgffkVaGqsSIFewwxh3OxOC8JwWr0rYpa3Mcl1Rw=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+AppShare.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jQn1g3/F1KYMDLZJD1Fwyxc6JwI=
+			eyX6ToLKYqOzivo5QblrdO+C4m8=
 			</data>
 			<key>hash2</key>
 			<data>
-			ldUx9toNdS9Z35cbmbxY5afqaSdjxNN49XF4HJpshNg=
+			HE0k92469TEs0tuEaQVJ0hJbhBX0GmPMYzkY5Ftn2C8=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Audio.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			R3Jty2wc1euowTD9h5MdM1DYUJo=
+			FdXdPISYTMnIt5pj6FdLKaUuEPs=
 			</data>
 			<key>hash2</key>
 			<data>
-			VF64pIuAyZ2TqV7nLR0iDd6MDgNfg/hCpvS/B13Uifw=
+			FEMDtCzzeYZ6NyFAXyu2cQ0n7+1BFHg0AAeF+y3ypmI=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Avatar.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			G032cZm2z66HrBt9j5Cs/Ez4V7o=
+			24o0x2gvle5oPEAExmOBV6bxGhs=
 			</data>
 			<key>hash2</key>
 			<data>
-			D8VHuNNiELLk1+zp8T5hM8UaHIBCqXUklyqyaQoxf7Q=
+			owuBvgcwR7DAZzW4Yq25W01tQMWYS3aKUNf4XzZlRhw=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+BO.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			G3J52J/HLxAjr3/2sTOv7BKZhIo=
+			+Fnq79vnAVGXaQ8LOkX60xfHpjo=
 			</data>
 			<key>hash2</key>
 			<data>
-			QpVPZpM3Sb4MvWkzsuz8S6QqhOv+5E63lGxNHz69A7k=
+			fbK9NFBjqKCl4Il6S9kRtGBTTcxUdLoaICAYmUDWDPs=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Chat.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AB0KHmKf4m/iWb7zaYAydA6DwuA=
+			z7k5T4+ucHOEv8cVCc2rgWYCrFg=
 			</data>
 			<key>hash2</key>
 			<data>
-			GFIUAu2YRU5YW/zfxIyCy2FmkSEYfa/8XNF7/enf2Z0=
+			t8m2TdDtf/SkYHQ2axJQaZCr50J1LyYSpStO/ospp/8=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Customize.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tZTL6zVM2iXyc5b8Z9Za5HD7UVM=
+			QkQ0dn0jcl4MVLT3GnngqG3AjAs=
 			</data>
 			<key>hash2</key>
 			<data>
-			kDtMeRpKkcjfnW2UmUsmTCyA3h0Ze1GAYGFHtPC6wEw=
+			+6afWUrwNH5xItPxN2WMbZRidwmakq/4U3NLRux+wJk=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Docs.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DGB2NGLRzPYDKFBJWLQq9XfYW8k=
+			UzGFXUV8maNLQKqU59yZs7lnS+c=
 			</data>
 			<key>hash2</key>
 			<data>
-			8JbNEKrvWvqNOBxjRa+NzdEZmoX0wMmxTsFcSiJIfx4=
+			Zjg4UJDSMQVMwfovnYIrCWu+LxWz8+UZno59Mr74+KQ=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Encryption.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0N6jkZlMIpcY733U8wIL9jYFYQA=
+			cQmfZ92RZ0DpTdIXo/DzQBvN4FQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			8AkFTCtWG501GfJPVqUdO16tXLioQ/gtGGtbCy7cmfk=
+			rlaA8zdez11KIeGZnqgVmHeUy9X+nDis5lMkUWAj0Vc=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+InMeeting.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1Vo8jBFYwRaR/NxPR0bvya/uuZQ=
+			O/lsM515vasNwh6NXHEBAQgbGR8=
 			</data>
 			<key>hash2</key>
 			<data>
-			POagLVO5TR5FTwJt6pL0kmGf3gbt2pS7EAt6ZMngnSI=
+			qqbFKwnZzYz2+6Wl2wDEw+J7Nl8jzBrmV4MoySzJ9fc=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Interpretation.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2axogkdGLUL+EKgHJuCeIKq62j4=
+			wcifnLSfA2yKoXV5k7TnN5ClY3k=
 			</data>
 			<key>hash2</key>
 			<data>
-			+9M810cbehncAyx+LpQwtnemhaQYoga83jP21SDl5UM=
+			grZf6c6oA0OTP3/VcAR+82+hIaNlY6bDeS4d/UwcgFg=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+LiveTranscription.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			esw11cDFZP7D6EtJbxUHGUFMi9A=
+			2X7GAluxqFLBJwjTuuHwRs7wfro=
 			</data>
 			<key>hash2</key>
 			<data>
-			Zd+vf8+asL6cNiQNBeeRzsUl2jhmprW30FC31nyoXWg=
+			nmcbF/LHqrz7mZhUiM2D+DS9zsQ2tSk1ZlXfIpX407I=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Phone.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ab/d9j/YzBw+V0DWUogEr9TuMUs=
+			+ctQalGc1KyebNZVDY6Z9lwTdxQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z0caj+HEWy1yEs3TWSLLc9OxXUAOTu9HdqWNB14YNek=
+			QhsRnjOAxZVNVTjM1Z0biK4wfPo0oqRMAaZHm1SnB/A=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Polling.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0WMGaoF1ICTJcCLSmW/MzlYWIFM=
+			FCKmhjgYx37odbVmdJcd9NWX3fE=
 			</data>
 			<key>hash2</key>
 			<data>
-			sWHsv6LJMYuCB86FtY1n3bZbo1aa5LJEDldbaq3rN50=
+			fsArlIPVagedZU07HnUw+/rcOKB6CTpbwhzKlhKU48c=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+QA.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cUdK9gkhWYnTaXTn6+8CWU2WnOw=
+			8BENe2Kb+/xeg7swrIGcJGmwuHk=
 			</data>
 			<key>hash2</key>
 			<data>
-			yka6b6QwMlvec8z/lBPjtBX/xtdAA6Zq+jQ6xf2krOg=
+			qensu3BtT2pQLglmxhiJWtBT77ujZVI+694iXqcOte4=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+RawArchiving.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sbnUP4CHtZLgbnx3NGffLY7UG+0=
+			Zp284avMxBTF0tCsqxFFSvqXXcs=
 			</data>
 			<key>hash2</key>
 			<data>
-			9UG6qpW7qSdVtxdmrzJfXIruTLBtRKw9jrt8zHTxED4=
+			kKSRkeVUxKqQd1Nnu/BP1UD1WusoEtCOCzBpwQkfR3s=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Reaction.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Qbf+/Qq8raDyExQy9z3jNaf9MaE=
+			zWYR5Gdd5H3UBwn5By2rZNrdhdo=
 			</data>
 			<key>hash2</key>
 			<data>
-			R1hvsxG7bSJ4GZqGBYQ4YBIyp26wS/BkJ/5tFOSJ1oo=
+			7T3CjbL38z/76LPO2zL94Jy/7QnjsamvVwqTSbtTy8E=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+SmartSummary.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OcPlTAgabQMhwfeT2RKeXcve984=
+			upoD98GIabL8jA1M+yqrHPGR4XY=
 			</data>
 			<key>hash2</key>
 			<data>
-			oREMd9PLLbpDknFM2iNY3+c9yZM4Dzacv9sDJ7Wnt4Q=
+			AGq2ZVsy3x4hvluJeGleOe2AFFThC2TnojwvIqwzKaA=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+User.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BPcrPCm8kYQIp3wiZEFrtyL/YwA=
+			G1HTVqQ928blnNfGhfnfX+GbPyk=
 			</data>
 			<key>hash2</key>
 			<data>
-			EN8+YPtZKemooatmCoAE5Qtrkej6gxRFbHXssyzXfGQ=
+			Ggb1eAJszPODpeDr2In9pwH4CW773mwGzyE97O5rn0U=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Video.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oTVWBjLlwhiFCAqIVUP4/NhF5Io=
+			YxDRNsnP+aomdiuABwSmG6S5xn0=
 			</data>
 			<key>hash2</key>
 			<data>
-			GDhMbUWmWtFurOdXzewfBjsBvFki/Gt01BTsvk0Bdjk=
+			OGwQYnerMZo/s0TKpdIF+YJUEebCDAfFZz0quzrdOz8=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+VirtualBackground.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			U4ggPO0nJdJgDAW3vV1mIyP2H+0=
+			ZdrVYOZ8/e8wmk76QtxxyX49DSw=
 			</data>
 			<key>hash2</key>
 			<data>
-			96a+TPGVuXOEr9jq98POzf0152dC6SEoRmEVPHkB5nE=
+			HHSgy/bMxUCb3cKiTqO4c89038Q4T4yfG2Gnh+wyy88=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Webinar.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rzqbwIVtWxcdVakJ5Bnn3zuAag0=
+			pMVPVGvsQOWfhOoZmJorCzNlM2g=
 			</data>
 			<key>hash2</key>
 			<data>
-			YP8fMEEF9P/FgYtYx5fH91B8yr2ckmPVCqpWVpgvjzU=
+			T3P8JvMzsF5tyYar+F49C6pnQuRf6it5bwOEl1qefV8=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Whiteboard.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			riWMRu/iH+eVitR8/u4PBPiyYjg=
+			XQ4Jc1F91zqviQzfK8fzF+m3fso=
 			</data>
 			<key>hash2</key>
 			<data>
-			KwnhJTBUY3wFOIQywFuc99rR/yGrx2gVKuohwu9UaS0=
+			V4rUnY25b++C5QhVq/l3wV82O6S7IL5RN8E+ctca/aE=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZFvzEwHKxm06giBi3Det8rHsixQ=
+			mEOgsRyqrv8zxlGejFcXOXglgtA=
 			</data>
 			<key>hash2</key>
 			<data>
-			J2JIKKN64/jpKy0olDxnJCM7RSkt+FipGM7wwzzKhJg=
+			mnrt4vikwKa/33EaHbHOiIXHNdFwEb0FUDe9xxTMU4c=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingSettings.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			j2WqhllOvM/qwz0xMw071Z4G/K0=
+			1ID5bDu1LFmbZ/23dnuyf2XbY0g=
 			</data>
 			<key>hash2</key>
 			<data>
-			fQUsnmWPr4hXmosFC7NRsU3XSPR9fIvRZ9PQHx23Uxs=
+			SMyzjZ25b+6Y8d3rf+pDgfkxmRntRNtWDLv/+LSXOMs=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingUserInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zjq80uOeke2wttCXjTvEuYAkxPI=
+			sKjMZ4stwSEC7AprzxKKqccIn+Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			cV/0TpQGtzljOdzyxNiHDJaPyZBNrAj8xxCjs32Cyuc=
+			L7F1uVr9OCirf0OKYz7VztrNrkXs0bFEeBBFfViM608=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCNotificationServiceHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0AoKDSEN/pxKDJX2VaNsk+aJF7Q=
+			fxDljAy3l9iGaGQdUvyUMD3CBAI=
 			</data>
 			<key>hash2</key>
 			<data>
-			CHVfBU3ABJDwMOCU1uyCpfkp/cYK/ukQtU6lHOAJNO8=
+			UrzkGITJEaU5pOnG8CQC12WF67M9KDDMPI4jPnEU4Rc=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCPreProcessRawData.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a5/6Be/TjWHya/xUUn5MKpREEKM=
+			tr2VNDwdlKpyDOIreGlWoMCfKPA=
 			</data>
 			<key>hash2</key>
 			<data>
-			xwLTla9FXruV4J5036vHWBGB7/8F52mCbIbVefKPNKw=
+			blgeQOWMhRuDGWnMiwK6rQT0iP30zHdUj7WXTqazhxQ=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCPresenceHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oCyOz8JTyDfAN/w1eUfkZdXoofA=
+			O06X1e4LIub+FJiPEyUWuEj57Jo=
 			</data>
 			<key>hash2</key>
 			<data>
-			NZj++8FmkkgahQkkv89zGibL3ucJv3PneBZVDOIpdJQ=
+			USpHv1kcJcLqEmAK7MpcN+1yqfTAFqcWGHSgRIaHTVE=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCQAItem.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			14efgMrcfK/oo15vTS8ySrsM8/I=
+			tuGh1eZn5mVkOziPbf37LajcFkQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			apGmXahiWT0iM3EFdlHstTp5vWjyI3gavMo0WyblNNc=
+			k+nI7Y+zZtAJNzQVkgvuG+ItZ7lhSzzQkuvJRJ6EIZQ=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCRawLiveStreamInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1ikyPMeiOX6oasQtbV/jdYjh/JA=
+			/Za3xCxCDkSdctqdZsB9nXllD+4=
 			</data>
 			<key>hash2</key>
 			<data>
-			FMhjuEBMVdw71z5UwKBDg7NGtq647X1/SeC5xKDli4Q=
+			6CvSfMET39UtpylGtC1Wzuvin+eyI2FO43v51v+i8MY=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCReminderHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			L0rq2NdDV+YaFBZop2PYmrcr+cQ=
+			NIAXYQSGyJ4dnHfhIPYlYXBFddQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			z43QSDDnjLks1+ILjsY+ZfIJdLV5uIXurabjTlOgfwE=
+			8RajYfx9sFPVUfUtI9h5PfVrv+2Yt67wmiuxeabqHF0=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCRemoteControlService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rby48tL6dTdEIIDwgE9DaPCWQ/s=
+			IhLeNa2egs88NY+JYboSEH5uvYY=
 			</data>
 			<key>hash2</key>
 			<data>
-			UDl9OjDBpUnlzohdpg8pOJ9RLlj2rRTPkSQabktrAgY=
+			sxI1J5Vvs8gZywpBRPFWUPVG8s9c12ENT1b4W2NP9o4=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCRenderer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GyPG2uKKb9n8QzgIqmV92chq/j4=
+			VyCksAHnTOf0uIgCHw7ZbOIVjB4=
 			</data>
 			<key>hash2</key>
 			<data>
-			OyztTVQcbZ1pk+SfYjVxQ8Go/vYNR3RP5tfy8GJUuRM=
+			Cz2V8SD+spu2JyQzM1jvlISitENGm4dwQFWTpaUfz8U=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCRequestRawLiveStreamPrivilegeHandler.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3mT6rgqThVBqplxxhpDPLrDwzEo=
+			TF0S/yctEnown9IGiYBe4SkIFDg=
 			</data>
 			<key>hash2</key>
 			<data>
-			wm57JcrIilWB3WufRTQETb6Ymz3AsHQTpL6djnqXgrA=
+			ZkaQv79oXOYXKANQ3uvmfqFelz3vrGIPHq+a3XIohBs=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCReturnToMainSessionHandler.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+M2puwfkxUmvURnbEXtL6LAfNiA=
+			2dIAwQAkQJlKYeheJPyK89v8Ipg=
 			</data>
 			<key>hash2</key>
 			<data>
-			MSLpFykxn93w2lt/EVsFHsMO4aCdrcHbbmbvgvnBgeQ=
+			VrqJ7fvL5IBTgScrwiWmpyVv+XQwgBnkFOEfm8coSkU=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCRoomDevice.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			m9K90xu23jggkglL0/gVt/Eevns=
+			VhM6fDdeWIYzINPJIjsBf1pmH5Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			nsG+9OSO718HBHx+sp0+ASJQ4Z/IiC0dshboW3R5O2s=
+			FljHZg6j8zn3vQ2MCN3xQRyfIk3R+CGMrAkhC1RRnbg=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCSMSService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xabimbiVeb7vff3RyggNXExLAkM=
+			uvpdf4MvItASz8bac0cLoijgCmw=
 			</data>
 			<key>hash2</key>
 			<data>
-			fPVUZI53lizayrN1pJhIHWpgovtXhaRLAaWRxJaokKs=
+			vPHRgpfM/h7UK9G8M/PTh91stQVk6BAMmuFupyvF1KQ=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCShareAudioSender.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DsPgnpI6ry/7JnTmuhnAt3ti4nY=
+			5jyiPOCgPGi+s4qBrbVisfObSIY=
 			</data>
 			<key>hash2</key>
 			<data>
-			mnBvPx3vyTbB1zxQlQKTJIERFbLaHjJOSE7SUzSUlRc=
+			e45ms14tpzasFIKpXEEmrc5xGJi8ki2XulNTkrTHMlw=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCShareSender.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bNAnCqAYe0XpEpKGVkBmqcbgLug=
+			b9ZUITA75/368cI0yZ/N/3Dz5jI=
 			</data>
 			<key>hash2</key>
 			<data>
-			isUBojiHCJNc2fQbbxh3xGI8EV/m8kwi3W+wZQ8LWdA=
+			93KCKUFyZQnHoOCzUkA5o40yGQf7fOnz50QYsjrUYz4=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCShareSourceHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1rFfXY9AukL08DlyiUCK56WuQHk=
+			WKaFxEN3z8S/kgklc5ra/MGuoys=
 			</data>
 			<key>hash2</key>
 			<data>
-			TsQNoNwAmY0sbWZRyh6JlfcDsMzMfvEf/UbYujs/wM8=
+			59K+wvMi3jO1EeQSmj9/Vw3Ldlyy+68k+5CWz1KryIA=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoCapabilityItem.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VmfTVJBCeEgFdS81lbuYImTytW8=
+			xDJanGNsAPvq/m1wWCF9SgmfWKM=
 			</data>
 			<key>hash2</key>
 			<data>
-			nwbgmnthz4JjQzttqguOIPxN/2KRINpLs+JiqkuLcHk=
+			GDwT4T0EobobclDssFb5JkPUGBPez+/jp8qoJ4yJX/o=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoRawData.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wCG9nJdcoHh9aj5GdIf0Ba7ZzE0=
+			fgmoO+Gin3CFn41hZq4gyqczF2A=
 			</data>
 			<key>hash2</key>
 			<data>
-			SveLRx/nHK4cI4t1369NG1CzMpR4KHTsbt6SGh7LbdE=
+			fBcCxpuQcmEXWg2AZRek2HNSMRfWUrorLJIP/lhYAiY=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoSender.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GlbkSwWl5v3z5JkiJfLXgo3A1q8=
+			oL8Qg0nvOzXq18aSs0BA/j6DT04=
 			</data>
 			<key>hash2</key>
 			<data>
-			J+Nh4FPUVXuw0p+2Xl5A+MaQY7bSaGrm91iMqjG++ik=
+			V3+SSw/kWQXVVVlaYgLy3K1KUQGjDlrNcHCppu9+irE=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoSourceHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lVxYmhBB99NfQEdJiQnHUhWIRAY=
+			3/9ghMTYeUFKoRVwh/4ymCbMWog=
 			</data>
 			<key>hash2</key>
 			<data>
-			xXCQWTVZkBNwfrQ/6hj1TS9DGO90UrH+FJVXg/Yelkc=
+			7FdEKgfkZ5TIfwNh/F6kHQVwUWm49zb12wHZV2tEhSM=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dpFmViQML9N7i3chqOPGDpfBWzY=
+			G7SrKszd1BHgh4b6SEg+WWkn6LQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			PEqrSHPimZFXZpXwquf1AowvI7QH+Eg7dDdRrDvPymU=
+			cWjhzIrqo0vXA2heXRKkQYqg4SLaXzooNtgibC5v8K8=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCWaitingRoomService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			l15Zzrvq8mksbZLQnUPT+siBlaY=
+			LYD62P12ACtJhz8fMsyV3HRPgRk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Bs2+sI+kqE8d6G9gAtsB6dV4RO58mAGI/iKe0namc40=
+			Gc2cgLVjCU3ks+E+IFpUUG/iSc1sAo4sTLL4HrKQF90=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Headers/MobileRTCWebinarInputScreenNameHandler.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UR2MH26b4z2KMy/4iVz3JZz8YFw=
+			xebcXRxASqvz2cAKT3fMWgVYgu8=
 			</data>
 			<key>hash2</key>
 			<data>
-			36e0rV8XmNDDyxZbLU+tHdt536xjAj/EJfYR/3bpKoU=
+			30/RWxrY1mfd/iBgfGDoWYCPUk0/oKFkpLJpnQeTqyM=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7fnj4syqwnBITfhuFdD102NEHDc=
+			hp54KbfKUB8/wFpQ71TaYdiXwxw=
 			</data>
 			<key>hash2</key>
 			<data>
-			91KcSLHUMRaWZewdzpVdEmYXZ2xTwaxXNlLSdhUEMlU=
+			N5xlf+H1aCwtG2rOFffixL9Pbq0NM0kOz4VB6X/i97g=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/MobileRTC</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zGXVeNArbRRpTc3fWZl8T/cFdoc=
+			HnriMiGf1qNulbqFfGpmpHMz9eQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			3azf6277FOQhR733ZYlRXZ6N2B93xc8X3zyZ8AyUL2U=
+			c+mgsJDD52hnJ73gtXwHU/lkItuugEXda1jMzMjPEe4=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -1466,33 +1466,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			goohgtZhTQJosomzTX2jLjirhoI=
+			G2k5094T2OyeyMlPHYaqeFNAqIw=
 			</data>
 			<key>hash2</key>
 			<data>
-			mzFEEYuDz55e/04HUssqz+kXfk8JKBINxPvKScgPces=
+			spWJdGswpgbijS3O3jqsUNRi7mwTJfqZ08fxezsxrw8=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2bVbArEeD7PAa0JAzoKYOCKcXD0=
+			/HsIonpKwi4yldZHhQ+2+azXFrU=
 			</data>
 			<key>hash2</key>
 			<data>
-			m239JPEr8Jb6i4gkxjiGTxGtsV7enEKtD+Ax0lvysbE=
+			E2MSfCJuZmdei5sl4+58WqNs6BXGxhvHpzKpprQYTP0=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			goohgtZhTQJosomzTX2jLjirhoI=
+			G2k5094T2OyeyMlPHYaqeFNAqIw=
 			</data>
 			<key>hash2</key>
 			<data>
-			mzFEEYuDz55e/04HUssqz+kXfk8JKBINxPvKScgPces=
+			spWJdGswpgbijS3O3jqsUNRi7mwTJfqZ08fxezsxrw8=
 			</data>
 		</dict>
 		<key>ios-arm64/MobileRTC.framework/Modules/module.modulemap</key>
@@ -1521,803 +1521,803 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VbFRkukMXY7VgabrxPPcl9UYhOE=
+			aUj93qNDaKi/ETXY2P4nLFGAdRI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Zca/vMHVlJ2g48CQ2NwC9wi59dQh5RdbGccIL8exf70=
+			VSK5yRqvFr29gprkyZvegonyPxAE2Vvnv/vfFaxOuSI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTC.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VmhY0P+1dyDISO3J7ff4dDIvveI=
+			BaNhW36XjyDpVABimfb/v2aYVP0=
 			</data>
 			<key>hash2</key>
 			<data>
-			OPXyMCWZ8+vM92idzHelY3QQY+laFv5XwtCCzc2v9SI=
+			N8V36Ev1rGPP5Lu9I+myzBYc7XkZvmPYpPLazDq5r8U=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAICQueryHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DV4Fr8Lg6VRvS0XN75iJsIB0DNk=
+			cl2ULrLWaoM1/HW6MxTT8eJJlTg=
 			</data>
 			<key>hash2</key>
 			<data>
-			1qn9NyvZZ1KeKJpa92cBps5BLlUCNnurxlFj/N3bQ4Y=
+			zgfXB3/I01IAsNegWSVr/3yNdld4MCnTzx7K2ZUzwlo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAICSmartSummaryHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			z7r+2a+0FtHHh4TspV0qWE5alCs=
+			HdmRVzYxH/9z1PBBz0k22023TGM=
 			</data>
 			<key>hash2</key>
 			<data>
-			cioHY2ULmcfw+8/do99psIkyJ7uoG5l3FunAuO7DlWo=
+			sL2JNUa1E6BrsSS/DjbVHX7ElpqdZtMPTrbxVlgDJ7Y=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAnnotationService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3zppIkH5y/QVv4Zc1SlhKF+Tr3w=
+			dySyAHCWbrZ2Oo7574QoJDoYV9A=
 			</data>
 			<key>hash2</key>
 			<data>
-			qeVO9RQ0l9I05DrF7SsmozVnMSZqrnIJGENviZRlTpY=
+			tOGTtGg10rdrisI6AZZjaSUsekUu8yj4VztAy9rwC1w=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCArchiveConfrimHandle.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2FDpOFXUN9o08ynz0jjqii4KNec=
+			GclxcpzbttB1Ln5aS36QBdvv9E4=
 			</data>
 			<key>hash2</key>
 			<data>
-			29VqtNEx2IACFrt0XclBs50mfAzs+4xMNS3g2BcsXMc=
+			t1ewS5o//jC/+E7L15GoWu1aIEd2MXXHDSF9od6or7A=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAudioRawData.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MGXu59fOc9mbgvnDLnrPkawXfiY=
+			tjuuuF2MTqcuZOD11QGn3N75Z8o=
 			</data>
 			<key>hash2</key>
 			<data>
-			7fvdu7srcQAoq2Fwa2FTrL3IHbR2QQL7Bhf1zU0R3XQ=
+			mOLW4fPsGkZC5+lzRpEBP+bf4KcHBMY/2gRrf80rv78=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAudioRawDataHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1dOUJhQb455pnjUuoVR3ud6PWQ0=
+			hX7rl9G256ScuIpVszBLkP83LBk=
 			</data>
 			<key>hash2</key>
 			<data>
-			4jH2rm08IrUEsQ2Hx+pC2gisUoPJ54e5fjMgcXtbNAI=
+			/N07DxINpethX611LNX8WT1zHJV8PWFtP543M2F5tqQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAudioSender.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gIa5qBiioYpFkBvknbdHOW2WQUo=
+			Lc4n+Z+lboqtD1tYco5+/zoH1I0=
 			</data>
 			<key>hash2</key>
 			<data>
-			7UJI7kMXKCdmOmIgwziKU8IADc9sK/aBFiL5jhwX1NM=
+			JIhFaPYm3Fregwe+Dw9L5mG1M5FcdNVL83mSGVYgiys=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAudioSourceHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LlWaIHA1AJ+SxOh1/SxWo+alpc8=
+			/YWPJnhzdNbWHWzkrwDgpijyBF0=
 			</data>
 			<key>hash2</key>
 			<data>
-			5OtLMKvaj7TaXrUDd4gFesTKvgEFUhZwUPXxtMWSZmY=
+			R5QeBfEkas84aa8DsIJeajrCvuraoJTwoGa7voeljH8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAuthService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xMxknAq/D41PuzX5f6MjRkYk1ow=
+			9QEHAyQJe9EPOIrMa+KQCv9atpw=
 			</data>
 			<key>hash2</key>
 			<data>
-			dAWOLxspDVK5sQks4p03pTrkXGjuyG7GLWB0ZvwsXPE=
+			a0v6fCAGAgsjG1Jpg/uzjVH5QG7sw84Fx52vjWxXA5Y=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAutoFramingParameter.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Xm2ZL3A7r+6+wbBpolkn4DQFchY=
+			uHeej9/HSGQhdoxFd1v1/IS5tP4=
 			</data>
 			<key>hash2</key>
 			<data>
-			CsuJiivoPxrr/qk2YoGbNEBsZ4W7tK7pDHEzOmXN5dY=
+			BqlFTb6JC4uwIZtvf2WgDSgA0S9Fmw+8UagTwsLmW9o=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCBORole.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HY7zDJwd7zq7kd3iXrj37BSDpI8=
+			/JyIqNh2dGqZFCy3dw+n8M50a20=
 			</data>
 			<key>hash2</key>
 			<data>
-			HgTQ41G454u9s2210NNJyIE7kY6QqyMbeVbF1zXJ6p8=
+			gDKw7oO/cddV7jhRFKY4Izgz0U8UnC6iVILp63lQfnM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCCallCountryCode.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HcLxe/R3KVusFI3xoB0FkhKksKM=
+			70Bu8WkqagrVrw5t3pQKMfsNWM0=
 			</data>
 			<key>hash2</key>
 			<data>
-			xoOkgKx5/zkvlnJydaruytZi3jopiGkJ/MY3ARUJFEk=
+			jqXpNJj9i9/GjUZvXnCl7mlbp4mOBNDKcUoH9F47Dd0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCCameraControlService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SIs2EN7sbfIxqvexMDPvDRCXryg=
+			KIZOi+BfNdIornX/L0ntNsAY2Mc=
 			</data>
 			<key>hash2</key>
 			<data>
-			QktkQmpvYfsH4g01F53D6JG+kp8POTBdpNz5wI2wRkY=
+			Z7QZGTi7/+TkDfst8kQM2UroNBpn9tchEb09A42Rhiw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCConstants.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VwnmgcYFv2/NRJXZkETquOTQwgA=
+			b7BvMYq0G7bIgtcbzgWt9a0RaoE=
 			</data>
 			<key>hash2</key>
 			<data>
-			VSpMDbPt2CF6ng5/2OpF1j4c6KuV4E5W3VqxmLROpUk=
+			+A0Xg1nB/Drgja8rms+C4GeoYugEMqKPLYhMWKKy3Rg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCDirectShareService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hl7afH08g0V+abPuCeTxcBdbseM=
+			ZNEryi46DdOpZnGw7GR9EXy1cXk=
 			</data>
 			<key>hash2</key>
 			<data>
-			1YjSGdhyr4IjPNC+JBFgfNhxSEN6Ok3FIKShBRgYh0A=
+			6p3oi4pQW02WrEEEH20s8x1WfS6B7t69Xyz+GHy1LIo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCInMeetingDeviceInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RXSoCRBKeFaxnms28z8FD6b/IBw=
+			EOY2SIjNx43vRXtczDSyxu231jw=
 			</data>
 			<key>hash2</key>
 			<data>
-			veqQtRnc/S8rLZPASe7lX1CstaIp0pNCDhq6cuquG1U=
+			FWlwXpUOfBjfIIRgiFR3qgOwFBhReuvxnGenHmHDjL8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCInviteHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WIzJ1xyOcDR8IJF6EUT7xpMIDRM=
+			e1ND+thOD3hMxFltPb6UvMJPmyo=
 			</data>
 			<key>hash2</key>
 			<data>
-			zrTJWULS9kPaLp/B/ovcduW5ukJxcEJZMgCQCzmzKcg=
+			Luul4OvSrlou682+cSFMnOYlPQzDP3dqAk3k4lFzgEU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCLiveTranscriptionLanguage.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			y57QUISZec+gxlDbnR4vtr8R9Yc=
+			MXUP4hZNM3jXJCPO0p5ENDKuJNw=
 			</data>
 			<key>hash2</key>
 			<data>
-			PKf/Ti3GctZrZTiIFc5EqWBshc8x0u72hhykysP5Sk8=
+			5ktCVfX+9nm4bJgmpoMi5Ln8HPl8DoOdIQtEpQRSJus=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingActionItem.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Qpt6EWCwgphjIZrbjW/7sfPGu2M=
+			bsTH7Z0yshsEQ0doDOcQpLk6tUU=
 			</data>
 			<key>hash2</key>
 			<data>
-			zseuTmvUQsJF6EJmKeTerH3kAihJROHamkRKP0l/mRE=
+			Jy/RyLadD5PdGSZ8/X84xQdlyESp/nYLbhJoFek7S30=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingChat.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Zc2dvP/a8MBBRHStjk2RkNfQRPo=
+			vllRQNCekh6/0fAhCjDm8EC+w8Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			ATa4nfN+NhZm0frthmIaiHr5VDOj+Gf1KoV11RLqI4U=
+			JqN/ulGylfzkvRjrynx4s4kovi1RJPvaLbEaVvpTq4I=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UCtBWahXF6qLqjDhAKbe6eKj+SE=
+			1GJszpKkc58qDLDir/XVlBhIMXk=
 			</data>
 			<key>hash2</key>
 			<data>
-			LOhICLu8g4a+5RaUfeN/gAkPISbtoScBVIQlerBMfRg=
+			pWfZvYNjxcvk544drKH3E6fNXFSVyYZfmu56BMuHyHU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+AICompanion.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Is40wkfAd2LIfkIqvSoPaFMLmUc=
+			aZshdC6NZCX22oQFjJuowQG3oQo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z00UVOoqWJsLB/zzksO8qTYQIy3blJ9S2wvUHW29KE0=
+			mCOPgffkVaGqsSIFewwxh3OxOC8JwWr0rYpa3Mcl1Rw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+AppShare.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jQn1g3/F1KYMDLZJD1Fwyxc6JwI=
+			eyX6ToLKYqOzivo5QblrdO+C4m8=
 			</data>
 			<key>hash2</key>
 			<data>
-			ldUx9toNdS9Z35cbmbxY5afqaSdjxNN49XF4HJpshNg=
+			HE0k92469TEs0tuEaQVJ0hJbhBX0GmPMYzkY5Ftn2C8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Audio.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			R3Jty2wc1euowTD9h5MdM1DYUJo=
+			FdXdPISYTMnIt5pj6FdLKaUuEPs=
 			</data>
 			<key>hash2</key>
 			<data>
-			VF64pIuAyZ2TqV7nLR0iDd6MDgNfg/hCpvS/B13Uifw=
+			FEMDtCzzeYZ6NyFAXyu2cQ0n7+1BFHg0AAeF+y3ypmI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Avatar.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			G032cZm2z66HrBt9j5Cs/Ez4V7o=
+			24o0x2gvle5oPEAExmOBV6bxGhs=
 			</data>
 			<key>hash2</key>
 			<data>
-			D8VHuNNiELLk1+zp8T5hM8UaHIBCqXUklyqyaQoxf7Q=
+			owuBvgcwR7DAZzW4Yq25W01tQMWYS3aKUNf4XzZlRhw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+BO.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			G3J52J/HLxAjr3/2sTOv7BKZhIo=
+			+Fnq79vnAVGXaQ8LOkX60xfHpjo=
 			</data>
 			<key>hash2</key>
 			<data>
-			QpVPZpM3Sb4MvWkzsuz8S6QqhOv+5E63lGxNHz69A7k=
+			fbK9NFBjqKCl4Il6S9kRtGBTTcxUdLoaICAYmUDWDPs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Chat.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AB0KHmKf4m/iWb7zaYAydA6DwuA=
+			z7k5T4+ucHOEv8cVCc2rgWYCrFg=
 			</data>
 			<key>hash2</key>
 			<data>
-			GFIUAu2YRU5YW/zfxIyCy2FmkSEYfa/8XNF7/enf2Z0=
+			t8m2TdDtf/SkYHQ2axJQaZCr50J1LyYSpStO/ospp/8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Customize.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tZTL6zVM2iXyc5b8Z9Za5HD7UVM=
+			QkQ0dn0jcl4MVLT3GnngqG3AjAs=
 			</data>
 			<key>hash2</key>
 			<data>
-			kDtMeRpKkcjfnW2UmUsmTCyA3h0Ze1GAYGFHtPC6wEw=
+			+6afWUrwNH5xItPxN2WMbZRidwmakq/4U3NLRux+wJk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Docs.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DGB2NGLRzPYDKFBJWLQq9XfYW8k=
+			UzGFXUV8maNLQKqU59yZs7lnS+c=
 			</data>
 			<key>hash2</key>
 			<data>
-			8JbNEKrvWvqNOBxjRa+NzdEZmoX0wMmxTsFcSiJIfx4=
+			Zjg4UJDSMQVMwfovnYIrCWu+LxWz8+UZno59Mr74+KQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Encryption.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0N6jkZlMIpcY733U8wIL9jYFYQA=
+			cQmfZ92RZ0DpTdIXo/DzQBvN4FQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			8AkFTCtWG501GfJPVqUdO16tXLioQ/gtGGtbCy7cmfk=
+			rlaA8zdez11KIeGZnqgVmHeUy9X+nDis5lMkUWAj0Vc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+InMeeting.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1Vo8jBFYwRaR/NxPR0bvya/uuZQ=
+			O/lsM515vasNwh6NXHEBAQgbGR8=
 			</data>
 			<key>hash2</key>
 			<data>
-			POagLVO5TR5FTwJt6pL0kmGf3gbt2pS7EAt6ZMngnSI=
+			qqbFKwnZzYz2+6Wl2wDEw+J7Nl8jzBrmV4MoySzJ9fc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Interpretation.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2axogkdGLUL+EKgHJuCeIKq62j4=
+			wcifnLSfA2yKoXV5k7TnN5ClY3k=
 			</data>
 			<key>hash2</key>
 			<data>
-			+9M810cbehncAyx+LpQwtnemhaQYoga83jP21SDl5UM=
+			grZf6c6oA0OTP3/VcAR+82+hIaNlY6bDeS4d/UwcgFg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+LiveTranscription.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			esw11cDFZP7D6EtJbxUHGUFMi9A=
+			2X7GAluxqFLBJwjTuuHwRs7wfro=
 			</data>
 			<key>hash2</key>
 			<data>
-			Zd+vf8+asL6cNiQNBeeRzsUl2jhmprW30FC31nyoXWg=
+			nmcbF/LHqrz7mZhUiM2D+DS9zsQ2tSk1ZlXfIpX407I=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Phone.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ab/d9j/YzBw+V0DWUogEr9TuMUs=
+			+ctQalGc1KyebNZVDY6Z9lwTdxQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z0caj+HEWy1yEs3TWSLLc9OxXUAOTu9HdqWNB14YNek=
+			QhsRnjOAxZVNVTjM1Z0biK4wfPo0oqRMAaZHm1SnB/A=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Polling.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0WMGaoF1ICTJcCLSmW/MzlYWIFM=
+			FCKmhjgYx37odbVmdJcd9NWX3fE=
 			</data>
 			<key>hash2</key>
 			<data>
-			sWHsv6LJMYuCB86FtY1n3bZbo1aa5LJEDldbaq3rN50=
+			fsArlIPVagedZU07HnUw+/rcOKB6CTpbwhzKlhKU48c=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+QA.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cUdK9gkhWYnTaXTn6+8CWU2WnOw=
+			8BENe2Kb+/xeg7swrIGcJGmwuHk=
 			</data>
 			<key>hash2</key>
 			<data>
-			yka6b6QwMlvec8z/lBPjtBX/xtdAA6Zq+jQ6xf2krOg=
+			qensu3BtT2pQLglmxhiJWtBT77ujZVI+694iXqcOte4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+RawArchiving.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sbnUP4CHtZLgbnx3NGffLY7UG+0=
+			Zp284avMxBTF0tCsqxFFSvqXXcs=
 			</data>
 			<key>hash2</key>
 			<data>
-			9UG6qpW7qSdVtxdmrzJfXIruTLBtRKw9jrt8zHTxED4=
+			kKSRkeVUxKqQd1Nnu/BP1UD1WusoEtCOCzBpwQkfR3s=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Reaction.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Qbf+/Qq8raDyExQy9z3jNaf9MaE=
+			zWYR5Gdd5H3UBwn5By2rZNrdhdo=
 			</data>
 			<key>hash2</key>
 			<data>
-			R1hvsxG7bSJ4GZqGBYQ4YBIyp26wS/BkJ/5tFOSJ1oo=
+			7T3CjbL38z/76LPO2zL94Jy/7QnjsamvVwqTSbtTy8E=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+SmartSummary.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OcPlTAgabQMhwfeT2RKeXcve984=
+			upoD98GIabL8jA1M+yqrHPGR4XY=
 			</data>
 			<key>hash2</key>
 			<data>
-			oREMd9PLLbpDknFM2iNY3+c9yZM4Dzacv9sDJ7Wnt4Q=
+			AGq2ZVsy3x4hvluJeGleOe2AFFThC2TnojwvIqwzKaA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+User.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BPcrPCm8kYQIp3wiZEFrtyL/YwA=
+			G1HTVqQ928blnNfGhfnfX+GbPyk=
 			</data>
 			<key>hash2</key>
 			<data>
-			EN8+YPtZKemooatmCoAE5Qtrkej6gxRFbHXssyzXfGQ=
+			Ggb1eAJszPODpeDr2In9pwH4CW773mwGzyE97O5rn0U=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Video.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oTVWBjLlwhiFCAqIVUP4/NhF5Io=
+			YxDRNsnP+aomdiuABwSmG6S5xn0=
 			</data>
 			<key>hash2</key>
 			<data>
-			GDhMbUWmWtFurOdXzewfBjsBvFki/Gt01BTsvk0Bdjk=
+			OGwQYnerMZo/s0TKpdIF+YJUEebCDAfFZz0quzrdOz8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+VirtualBackground.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			U4ggPO0nJdJgDAW3vV1mIyP2H+0=
+			ZdrVYOZ8/e8wmk76QtxxyX49DSw=
 			</data>
 			<key>hash2</key>
 			<data>
-			96a+TPGVuXOEr9jq98POzf0152dC6SEoRmEVPHkB5nE=
+			HHSgy/bMxUCb3cKiTqO4c89038Q4T4yfG2Gnh+wyy88=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Webinar.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rzqbwIVtWxcdVakJ5Bnn3zuAag0=
+			pMVPVGvsQOWfhOoZmJorCzNlM2g=
 			</data>
 			<key>hash2</key>
 			<data>
-			YP8fMEEF9P/FgYtYx5fH91B8yr2ckmPVCqpWVpgvjzU=
+			T3P8JvMzsF5tyYar+F49C6pnQuRf6it5bwOEl1qefV8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Whiteboard.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			riWMRu/iH+eVitR8/u4PBPiyYjg=
+			XQ4Jc1F91zqviQzfK8fzF+m3fso=
 			</data>
 			<key>hash2</key>
 			<data>
-			KwnhJTBUY3wFOIQywFuc99rR/yGrx2gVKuohwu9UaS0=
+			V4rUnY25b++C5QhVq/l3wV82O6S7IL5RN8E+ctca/aE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZFvzEwHKxm06giBi3Det8rHsixQ=
+			mEOgsRyqrv8zxlGejFcXOXglgtA=
 			</data>
 			<key>hash2</key>
 			<data>
-			J2JIKKN64/jpKy0olDxnJCM7RSkt+FipGM7wwzzKhJg=
+			mnrt4vikwKa/33EaHbHOiIXHNdFwEb0FUDe9xxTMU4c=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingSettings.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			j2WqhllOvM/qwz0xMw071Z4G/K0=
+			1ID5bDu1LFmbZ/23dnuyf2XbY0g=
 			</data>
 			<key>hash2</key>
 			<data>
-			fQUsnmWPr4hXmosFC7NRsU3XSPR9fIvRZ9PQHx23Uxs=
+			SMyzjZ25b+6Y8d3rf+pDgfkxmRntRNtWDLv/+LSXOMs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingUserInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zjq80uOeke2wttCXjTvEuYAkxPI=
+			sKjMZ4stwSEC7AprzxKKqccIn+Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			cV/0TpQGtzljOdzyxNiHDJaPyZBNrAj8xxCjs32Cyuc=
+			L7F1uVr9OCirf0OKYz7VztrNrkXs0bFEeBBFfViM608=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCNotificationServiceHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0AoKDSEN/pxKDJX2VaNsk+aJF7Q=
+			fxDljAy3l9iGaGQdUvyUMD3CBAI=
 			</data>
 			<key>hash2</key>
 			<data>
-			CHVfBU3ABJDwMOCU1uyCpfkp/cYK/ukQtU6lHOAJNO8=
+			UrzkGITJEaU5pOnG8CQC12WF67M9KDDMPI4jPnEU4Rc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCPreProcessRawData.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a5/6Be/TjWHya/xUUn5MKpREEKM=
+			tr2VNDwdlKpyDOIreGlWoMCfKPA=
 			</data>
 			<key>hash2</key>
 			<data>
-			xwLTla9FXruV4J5036vHWBGB7/8F52mCbIbVefKPNKw=
+			blgeQOWMhRuDGWnMiwK6rQT0iP30zHdUj7WXTqazhxQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCPresenceHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oCyOz8JTyDfAN/w1eUfkZdXoofA=
+			O06X1e4LIub+FJiPEyUWuEj57Jo=
 			</data>
 			<key>hash2</key>
 			<data>
-			NZj++8FmkkgahQkkv89zGibL3ucJv3PneBZVDOIpdJQ=
+			USpHv1kcJcLqEmAK7MpcN+1yqfTAFqcWGHSgRIaHTVE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCQAItem.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			14efgMrcfK/oo15vTS8ySrsM8/I=
+			tuGh1eZn5mVkOziPbf37LajcFkQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			apGmXahiWT0iM3EFdlHstTp5vWjyI3gavMo0WyblNNc=
+			k+nI7Y+zZtAJNzQVkgvuG+ItZ7lhSzzQkuvJRJ6EIZQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCRawLiveStreamInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1ikyPMeiOX6oasQtbV/jdYjh/JA=
+			/Za3xCxCDkSdctqdZsB9nXllD+4=
 			</data>
 			<key>hash2</key>
 			<data>
-			FMhjuEBMVdw71z5UwKBDg7NGtq647X1/SeC5xKDli4Q=
+			6CvSfMET39UtpylGtC1Wzuvin+eyI2FO43v51v+i8MY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCReminderHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			L0rq2NdDV+YaFBZop2PYmrcr+cQ=
+			NIAXYQSGyJ4dnHfhIPYlYXBFddQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			z43QSDDnjLks1+ILjsY+ZfIJdLV5uIXurabjTlOgfwE=
+			8RajYfx9sFPVUfUtI9h5PfVrv+2Yt67wmiuxeabqHF0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCRemoteControlService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rby48tL6dTdEIIDwgE9DaPCWQ/s=
+			IhLeNa2egs88NY+JYboSEH5uvYY=
 			</data>
 			<key>hash2</key>
 			<data>
-			UDl9OjDBpUnlzohdpg8pOJ9RLlj2rRTPkSQabktrAgY=
+			sxI1J5Vvs8gZywpBRPFWUPVG8s9c12ENT1b4W2NP9o4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCRenderer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GyPG2uKKb9n8QzgIqmV92chq/j4=
+			VyCksAHnTOf0uIgCHw7ZbOIVjB4=
 			</data>
 			<key>hash2</key>
 			<data>
-			OyztTVQcbZ1pk+SfYjVxQ8Go/vYNR3RP5tfy8GJUuRM=
+			Cz2V8SD+spu2JyQzM1jvlISitENGm4dwQFWTpaUfz8U=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCRequestRawLiveStreamPrivilegeHandler.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3mT6rgqThVBqplxxhpDPLrDwzEo=
+			TF0S/yctEnown9IGiYBe4SkIFDg=
 			</data>
 			<key>hash2</key>
 			<data>
-			wm57JcrIilWB3WufRTQETb6Ymz3AsHQTpL6djnqXgrA=
+			ZkaQv79oXOYXKANQ3uvmfqFelz3vrGIPHq+a3XIohBs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCReturnToMainSessionHandler.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+M2puwfkxUmvURnbEXtL6LAfNiA=
+			2dIAwQAkQJlKYeheJPyK89v8Ipg=
 			</data>
 			<key>hash2</key>
 			<data>
-			MSLpFykxn93w2lt/EVsFHsMO4aCdrcHbbmbvgvnBgeQ=
+			VrqJ7fvL5IBTgScrwiWmpyVv+XQwgBnkFOEfm8coSkU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCRoomDevice.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			m9K90xu23jggkglL0/gVt/Eevns=
+			VhM6fDdeWIYzINPJIjsBf1pmH5Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			nsG+9OSO718HBHx+sp0+ASJQ4Z/IiC0dshboW3R5O2s=
+			FljHZg6j8zn3vQ2MCN3xQRyfIk3R+CGMrAkhC1RRnbg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCSMSService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xabimbiVeb7vff3RyggNXExLAkM=
+			uvpdf4MvItASz8bac0cLoijgCmw=
 			</data>
 			<key>hash2</key>
 			<data>
-			fPVUZI53lizayrN1pJhIHWpgovtXhaRLAaWRxJaokKs=
+			vPHRgpfM/h7UK9G8M/PTh91stQVk6BAMmuFupyvF1KQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCShareAudioSender.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DsPgnpI6ry/7JnTmuhnAt3ti4nY=
+			5jyiPOCgPGi+s4qBrbVisfObSIY=
 			</data>
 			<key>hash2</key>
 			<data>
-			mnBvPx3vyTbB1zxQlQKTJIERFbLaHjJOSE7SUzSUlRc=
+			e45ms14tpzasFIKpXEEmrc5xGJi8ki2XulNTkrTHMlw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCShareSender.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bNAnCqAYe0XpEpKGVkBmqcbgLug=
+			b9ZUITA75/368cI0yZ/N/3Dz5jI=
 			</data>
 			<key>hash2</key>
 			<data>
-			isUBojiHCJNc2fQbbxh3xGI8EV/m8kwi3W+wZQ8LWdA=
+			93KCKUFyZQnHoOCzUkA5o40yGQf7fOnz50QYsjrUYz4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCShareSourceHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1rFfXY9AukL08DlyiUCK56WuQHk=
+			WKaFxEN3z8S/kgklc5ra/MGuoys=
 			</data>
 			<key>hash2</key>
 			<data>
-			TsQNoNwAmY0sbWZRyh6JlfcDsMzMfvEf/UbYujs/wM8=
+			59K+wvMi3jO1EeQSmj9/Vw3Ldlyy+68k+5CWz1KryIA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCVideoCapabilityItem.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VmfTVJBCeEgFdS81lbuYImTytW8=
+			xDJanGNsAPvq/m1wWCF9SgmfWKM=
 			</data>
 			<key>hash2</key>
 			<data>
-			nwbgmnthz4JjQzttqguOIPxN/2KRINpLs+JiqkuLcHk=
+			GDwT4T0EobobclDssFb5JkPUGBPez+/jp8qoJ4yJX/o=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCVideoRawData.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wCG9nJdcoHh9aj5GdIf0Ba7ZzE0=
+			fgmoO+Gin3CFn41hZq4gyqczF2A=
 			</data>
 			<key>hash2</key>
 			<data>
-			SveLRx/nHK4cI4t1369NG1CzMpR4KHTsbt6SGh7LbdE=
+			fBcCxpuQcmEXWg2AZRek2HNSMRfWUrorLJIP/lhYAiY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCVideoSender.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GlbkSwWl5v3z5JkiJfLXgo3A1q8=
+			oL8Qg0nvOzXq18aSs0BA/j6DT04=
 			</data>
 			<key>hash2</key>
 			<data>
-			J+Nh4FPUVXuw0p+2Xl5A+MaQY7bSaGrm91iMqjG++ik=
+			V3+SSw/kWQXVVVlaYgLy3K1KUQGjDlrNcHCppu9+irE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCVideoSourceHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lVxYmhBB99NfQEdJiQnHUhWIRAY=
+			3/9ghMTYeUFKoRVwh/4ymCbMWog=
 			</data>
 			<key>hash2</key>
 			<data>
-			xXCQWTVZkBNwfrQ/6hj1TS9DGO90UrH+FJVXg/Yelkc=
+			7FdEKgfkZ5TIfwNh/F6kHQVwUWm49zb12wHZV2tEhSM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCVideoView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dpFmViQML9N7i3chqOPGDpfBWzY=
+			G7SrKszd1BHgh4b6SEg+WWkn6LQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			PEqrSHPimZFXZpXwquf1AowvI7QH+Eg7dDdRrDvPymU=
+			cWjhzIrqo0vXA2heXRKkQYqg4SLaXzooNtgibC5v8K8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCWaitingRoomService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			l15Zzrvq8mksbZLQnUPT+siBlaY=
+			LYD62P12ACtJhz8fMsyV3HRPgRk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Bs2+sI+kqE8d6G9gAtsB6dV4RO58mAGI/iKe0namc40=
+			Gc2cgLVjCU3ks+E+IFpUUG/iSc1sAo4sTLL4HrKQF90=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Headers/MobileRTCWebinarInputScreenNameHandler.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UR2MH26b4z2KMy/4iVz3JZz8YFw=
+			xebcXRxASqvz2cAKT3fMWgVYgu8=
 			</data>
 			<key>hash2</key>
 			<data>
-			36e0rV8XmNDDyxZbLU+tHdt536xjAj/EJfYR/3bpKoU=
+			30/RWxrY1mfd/iBgfGDoWYCPUk0/oKFkpLJpnQeTqyM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8QFfCxoPorHb1yBD+hwlH2S5+2w=
+			d3mc1Jcj1ChWSfLkYrkTO/IS6eA=
 			</data>
 			<key>hash2</key>
 			<data>
-			QQ0mAZ1eokqv973XoYhY0a6+59oLVCFTc+q7Dfn/7MY=
+			MKCWr6UEX1A+zkjYEN6iVWTMwl+FVAA06tjaA0EOeWM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/MobileRTC</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SzKtxOKgvsmR9hHOKrsGVEaArNc=
+			sOSQe8onLs16wao2+cwYLFO5XZw=
 			</data>
 			<key>hash2</key>
 			<data>
-			28YsIivoPDJGkYPPNQQqerXH0pitxn10L+gMqZZ5PT4=
+			duxo2G70rTKlRq37m8Zt2d439MhdzSXpLHrKApVh1ps=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -2335,33 +2335,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FxZlU50hv5Y38Ib3eBuVlhmQXBk=
+			Gv0feaqWBeajoqld+ubv6KR2TAA=
 			</data>
 			<key>hash2</key>
 			<data>
-			tzTtPoTkuizRLPCL7/7aNQB9ub27/f29n47W3fS4/vc=
+			l95NOysdpCyPMvtl1ldYTHkOlOa+YbjzQ9SV7NKvTMM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HPuU5c1lLPgrpy2RSWCvPt3+ScE=
+			kb8eMB8KumTngl3sRPb5BvW4MT0=
 			</data>
 			<key>hash2</key>
 			<data>
-			v85t0j2wlQ89BIpAgum7boEyXw/NltdhdSYR9ZARQc0=
+			s5K4+5tgqoI/J50e87VRvLW6m6qZKy/VTrCFYj5LBkA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FxZlU50hv5Y38Ib3eBuVlhmQXBk=
+			Gv0feaqWBeajoqld+ubv6KR2TAA=
 			</data>
 			<key>hash2</key>
 			<data>
-			tzTtPoTkuizRLPCL7/7aNQB9ub27/f29n47W3fS4/vc=
+			l95NOysdpCyPMvtl1ldYTHkOlOa+YbjzQ9SV7NKvTMM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -2379,33 +2379,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mC77A1HnuU1zKBvoxKItuECMmMs=
+			xcBcQl1/+gtdWecYS4+6bQZpKJY=
 			</data>
 			<key>hash2</key>
 			<data>
-			zf9SaM3JElkiFOyYL0lfgJ/Q+NdHn2NDBOSu/y0/C0c=
+			Hkt2ZkFNrhw/kN7bPQH79GdIzLMWVRDFplajCMLm2GQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			r/eYXIlI8L9VJGmtzMuWCv55mFs=
+			iwI/ytWISg1PuhPccl/SbHsFPvU=
 			</data>
 			<key>hash2</key>
 			<data>
-			9NfujCaREASknkj2D9q8houeItH0Et+5KIWm1sitg3U=
+			YZ0XxI//jiEtXHhJ+OFPhmHDeW+Cyjuv4iuMhjMN0Vs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/MobileRTC.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mC77A1HnuU1zKBvoxKItuECMmMs=
+			xcBcQl1/+gtdWecYS4+6bQZpKJY=
 			</data>
 			<key>hash2</key>
 			<data>
-			zf9SaM3JElkiFOyYL0lfgJ/Q+NdHn2NDBOSu/y0/C0c=
+			Hkt2ZkFNrhw/kN7bPQH79GdIzLMWVRDFplajCMLm2GQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/Modules/module.modulemap</key>
@@ -2434,22 +2434,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EwANHYUxDL8oHNSQkZO4ntnDXyY=
+			SJ817CHHVVZTblNvVxXxeYUb8X8=
 			</data>
 			<key>hash2</key>
 			<data>
-			xNyfMvl3PyphtzmgQ37uAMuSd3FdcEDknxf/+vHTDYc=
+			altGGs7WM4NPeqJGJIotozZCfafWar49wGMnv9Djoa0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/MobileRTC.framework/nydusDefault.metallib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zrcCrKXlgrmRddTt3R1YlQSov4A=
+			SiYI9LWdgoVgxKQ3edfPVmaNG1c=
 			</data>
 			<key>hash2</key>
 			<data>
-			AWXru+FHz5EeiPL4rM/484VhwFkRo+2NgkD5ba3T8fU=
+			BtVBuxiEuo44MAQqHSOwSDEyfgU61WM67y+oukq8YPc=
 			</data>
 		</dict>
 	</dict>

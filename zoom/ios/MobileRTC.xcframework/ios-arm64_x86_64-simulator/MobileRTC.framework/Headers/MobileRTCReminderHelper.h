@@ -1,10 +1,7 @@
-//
-//  MobileRTCReminderHelper.h
-//  MobileRTC
-//
-//  Created by Zoom on 3/27/23.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCReminderHelper.h
+ * @brief Helper for managing meeting reminders and notifications.
+ */
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -73,16 +70,19 @@
 @interface MobileRTCReminderHandler : NSObject
 /**
  * @brief accept the reminder.
+ * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise the function fails.
  */
 - (MobileRTCSDKError)accept;
 
 /**
  * @brief Declined the reminder.
+ * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise the function fails.
  */
 - (MobileRTCSDKError)declined;
 
 /**
  * @brief Ignore the reminder.
+ * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise the function fails.
  */
 - (MobileRTCSDKError)ignore;
 

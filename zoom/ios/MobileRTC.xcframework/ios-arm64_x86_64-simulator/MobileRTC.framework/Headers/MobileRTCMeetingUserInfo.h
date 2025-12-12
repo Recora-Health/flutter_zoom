@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingUserInfo.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2017/2/27.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingUserInfo.h
+ * @brief User information and participant data structures.
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -102,8 +99,10 @@ typedef NS_ENUM(NSUInteger, MobileRTCAudioType) {
 
 @end
 
-/*!
- @brief The information of the current user in the meeting.
+
+/**
+ * @class MobileRTCMeetingUserInfo
+ * @brief The information of the current user in the meeting.
  */
 @interface MobileRTCMeetingUserInfo : NSObject
 /**

@@ -1,10 +1,7 @@
-//
-//  MobileRTCWaitingRoomService.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2019/3/6.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCWaitingRoomService.h
+ * @brief Waiting room management and participant handling.
+ */
 
 #import <Foundation/Foundation.h>
 

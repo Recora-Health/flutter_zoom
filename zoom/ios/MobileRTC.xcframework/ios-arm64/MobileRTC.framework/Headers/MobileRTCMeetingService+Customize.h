@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+Customize.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2017/2/27.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+Customize.h
+ * @brief Meeting+Customize service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 #import <MobileRTC/MobileRTCRoomDevice.h>
@@ -30,6 +27,7 @@
 /**
  * @brief Set to customize the meeting topic which will be displayed in the meeting info view.
  * @param meetingTopic The topic of the meeting.
+ * @return If the function succeeds, it will return MobileRTCSDKError_Success. Otherwise, it will return other error codes.
  * @warning Only meeting original host can call the function.
  * @warning Only in-meeting can call the function.
  */
@@ -37,6 +35,7 @@
 /**
  * @brief Set to customize the meeting topic which will be displayed in the meeting info view.
  * @param meetingTopic The topic of the meeting.
+ * @return If the function succeeds, it will return YES. Otherwise not.
  * @warning Only meeting original host can call the function.
  * @warning Only in-meeting can call the function.
  * @deprecated Use setMeetingTopics  instead.

@@ -1,10 +1,7 @@
-//
-//  MobileRTCInviteHelper.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 7/29/15.
-//  Copyright (c) Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCInviteHelper.h
+ * @brief Helper for managing meeting invitations.
+ */
 
 #import <Foundation/Foundation.h>
 

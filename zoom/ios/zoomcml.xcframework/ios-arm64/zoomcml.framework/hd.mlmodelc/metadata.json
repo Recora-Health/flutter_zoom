@@ -74,12 +74,12 @@
     "generatedClassName" : "hd",
     "neuralNetworkLayerTypeHistogram" : {
       "Concat" : 5,
-      "ActivationReLU" : 51,
+      "ActivationReLU" : 55,
       "Flatten" : 6,
-      "Add" : 4,
+      "Add" : 6,
       "Permute" : 3,
       "Crop" : 2,
-      "Convolution" : 66,
+      "Convolution" : 70,
       "Deconvolution" : 2,
       "Reshape" : 3
     },

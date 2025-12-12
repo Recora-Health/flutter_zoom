@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+QA.h
-//  MobileRTC
-//
-//  Created by Zoom on 12/29/2023.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+QA.h
+ * @brief Meeting+QA service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 #import <MobileRTC/MobileRTCQAItem.h>

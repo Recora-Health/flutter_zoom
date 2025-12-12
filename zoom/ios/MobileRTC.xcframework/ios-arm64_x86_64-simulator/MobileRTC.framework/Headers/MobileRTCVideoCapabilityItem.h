@@ -1,10 +1,7 @@
-//
-//  MobileRTCVideoCapabilityItem.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2020/3/9.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCVideoCapabilityItem.h
+ * @brief Video capability information and device specifications.
+ */
 
 #import <Foundation/Foundation.h>
 

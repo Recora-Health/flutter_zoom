@@ -1,10 +1,7 @@
-//
-//  MobileRTCShareAudioSender.h
-//  MobileRTC
-//
-//  Created by Zoom on 7/9/23.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCShareAudioSender.h
+ * @brief Audio sharing sender for screen share with audio.
+ */
 
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCConstants.h>

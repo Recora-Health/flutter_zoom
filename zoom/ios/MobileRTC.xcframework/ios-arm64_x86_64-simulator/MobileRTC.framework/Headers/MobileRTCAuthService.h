@@ -1,10 +1,7 @@
-//
-//  MobileRTCAuthService.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 8/8/14.
-//  Copyright (c) Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCAuthService.h
+ * @brief Authentication service for authorizing and managing Zoom SDK authentication.
+ */
 
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCConstants.h>

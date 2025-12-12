@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+Chat.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2018/6/6.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+Chat.h
+ * @brief Meeting+Chat service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 

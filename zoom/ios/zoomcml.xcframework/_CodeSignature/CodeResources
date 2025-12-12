@@ -10,7 +10,7 @@
 		</data>
 		<key>ios-arm64/zoomcml.framework/Info.plist</key>
 		<data>
-		TXphTPQdXbw7d9J61kDK7HcTgxA=
+		/37S+rhAr74Bt5De+u/WpCXHvZ8=
 		</data>
 		<key>ios-arm64/zoomcml.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -136,9 +136,33 @@
 		<data>
 		tkgF5pxT7RlO+9uypQti9obolyA=
 		</data>
+		<key>ios-arm64/zoomcml.framework/gesture_cls.mlmodelc/analytics/coremldata.bin</key>
+		<data>
+		J4lYSW2s48TSsO+kZhgy8kXw/wg=
+		</data>
+		<key>ios-arm64/zoomcml.framework/gesture_cls.mlmodelc/coremldata.bin</key>
+		<data>
+		xT2VRvR1w4GcHwmunMvzXD4fo3A=
+		</data>
+		<key>ios-arm64/zoomcml.framework/gesture_cls.mlmodelc/metadata.json</key>
+		<data>
+		QH3/7ns++GbqFu2PD2RGlSBA2Uo=
+		</data>
+		<key>ios-arm64/zoomcml.framework/gesture_cls.mlmodelc/model.espresso.weights</key>
+		<data>
+		Vfb8VmOwB4AcHE+s/8ohEVgDBxY=
+		</data>
+		<key>ios-arm64/zoomcml.framework/gesture_cls.mlmodelc/model/coremldata.bin</key>
+		<data>
+		BAcGz5nP3d6p5ZJBOTSb+iF6Wa0=
+		</data>
+		<key>ios-arm64/zoomcml.framework/gesture_cls.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<data>
+		uA3l0Th1hUHF8FJlrRRKufqG0ds=
+		</data>
 		<key>ios-arm64/zoomcml.framework/hd.mlmodelc/analytics/coremldata.bin</key>
 		<data>
-		iKlY7VrY2HoP5AT5TF+ItOWK+J4=
+		cyQm50XgMnDeWP6M2vSFIEVjhUw=
 		</data>
 		<key>ios-arm64/zoomcml.framework/hd.mlmodelc/coremldata.bin</key>
 		<data>
@@ -146,11 +170,11 @@
 		</data>
 		<key>ios-arm64/zoomcml.framework/hd.mlmodelc/metadata.json</key>
 		<data>
-		02Xa+RH2vT1fpihQP78HbI07l9Q=
+		dR7RVRj5GcNYwP6TYebiff9QOp4=
 		</data>
 		<key>ios-arm64/zoomcml.framework/hd.mlmodelc/model.espresso.weights</key>
 		<data>
-		fkaopE7MdJUWvsQYzdu+dMJYHyk=
+		umRUZ4lhlKaquff0M+/8AJPJAzs=
 		</data>
 		<key>ios-arm64/zoomcml.framework/hd.mlmodelc/model/coremldata.bin</key>
 		<data>
@@ -210,7 +234,7 @@
 		</data>
 		<key>ios-arm64/zoomcml.framework/zoomcml</key>
 		<data>
-		BhAShz4b71vWSmc6n6M8jT+llIg=
+		8s2Tw9AmjDZhOqHreTJpsL4DJJY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/Headers/zoomcml_interface.h</key>
 		<data>
@@ -218,7 +242,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/Info.plist</key>
 		<data>
-		rNz03wQo1IJbg88RRH5REu4H5fQ=
+		eAZQahZHalk6+IqR/3juGepJc6s=
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -226,7 +250,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/_CodeSignature/CodeResources</key>
 		<data>
-		EvAhJRUgZg9Sj2TF7okgr/6WKfA=
+		eeiXs/C87wc/RDU2+SWESDmTLqc=
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
 		<data>
@@ -348,9 +372,33 @@
 		<data>
 		tkgF5pxT7RlO+9uypQti9obolyA=
 		</data>
+		<key>ios-arm64_x86_64-simulator/zoomcml.framework/gesture_cls.mlmodelc/analytics/coremldata.bin</key>
+		<data>
+		J4lYSW2s48TSsO+kZhgy8kXw/wg=
+		</data>
+		<key>ios-arm64_x86_64-simulator/zoomcml.framework/gesture_cls.mlmodelc/coremldata.bin</key>
+		<data>
+		xT2VRvR1w4GcHwmunMvzXD4fo3A=
+		</data>
+		<key>ios-arm64_x86_64-simulator/zoomcml.framework/gesture_cls.mlmodelc/metadata.json</key>
+		<data>
+		QH3/7ns++GbqFu2PD2RGlSBA2Uo=
+		</data>
+		<key>ios-arm64_x86_64-simulator/zoomcml.framework/gesture_cls.mlmodelc/model.espresso.weights</key>
+		<data>
+		Vfb8VmOwB4AcHE+s/8ohEVgDBxY=
+		</data>
+		<key>ios-arm64_x86_64-simulator/zoomcml.framework/gesture_cls.mlmodelc/model/coremldata.bin</key>
+		<data>
+		BAcGz5nP3d6p5ZJBOTSb+iF6Wa0=
+		</data>
+		<key>ios-arm64_x86_64-simulator/zoomcml.framework/gesture_cls.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<data>
+		uA3l0Th1hUHF8FJlrRRKufqG0ds=
+		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/hd.mlmodelc/analytics/coremldata.bin</key>
 		<data>
-		iKlY7VrY2HoP5AT5TF+ItOWK+J4=
+		cyQm50XgMnDeWP6M2vSFIEVjhUw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/hd.mlmodelc/coremldata.bin</key>
 		<data>
@@ -358,11 +406,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/hd.mlmodelc/metadata.json</key>
 		<data>
-		02Xa+RH2vT1fpihQP78HbI07l9Q=
+		dR7RVRj5GcNYwP6TYebiff9QOp4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/hd.mlmodelc/model.espresso.weights</key>
 		<data>
-		fkaopE7MdJUWvsQYzdu+dMJYHyk=
+		umRUZ4lhlKaquff0M+/8AJPJAzs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/hd.mlmodelc/model/coremldata.bin</key>
 		<data>
@@ -422,7 +470,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/zoomcml</key>
 		<data>
-		LDMbZXVUjOL/fz4swjyG/iS5X2U=
+		qWSKP1XW0SvfgfvbAP99AwZx1xE=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -442,11 +490,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TXphTPQdXbw7d9J61kDK7HcTgxA=
+			/37S+rhAr74Bt5De+u/WpCXHvZ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			HkfDSIxkVU/jnKqW2BnqcHCn7VrlC6ypwucMdGmTuNY=
+			AZzO5wEu/U6Zhvb1LM0Uha2PG7xZy4Lt/7olUm5JV+s=
 			</data>
 		</dict>
 		<key>ios-arm64/zoomcml.framework/PrivacyInfo.xcprivacy</key>
@@ -790,15 +838,81 @@
 			WTG9U2xFUClKISxvyNPBvuddqBeYC6C2cchgPa+zYjg=
 			</data>
 		</dict>
+		<key>ios-arm64/zoomcml.framework/gesture_cls.mlmodelc/analytics/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			J4lYSW2s48TSsO+kZhgy8kXw/wg=
+			</data>
+			<key>hash2</key>
+			<data>
+			a9mvfZbKbuQWrl4v2CePmcwPRCwnKFWnm3UoBpcA/AA=
+			</data>
+		</dict>
+		<key>ios-arm64/zoomcml.framework/gesture_cls.mlmodelc/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xT2VRvR1w4GcHwmunMvzXD4fo3A=
+			</data>
+			<key>hash2</key>
+			<data>
+			E/XtYSIMFLH8WpvTuRhaPRdZquySXo0CkaO/jW2WAhc=
+			</data>
+		</dict>
+		<key>ios-arm64/zoomcml.framework/gesture_cls.mlmodelc/metadata.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QH3/7ns++GbqFu2PD2RGlSBA2Uo=
+			</data>
+			<key>hash2</key>
+			<data>
+			YrP5rxWI/5iMMOqcYJI7WRd+4hzxa+ayJbfDnnox4Vs=
+			</data>
+		</dict>
+		<key>ios-arm64/zoomcml.framework/gesture_cls.mlmodelc/model.espresso.weights</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Vfb8VmOwB4AcHE+s/8ohEVgDBxY=
+			</data>
+			<key>hash2</key>
+			<data>
+			o3mWFCNsdMbSgjQoh8rQGreKxQOZxzNWLgO9furkoLI=
+			</data>
+		</dict>
+		<key>ios-arm64/zoomcml.framework/gesture_cls.mlmodelc/model/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BAcGz5nP3d6p5ZJBOTSb+iF6Wa0=
+			</data>
+			<key>hash2</key>
+			<data>
+			8h7KONKYEx+DqOLQr00ATInPArA1kULynzXM/tcXx/A=
+			</data>
+		</dict>
+		<key>ios-arm64/zoomcml.framework/gesture_cls.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uA3l0Th1hUHF8FJlrRRKufqG0ds=
+			</data>
+			<key>hash2</key>
+			<data>
+			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
+			</data>
+		</dict>
 		<key>ios-arm64/zoomcml.framework/hd.mlmodelc/analytics/coremldata.bin</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iKlY7VrY2HoP5AT5TF+ItOWK+J4=
+			cyQm50XgMnDeWP6M2vSFIEVjhUw=
 			</data>
 			<key>hash2</key>
 			<data>
-			BFJmHavTMIg+UJwl2qHadshKf4p/Y4Q8n5i86lC4Vg0=
+			qAONWuQ5Is7Dk0qrh42mploNKq+Jsg60kQbjxKRldKU=
 			</data>
 		</dict>
 		<key>ios-arm64/zoomcml.framework/hd.mlmodelc/coremldata.bin</key>
@@ -816,22 +930,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			02Xa+RH2vT1fpihQP78HbI07l9Q=
+			dR7RVRj5GcNYwP6TYebiff9QOp4=
 			</data>
 			<key>hash2</key>
 			<data>
-			7tZlvCmEl6PvElOKYAuJAsUK1t5mwSdbSGtoo+1/Q7s=
+			YxHlwodhDI3YKJs0JmoMz81T8i9hf5G2gWk83UiOwIs=
 			</data>
 		</dict>
 		<key>ios-arm64/zoomcml.framework/hd.mlmodelc/model.espresso.weights</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fkaopE7MdJUWvsQYzdu+dMJYHyk=
+			umRUZ4lhlKaquff0M+/8AJPJAzs=
 			</data>
 			<key>hash2</key>
 			<data>
-			qFuWXsCUus7/oZyyeLqY5KT637H6QGXBNa96za7avng=
+			dnzFErRewGZAqOQWyhN32na0rJ8KTKUqcuyebz8jU/Q=
 			</data>
 		</dict>
 		<key>ios-arm64/zoomcml.framework/hd.mlmodelc/model/coremldata.bin</key>
@@ -992,11 +1106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BhAShz4b71vWSmc6n6M8jT+llIg=
+			8s2Tw9AmjDZhOqHreTJpsL4DJJY=
 			</data>
 			<key>hash2</key>
 			<data>
-			WsUOzBWif/OoSTBUXkExGiWP/2MUPQvac0soq31d4/A=
+			r5INJOnds9YN+9raQIO10qYQYgu2fua8O9d0mKC44d8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/Headers/zoomcml_interface.h</key>
@@ -1014,11 +1128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rNz03wQo1IJbg88RRH5REu4H5fQ=
+			eAZQahZHalk6+IqR/3juGepJc6s=
 			</data>
 			<key>hash2</key>
 			<data>
-			hboiCkNl7E8ygwJ2UuMBD008IyyvopCr6MWYt0gr+EM=
+			JEuG1ckkcjCLPX+NW4gyG9Ui3bp2yFL36l5PQLwN8Vg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/PrivacyInfo.xcprivacy</key>
@@ -1036,11 +1150,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EvAhJRUgZg9Sj2TF7okgr/6WKfA=
+			eeiXs/C87wc/RDU2+SWESDmTLqc=
 			</data>
 			<key>hash2</key>
 			<data>
-			cBewqMYn5gFkJ2+2sweyZYevB+PpVkvL/Yjw50Rgtmo=
+			QSgmXQEyks/MTS3Jqu1X+5iHUUBo2Cl6/S09CtQg5Tw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
@@ -1373,15 +1487,81 @@
 			WTG9U2xFUClKISxvyNPBvuddqBeYC6C2cchgPa+zYjg=
 			</data>
 		</dict>
+		<key>ios-arm64_x86_64-simulator/zoomcml.framework/gesture_cls.mlmodelc/analytics/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			J4lYSW2s48TSsO+kZhgy8kXw/wg=
+			</data>
+			<key>hash2</key>
+			<data>
+			a9mvfZbKbuQWrl4v2CePmcwPRCwnKFWnm3UoBpcA/AA=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/zoomcml.framework/gesture_cls.mlmodelc/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xT2VRvR1w4GcHwmunMvzXD4fo3A=
+			</data>
+			<key>hash2</key>
+			<data>
+			E/XtYSIMFLH8WpvTuRhaPRdZquySXo0CkaO/jW2WAhc=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/zoomcml.framework/gesture_cls.mlmodelc/metadata.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QH3/7ns++GbqFu2PD2RGlSBA2Uo=
+			</data>
+			<key>hash2</key>
+			<data>
+			YrP5rxWI/5iMMOqcYJI7WRd+4hzxa+ayJbfDnnox4Vs=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/zoomcml.framework/gesture_cls.mlmodelc/model.espresso.weights</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Vfb8VmOwB4AcHE+s/8ohEVgDBxY=
+			</data>
+			<key>hash2</key>
+			<data>
+			o3mWFCNsdMbSgjQoh8rQGreKxQOZxzNWLgO9furkoLI=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/zoomcml.framework/gesture_cls.mlmodelc/model/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BAcGz5nP3d6p5ZJBOTSb+iF6Wa0=
+			</data>
+			<key>hash2</key>
+			<data>
+			8h7KONKYEx+DqOLQr00ATInPArA1kULynzXM/tcXx/A=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/zoomcml.framework/gesture_cls.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uA3l0Th1hUHF8FJlrRRKufqG0ds=
+			</data>
+			<key>hash2</key>
+			<data>
+			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
+			</data>
+		</dict>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/hd.mlmodelc/analytics/coremldata.bin</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iKlY7VrY2HoP5AT5TF+ItOWK+J4=
+			cyQm50XgMnDeWP6M2vSFIEVjhUw=
 			</data>
 			<key>hash2</key>
 			<data>
-			BFJmHavTMIg+UJwl2qHadshKf4p/Y4Q8n5i86lC4Vg0=
+			qAONWuQ5Is7Dk0qrh42mploNKq+Jsg60kQbjxKRldKU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/hd.mlmodelc/coremldata.bin</key>
@@ -1399,22 +1579,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			02Xa+RH2vT1fpihQP78HbI07l9Q=
+			dR7RVRj5GcNYwP6TYebiff9QOp4=
 			</data>
 			<key>hash2</key>
 			<data>
-			7tZlvCmEl6PvElOKYAuJAsUK1t5mwSdbSGtoo+1/Q7s=
+			YxHlwodhDI3YKJs0JmoMz81T8i9hf5G2gWk83UiOwIs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/hd.mlmodelc/model.espresso.weights</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fkaopE7MdJUWvsQYzdu+dMJYHyk=
+			umRUZ4lhlKaquff0M+/8AJPJAzs=
 			</data>
 			<key>hash2</key>
 			<data>
-			qFuWXsCUus7/oZyyeLqY5KT637H6QGXBNa96za7avng=
+			dnzFErRewGZAqOQWyhN32na0rJ8KTKUqcuyebz8jU/Q=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/hd.mlmodelc/model/coremldata.bin</key>
@@ -1575,11 +1755,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LDMbZXVUjOL/fz4swjyG/iS5X2U=
+			qWSKP1XW0SvfgfvbAP99AwZx1xE=
 			</data>
 			<key>hash2</key>
 			<data>
-			s+VFOAISGfaMrg1JR3H6jtNwgj+PYkFRVmxAc0auglM=
+			ud7hxwh/P6iw0cp2Jb397KIV4p/VVyrVcuZDzTSDVDg=
 			</data>
 		</dict>
 	</dict>

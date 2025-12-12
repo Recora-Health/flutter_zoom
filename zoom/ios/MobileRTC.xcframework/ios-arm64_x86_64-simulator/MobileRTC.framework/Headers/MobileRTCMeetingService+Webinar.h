@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+Webinar.h
-//  MobileRTC
-//
-//  Created by Zoom on 07/08/2018.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+Webinar.h
+ * @brief Meeting+Webinar service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 

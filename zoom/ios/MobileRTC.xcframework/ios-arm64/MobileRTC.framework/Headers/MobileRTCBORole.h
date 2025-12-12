@@ -1,10 +1,7 @@
-//
-//  MobileRTCBORole.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2020/2/11.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCBORole.h
+ * @brief Breakout room role management and user status definitions.
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -29,11 +26,13 @@ typedef enum : NSUInteger {
 @interface MobileRTCBOUser : NSObject
 /**
  * @brief Get bo meeting user id.
+ * @return The bo meeting user id.
  */
 - (NSString * _Nullable)getUserId;
 
 /**
  * @brief Get bo meeting user name.
+ * @return The bo meeting user name.
  */
 - (NSString * _Nullable)getUserName;
 
@@ -46,16 +45,19 @@ typedef enum : NSUInteger {
 @interface MobileRTCBOMeeting : NSObject
 /**
  * @brief Get bo meeting id.
+ * @return The bo meeting id.
  */
 - (NSString * _Nullable)getBOMeetingId;
 
 /**
  * @brief Get bo meeting name.
+ * @return The bo meeting name.
  */
 - (NSString * _Nullable)getBOMeetingName;
 
 /**
  * @brief Get bo meeting user array.
+ * @return If the function succeeds, will get the breakout meeting user list.
  */
 - (NSArray <NSString *>* _Nullable)getBOMeetingUserList;
 
@@ -234,7 +236,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
  * @param boNameList Breakout meeting name list，the element of nameList should less than 50 characters.
  * @return If the function succeeds,will return YES.
  */
-- (BOOL)createWebinarBO:(NSArray<NSString*> * _Nonnull)boNameList;
+- (BOOL)createWebinarBO:(NSArray<NSString*> * _Nonnull)boNameList DEPRECATED_MSG_ATTRIBUTE("Use createBreakoutRoom: instead");
 
 /**
  * @brief Update bo meeting name with bo id, the callback is: 'onUpdateBONameResponse:BOID'.
@@ -484,7 +486,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
  * @brief Get bo meeting name of current BO.
  * @return The current BO name.
  */
-- (NSString  * _Nullable)getCurrentBOName;
+- (NSString * _Nullable)getCurrentBOName;
 
 /**
  * @brief Whether the boUserId is current user.

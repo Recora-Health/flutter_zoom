@@ -1,10 +1,7 @@
-//
-//  MobileRTCZpnsHelper.h
-//  MobileRTC
-//
-//  Created by Zoom on 2022/11/16.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCNotificationServiceHelper.h
+ * @brief Helper for handling SDK notifications and alerts.
+ */
 
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCConstants.h>
@@ -88,11 +85,13 @@ typedef NS_ENUM(NSInteger, MobileRTCTransferMeetingMode) {
 
 /**
  * @brief Determine whether the transfer meeting feature is enabled.
+ * @return YES means transfer meeting feature is enabled, otherwise not.
  */
 - (BOOL)isTransferMeetingEnabled;
 
 /**
  * @brief Determine whether the presence feature is enabled.
+ * @return YES means presence feature is enabled, otherwise not.
  */
 - (BOOL)isPresenceFeatureEnabled;
 /**

@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+Audio.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2018/6/6.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+Audio.h
+ * @brief Meeting+Audio service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 
@@ -131,6 +128,7 @@
 
 /**
  * @brief Switch my audio output(receiver/speaker).
+ * @return If the function succeeds, the return value is MobileRTCAudioError_Success. Otherwise the function fails.
  */
 - (MobileRTCAudioError)switchMyAudioSource;
 

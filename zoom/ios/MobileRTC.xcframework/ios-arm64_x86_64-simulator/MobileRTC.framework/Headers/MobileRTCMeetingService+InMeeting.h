@@ -1,13 +1,120 @@
-//
-//  MobileRTCMeetingService+InMeeting.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2017/2/27.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+InMeeting.h
+ * @brief Meeting+InMeeting service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 #import <MobileRTC/MobileRTCRawLiveStreamInfo.h>
+
+/**
+ * @class MobileRTCAudioStatisticInfo
+ * @brief Session audio statistic information.
+ */
+@interface MobileRTCAudioStatisticInfo : NSObject
+/**
+ * @brief This meeting's sent audio frequency in kilohertz (KHz).
+ */
+@property(nonatomic, assign, readonly) NSInteger  sendFrequency;
+/**
+ * @brief This meeting's sent audio band width.
+ */
+@property(nonatomic, assign, readonly) NSInteger  sendBandwidth;
+/**
+ * @brief This meeting's sent audio RTT.
+ */
+@property(nonatomic, assign, readonly) NSInteger  sendRTT;
+/**
+ * @brief This meeting's sent audio jitter.
+ */
+@property(nonatomic, assign, readonly) NSInteger  sendJitter;
+/**
+ * @brief This meeting's average of sent audio packet loss.
+ */
+@property(nonatomic, assign, readonly) CGFloat    sendPacketLossAvg;
+/**
+ * @brief This meeting's maximum of sent audio packet loss.
+ */
+@property(nonatomic, assign, readonly) CGFloat    sendPacketLossMax;
+/**
+ * @brief This meeting's received audio frequency in kilohertz (KHz).
+ */
+@property(nonatomic, assign, readonly) NSInteger  recvFrequency;
+/**
+ * @brief This meeting's received audio band width.
+ */
+@property(nonatomic, assign, readonly) NSInteger  recvBandwidth;
+/**
+ * @brief This meeting's received audio RTT.
+ */
+@property(nonatomic, assign, readonly) NSInteger  recvRTT;
+/**
+ * @brief This meeting's received audio jitter.
+ */
+@property(nonatomic, assign, readonly) NSInteger  recvJitter;
+/**
+ * @brief This meeting's average of received audio packet loss.
+ */
+@property(nonatomic, assign, readonly) CGFloat    recvPacketLossAvg;
+/**
+ * @brief This meeting's maximum received audio packet loss.
+ */
+@property(nonatomic, assign, readonly) CGFloat    recvPacketLossMax;
+@end
+
+/**
+ * @class MobileRTCASVStatisticInfo
+ * @brief The session video or share statistic information.
+ */
+@interface MobileRTCASVStatisticInfo : NSObject
+/**
+ * @brief This meeting's sent band width for video or sharing.
+ */
+@property(nonatomic, assign, readonly) NSInteger  sendBandwidth;
+/**
+ * @brief This meeting's sent frame rate of video or sharing.
+ */
+@property(nonatomic, assign, readonly) NSInteger  sendFps;
+/**
+ * @brief This meeting's sent video or sharing rtt data.
+ */
+@property(nonatomic, assign, readonly) NSInteger  sendRTT;
+/**
+ * @brief This meeting's sent video or /sharinge jitter data.
+ */
+@property(nonatomic, assign, readonly) NSInteger  sendJitter;
+/**
+ * @brief This meeting's average video or sharing packet loss for sent data.
+ */
+@property(nonatomic, assign, readonly) CGFloat    sendPacketLossAvg;
+/**
+ * @brief This meeting's maximum video or sharing packet loss for sent data.
+ */
+@property(nonatomic, assign, readonly) CGFloat    sendPacketLossMax;
+/**
+ * @brief This meeting's received band width for video or sharing.
+ */
+@property(nonatomic, assign, readonly) NSInteger  recvBandwidth;
+/**
+ * @brief This meeting's received frame rate for video or sharing.
+ */
+@property(nonatomic, assign, readonly) NSInteger  recvFps;
+/**
+ * @brief This meeting's received video or sharing rtt data.
+ */
+@property(nonatomic, assign, readonly) NSInteger  recvRTT;
+/**
+ * @brief This meeting's received video or sharing jitter data.
+ */
+@property(nonatomic, assign, readonly) NSInteger  recvJitter;
+/**
+ * @brief This meeting's average video or sharing packet loss for receivde data.
+ */
+@property(nonatomic, assign, readonly) CGFloat    recvPacketLossAvg;
+/**
+ * @brief This meeting's maximum video or sharing packet loss for received data.
+ */
+@property(nonatomic, assign, readonly) CGFloat    recvPacketLossMax;
+@end
 
 /**
  * @class MobileRTCRequestLocalRecordingPrivilegeHandler
@@ -60,6 +167,7 @@
 - (NSString * _Nullable)getRequesterName;
 /**
  * @brief Accept the request to start cloud recording and then destroys the MobileRTCRequestStartCloudRecordingPrivilegeHandler instance.
+ * @return If the function succeeds, it will return MobileRTCSDKError_Success.
  */
 - (MobileRTCSDKError)grant;
 /**
@@ -260,12 +368,33 @@
 
 /**
  * @brief Check in-meeting network status.
- * @param type Meeting component types, now we can only query three components network status: MobileRTCComponentType_AUDIO, MobileRTCComponentType_VIDEO and MobileRTCComponentType_AS.
+ * @param type Meeting component types, now we can only query three components network status: MobileRTCComponentType_AUDIO, MobileRTCComponentType_VIDEO and MobileRTCComponentType_SHARE.
  * @param sending if YES means that query sending data; if NO means that query receiving data.
  * @return The level of network quality.
  * @warning The method is optional, you can query the network quality of audio, video and sharing.
  */
 - (MobileRTCNetworkQuality)queryNetworkQuality:(MobileRTCComponentType)type withDataFlow:(BOOL)sending;
+
+/**
+ * @brief Get meeting audio statistics information.
+ * @return A MobileRTCAudioStatisticInfo instance containing audio stats.
+ *         Returns nil if there is no ongoing meeting or if data is unavailable.
+ */
+- (MobileRTCAudioStatisticInfo * _Nullable)getMeetingAudioStatisticInfo;
+
+/**
+ * @brief Get meeting video statistics information.
+ * @return A MobileRTCASVStatisticInfo instance containing video stats.
+ *         Returns nil if there is no ongoing meeting or if data is unavailable.
+ */
+- (MobileRTCASVStatisticInfo * _Nullable)getMeetingVideoStatisticInfo;
+
+/**
+ * @brief Get meeting share statistics information.
+ * @return A MobileRTCASVStatisticInfo instance containing share stats.
+ *         Returns nil if no sharing is active or if data is unavailable.
+ */
+- (MobileRTCASVStatisticInfo * _Nullable)getMeetingShareStatisticInfo;
 
 /**
  * @brief Set to present Zoom original Meeting Chat ViewController.
@@ -455,7 +584,7 @@
 /**
  * @brief Show app signaling pannel in designated position of container view.
  * @param containerView the view container to show app signaling pannel.
- * @param originXY the origin position of app signaling pannel in container view.
+ * @param originXY the origin position of app signaling pannel in container view, not using this parameter any more.
  * @return MobileRTCANNError_Success means the operation succeed, otherwise not.
  * @warning OriginXY only take effect on iPad device, behavior of iphone always pop up from the bottom with the device width.
  */
@@ -491,17 +620,20 @@
 /**
  * @brief Call the method to show Minimize meeting when in Zoom UI meeting.
  * @warning The method only for Zoom UI.
+ * @return YES means will show minimize meeting, Otherwise not.
  */
 - (BOOL)showMinimizeMeetingFromZoomUIMeeting;
 
 /**
  * @brief Call the methond to back Zoom UI meeting when in minimize meeting.
+ * @return YES means will back zoom ui meeting, Otherwise not.
  * @warning The method only for Zoom UI.
  */
 - (BOOL)backZoomUIMeetingFromMinimizeMeeting;
 
 /**
  * @brief Query if the meeting is allow participants to rename themselves.
+ * @return YES means will allow participants to rename themselves, Otherwise not.
  * @warning Only in-meeting can call the function.
  */
 - (BOOL)isParticipantsRenameAllowed;
@@ -515,6 +647,7 @@
 
 /**
  * @brief Query if the meeting is allow participants to unmute themselves.
+ * @return YES means will allow participants to unmute themselves, Otherwise not.
  * @warning Only meeting host/co-host can call the function.
  * @warning Only in-meeting can call the function.
  */

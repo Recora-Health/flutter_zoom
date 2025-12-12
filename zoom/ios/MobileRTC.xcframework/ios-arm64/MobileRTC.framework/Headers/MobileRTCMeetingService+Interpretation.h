@@ -1,11 +1,7 @@
-//
-//  MobileRTCMeetingService+Interpretation.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2020/10/15.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
-
+/**
+ * @file MobileRTCMeetingService+Interpretation.h
+ * @brief Meeting+Interpretation service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 
@@ -14,8 +10,20 @@
  * @brief The information of interpretation language.
  */
 @interface MobileRTCInterpretationLanguage : NSObject
+/**
+ * @brief Get the language ID.
+ * @return The language ID.
+ */
 - (NSInteger)getLanguageID;
+/**
+ * @brief Get the language alias (abbreviation).
+ * @return A string representing the language abbreviation (e.g., "EN", "CN").
+ */
 - (NSString * _Nullable)getLanguageAbbreviations;
+/**
+ * @brief Get the language name.
+ * @return A string representing the full language name (e.g., "English", "Chinese").
+ */
 - (NSString * _Nullable)getLanguageName;
 @end
 
@@ -24,9 +32,25 @@
  * @brief The information of interpreter.
  */
 @interface MobileRTCMeetingInterpreter : NSObject
+/**
+ * @brief Get the interpreter's user ID.
+ * @return User ID of the interpreter.
+ */
 - (NSInteger)getUserID;
+/**
+ * @brief Get the interpreter's first supported language ID.
+ * @return Language ID.
+ */
 - (NSInteger)getLanguageID1;
+/**
+ * @brief Get the interpreter's second supported language ID.
+ * @return Language ID.
+ */
 - (NSInteger)getLanguageID2;
+/**
+ * @brief Determine is currently available in the meeting.
+ * @return YES means the interpreter is available and had join meeting, otherwise not.
+ */
 - (BOOL)isAvailable;
 
 @end
@@ -40,16 +64,19 @@
 
 /**
  * @brief Determine if interpretation feature is enabled in the meeting.
+ * @return YES means interpretation function is enable,otherwise not.
  */
 - (BOOL)isInterpretationEnabled;
 
 /**
  * @brief Determine if interpretation has been started by host.
+ * @return YES means interpretation is started,otherwise not.
  */
 - (BOOL)isInterpretationStarted;
 
 /**
  * @brief Determine if myself is interpreter.
+ * @return YES means self is interpreter,otherwise not.
  */
 - (BOOL)isInterpreter;
 
@@ -321,6 +348,7 @@
 
 /**
  * @brief Determine if I can start the sign interpretation in the meeting.
+ * @return YES means I can start the sign interpretation in the meeting, otherwise not.
  * @warning The interface for host only.
  */
 - (BOOL)canStartSignInterpretation;

@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+AppShare.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2017/2/27.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+AppShare.h
+ * @brief Meeting+AppShare service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 
@@ -40,6 +37,7 @@
 
 /**
  * @brief Get active share view from share action.
+ * @return If the function succeeds, the return value is the active share view. Otherwise the function fails, and the return value is nil.
  */
 
 - (UIView *_Nullable)getActiveShareView;

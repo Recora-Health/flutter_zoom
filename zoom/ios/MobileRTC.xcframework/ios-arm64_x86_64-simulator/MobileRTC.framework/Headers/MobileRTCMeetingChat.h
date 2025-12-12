@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingChat.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2017/9/15.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingChat.h
+ * @brief Chat functionality for sending and receiving messages during meetings.
+ */
 
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCConstants.h>
@@ -130,21 +127,25 @@
 /**
  * @brief Set chat message content.
  * @param content The chat message’s content.
+ * @return If the function succeeds, it will return object MobileRTCMeetingChatBuilder.
  */
 - (MobileRTCMeetingChatBuilder * _Nullable)setContent:(NSString * _Nullable)content;
 /**
  * @brief Set who will receive the chat message.
  * @param receiver Specify the user ID to receive the chat message. The message is sent to all participants when the value is zero (0).
+ * @return If the function succeeds, it will return object MobileRTCMeetingChatBuilder.
  */
 - (MobileRTCMeetingChatBuilder * _Nullable)setReceiver:(NSInteger)receiver;
 /**
  * @brief Set the ID of the thread where the message will be posted.
  * @param threadId Specify the thread ID.
+ * @return If the function succeeds, it will return object MobileRTCMeetingChatBuilder.
  */
 - (MobileRTCMeetingChatBuilder * _Nullable)setThreadId:(NSString * _Nullable)threadId;
 /**
  * @brief Set the chat message type.
  * @param type The chat message’s type.
+ * @return If the function succeeds, it will return object MobileRTCMeetingChatBuilder.
  */
 - (MobileRTCMeetingChatBuilder * _Nullable)setMessageType:(MobileRTCChatMessageType)type;
 

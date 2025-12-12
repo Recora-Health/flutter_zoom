@@ -1,10 +1,7 @@
-//
-//  MobileRTCRoomDevice.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2017/2/27.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCRoomDevice.h
+ * @brief Room device management and configuration.
+ */
 
 #import <Foundation/Foundation.h>
 

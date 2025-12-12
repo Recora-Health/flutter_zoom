@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingDelegate.h
-//  MobileRTC
-//
-//  Created by Robust on 2017/11/14.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingDelegate.h
+ * @brief Delegate protocol for handling meeting events and notifications.
+ */
 
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCVideoRawData.h>
@@ -496,16 +493,16 @@
  */
 - (void)onRequestCloudRecordingResponse:(MobileRTCRequestStartCloudRecordingStatus)status;
 
- /**
-  * @brief Callback event received only by the host when a user requests to start cloud recording.
-  * @param handler A pointer to the MobileRTCRequestStartCloudRecordingPrivilegeHandler.
-  */
+/**
+ * @brief Callback event received only by the host when a user requests to start cloud recording.
+ * @param handler A pointer to the MobileRTCRequestStartCloudRecordingPrivilegeHandler.
+ */
 - (void)onStartCloudRecordingRequested:(MobileRTCRequestStartCloudRecordingPrivilegeHandler*_Nullable) handler;
 
- /**
-  * @brief Callback event that lets participants request hots to start cloud recording.
-  * @param allow True allow. If false, disallow.
-  */
+/**
+ * @brief Callback event that lets participants request hots to start cloud recording.
+ * @param allow True allow. If false, disallow.
+ */
 - (void)onAllowParticipantsRequestCloudRecording:(BOOL)allow;
 
 #pragma mark - smart summary DEPRECATED -
@@ -718,8 +715,10 @@ DEPRECATED_MSG_ATTRIBUTE("Use onActiveSpeakerVideoUserChanged: instead");
  * @brief The video quality of a user has changed.
  * @param qality The user's new video quality.
  * @param userID The ID of the user whose video quality has changed.
+ * @deprecated Use onUserNetworkStatusChanged:level:userID:uplink: instead.
  */
-- (void)onSinkMeetingVideoQualityChanged:(MobileRTCVideoQuality)qality userID:(NSUInteger)userID;
+- (void)onSinkMeetingVideoQualityChanged:(MobileRTCVideoQuality)qality userID:(NSUInteger)userID
+DEPRECATED_MSG_ATTRIBUTE("Use onUserNetworkStatusChanged:level:userID:uplink: instead");
 
 /**
  * @brief The host has requested the current user to unmute their video.
@@ -1250,7 +1249,7 @@ DEPRECATED_MSG_ATTRIBUTE("Use onActiveSpeakerVideoUserChanged: instead");
  * @brief Sink the event of request for start the live transcription. Only the host can retrieve this callback. You can approve request call start live transcription, or decline as do nothing.
  * @param requesterUserId The user ID of the request from. If bAnonymous is TRUE, requesterUserId has no meaning.
  * @param bAnonymous TRUE means the request is anonymous.
-*/
+ */
 - (void)onSinkRequestForLiveTranscriptReceived:(NSUInteger)requesterUserId bAnonymous:(BOOL)bAnonymous;
 
 #pragma mark - MobileRTC3DAvatarDelegate
@@ -1639,6 +1638,7 @@ DEPRECATED_MSG_ATTRIBUTE("Use onActiveSpeakerVideoUserChanged: instead");
  */
 - (void)onDocsPermissionChangedCreateOption:(MobileRTCDocsCreateOption)createOption shareOption:(MobileRTCDocsShareOption)shareOption;
 
+#pragma mark - Companion mode -
 /**
  * @brief Callback event that the companion relationship created in the meeting.
  * @param parentUserID Specify the parent user ID.
@@ -1651,6 +1651,17 @@ DEPRECATED_MSG_ATTRIBUTE("Use onActiveSpeakerVideoUserChanged: instead");
  * @param childUserID Specify the child user ID.
  */
 - (void)onRemoveCompanionRelation:(NSUInteger)childUserID;
+
+#pragma mark - meeting Network -
+/**
+ * @brief Called when the user's share network quality changes.
+ * @param type The data type whose network quality changed.
+ * @param level The new network quality level for the specified data type.
+ * @param userID The user whose network quality changed.
+ * @param uplink This data is uplink or downlink.
+ */
+- (void)onUserNetworkStatusChanged:(MobileRTCComponentType)type level:(MobileRTCNetworkQuality)level userID:(NSUInteger)userID uplink:(BOOL)uplink;
+
  @end
 
 #pragma mark - MobileRTCCustomizedUIMeetingDelegate

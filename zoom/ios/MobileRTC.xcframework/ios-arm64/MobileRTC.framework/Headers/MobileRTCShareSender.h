@@ -1,10 +1,7 @@
-//
-//  MobileRTCShareSender.h
-//  MobileRTC
-//
-//  Created by Zoom on 2022/6/30.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCShareSender.h
+ * @brief Screen sharing sender functionality.
+ */
 
 #import <Foundation/Foundation.h>
 #include <MobileRTC/MobileRTCConstants.h>

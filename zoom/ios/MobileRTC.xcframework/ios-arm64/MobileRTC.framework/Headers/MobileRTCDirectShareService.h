@@ -1,10 +1,7 @@
-//
-//  MobileRTCDirectShareService.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2020/10/20.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCDirectShareService.h
+ * @brief Direct screen sharing service functionality.
+ */
 
 #import <Foundation/Foundation.h>
 

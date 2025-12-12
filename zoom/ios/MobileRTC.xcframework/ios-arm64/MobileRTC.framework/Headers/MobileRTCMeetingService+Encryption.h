@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+AppShare.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2017/2/27.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+Encryption.h
+ * @brief Meeting+Encryption service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 

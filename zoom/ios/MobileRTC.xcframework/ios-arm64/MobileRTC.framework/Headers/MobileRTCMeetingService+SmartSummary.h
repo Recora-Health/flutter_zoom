@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+SmartSummary.h
-//  MobileRTC
-//
-//  Created by Zoom on 10/10/23.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+SmartSummary.h
+ * @brief Meeting+SmartSummary service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 

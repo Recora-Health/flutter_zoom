@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+Whiteboard.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2023/11/23.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+Whiteboard.h
+ * @brief Meeting+Whiteboard service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 
@@ -27,20 +24,20 @@
 
 /**
  * @brief Set parent view controller for whiteboard board view and whiteboard canvas.
- * @param parentVC which use to present ViewController.
+ * @param parentVC which use to present ViewController. if parentVC is nil,Whiteboard will dismiss.
  * @warning The function only for Custom UI. This method is a prerequisite for using whiteboard. Suggest to call this function in "onMeetingStateChange:" for inMeeting status.
  * @return If the function succeeds, the return value is @c MobileRTCSDKError_Success.
  * @deprecated Not maintain anymore,Use showWhiteboardByParentViewCtroller instead.
  */
-- (MobileRTCSDKError)setParentViewCtroller:(UIViewController* _Nonnull)parentVC DEPRECATED_MSG_ATTRIBUTE("Not maintain anymore,Use showWhiteboardByParentViewCtroller instead");
+- (MobileRTCSDKError)setParentViewCtroller:(UIViewController* _Nullable)parentVC DEPRECATED_MSG_ATTRIBUTE("Not maintain anymore,Use showWhiteboardByParentViewCtroller instead");
 
 /**
  * @brief Show Whiteboard  or  DashboardView need to set  parent view controller. If Whitboard is activing( @c MobileRTCWhiteboardStatus_Started),that can show activing whiteboard.
- * @param parentVC which use to present ViewController.
+ * @param parentVC which use to present ViewController. if parentVC is nil,Whiteboard will dismiss.
  * @warning The function only for Custom UI. This method is a prerequisite for using whiteboard. Suggest to call this function in "onWhiteboardStatusChanged:" for whiteboard status.
  * @return If the function succeeds, the return value is MobileRTCSDKError_Success.
  */
-- (MobileRTCSDKError)showWhiteboardByParentViewCtroller:(UIViewController* _Nonnull)parentVC;
+- (MobileRTCSDKError)showWhiteboardByParentViewCtroller:(UIViewController* _Nullable)parentVC;
 
 /**
  * @brief Show the dashboard web view window.

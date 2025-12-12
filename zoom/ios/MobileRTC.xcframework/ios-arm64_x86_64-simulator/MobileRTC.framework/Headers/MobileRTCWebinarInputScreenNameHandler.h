@@ -1,10 +1,7 @@
-//
-//  MobileRTCWebinarInputScreenNameHandler.h
-//  MobileRTC
-//
-//  Created by Zoom on 2024/3/2.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCWebinarInputScreenNameHandler.h
+ * @brief Handler for webinar screen name input.
+ */
 
 /**
  * @class MobileRTCWebinarInputScreenNameHandler
@@ -20,6 +17,7 @@
 
 /**
  * @brief Cancel to join webinar.
+ * @return If the function succeeds, it will return MobileRTCSDKError_Success. Otherwise the function fails.
  */
 - (MobileRTCSDKError)cancel;
 

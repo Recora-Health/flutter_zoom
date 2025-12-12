@@ -1,10 +1,7 @@
-//
-//  MobileRTCRenderer.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2019/8/6.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCRenderer.h
+ * @brief Video rendering functionality and display management.
+ */
 
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCMeetingDelegate.h>

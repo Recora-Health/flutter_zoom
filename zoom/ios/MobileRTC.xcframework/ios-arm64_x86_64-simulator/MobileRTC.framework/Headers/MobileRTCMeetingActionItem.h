@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingActionItem.h
-//  MobileRTC
-//
-//  Created by Zoom on 16/03/2018.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingActionItem.h
+ * @brief Action item data structure for meeting actions and tasks.
+ */
 
 #import <Foundation/Foundation.h>
 

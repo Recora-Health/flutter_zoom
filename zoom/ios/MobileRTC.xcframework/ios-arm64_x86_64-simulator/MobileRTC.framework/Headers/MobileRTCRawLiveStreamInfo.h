@@ -1,10 +1,7 @@
-//
-//  MobileRTCRawLiveStreamInfo.h
-//  MobileRTC
-//
-//  Created by Zoom on 2022/9/21.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCRawLiveStreamInfo.h
+ * @brief Raw live streaming information and configuration.
+ */
 
 #import <Foundation/Foundation.h>
 

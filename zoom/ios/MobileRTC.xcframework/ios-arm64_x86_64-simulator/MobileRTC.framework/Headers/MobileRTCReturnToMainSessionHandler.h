@@ -1,10 +1,7 @@
-//
-//  MobileRTCReturnToMainSessionHandler.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2021/5/31.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCReturnToMainSessionHandler.h
+ * @brief Handler for returning to main session from breakout rooms.
+ */
 
 #import <Foundation/Foundation.h>
 

@@ -1,10 +1,7 @@
-//
-//  MobileRTCLiveTranscriptionLanguage.h
-//  MobileRTC
-//
-//  Created by Zoom on 2022/5/30.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCLiveTranscriptionLanguage.h
+ * @brief Language definitions for live transcription feature.
+ */
 
 #import <Foundation/Foundation.h>
 

@@ -1,10 +1,7 @@
-//
-//  MobileRTCInMeetingDeviceInfo.h
-//  MobileRTC
-//
-//  Created by Zoom on 2022/11/17.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCInMeetingDeviceInfo.h
+ * @brief Device information and capabilities during meetings.
+ */
 
 #import <Foundation/Foundation.h>
 /**

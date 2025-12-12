@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+LiveTranscription.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2021/10/27.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+LiveTranscription.h
+ * @brief Meeting+LiveTranscription service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 #import <MobileRTC/MobileRTCLiveTranscriptionLanguage.h>
@@ -171,10 +168,13 @@
 
 /**
  * @brief Hosts only API to set meeting language for the entire meeting.
+ * @param bEnable YES means enable, otherwise not.
+ * @return If the function succeeds, it will return YES, otherwise not.
  */
 - (BOOL)enableMeetingManualCaption:(BOOL)bEnable;
 /**
  * @brief Determine whether it is enabled to manual input CC for meeting.
+ * @return YES means enabled, otherwise not.
  */
 - (BOOL)isMeetingManualCaptionEnabled;
 
@@ -277,6 +277,7 @@
 
 /**
  * @brief Get the spoken language of the current user.
+ * @return If the function succeeds, it will an object of MobileRTCLiveTranscriptionLanguage, otherwise nil.
  */
 - (MobileRTCLiveTranscriptionLanguage *_Nullable)getMeetingSpokenLanguage;
 
@@ -295,6 +296,7 @@
 
 /**
  * @brief Get the translation language of the current user.
+ * @return If the function succeeds, it will an object of MobileRTCLiveTranscriptionLanguage, otherwise nil.
  */
 - (MobileRTCLiveTranscriptionLanguage *_Nullable)getTranslationLanguage;
 

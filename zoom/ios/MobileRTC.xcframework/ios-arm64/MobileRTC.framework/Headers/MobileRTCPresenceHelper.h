@@ -1,10 +1,7 @@
-//
-//  MobileRTCPresenceHelper.h
-//  MobileRTC
-//
-//  Created by Zoom on 2023/4/3.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCPresenceHelper.h
+ * @brief Helper for managing user presence status.
+ */
 
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCConstants.h>
@@ -99,14 +96,17 @@
 - (void)setScreenName:(NSString * _Nullable)screenName;
 /**
  * @brief Instance to accept the invitation, join the meeting, and finally self-destruct.
+ * @return If the function succeeds, it will return MobileRTCSDKError_Success. Otherwise failed.
  */
 - (MobileRTCSDKError)accept;
 /**
  * @brief Instance to decline the invitation, finally self-destruct.
+ * @return If the function succeeds, it will return MobileRTCSDKError_Success. Otherwise failed.
  */
 - (MobileRTCSDKError)decline;
 /**
  * @brief Instance to let the invitation time out, finally self-destruct.
+ * @return If the function succeeds, it will return MobileRTCSDKError_Success. Otherwise failed.
  */
 - (MobileRTCSDKError)timeout;
 

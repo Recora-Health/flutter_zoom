@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+Docs.h
-//  MobileRTC
-//
-//  Created by ZOOM  on 2024/12/19.
-//  Copyright © 2024 Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+Docs.h
+ * @brief Meeting+Docs service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 
@@ -64,6 +61,15 @@
  * @return If the function succeeds, the return value is MobileRTCSDKError_Success.
  */
 - (MobileRTCSDKError)showDocByParentViewCtroller:(UIViewController* _Nonnull)parentVC;
+
+/**
+ * @brief Show Doc  or  DocDashboardView need to set  parent view controller. If Doc is activing( @c MobileRTCDocsStatus_Start),that can show activing Doc.
+ * @param parentVC which use to present ViewController.
+ * @param shareSourceID which the selected doc share source ID;
+ * @warning The function only for Custom UI. This method is a prerequisite for using doc. Suggest to call this function in "onDocsStatusChanged:" for doc status.
+ * @return If the function succeeds, the return value is MobileRTCSDKError_Success.
+ */
+- (MobileRTCSDKError)showActiveDoc:(NSUInteger)shareSourceID byParentViewCtroller:(UIViewController* _Nonnull)parentVC;
 
 /**
  * @brief Show the dashboard web view window.

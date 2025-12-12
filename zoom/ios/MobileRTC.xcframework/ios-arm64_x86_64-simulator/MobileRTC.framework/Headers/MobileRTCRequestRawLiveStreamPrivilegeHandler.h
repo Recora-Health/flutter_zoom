@@ -1,10 +1,7 @@
-//
-//  MobileRTCRequestRawLiveStreamPrivilegeHandler.h
-//  MobileRTC
-//
-//  Created by Zoom on 2022/9/21.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCRequestRawLiveStreamPrivilegeHandler.h
+ * @brief Handler for requesting raw live stream privileges.
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -45,11 +42,13 @@
 
 /**
  * @brief Allows the user to start raw live stream and finally self-destroy.
+ * @return If the function succeeds, the return value is YES. Otherwise the function fails.
  */
 - (BOOL)grantRawLiveStreamPrivilege;
 
 /**
  * @brief Denies the user permission to start raw live stream and finally self-destroy.
+ * @return If the function succeeds, the return value is YES. Otherwise the function fails.
  */
 - (BOOL)denyRawLiveStreamPrivilege;
 

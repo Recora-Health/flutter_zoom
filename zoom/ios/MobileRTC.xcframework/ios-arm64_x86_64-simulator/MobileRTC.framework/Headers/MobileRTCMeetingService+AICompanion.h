@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+AICompanion.h
-//  MobileRTC
-//
-//  Created by Zoom on 2024/4/25.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+AICompanion.h
+ * @brief Meeting+AICompanion service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 #import <MobileRTC/MobileRTCAICQueryHelper.h>

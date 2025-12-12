@@ -31,6 +31,12 @@ function graftedFetch(request, opts) {
     }
     return originalFetch(url, opts);
 }
+
+
+/**************************************************************
+ *   For API
+ *************************************************************/
+    
 //axios/xhr
 window.fetch = graftedFetch;
 var originalSend_1 = XMLHttpRequest.prototype.send;
@@ -820,5 +826,26 @@ if ("ServiceWorkerContainer" in self === false) {
         }
     });
 }
+    
+(function() {
+  try {
+    // check if auto register is enabled
+    if (typeof swwebviewSettings.IS_AUTO_REGISTER !== 'undefined' && swwebviewSettings.IS_AUTO_REGISTER === '1') {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('default_sw.js', { scope: '' })
+          .then(function(reg) {
+            console.log('[NativeSW] Default SW registered:', reg.scope);
+          })
+          .catch(function(err) {
+            console.error('[NativeSW] Default SW registration failed:', err);
+          });
+      }
+    } else {
+      console.log('[NativeSW] Auto registration disabled (IS_AUTO_REGISTER is not true)');
+    }
+  } catch (e) {
+    console.error('[NativeSW] Exception while registering default SW:', e);
+  }
+})();
 
 }(swwebviewSettings));

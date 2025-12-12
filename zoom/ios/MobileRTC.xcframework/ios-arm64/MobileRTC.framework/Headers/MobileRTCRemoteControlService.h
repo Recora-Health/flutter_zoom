@@ -1,10 +1,7 @@
-//
-//  MobileRTCRemoteControlService.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2018/6/22.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCRemoteControlService.h
+ * @brief Remote control functionality during screen sharing.
+ */
 
 #import <Foundation/Foundation.h>
 

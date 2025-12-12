@@ -1,10 +1,7 @@
-//
-//  MobileRTCQAMessage.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2019/10/11.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCQAItem.h
+ * @brief Q&A item data structure for meeting Q&A functionality.
+ */
 
 #import <Foundation/Foundation.h>
 

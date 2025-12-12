@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+VirtualBackground.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2019/10/22.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+VirtualBackground.h
+ * @brief Meeting+VirtualBackground service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 

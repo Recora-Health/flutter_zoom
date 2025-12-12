@@ -1,10 +1,7 @@
-//
-//  MobileRTCPreProcessRawData.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2020/2/26.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCPreProcessRawData.h
+ * @brief Raw data preprocessing utilities.
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -35,17 +32,20 @@
 @property (nonatomic, assign) int vStride;
 
 /**
- * @brief Y data pointer of video's YUV data .
+ * @brief Y data pointer of video's YUV data.
+ * @return If the function succeeds, it will return the Y buffer of this data.
  */
 - (char *)getYBuffer:(int)lineNum;
 
 /**
- * @brief U data pointer of video's YUV data .
+ * @brief U data pointer of video's YUV data.
+ * @return If the function succeeds, it will return the U buffer of this data.
  */
 - (char *)getUBuffer:(int)lineNum;
 
 /**
- * @brief V data pointer of video's YUV data .
+ * @brief V data pointer of video's YUV data.
+ * @return If the function succeeds, it will return the V buffer of this data.
  */
 - (char *)getVBuffer:(int)lineNum;
 

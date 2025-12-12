@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 8/7/14.
-//  Copyright (c) Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService.h
+ * @brief Core meeting service providing meeting management, control, and configuration functionality.
+ */
 
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCConstants.h>
@@ -65,6 +62,11 @@
  * @brief <Optional>  The sampling rate of the acquired raw audio data, The default is MobileRTCAudioRawdataSamplingRate_32K.
  */
 @property (nonatomic, assign, readwrite) MobileRTCAudioRawdataSamplingRate audioRawSampleRate;
+
+/**
+ * @brief <Optional>  The colorspace of video rawdata. The default is VideoRawdataColorspace_BT601_L.
+ */
+@property (nonatomic, assign, readwrite) MobileRTCVideoRawdataColorspace videoRawdataColorspace;
 
 @end
 
@@ -174,6 +176,11 @@
  * @brief <Optional>  The sampling rate of the acquired raw audio data, The default is MobileRTCAudioRawdataSamplingRate_32K.
  */
 @property (nonatomic, assign, readwrite) MobileRTCAudioRawdataSamplingRate audioRawSampleRate;
+
+/**
+ * @brief <Optional>  The colorspace of video rawdata. The default is VideoRawdataColorspace_BT601_L.
+ */
+@property (nonatomic, assign, readwrite) MobileRTCVideoRawdataColorspace videoRawdataColorspace;
 
 
 @end

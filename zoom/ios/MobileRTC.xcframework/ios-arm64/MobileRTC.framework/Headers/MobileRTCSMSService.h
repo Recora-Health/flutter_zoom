@@ -1,10 +1,7 @@
-//
-//  MobileRTCSMSService.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2019/9/23.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCSMSService.h
+ * @brief SMS service for phone number verification and messaging.
+ */
 
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCMeetingDelegate.h>
@@ -29,12 +26,14 @@
 /**
  * @brief CountryCode, counry code in country code list.
  * @param phoneNum your phone number.
+ * @return If the function succeeds, the return value is YES. Otherwise not.
  * @warning If retrieve return NO, please get new retrieve handler 60s later. 'getResendSMSVerificationCodeHandler' in 'MobileRTCSMSService'.
  */
 - (BOOL)retrieve:(NSString * _Nullable)countryCode andPhoneNumber:(NSString * _Nullable)phoneNum;
 
 /**
  * @brief CancelAndLeaveMeeting sms.
+ * @return If the function succeeds, the return value is YES. Otherwise not.
  * @warning Cancel and leavemb meeting.
  */
 - (BOOL)cancelAndLeaveMeeting;
@@ -50,12 +49,14 @@
  * @brief CountryCode, counry code in country code list.
  * @param phoneNum your phone number.
  * @param verifyCode your received verify code.
+ * @return If the function succeeds, the return value is YES. Otherwise not.
  * @warning If verify return NO, please get new verify handler 60s later. 'getReVerifySMSVerificationCodeHandler' in 'MobileRTCSMSService'.
  */
 - (BOOL)verify:(NSString * _Nullable)countryCode phoneNumber:(NSString * _Nullable)phoneNum andVerifyCode:(NSString * _Nullable)verifyCode;
 
 /**
  * @brief CancelAndLeaveMeeting sms.
+ * @return If the function succeeds, the return value is YES. Otherwise not.
  * @warning Cancel and leavemb meeting.
  */
 - (BOOL)cancelAndLeaveMeeting;
@@ -75,6 +76,7 @@
  */
 @interface MobileRTCSMSService : NSObject
 @property (weak, nonatomic) id<MobileRTCSMSServiceDelegate> _Nullable delegate;
+
 /**
  * @brief Enable, pass YES for using the auth real name service. the call back function will called when need.(Judged by sdk logic).
  * @warning Enable/disable auth real name service.
@@ -83,18 +85,21 @@
 
 /**
  * @brief For get new retrieve handle.
+ * @return If the function succeeds, the return value is MobileRTCRetrieveSMSHandler. Otherwise not.
  * @warning Need get new handle 60s later.
  */
 - (MobileRTCRetrieveSMSHandler * _Nullable)getResendSMSVerificationCodeHandler;
 
 /**
  * @brief For get new verify handle.
+ * @return If the function succeeds, the return value is MobileRTCVerifySMSHandler. Otherwise not.
  * @warning Need get new handle 60s later.
  */
 - (MobileRTCVerifySMSHandler * _Nullable)getReVerifySMSVerificationCodeHandler;
 
 /**
  * @brief GetSupportPhoneNumberCountryList.
+ * @return If the function succeeds, will get the support country list.
  * @warning Get country code iist after call join meeting or start meeting interface.
  */
 - (NSArray <MobileRTCRealNameCountryInfo *> * _Nullable)getSupportPhoneNumberCountryList;

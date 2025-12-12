@@ -1,10 +1,7 @@
-//
-//  MobileRTCAudioRawDataHelper.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2019/8/8.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCAudioRawDataHelper.h
+ * @brief Helper utilities for audio raw data processing and management.
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -22,11 +19,13 @@
 
 /**
  * @brief Call the function to start audio rawdata.
+ * @return If the function succeeds, it will return MobileRTCRawData_Success. Otherwise the function fails.
  */
 -(MobileRTCRawDataError)subscribe;
 
 /**
  * @brief Call the function to stop audio rawdata.
+ * @return If the function succeeds, it will return MobileRTCRawData_Success. Otherwise the function fails.
  */
 - (MobileRTCRawDataError)unSubscribe;
 

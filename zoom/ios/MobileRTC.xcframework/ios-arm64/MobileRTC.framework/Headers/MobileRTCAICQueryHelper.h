@@ -1,10 +1,7 @@
-//
-//  MobileRTCAIQueryHelper.h
-//  MobileRTC
-//
-//  Created by Zoom on 2024/5/7.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCAICQueryHelper.h
+ * @brief AI Companion query helper for intelligent meeting features.
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -253,11 +250,13 @@ typedef NS_ENUM(NSUInteger, MobileRTCAICompanionQuerySettingOptions) {
 @interface MobileRTCEnableQueryActionHandler : NSObject
 /**
  * @brief Get the title of the tip.
+ * @return The title of the tip
  */
 - (NSString *_Nullable)tipTitle;
 
 /**
  * @brief Get the tip string.
+ * @return The tip string.
  */
 - (NSString *_Nullable)tipString;
 

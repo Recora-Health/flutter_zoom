@@ -1,10 +1,7 @@
-//
-//  MobileRTCVideoSender.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2020/3/9.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCVideoSender.h
+ * @brief Video sender functionality for custom video input.
+ */
 
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCConstants.h>

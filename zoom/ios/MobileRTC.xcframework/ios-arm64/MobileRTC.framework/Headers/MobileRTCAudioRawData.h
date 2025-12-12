@@ -1,10 +1,7 @@
-//
-//  MobileRTCAudioRawData.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2019/8/6.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCAudioRawData.h
+ * @brief Raw audio data handling for custom audio processing.
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -41,16 +38,19 @@
 
 /**
  * @brief Can add reference count or not.
+ * @return If can add ref, it will return YES. Otherwise NO.
  */
 - (BOOL)canAddRef;
 
 /**
  * @brief Add reference count.
+ * @return If the function succeeds, it will return YES. Otherwise NO.
  */
 - (BOOL)addRef;
 
 /**
  * @brief Minus reference count.
+ * @return If the function succeeds, it will return reference count of this object.
  */
 - (NSInteger)releaseRef;
 

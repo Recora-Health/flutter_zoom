@@ -1,10 +1,7 @@
-//
-//  MobileRTCConstants.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 8/7/14.
-//  Copyright (c) Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCConstants.h
+ * @brief Defines all constants, enumerations, and data types used throughout the Zoom SDK.
+ */
 
 /**
  * @brief Enumeration of SDK error.
@@ -313,6 +310,21 @@ typedef NS_ENUM(NSUInteger, MobileRTCAudioRawdataSamplingRate) {
     MobileRTCAudioRawdataSamplingRate_48K,
 };
 
+
+/**
+ * @brief Enumeration representing the colorspace of acquired raw video data.
+ */
+typedef NS_ENUM(NSUInteger, MobileRTCVideoRawdataColorspace) {
+    /** For standard definition TV (SDTV)  Y[16,235], Cb/Cr[16,240]. */
+    MobileRTCVideoRawdataColorspace_BT601_L,
+    /** For standard definition TV (SDTV) full range version: [0,255]. */
+    MobileRTCVideoRawdataColorspace_BT601_F,
+    /** For high definition TV (HDTV) Y[16,235], Cb/Cr[16,240] */
+    MobileRTCVideoRawdataColorspace_BT709_L,
+    /** For high definition TV (HDTV) full range version: [0,255] */
+    MobileRTCVideoRawdataColorspace_BT709_F
+};
+
 /**
  * @brief Enumerates the types of users.
  */
@@ -426,21 +438,21 @@ typedef NS_ENUM(NSUInteger, MobileRTCH323ParingStatus) {
 };
 
 /**
- * @brief Enumeration of security session types. Marked as deprecated, no longer used.
+ * @brief Meeting component enumeration.
  */
 typedef NS_ENUM(NSUInteger, MobileRTCComponentType) {
     /** Default component type. */
     MobileRTCComponentType_Def    = 0,
-    /** Chat. */
-    MobileRTCComponentType_Chat,
-    /** File Transfer. */
-    MobileRTCComponentType_FT,
+    /** Chat.  DEPRECATED_MSG_ATTRIBUTE(deprecated("No longer used").*/
+    MobileRTCComponentType_Chat DEPRECATED_ATTRIBUTE,
+    /** File Transfer.  DEPRECATED_MSG_ATTRIBUTE(deprecated("No longer used").*/
+    MobileRTCComponentType_FT DEPRECATED_ATTRIBUTE,
     /** Audio. */
     MobileRTCComponentType_AUDIO,
     /** Video. */
     MobileRTCComponentType_VIDEO,
     /** Share application. */
-    MobileRTCComponentType_AS,
+    MobileRTCComponentType_SHARE,
 };
 
 /**
@@ -458,14 +470,14 @@ typedef NS_ENUM(NSInteger, MobileRTCVideoQuality) {
 };
 
 /**
- * @brief Enumeration of connection quality.
+ * @brief Connection quality enumeration.
  */
 typedef NS_ENUM(NSInteger, MobileRTCNetworkQuality) {
     /** Unknown connection status. */
     MobileRTCNetworkQuality_Unknown     = -1,
     /** The connection quality is very poor. */
     MobileRTCNetworkQuality_VeryBad     = 0,
-    /** The connection quality is very poor. */
+    /** The connection quality is poor. */
     MobileRTCNetworkQuality_Bad         = 1,
     /** The connection quality is not good. */
     MobileRTCNetworkQuality_NotGood     = 2,
@@ -1864,6 +1876,9 @@ typedef NS_ENUM(NSUInteger, MobileRTCDocsCreateOption) {
 };
 
 
+/**
+ * @brief Enumeration of co-owner assets type.
+ */
 typedef NS_ENUM(NSUInteger, MobileRTCDGrantCoOwnerAssetsType) {
     /** For initialization. */
     MobileRTCDGrantCoOwnerAssetsType_None,

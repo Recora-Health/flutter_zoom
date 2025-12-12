@@ -1,10 +1,8 @@
-//
-//  MobileRTC.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 8/7/14.
-//  Copyright (c) Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTC.h
+ * @brief Main framework header providing core Zoom meeting SDK functionality and all necessary imports.
+ */
+
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCConstants.h>
@@ -97,6 +95,9 @@
  */
 @property (nonatomic, copy) NSString                        * _Nullable replaykitBundleIdentifier;
 
+/**
+ * @brief SDK wrapper type (reserved for internal use).
+ */
 @property (nonatomic, assign) NSInteger                     wrapperType;
 
 /**
@@ -171,6 +172,20 @@
  * @warning In that case, if you want to disaplay customized UI of you app above Zoom meeting view, should get meeting view(call "- (UIView * _Nullable)meetingView;) and then add your customized view to the meeting view.
  */
 - (void)setMobileRTCRootController:(UINavigationController * _Nullable)navController;
+
+/**
+ * @brief Get the presentation scene of MobileRTC client.
+ * @return The scene  MobileRTC is using now..
+ */
+- (UIScene *_Nullable)mobileRTCPresentationScene;
+
+/**
+ * @brief Sets the UIScene context used by the SDK.
+ * In multi-scene environments, an application may create multiple `UIScene` instances. This method allows you to provide the SDK with the specific scene it should use for presenting UI, handling lifecycle events, or associating with the application’s environment.
+ * @param scene The `UIScene` instance to be used by the SDK.
+ * @warning Passing an invalid or inactive scene may cause the SDK’s UI to fail to present or behave unexpectedly.
+ */
+- (void)setMobileRTCPresentationScene:(UIScene * _Nonnull)scene;
 
 /**
  * @brief Check the MobileRTC version.  
@@ -339,6 +354,7 @@
 
 /**
  * @brief Gets whether you have permission to use raw data.
+ * @return YES means you have permission to use raw data.
  * @warning It is necessary to call the method after auth success.
  */
 - (BOOL)hasRawDataLicense;

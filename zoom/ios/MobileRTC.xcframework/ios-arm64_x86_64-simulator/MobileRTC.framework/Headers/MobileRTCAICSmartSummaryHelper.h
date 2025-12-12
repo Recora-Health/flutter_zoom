@@ -1,10 +1,7 @@
-//
-//  MobileRTCAICSmartSummaryHelper.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 5/23/24.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCAICSmartSummaryHelper.h
+ * @brief AI Companion smart summary helper for meeting summaries.
+ */
 
 #import <Foundation/Foundation.h>
 

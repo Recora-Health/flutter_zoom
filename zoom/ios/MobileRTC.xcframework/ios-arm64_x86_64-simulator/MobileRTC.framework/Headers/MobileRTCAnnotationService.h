@@ -1,10 +1,7 @@
-//
-//  MobileRTCAnnotationService.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2018/6/12.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCAnnotationService.h
+ * @brief Interface for managing annotation features including tool settings, drawing operations, and annotation permissions during screen sharing.
+ */
 
 #import <Foundation/Foundation.h>
 

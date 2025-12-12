@@ -1,10 +1,7 @@
-//
-//  MobileRTCArchiveConfrimHandle.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 5/6/24.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCArchiveConfrimHandle.h
+ * @brief Archive confirmation handler for meeting recordings.
+ */
 
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCConstants.h>

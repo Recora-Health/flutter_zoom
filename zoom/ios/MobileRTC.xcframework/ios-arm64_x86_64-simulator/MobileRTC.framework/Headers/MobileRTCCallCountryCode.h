@@ -1,10 +1,7 @@
-//
-//  MobileRTCCallCountryCode.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2019/7/3.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCCallCountryCode.h
+ * @brief Country code definitions for phone calls.
+ */
 
 #import <Foundation/Foundation.h>
 

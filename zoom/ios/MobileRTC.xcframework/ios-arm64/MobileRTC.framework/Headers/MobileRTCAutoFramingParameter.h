@@ -1,10 +1,7 @@
-//
-//  MobileRTCAutoFramingParameter.h
-//  MobileRTC
-//
-//  Created by Zoom on 5/12/23.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCAutoFramingParameter.h
+ * @brief Auto-framing parameters.
+ */
 
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCConstants.h>

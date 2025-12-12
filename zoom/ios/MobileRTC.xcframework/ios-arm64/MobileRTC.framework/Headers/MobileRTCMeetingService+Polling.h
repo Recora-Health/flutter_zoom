@@ -1,10 +1,7 @@
-//
-//  MobileRTCMeetingService+Polling.h
-//  MobileRTC
-//
-//  Created by Zoom on 2023/11/29.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCMeetingService+Polling.h
+ * @brief Meeting+Polling service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 
@@ -16,30 +13,38 @@
 @interface MobileRTCPollingItem : NSObject
 /**
  * @brief Polling ID.
+ * @return If the function succeeds, the return value is the polling ID. Otherwise, the return value is nil.
  */
 - (NSString *_Nullable)getPollingID;
 /**
  * @brief Polling name.
+ * @return If the function succeeds, the return value is the polling name. Otherwise, the return value is nil.
  */
 - (NSString *_Nullable)getPollingName;
 /**
  * @brief Polling type.
+ * @return If the function succeeds, the return value is the polling type. Otherwise, the return value is MobileRTCPollingType_Unknown.
  */
 - (MobileRTCPollingType)getPollingType;
 /**
  * @brief Polling status.
+ * @return If the function succeeds, the return value is the polling status. Otherwise, the return value is MobileRTCPollingStatus_Unknown.
  */
 - (MobileRTCPollingStatus)getPollingStatus;
 /**
  * @brief Polling question count.
+ * @return If the function succeeds, the return value is the polling question count. Otherwise, the return value is 0.
  */
 - (NSInteger)getPollingQuestionCount;
 /**
  * @brief Count of total voted users.
+ * @return If the function succeeds, the return value is the total voted user count. Otherwise, the return value is 0.
  */
 - (NSInteger)getTotalVotedUserCount;
 /**
  * @brief Determine if is library polling.
+ * @return YES means is library polling, otherwise not.
+ * @note This function is only available for the library polling.
  */
 - (BOOL)isLibraryPolling;
 @end
@@ -51,30 +56,37 @@
 @interface MobileRTCPollingAnswerItem : NSObject
 /**
  * @brief Polling ID of answer item.
+ * @return If the function succeeds, the return value is the polling ID. Otherwise, the return value is nil.
  */
 - (NSString *_Nullable)getPollingID;
 /**
  * @brief Polling question ID.
+ * @return If the function succeeds, the return value is the polling question ID. Otherwise, the return value is nil.
  */
 - (NSString *_Nullable)getPollingQuestionID;
 /**
  * @brief Polling sub-question ID.
+ * @return If the function succeeds, the return value is the polling sub-question ID. Otherwise, the return value is nil.
  */
 - (NSString *_Nullable)getPollingSubQuestionID;
 /**
  * @brief Polling answer ID.
+ * @return If the function succeeds, the return value is the polling answer ID. Otherwise, the return value is nil.
  */
 - (NSString *_Nullable)getPollingAnswerID;
 /**
  * @brief Polling answer name.
+ * @return If the function succeeds, the return value is the polling answer name. Otherwise, the return value is nil.
  */
 - (NSString *_Nullable)getPollingAnswerName;
 /**
  * @brief Polling answered content.
+ * @return If the function succeeds, the return value is the polling answered content. Otherwise, the return value is nil.
  */
 - (NSString *_Nullable)getPollingAnsweredContent;
 /**
  * @brief Determine if is checked.
+ * @return YES means is checked, otherwise not.
  * @note This property has no meaning for the corrent answer.
  */
 - (BOOL)isChecked;
@@ -87,34 +99,42 @@
 @interface MobileRTCPollingQuestionItem : NSObject
 /**
  * @brief Polling ID of question item.
+ * @return If the function succeeds, the return value is the polling ID. Otherwise, the return value is nil.
  */
 - (NSString *_Nullable)getPollingID;
 /**
  * @brief Polling question ID.
+ * @return If the function succeeds, the return value is the polling question ID. Otherwise, the return value is nil.
  */
 - (NSString *_Nullable)getPollingQuestionID;
 /**
  * @brief Polling question name.
+ * @return If the function succeeds, the return value is the polling question name. Otherwise, the return value is nil.
  */
 - (NSString *_Nullable)getPollingQuestionName;
 /**
  * @brief Polling question type.
+ * @return If the function succeeds, the return value is the polling question type. Otherwise, the return value is MobileRTCPollingQuestionType_Unknown.
  */
 - (MobileRTCPollingQuestionType)getPollingQuestionType;
 /**
  * @brief The count of answered questions.
+ * @return If the function succeeds, the return value is the count of answered questions. Otherwise, the return value is 0.
  */
 - (NSInteger)getAnsweredCount;
 /**
  * @brief Determine if is required.
+ * @return YES means is required, otherwise not.
  */
 - (BOOL)isRequired;
 /**
  * @brief Get the list of polling question's subquestion.
+ * @return If the function succeeds, the return value is NSArray<MobileRTCPollingQuestionItem*>. Otherwise, the return value is nil.
  */
 - (NSArray <MobileRTCPollingQuestionItem *> * _Nullable)getPollingSubQuestionItemList;
 /**
  * @brief Get the list of polling question or subquestion's answer. 
+ * @return If the function succeeds, the return value is NSArray<MobileRTCPollingAnswerItem*>. Otherwise, the return value is nil.
  */
 - (NSArray <MobileRTCPollingAnswerItem *> * _Nullable)getPollingAnswerItemList;
 @end
@@ -126,26 +146,32 @@
 @interface MobileRTCPollingAnswerResultItem : NSObject
 /**
  * @brief Polling ID of answer result item.
+ * @return If the function succeeds, the return value is the polling ID.
  */
 - (NSString *_Nullable)getPollingID;
 /**
  * @brief Polling queston ID.
+ * @return If the function succeeds, the return value is the polling question ID.
  */
 - (NSString *_Nullable)getPollingQuestionID;
 /**
  * @brief Polling sub-queston ID.
+ * @return If the function succeeds, the return value is the polling sub-question ID.
  */
 - (NSString *_Nullable)getPollingSubQuestionID;
 /**
  * @brief Polling answer ID.
+ * @return If the function succeeds, the return value is the polling answer ID.
  */
 - (NSString *_Nullable)getPollingAnswerID;
 /**
  * @brief Polling answer name.
+ * @return If the function succeeds, the return value is the polling answer name.
  */
 - (NSString *_Nullable)getPollingAnswerName;
 /**
  * @brief Query how many participants selected this answer.
+ * @return If the function succeeds, the return value is the selected count.
  */
 - (NSInteger)getSelectedCount;
 @end

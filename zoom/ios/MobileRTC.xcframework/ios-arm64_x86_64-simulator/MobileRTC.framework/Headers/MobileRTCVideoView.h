@@ -1,10 +1,7 @@
-//
-//  MobileRTCVideoView.h
-//  MobileRTC
-//
-//  Created by Zoom on 2017/11/15.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCVideoView.h
+ * @brief Video view component for displaying and managing video content in meetings.
+ */
 
 #import <UIKit/UIKit.h>
 
@@ -36,6 +33,7 @@ typedef enum {
 /**
  * @brief Designated for Render Attendee Video.
  * @param userID user's video will be shown up.
+ * @return If the function succeeds, it will return YES. Otherwise not.
  */
 - (BOOL)showAttendeeVideoWithUserID:(NSUInteger)userID;
 
@@ -74,6 +72,7 @@ typedef enum {
 /**
  * @brief Designated for Render Share Content.
  * @param shareSourceID user's shared content will be shown up.
+ * @return If the function succeeds, it will return YES. Otherwise not.
  */
 - (BOOL)showActiveShareWithShareSourceID:(NSUInteger)shareSourceID;
 
@@ -90,6 +89,7 @@ typedef enum {
 
 /**
  * @brief Get MobileRTC Active Share View use share souce ID.
+ * @return If the function succeeds, it will return share source ID.
  */
 - (NSUInteger)getShareSourceID;
 

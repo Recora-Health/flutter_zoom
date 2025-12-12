@@ -1,10 +1,7 @@
-//
-//  MobileRTCShareSourceHelper.h
-//  MobileRTC
-//
-//  Created by Zoom on 2022/6/30.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
+/**
+ * @file MobileRTCShareSourceHelper.h
+ * @brief Helper for managing screen sharing sources.
+ */
 
 #import <Foundation/Foundation.h>
 

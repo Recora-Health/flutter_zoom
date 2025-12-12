@@ -1,11 +1,7 @@
-//
-//  MobileRTCMeetingService+BO.h
-//  MobileRTC
-//
-//  Created by Zoom Communications on 2020/2/11.
-//  Copyright © Zoom Communications, Inc. All rights reserved.
-//
-
+/**
+ * @file MobileRTCMeetingService+BO.h
+ * @brief Meeting+BO service functionality and management.
+ */
 
 #import <MobileRTC/MobileRTC.h>
 #import <MobileRTC/MobileRTCBORole.h>
@@ -16,41 +12,49 @@
 @interface MobileRTCMeetingService (BO)
 /**
  * @brief Object for creating Breakout Room meetings defined in  [MobileRTCBOCreator].
+ * @return If the function succeeds, it will return object MobileRTCBOCreator.
  */
 - (MobileRTCBOCreator * _Nullable)getCreatorHelper;
 
 /**
  * @brief Object for administrator management of Breakout Room meetings defined in [MobileRTCBOAdmin].
+ * @return If the function succeeds, it will return object MobileRTCBOAdmin.
  */
 - (MobileRTCBOAdmin * _Nullable)getAdminHelper;
 
 /**
  * @brief Object for help assistant of Breakout Room meetings defined in [MobileRTCBOAssistant].
+ * @return If the function succeeds, it will return object MobileRTCBOAssistant.
  */
 - (MobileRTCBOAssistant * _Nullable)getAssistantHelper;
 
 /**
  * @brief Object for attendee functionality of Breakout Room meetings defined in [MobileRTCBOAttendee].
+ * @return If the function succeeds, it will return object MobileRTCBOAttendee.
  */
 - (MobileRTCBOAttendee * _Nullable)getAttedeeHelper;
 
 /**
  * @brief Object for Breakout Room meeting id information defined in [MobileRTCBOData].
+ * @return If the function succeeds, it will return object MobileRTCBOData.
  */
 - (MobileRTCBOData * _Nullable)getDataHelper;
 
 /**
  * @brief Has Breakout Room meeting began.
+ * @return If the function succeeds, it will return YES, otherwise not.
  */
 - (BOOL)isBOMeetingStarted;
 
 /**
  * @brief Is Breakout Room feature enabled in meeting.
+ * @return If the function succeeds, it will return YES, otherwise not.
  */
 - (BOOL)isBOMeetingEnabled;
 
 /**
  * @brief Is currently in Breakout Room during meeting.
+ * @return If the function succeeds, it will return YES, otherwise not.
  */
 - (BOOL)isInBOMeeting;
 
