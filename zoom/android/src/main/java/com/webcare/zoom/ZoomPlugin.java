@@ -24,6 +24,7 @@ import us.zoom.sdk.StartMeetingOptions;
 import us.zoom.sdk.StartMeetingParamsWithoutLogin;
 import us.zoom.sdk.ZoomError;
 import us.zoom.sdk.ZoomSDK;
+import us.zoom.sdk.SDKNotificationServiceError;
 import us.zoom.sdk.ZoomSDKAuthenticationListener;
 import us.zoom.sdk.ZoomSDKInitParams;
 import us.zoom.sdk.ZoomSDKInitializeListener;
@@ -260,7 +261,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
     }
 
     @Override
-    public void onNotificationServiceStatus(us.zoom.sdk.SDKNotificationServiceStatus status, us.zoom.sdk.SDKNotificationServiceError error) {
+    public void onNotificationServiceStatus(ZoomSDKAuthenticationListener.SDKNotificationServiceStatus status, SDKNotificationServiceError error) {
 
     }
 
