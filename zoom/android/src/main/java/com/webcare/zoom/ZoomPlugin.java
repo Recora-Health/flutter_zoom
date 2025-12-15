@@ -161,7 +161,14 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         opts.no_audio = parseBoolean(options, "noAudio", false);
         opts.no_video = parseBoolean(options, "noVideo", false);
         opts.no_share =  parseBoolean(options, "noShare", false);
-        opts.meeting_views_options = parseInt(options, "meetingViewOptions", 0); 
+        opts.no_meeting_chat = parseBoolean(options, "disableChat", false);
+        opts.meeting_views_options = parseInt(options, "meetingViewOptions", 0);
+        opts.no_meeting_end_message = parseBoolean(options, "noMeetingEndMessage", false);
+        opts.no_titlebar = parseBoolean(options, "noTitlebar", false);
+        opts.no_bottom_toolbar = parseBoolean(options, "noBottomToolbar", false);
+        opts.no_dial_out_to_phone = parseBoolean(options, "noDialOut", false);
+        opts.no_record = parseBoolean(options, "noRecord", false);
+        opts.no_meeting_error_message = parseBoolean(options, "noMeetingErrorMessage", false); 
 
         JoinMeetingParams params = new JoinMeetingParams();
 
@@ -171,23 +178,14 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         params.webinarToken = options.get("webToken");
 
         final MeetingService meetingService = zoomSDK.getMeetingService();
-        meetingService.joinMeetingWithParams(context, params, opts);
 
         final MeetingSettingsHelper meetingSettingsHelper = zoomSDK.getMeetingSettingsHelper();
-        meetingSettingsHelper.disableShowVideoPreviewWhenJoinMeeting(true);
-        meetingSettingsHelper.setAutoConnectVoIPWhenJoinMeeting(true);
-        meetingSettingsHelper.setNoInviteH323RoomCallInEnabled(true);
-        meetingSettingsHelper.setNoInviteH323RoomCallOutEnabled(true);
+        // Configure settings before joining - using non-deprecated methods
+        meetingSettingsHelper.enable720p(false);
+        meetingSettingsHelper.enableShowMyMeetingElapseTime(true);
 
-        // New Overrides to make sure the meeting UI is as we want it
-        // Updated method calls to avoid deprecated API usage
-        meetingSettingsHelper.disableChatUI(parseBoolean(options, "disableChat", true));
-        meetingSettingsHelper.setMuteMyMicrophoneWhenJoinMeeting(opts.no_audio);
-        meetingSettingsHelper.enableForceAutoStartMyVideoWhenJoinMeeting(!opts.no_video);
-        meetingSettingsHelper.enableAutoAdjustMicVolume(!opts.no_audio);
-
-        // Disable until it exists for iOS as well
-        // meetingSettingsHelper.setAlwaysShowMeetingToolbarEnabled(parseBoolean(options, "alwaysShowToolbar", true));
+        // Join the meeting with the configured options
+        meetingService.joinMeetingWithParams(context, params, opts);
 
         result.success(true);
     }
@@ -260,10 +258,6 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
 
     @Override
     public void onZoomIdentityExpired() {
-
-    }
-
-    public void onNotificationServiceStatus(SDKNotificationServiceStatus status, SDKNotificationServiceError error) {
 
     }
 
