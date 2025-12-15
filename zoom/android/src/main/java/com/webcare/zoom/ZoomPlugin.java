@@ -16,6 +16,7 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import us.zoom.sdk.SDKNotificationServiceError;
+import us.zoom.sdk.SDKNotificationServiceStatus;
 import us.zoom.sdk.JoinMeetingOptions;
 import us.zoom.sdk.JoinMeetingParams;
 import us.zoom.sdk.MeetingService;
@@ -161,7 +162,6 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         opts.no_audio = parseBoolean(options, "noAudio", false);
         opts.no_video = parseBoolean(options, "noVideo", false);
         opts.no_share =  parseBoolean(options, "noShare", false);
-        opts.no_meeting_chat = parseBoolean(options, "disableChat", false);
         opts.meeting_views_options = parseInt(options, "meetingViewOptions", 0);
         opts.no_meeting_end_message = parseBoolean(options, "noMeetingEndMessage", false);
         opts.no_titlebar = parseBoolean(options, "noTitlebar", false);
@@ -180,7 +180,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         final MeetingService meetingService = zoomSDK.getMeetingService();
 
         final MeetingSettingsHelper meetingSettingsHelper = zoomSDK.getMeetingSettingsHelper();
-        // Configure settings before joining - using non-deprecated methods
+        // Configure settings before joining
         meetingSettingsHelper.enable720p(false);
         meetingSettingsHelper.enableShowMyMeetingElapseTime(true);
 
@@ -258,6 +258,11 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
 
     @Override
     public void onZoomIdentityExpired() {
+
+    }
+
+    @Override
+    public void onNotificationServiceStatus(SDKNotificationServiceStatus status, SDKNotificationServiceError error) {
 
     }
 
