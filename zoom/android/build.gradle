@@ -73,6 +73,16 @@ dependencies {
     // Lottie - Required by mobilertc.aar for animations
     implementation libraries.lottie
 
+    // Additional mobilertc.aar dependencies
+    implementation libraries.glideAnnotations
+    implementation libraries.glideGlide
+    implementation libraries.windowJava
+    implementation libraries.scaleImageView
+    implementation libraries.splashScreenLib
+    implementation libraries.coil
+    implementation libraries.coilGif
+    implementation libraries.composeConstraintlayout
+
     implementation libraries.supportAnnotation
     implementation libraries.kotlinStdlibJdk
     implementation libraries.kotlinStdlibJdk7
