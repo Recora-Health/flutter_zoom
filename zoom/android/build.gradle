@@ -27,6 +27,7 @@ rootProject.allprojects {
 }
 
 apply plugin: 'com.android.library'
+apply from: 'libs/versions.gradle'
 
 android {
     namespace 'com.webcare.zoom'
