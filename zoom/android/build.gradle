@@ -173,7 +173,7 @@ dependencies {
     implementation libraries.androidxTracing
 
 
-    implementation libraries.rxAndroidimplementation
+    implementation libraries.rxAndroid
     implementation libraries.reactiveStream
     implementation libraries.okhttp
     implementation libraries.kotlinxAtomicfu
