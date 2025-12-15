@@ -69,6 +69,10 @@ dependencies {
     // ExoPlayer - Required by mobilertc.aar
     implementation libraries.exoplayerCore
     implementation libraries.exoplayerUI
+
+    // Lottie - Required by mobilertc.aar for animations
+    implementation libraries.lottie
+
     implementation libraries.supportAnnotation
     implementation libraries.kotlinStdlibJdk
     implementation libraries.kotlinStdlibJdk7
