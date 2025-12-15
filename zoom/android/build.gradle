@@ -115,8 +115,9 @@ dependencies {
     implementation libraries.drawerlayout
     implementation libraries.customview
     implementation libraries.startup
-    implementation libraries.apmCommon
-    implementation libraries.apmApis
+    // APM libraries are not publicly available (JCenter/Bintray shutdown)
+    // implementation libraries.apmCommon
+    // implementation libraries.apmApis
     implementation libraries.lifecycleService
     implementation libraries.javapoet
 
