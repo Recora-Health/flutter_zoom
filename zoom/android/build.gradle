@@ -79,6 +79,7 @@ dependencies {
     implementation libraries.windowJava
     implementation libraries.scaleImageView
     implementation libraries.splashScreenLib
+    implementation libraries.workerManager
     implementation libraries.coil
     implementation libraries.coilGif
     implementation libraries.composeConstraintlayout
