@@ -15,8 +15,6 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import us.zoom.sdk.SDKNotificationServiceError;
-import us.zoom.sdk.SDKNotificationServiceStatus;
 import us.zoom.sdk.JoinMeetingOptions;
 import us.zoom.sdk.JoinMeetingParams;
 import us.zoom.sdk.MeetingService;
@@ -258,11 +256,6 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
 
     @Override
     public void onZoomIdentityExpired() {
-
-    }
-
-    @Override
-    public void onNotificationServiceStatus(SDKNotificationServiceStatus status, SDKNotificationServiceError error) {
 
     }
 
