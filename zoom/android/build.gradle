@@ -107,7 +107,8 @@ dependencies {
     implementation libraries.playServiceTask
     implementation libraries.constraintlayoutCore
     implementation libraries.gson
-    implementation libraries.protobufJava
+    // Use protobuf-javalite for Android (protobuf-java causes duplicate classes)
+    // implementation libraries.protobufJava
     implementation libraries.protobufJavalite
     implementation libraries.errorProneAnnotations
     implementation libraries.guava
