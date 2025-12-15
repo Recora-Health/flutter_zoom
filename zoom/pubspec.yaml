@@ -13,7 +13,7 @@ dependencies:
   zoom_platform_interface:
     git:
       url: git@github.com:Recora-Health/flutter_zoom.git
-      ref: 6.6.9_depreciation_changes
+      ref: 6.6.9
       path: zoom/zoom_platform_interface
 
 dev_dependencies:
