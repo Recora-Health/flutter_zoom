@@ -65,6 +65,10 @@ dependencies {
     implementation libraries.browser
     implementation libraries.androidxCoreKtx
     implementation libraries.jetbrainskotlin
+
+    // ExoPlayer - Required by mobilertc.aar
+    implementation libraries.exoplayerCore
+    implementation libraries.exoplayerUI
     implementation libraries.supportAnnotation
     implementation libraries.kotlinStdlibJdk
     implementation libraries.kotlinStdlibJdk7
