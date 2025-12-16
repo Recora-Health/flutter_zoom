@@ -182,7 +182,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         // Configure settings before joining
         meetingSettingsHelper.enable720p(false);
         meetingSettingsHelper.enableShowMyMeetingElapseTime(true);
-        meetingSettingsHelper.setShowVideoPreviewWhenJoinMeeting(false);
+        meetingSettingsHelper.disableShowVideoPreviewWhenJoinMeeting(true);
 
         // Join the meeting with the configured options
         meetingService.joinMeetingWithParams(context, params, opts);
