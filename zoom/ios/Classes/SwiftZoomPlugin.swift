@@ -81,7 +81,29 @@ import MobileRTC
         context.enableLog = true
         context.bundleResPath = pluginBundlePath
         MobileRTC.shared().initialize(context)
-        
+
+        // Set up root navigation controller for Zoom UI mode
+        if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }),
+           let rootViewController = window.rootViewController {
+
+            // Check if root is already a navigation controller
+            if let navController = rootViewController as? UINavigationController {
+                MobileRTC.shared().setMobileRTCRootController(navController)
+                print("ZoomPlugin: Root navigation controller set")
+            } else {
+                // Try to find a navigation controller in the hierarchy
+                if let navController = findNavigationController(in: rootViewController) {
+                    MobileRTC.shared().setMobileRTCRootController(navController)
+                    print("ZoomPlugin: Found and set navigation controller from hierarchy")
+                } else {
+                    // No nav controller found - acceptable, Zoom will use its own window
+                    print("ZoomPlugin: No UINavigationController found, Zoom will use its own window")
+                }
+            }
+        } else {
+            print("ZoomPlugin: Could not access window or root controller")
+        }
+
         let auth = MobileRTC.shared().getAuthService()
         auth?.delegate = self.authenticationDelegate.onAuth(result)
         if let jwtToken = arguments["jwtToken"] {
@@ -126,7 +148,7 @@ import MobileRTC
             meetingSettings?.disableDriveMode(parseBoolean(data: arguments["disableDrive"]!, defaultValue: false))
             meetingSettings?.disableCall(in: parseBoolean(data: arguments["disableDialIn"]!, defaultValue: false))
             meetingSettings?.setAutoConnectInternetAudio(true)
-            meetingSettings?.disableShowVideoPreviewWhenJoinMeeting(true)
+            meetingSettings?.disableShowVideoPreview(whenJoinMeeting: true)
             meetingSettings?.setMuteAudioWhenJoinMeeting(parseBoolean(data: arguments["noAudio"]!, defaultValue: false))
             meetingSettings?.meetingShareHidden = parseBoolean(data: arguments["disableShare"]!, defaultValue: false)
             meetingSettings?.meetingInviteHidden = parseBoolean(data: arguments["disableDrive"]!, defaultValue: false)
@@ -195,7 +217,7 @@ import MobileRTC
             meetingSettings?.disableDriveMode(parseBoolean(data: arguments["disableDrive"]!, defaultValue: false))
             meetingSettings?.disableCall(in: parseBoolean(data: arguments["disableDialIn"]!, defaultValue: false))
             meetingSettings?.setAutoConnectInternetAudio(parseBoolean(data: arguments["noDisconnectAudio"]!, defaultValue: false))
-            meetingSettings?.disableShowVideoPreviewWhenJoinMeeting(true)
+            meetingSettings?.disableShowVideoPreview(whenJoinMeeting: true)
             meetingSettings?.setMuteAudioWhenJoinMeeting(parseBoolean(data: arguments["noAudio"]!, defaultValue: false))
             meetingSettings?.meetingShareHidden = parseBoolean(data: arguments["disableShare"]!, defaultValue: false)
             meetingSettings?.meetingInviteHidden = parseBoolean(data: arguments["disableDrive"]!, defaultValue: false)
@@ -351,9 +373,28 @@ import MobileRTC
         
         return message
     }
+
+    private func findNavigationController(in viewController: UIViewController) -> UINavigationController? {
+        // Check if it's embedded in a navigation controller
+        if let navController = viewController.navigationController {
+            return navController
+        }
+
+        // Check children recursively
+        for child in viewController.children {
+            if let navController = child as? UINavigationController {
+                return navController
+            }
+            if let found = findNavigationController(in: child) {
+                return found
+            }
+        }
+
+        return nil
+    }
 }
 
- 
+
 @objc(AuthenticationDelegate) public class AuthenticationDelegate: NSObject, MobileRTCAuthDelegate {
     
     private var result: FlutterResult?
