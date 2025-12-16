@@ -98,4 +98,5 @@ Future<void> downloadFile(Uri uri, String savePath, bool isUpdate) async {
   final request = await HttpClient().getUrl(uri);
   final response = await request.close();
   await response.pipe(destinationFile.openWrite());
+  // force update
 }
