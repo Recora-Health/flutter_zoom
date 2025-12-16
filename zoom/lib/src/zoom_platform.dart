@@ -5,7 +5,7 @@
 
 import 'dart:async';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'package:zoom_platform_interface/zoom_options.dart';
+import 'zoom_options.dart';
 
 import 'method_channel_zoom.dart';
 export 'zoom_options.dart';

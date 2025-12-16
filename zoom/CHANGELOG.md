@@ -1,3 +1,10 @@
+## 2.0.0
+* BREAKING: Unified zoom_platform_interface into main zoom package
+* Removed Git URL dependency, resolving gradle cache issues
+* Internal restructuring: platform interface moved to src/ directory
+* Public API remains unchanged (Zoom, ZoomOptions, ZoomMeetingOptions)
+* No code changes required for users importing 'package:zoom/zoom.dart'
+
 ## 1.0.3+6
 * add leave meeting command
 
