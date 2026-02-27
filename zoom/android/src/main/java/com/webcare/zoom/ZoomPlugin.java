@@ -40,6 +40,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
     private MethodChannel channel;
     private EventChannel meetingStatusChannel;
     private Context context;
+    private EventChannel.EventSink pendingEventSink;
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
         context = flutterPluginBinding.getApplicationContext();
@@ -47,6 +48,18 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         channel.setMethodCallHandler(this);
 
         meetingStatusChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), "plugins.webcare/zoom_event_stream");
+        // Set a placeholder handler so Dart can subscribe before init() completes.
+        // The real StatusStreamHandler replaces this after SDK initialization.
+        meetingStatusChannel.setStreamHandler(new EventChannel.StreamHandler() {
+            @Override
+            public void onListen(Object arguments, EventChannel.EventSink events) {
+                pendingEventSink = events;
+            }
+            @Override
+            public void onCancel(Object arguments) {
+                pendingEventSink = null;
+            }
+        });
     }
 
     @Override
@@ -72,6 +85,8 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
     @Override
     public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
         channel.setMethodCallHandler(null);
+        meetingStatusChannel.setStreamHandler(null);
+        pendingEventSink = null;
     }
 
     private void init(final MethodCall methodCall, final MethodChannel.Result result) {
@@ -81,6 +96,11 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         ZoomSDK zoomSDK = ZoomSDK.getInstance();
 
         if(zoomSDK.isInitialized()) {
+            // Re-set the StreamHandler for engine re-attach scenarios
+            MeetingService meetingService = zoomSDK.getMeetingService();
+            if (meetingService != null) {
+                meetingStatusChannel.setStreamHandler(new StatusStreamHandler(meetingService));
+            }
             List<Integer> response = Arrays.asList(0, 0);
             result.success(response);
             return;
