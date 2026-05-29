@@ -50,7 +50,7 @@ Future<void> checkAndDownloadSDK(String location, bool isUpdate) async {
   var androidRTCLibFile = location + '/android/libs/mobilertc.aar';
   var iosSDKFile = location + '/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/MobileRTC';
   var iosSimulateArm64SDKFile = location +
-      '/ios/MobileRTC.xcframework/ios-arm64_x86_64-simulator/MobileRTC.framework/MobileRTC';
+      '/ios/MobileRTC.xcframework/ios-arm64-simulator/MobileRTC.framework/MobileRTC';
   
   // Check if the Android MobileRTC SDK files exist
   var exists = await File(androidRTCLibFile).exists();

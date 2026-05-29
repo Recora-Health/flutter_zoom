@@ -9,4 +9,4 @@ build/
 android/libs/mobilertc.aar
 
 ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/MobileRTC
-ios/MobileRTC.xcframework/ios-arm64_x86_64-simulator/MobileRTC.framework/MobileRTC
+ios/MobileRTC.xcframework/ios-arm64-simulator/MobileRTC.framework/MobileRTC

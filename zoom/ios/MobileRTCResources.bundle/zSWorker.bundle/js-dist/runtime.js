@@ -31,12 +31,11 @@ function graftedFetch(request, opts) {
     }
     return originalFetch(url, opts);
 }
-
-
+    
 /**************************************************************
  *   For API
  *************************************************************/
-    
+
 //axios/xhr
 window.fetch = graftedFetch;
 var originalSend_1 = XMLHttpRequest.prototype.send;
@@ -826,7 +825,8 @@ if ("ServiceWorkerContainer" in self === false) {
         }
     });
 }
-    
+
+
 (function() {
   try {
     // check if auto register is enabled
@@ -847,5 +847,5 @@ if ("ServiceWorkerContainer" in self === false) {
     console.error('[NativeSW] Exception while registering default SW:', e);
   }
 })();
-
+    
 }(swwebviewSettings));
