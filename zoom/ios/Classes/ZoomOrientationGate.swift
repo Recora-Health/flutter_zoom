@@ -87,7 +87,9 @@ extension UIViewController {
         self.zoom_viewWillTransition(to: size, with: coordinator)
         guard ZoomOrientationGate.shared.isInMeeting,
               self.zoom_isWindowRoot else { return }
-        MobileRTC.shared()?.viewWillTransition(toSize: size, withTransitionCoordinator: coordinator)
+        // Apple's API notes rename `viewWillTransitionToSize:withTransitionCoordinator:`
+        // to `viewWillTransition(to:with:)` globally — including on MobileRTC.
+        MobileRTC.shared().viewWillTransition(to: size, with: coordinator)
     }
 
     @objc fileprivate func zoom_willTransition(
@@ -97,7 +99,7 @@ extension UIViewController {
         self.zoom_willTransition(to: newCollection, with: coordinator)
         guard ZoomOrientationGate.shared.isInMeeting,
               self.zoom_isWindowRoot else { return }
-        MobileRTC.shared()?.willTransition(toTraitCollection: newCollection, withTransitionCoordinator: coordinator)
+        MobileRTC.shared().willTransition(to: newCollection, with: coordinator)
     }
 
     /// Only forward when *this* VC is the window's rootViewController — the SDK headers
