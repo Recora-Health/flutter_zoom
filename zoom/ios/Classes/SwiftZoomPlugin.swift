@@ -21,11 +21,14 @@ import MobileRTC
   public static func register(with registrar: FlutterPluginRegistrar) {
     let messenger = registrar.messenger()
     let channel = FlutterMethodChannel(name: "plugins.webcare/zoom_channel", binaryMessenger: messenger)
-    let instance = SwiftZoomPlugin() 
+    let instance = SwiftZoomPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
 
     let eventChannel = FlutterEventChannel(name: "plugins.webcare/zoom_event_stream", binaryMessenger: messenger)
     eventChannel.setStreamHandler(instance)
+
+    // Forward UIKit rotation events to MobileRTC during meetings (see ZoomOrientationGate).
+    ZoomRotationForwarding.install()
   }
 
   override init(){
@@ -303,11 +306,21 @@ import MobileRTC
     }
     
     public func onMeetingStateChange(_ state: MobileRTCMeetingState) {
-        
+
+        // Tell the host AppDelegate to allow landscape only while the Zoom UI is on-screen.
+        switch state {
+        case .inMeeting, .inWaitingRoom, .waitingForHost, .webinarPromote, .webinarDePromote:
+            ZoomOrientationGate.shared.setInMeeting(true)
+        case .idle, .ended, .failed, .disconnecting:
+            ZoomOrientationGate.shared.setInMeeting(false)
+        default:
+            break
+        }
+
         guard let eventSink = eventSink else {
             return
         }
-        
+
         eventSink(getStateMessage(state))
     }
     
