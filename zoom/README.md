@@ -3,9 +3,8 @@ A Flutter plugin for the Zoom Client SDK.
 
 ## Zoom SDK Versions
 
-Android: zoom-sdk-android-5.13.1.11014
- 
-iOS: zoom-sdk-ios-5.13.1.6095
+Android: zoom-sdk-android-6.6.9.35200
+iOS: zoom-sdk-ios-6.6.9.29800
 
 ## Installation from pub.dev
 https://pub.dev/packages/zoom
@@ -78,8 +77,15 @@ flutter pub run zoom:unzip_zoom_sdk
 Change the minimum Android sdk version to at the minimum 21 in your `android/app/build.gradle` file.
 
 ```
-minSdkVersion 21
+minSdkVersion 28
 ```
+
+Update Material Design version to 1.5.0 in your `android/app/build.gradle` file.
+
+```
+implementation "com.google.android.material:material:1.5.0"
+```
+
 
 Disable shrinkResources for release buid
 ```

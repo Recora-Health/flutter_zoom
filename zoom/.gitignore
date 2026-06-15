@@ -5,3 +5,8 @@
 .pub/
 
 build/
+
+android/libs/mobilertc.aar
+
+ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/MobileRTC
+ios/MobileRTC.xcframework/ios-arm64-simulator/MobileRTC.framework/MobileRTC

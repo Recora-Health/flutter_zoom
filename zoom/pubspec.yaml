@@ -1,20 +1,16 @@
 name: zoom
 description: A Flutter plugin for the Zoom Client SDK.
-version: 1.0.4
+version: 3.0.0
 publish_to: none
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
-  flutter: ">=1.20.0"
+  sdk: ">=3.5.0 <4.0.0"
+  flutter: ">=3.29.3 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  zoom_platform_interface:
-    git:
-      url: git@github.com:Recora-Health/flutter_zoom.git
-      ref: main
-      path: zoom/zoom_platform_interface
+  plugin_platform_interface: ^2.0.0
 
 dev_dependencies:
   args: ^2.4.2

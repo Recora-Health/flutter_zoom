@@ -1,21 +1,24 @@
 group 'com.webcare.zoom'
-version '1.0'
+version '1.5.0'
 
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
     }
-
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath 'com.android.tools.build:gradle:8.7.3'
+        classpath 'org.jetbrains.compose:compose-gradle-plugin:1.7.0'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.23'
     }
 }
 
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
 
         flatDir {
             dirs project(':zoom').file('libs')
@@ -24,51 +27,181 @@ rootProject.allprojects {
 }
 
 apply plugin: 'com.android.library'
+apply from: 'libs/versions.gradle'
 
 android {
-    compileSdkVersion 33
+    namespace 'com.webcare.zoom'
+    compileSdkVersion 36
+    buildToolsVersion = "36.0.0"
+
+    viewBinding {
+        enabled = true
+    }
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 29
+        minSdkVersion 28
+        targetSdkVersion 35
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        versionCode 1
+        versionName "1.0"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
-        consumerProguardFiles 'proguard.txt'
+        consumerProguardFiles 'proguard.cfg'
     }
     lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
         disable 'InvalidPackage'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
 dependencies {
-    implementation "androidx.security:security-crypto:1.1.0-alpha03"
-    implementation "com.google.crypto.tink:tink-android:1.5.0"
-    implementation "com.google.android.exoplayer:exoplayer-core:2.16.1"
-    implementation "com.google.android.exoplayer:exoplayer-ui:2.17.1"
-    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    // Updates for 6.6.9
+    implementation libraries.nimbusds
+    implementation libraries.browser
+    implementation libraries.androidxCoreKtx
+    implementation libraries.jetbrainskotlin
 
-    implementation "androidx.appcompat:appcompat:1.3.0"
-    implementation "androidx.constraintlayout:constraintlayout:2.1.0"
-    implementation "com.google.android.material:material:1.4.0"
-    implementation "com.google.android:flexbox:2.0.1"
-    implementation "androidx.multidex:multidex:2.0.0"
-    implementation "com.google.code.gson:gson:2.8.1"
-    implementation "com.github.bumptech.glide:annotations:4.11.0"
-    implementation "com.github.bumptech.glide:glide:4.11.0"
-    implementation "com.airbnb.android:lottie:4.0.0"
+    // ExoPlayer - Required by mobilertc.aar
+    implementation libraries.exoplayerCore
+    implementation libraries.exoplayerUI
 
-    implementation "androidx.window:window:1.0.0"
+    // Lottie - Required by mobilertc.aar for animations
+    implementation libraries.lottie
 
-    implementation "androidx.window:window-java:1.0.0"
+    // Additional mobilertc.aar dependencies
+    implementation libraries.glideAnnotations
+    implementation libraries.glideGlide
+    implementation libraries.windowJava
+    implementation libraries.scaleImageView
+    implementation libraries.splashScreenLib
+    implementation libraries.workerManager
+    implementation libraries.androidxWebkitKtx
+    implementation libraries.coil
+    implementation libraries.coilGif
+    implementation libraries.composeConstraintlayout
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.0"
-    implementation "androidx.core:core-ktx:1.6.0"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+    implementation libraries.supportAnnotation
+    implementation libraries.kotlinStdlibJdk
+    implementation libraries.kotlinStdlibJdk7
+    implementation libraries.constraintlayout
+    implementation libraries.recyclerview
+    implementation libraries.kotlinxCoroutinesCore
+    implementation libraries.androidxCore
+    implementation libraries.kotlinStdlibCommon
+    implementation libraries.fragmentx
+    implementation libraries.fragmentKtx
+    implementation libraries.viewBindingX
+    implementation libraries.supportAppcompat
+    implementation libraries.okio
+    implementation libraries.collection
+    implementation libraries.annotationExperimental
+    implementation libraries.kotlinxCoroutinesAndroid
+    implementation libraries.collectionKtx
+    implementation libraries.viewmodel
+    implementation libraries.activityx
+    implementation libraries.lifecycleKtx
+    implementation libraries.viewmodelKtx
+    implementation libraries.lifecycleCommon
+    implementation libraries.lifecycleCommonJava
+    implementation libraries.livedataCore
+    implementation libraries.lifecycle
+    implementation libraries.livedata
+    implementation libraries.livedataKtx
+    implementation libraries.livedataCoreKtx
+    implementation libraries.lifecycleViewModelSavedState
+    implementation libraries.listenablefuture
+    implementation libraries.archCoreCommon
+    implementation libraries.archCoreRuntime
+    implementation libraries.swiperefreshlayout
+    implementation libraries.coordinatorlayout
+    implementation libraries.vectordrawable
+    implementation libraries.vectordrawableAnimated
+    implementation libraries.firebaseAnnotation
+    implementation libraries.playServiceFido
+    implementation libraries.playServiceBasement
+    implementation libraries.playServiceTask
+    implementation libraries.constraintlayoutCore
+    implementation libraries.gson
+    // Use protobuf-javalite for Android (protobuf-java causes duplicate classes)
+    // implementation libraries.protobufJava
+    implementation libraries.protobufJavalite
+    implementation libraries.errorProneAnnotations
+    implementation libraries.guava
+    implementation libraries.activityKtx
+    implementation libraries.drawerlayout
+    implementation libraries.customview
+    implementation libraries.startup
+    // APM libraries are not publicly available (JCenter/Bintray shutdown)
+    // implementation libraries.apmCommon
+    // implementation libraries.apmApis
+    implementation libraries.lifecycleService
+    implementation libraries.javapoet
 
-    implementation "androidx.fragment:fragment-ktx:1.4.1"
+    //compose start
+    implementation libraries.composeMaterial3
 
-    api(name: 'commonlib', ext: 'aar')
+    implementation libraries.composeMaterial
+    implementation libraries.composeActivity
+    implementation libraries.composeAnimation
+    implementation libraries.composeAnimationCore
+    implementation libraries.composeNavigation
+    implementation libraries.composeFoundation
+    implementation libraries.composeFoundationLayout
+    implementation libraries.composeRuntime
+    implementation libraries.composeRuntimeSaveable
+    implementation libraries.composeLifecycle
+    implementation libraries.composeLifecycleViewmodel
+    implementation libraries.composeUI
+    implementation libraries.composeUIGeometry
+    implementation libraries.composeUIGraphics
+    implementation libraries.composeUIText
+    implementation libraries.composeUIUnit
+    implementation libraries.composeUIUtil
+    implementation libraries.composeUITest
+    implementation libraries.composeUITooling
+    implementation libraries.composeUIToolingPreview
+    //----compose related----//
+    implementation libraries.emoji2
+    implementation libraries.emoji2ViewsHelper
+    implementation libraries.exifinterface
+    implementation libraries.lifecycleProcess
+    implementation libraries.concurrentFutures
+    implementation libraries.savedstate
+    implementation libraries.savedstateKtx
+    implementation libraries.media
+    implementation libraries.playServicesBase
+    implementation libraries.supportWindow
+    implementation libraries.kotlinxCoroutinesSwing
+    implementation libraries.kotlinxCoroutinesCoreJvm
+    implementation libraries.jetbrainsAnnotations
+    implementation libraries.kotlinParcelize
+    implementation libraries.profileinstaller
+    //compose end
+
+    // Start - CameraX and MLKit text-recognition
+    implementation libraries.dataTransportApi
+    implementation libraries.dataTrasnsportBackendCct
+    implementation libraries.dataTrasnsportRuntime
+    implementation libraries.firebaseComponenets
+    implementation libraries.firebaseEncoders
+    implementation libraries.firebaseEncodersJson
+    implementation libraries.androidxTracing
+
+
+    implementation libraries.rxAndroid
+    implementation libraries.reactiveStream
+    implementation libraries.okhttp
+    implementation libraries.kotlinxAtomicfu
+
+    implementation libraries.mlkitCommon
+    implementation libraries.composeMaterialRipple
+    implementation libraries.coilGif
+
     api(name: 'mobilertc', ext: 'aar')
 }
+

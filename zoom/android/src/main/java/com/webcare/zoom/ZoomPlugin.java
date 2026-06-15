@@ -15,7 +15,6 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 import us.zoom.sdk.JoinMeetingOptions;
 import us.zoom.sdk.JoinMeetingParams;
 import us.zoom.sdk.MeetingService;
@@ -25,10 +24,13 @@ import us.zoom.sdk.StartMeetingOptions;
 import us.zoom.sdk.StartMeetingParamsWithoutLogin;
 import us.zoom.sdk.ZoomError;
 import us.zoom.sdk.ZoomSDK;
+import us.zoom.sdk.SDKNotificationServiceError;
 import us.zoom.sdk.ZoomSDKAuthenticationListener;
 import us.zoom.sdk.ZoomSDKInitParams;
 import us.zoom.sdk.ZoomSDKInitializeListener;
+import us.zoom.sdk.ZoomSDKRawDataMemoryMode;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
+
 /** ZoomPlugin */
 public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAware, ZoomSDKAuthenticationListener {
     /// The MethodChannel that will the communication between Flutter and native Android
@@ -38,6 +40,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
     private MethodChannel channel;
     private EventChannel meetingStatusChannel;
     private Context context;
+    private EventChannel.EventSink pendingEventSink;
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
         context = flutterPluginBinding.getApplicationContext();
@@ -45,6 +48,18 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         channel.setMethodCallHandler(this);
 
         meetingStatusChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), "plugins.webcare/zoom_event_stream");
+        // Set a placeholder handler so Dart can subscribe before init() completes.
+        // The real StatusStreamHandler replaces this after SDK initialization.
+        meetingStatusChannel.setStreamHandler(new EventChannel.StreamHandler() {
+            @Override
+            public void onListen(Object arguments, EventChannel.EventSink events) {
+                pendingEventSink = events;
+            }
+            @Override
+            public void onCancel(Object arguments) {
+                pendingEventSink = null;
+            }
+        });
     }
 
     @Override
@@ -70,6 +85,8 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
     @Override
     public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
         channel.setMethodCallHandler(null);
+        meetingStatusChannel.setStreamHandler(null);
+        pendingEventSink = null;
     }
 
     private void init(final MethodCall methodCall, final MethodChannel.Result result) {
@@ -79,6 +96,11 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         ZoomSDK zoomSDK = ZoomSDK.getInstance();
 
         if(zoomSDK.isInitialized()) {
+            // Re-set the StreamHandler for engine re-attach scenarios
+            MeetingService meetingService = zoomSDK.getMeetingService();
+            if (meetingService != null) {
+                meetingStatusChannel.setStreamHandler(new StatusStreamHandler(meetingService));
+            }
             List<Integer> response = Arrays.asList(0, 0);
             result.success(response);
             return;
@@ -89,12 +111,15 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         if(options.containsKey("jwtToken")){
             initParams.jwtToken = options.get("jwtToken");
         }
-        if(options.containsKey("appKey")){
-            initParams.appKey = options.get("appKey");
-        }
-        if(options.containsKey("appSecret")){
-            initParams.appSecret = options.get("appSecret");
-        }
+
+        // Guard the native SDK bring-up. ZoomSDK.initialize() loads Zoom's native
+        // libraries (libc++_shared.so, etc.) synchronously. On an incomplete install
+        // (e.g. a missing App Bundle per-ABI native-lib split) this throws
+        // UnsatisfiedLinkError — a java.lang.Error that Flutter's MethodChannel handler
+        // does NOT catch, so the whole app hard-crashes here. Catch Throwable and fail
+        // the call cleanly via result.error so Dart gets a PlatformException it can
+        // handle (the app already degrades gracefully on that path).
+        try {
         zoomSDK.initialize(
                 context,
                 new ZoomSDKInitializeListener() {
@@ -109,7 +134,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
                         List<Integer> response = Arrays.asList(errorCode, internalErrorCode);
 
                         if (errorCode != ZoomError.ZOOM_ERROR_SUCCESS) {
-                            System.out.println("Failed to initialize Zoom SDK");
+                            System.out.println("ZoomMeeting: Failed to initialize Zoom SDK");
                             result.success(response);
                             return;
                         }
@@ -117,10 +142,35 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
                         ZoomSDK zoomSDK = ZoomSDK.getInstance();
                         MeetingService meetingService = zoomSDK.getMeetingService();
                         meetingStatusChannel.setStreamHandler(new StatusStreamHandler(meetingService));
+
+                        // Set custom meeting UI activity for edge-to-edge support on Android 16
+                        // Use reflection to load the app's custom activity class
+                        try {
+                            Class<?> customActivityClass = Class.forName(
+                                "com.recorahealth.members.ZoomMeetingActivity"
+                            );
+                            // Cast to the expected type for setNewMeetingUI
+                            @SuppressWarnings("unchecked")
+                            Class<? extends us.zoom.sdk.NewMeetingActivity> activityClass =
+                                (Class<? extends us.zoom.sdk.NewMeetingActivity>) customActivityClass;
+                            zoomSDK.getZoomUIService().setNewMeetingUI(activityClass);
+                            System.out.println("ZoomMeeting: Custom Zoom meeting UI set successfully");
+                        } catch (ClassNotFoundException e) {
+                            System.out.println("ZoomMeeting: Custom activity class not found: " + e.getMessage());
+                        } catch (Exception e) {
+                            System.out.println("ZoomMeeting: Failed to set custom meeting UI: " + e.getMessage());
+                            e.printStackTrace();
+                        }
+
                         result.success(response);
                     }
                 },
                 initParams);
+        } catch (Throwable t) {
+            // Includes UnsatisfiedLinkError when Zoom's native libs are unavailable.
+            System.out.println("ZoomMeeting: Native Zoom SDK init failed: " + t);
+            result.error("ZOOM_INIT_NATIVE_ERROR", t.getMessage(), null);
+        }
     }
 
     private void joinMeeting(MethodCall methodCall, MethodChannel.Result result) {
@@ -130,7 +180,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         ZoomSDK zoomSDK = ZoomSDK.getInstance();
 
         if(!zoomSDK.isInitialized()) {
-            System.out.println("Not initialized!!!!!!");
+            System.out.println("ZoomMeeting: Not initialized!!!!!!");
             result.success(false);
             return;
         }
@@ -138,13 +188,20 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         JoinMeetingOptions opts = new JoinMeetingOptions();
         opts.no_invite = parseBoolean(options, "disableInvite", false);
         opts.no_share = parseBoolean(options, "disableShare", false);
-        opts.no_driving_mode = parseBoolean(options, "disableDrive", false);
-        opts.no_dial_in_via_phone = parseBoolean(options, "disableDialIn", false);
-        opts.no_disconnect_audio = parseBoolean(options, "noDisconnectAudio", false);
+        opts.no_driving_mode =  parseBoolean(options, "disableDrive", false);
+        opts.no_dial_in_via_phone =  parseBoolean(options, "disableDialIn", false);
+        opts.no_disconnect_audio =  parseBoolean(options, "noDisconnectAudio", false);
         opts.no_audio = parseBoolean(options, "noAudio", false);
         opts.no_video = parseBoolean(options, "noVideo", false);
-        opts.no_share = parseBoolean(options, "noShare", false);
-        opts.meeting_views_options = parseInt(options, "meetingViewOptions", 0); 
+        opts.no_share =  parseBoolean(options, "noShare", false);
+        opts.meeting_views_options = parseInt(options, "meetingViewOptions", 0);
+        opts.no_meeting_end_message = parseBoolean(options, "noMeetingEndMessage", false);
+        opts.no_titlebar = parseBoolean(options, "noTitlebar", false);
+        opts.no_bottom_toolbar = parseBoolean(options, "noBottomToolbar", false);
+        opts.no_dial_out_to_phone = parseBoolean(options, "noDialOut", false);
+        opts.no_record = parseBoolean(options, "noRecord", false);
+        opts.no_meeting_error_message = parseBoolean(options, "noMeetingErrorMessage", false); 
+
         JoinMeetingParams params = new JoinMeetingParams();
 
         params.displayName = options.get("userId");
@@ -153,11 +210,15 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         params.webinarToken = options.get("webToken");
 
         final MeetingService meetingService = zoomSDK.getMeetingService();
-        meetingService.joinMeetingWithParams(context, params, opts);
 
         final MeetingSettingsHelper meetingSettingsHelper = zoomSDK.getMeetingSettingsHelper();
+        // Configure settings before joining
+        meetingSettingsHelper.enable720p(false);
+        meetingSettingsHelper.enableShowMyMeetingElapseTime(true);
         meetingSettingsHelper.disableShowVideoPreviewWhenJoinMeeting(true);
-        meetingSettingsHelper.setAutoConnectVoIPWhenJoinMeeting(true);
+
+        // Join the meeting with the configured options
+        meetingService.joinMeetingWithParams(context, params, opts);
 
         result.success(true);
     }
@@ -176,7 +237,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         ZoomSDK zoomSDK = ZoomSDK.getInstance();
 
         if(!zoomSDK.isInitialized()) {
-            System.out.println("Not initialized!!!!!!");
+            System.out.println("ZoomMeeting: Not initialized!!!!!!");
             result.success(Arrays.asList("MEETING_STATUS_UNKNOWN", "SDK not initialized"));
             return;
         }
@@ -197,7 +258,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
         ZoomSDK zoomSDK = ZoomSDK.getInstance();
 
         if(!zoomSDK.isInitialized()) {
-            System.out.println("Not initialized!!!!!!");
+            System.out.println("ZoomMeeting: Not initialized!!!!!!");
             result.success(Arrays.asList("MEETING_STATUS_UNKNOWN", "SDK not initialized"));
             return;
         }
@@ -234,7 +295,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
     }
 
     @Override
-    public void onNotificationServiceStatus​(ZoomSDKAuthenticationListener.SDKNotificationServiceStatus status) {
+    public void onNotificationServiceStatus(ZoomSDKAuthenticationListener.SDKNotificationServiceStatus status, SDKNotificationServiceError error) {
 
     }
 

@@ -2,7 +2,7 @@ import Flutter
 import UIKit
 import MobileRTC
 
-public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , MobileRTCMeetingServiceDelegate{
+@objc(SwiftZoomPlugin) public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , MobileRTCMeetingServiceDelegate{
   struct MeetingViewOptions { 
     static let NO_BUTTON_AUDIO = 2
     static let NO_BUTTON_LEAVE = 128
@@ -21,11 +21,14 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
   public static func register(with registrar: FlutterPluginRegistrar) {
     let messenger = registrar.messenger()
     let channel = FlutterMethodChannel(name: "plugins.webcare/zoom_channel", binaryMessenger: messenger)
-    let instance = SwiftZoomPlugin() 
+    let instance = SwiftZoomPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
 
     let eventChannel = FlutterEventChannel(name: "plugins.webcare/zoom_event_stream", binaryMessenger: messenger)
     eventChannel.setStreamHandler(instance)
+
+    // Forward UIKit rotation events to MobileRTC during meetings (see ZoomOrientationGate).
+    ZoomRotationForwarding.install()
   }
 
   override init(){
@@ -81,17 +84,33 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
         context.enableLog = true
         context.bundleResPath = pluginBundlePath
         MobileRTC.shared().initialize(context)
-        
+
+        // Set up root navigation controller for Zoom UI mode
+        if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }),
+           let rootViewController = window.rootViewController {
+
+            // Check if root is already a navigation controller
+            if let navController = rootViewController as? UINavigationController {
+                MobileRTC.shared().setMobileRTCRootController(navController)
+                print("ZoomPlugin: Root navigation controller set")
+            } else {
+                // Try to find a navigation controller in the hierarchy
+                if let navController = findNavigationController(in: rootViewController) {
+                    MobileRTC.shared().setMobileRTCRootController(navController)
+                    print("ZoomPlugin: Found and set navigation controller from hierarchy")
+                } else {
+                    // No nav controller found - acceptable, Zoom will use its own window
+                    print("ZoomPlugin: No UINavigationController found, Zoom will use its own window")
+                }
+            }
+        } else {
+            print("ZoomPlugin: Could not access window or root controller")
+        }
+
         let auth = MobileRTC.shared().getAuthService()
         auth?.delegate = self.authenticationDelegate.onAuth(result)
         if let jwtToken = arguments["jwtToken"] {
             auth?.jwtToken = jwtToken
-        }
-        if let appKey = arguments["appKey"] {
-            auth?.clientKey = appKey
-        }
-        if let appSecret = arguments["appSecret"] {
-            auth?.clientSecret = appSecret
         }
         
         auth?.sdkAuth()
@@ -136,6 +155,7 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             meetingSettings?.setMuteAudioWhenJoinMeeting(parseBoolean(data: arguments["noAudio"]!, defaultValue: false))
             meetingSettings?.meetingShareHidden = parseBoolean(data: arguments["disableShare"]!, defaultValue: false)
             meetingSettings?.meetingInviteHidden = parseBoolean(data: arguments["disableDrive"]!, defaultValue: false)
+
             if  arguments["meetingViewOptions"] != nil{
                 let meetingViewOptions = parseInt(data: arguments["meetingViewOptions"]!, defaultValue: 0)
                 if (meetingViewOptions & MeetingViewOptions.NO_BUTTON_AUDIO) != 0 {
@@ -173,9 +193,11 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             joinMeetingParameters.webinarToken = arguments["webToken"]!!
             joinMeetingParameters.noAudio = parseBoolean(data: arguments["noAudio"]!, defaultValue: false)
             joinMeetingParameters.noVideo = parseBoolean(data: arguments["noVideo"]!, defaultValue: false)
-            
+
             let response = meetingService?.joinMeeting(with: joinMeetingParameters)
-            
+
+            meetingService?.showMeetingControlBar()
+
             if let response = response {
                 print("Got response from join: \(response)")
             }
@@ -235,8 +257,6 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
             user.userType = .apiUser
             user.meetingNumber = arguments["meetingId"]!!
             user.userName = arguments["displayName"]!!
-           // user.userToken = arguments["zoomToken"]!!
-            user.userID = arguments["userId"]!!
             user.zak = arguments["zoomAccessToken"]!!
 
             let param: MobileRTCMeetingStartParam = user
@@ -286,11 +306,21 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
     }
     
     public func onMeetingStateChange(_ state: MobileRTCMeetingState) {
-        
+
+        // Tell the host AppDelegate to allow landscape only while the Zoom UI is on-screen.
+        switch state {
+        case .inMeeting, .inWaitingRoom, .waitingForHost, .webinarPromote, .webinarDePromote:
+            ZoomOrientationGate.shared.setInMeeting(true)
+        case .idle, .ended, .failed, .disconnecting:
+            ZoomOrientationGate.shared.setInMeeting(false)
+        default:
+            break
+        }
+
         guard let eventSink = eventSink else {
             return
         }
-        
+
         eventSink(getStateMessage(state))
     }
     
@@ -354,10 +384,29 @@ public class SwiftZoomPlugin: NSObject, FlutterPlugin,FlutterStreamHandler , Mob
         
         return message
     }
+
+    private func findNavigationController(in viewController: UIViewController) -> UINavigationController? {
+        // Check if it's embedded in a navigation controller
+        if let navController = viewController.navigationController {
+            return navController
+        }
+
+        // Check children recursively
+        for child in viewController.children {
+            if let navController = child as? UINavigationController {
+                return navController
+            }
+            if let found = findNavigationController(in: child) {
+                return found
+            }
+        }
+
+        return nil
+    }
 }
 
- 
-public class AuthenticationDelegate: NSObject, MobileRTCAuthDelegate {
+
+@objc(AuthenticationDelegate) public class AuthenticationDelegate: NSObject, MobileRTCAuthDelegate {
     
     private var result: FlutterResult?
     
