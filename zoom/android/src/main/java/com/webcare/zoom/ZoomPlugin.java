@@ -112,6 +112,14 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
             initParams.jwtToken = options.get("jwtToken");
         }
 
+        // Guard the native SDK bring-up. ZoomSDK.initialize() loads Zoom's native
+        // libraries (libc++_shared.so, etc.) synchronously. On an incomplete install
+        // (e.g. a missing App Bundle per-ABI native-lib split) this throws
+        // UnsatisfiedLinkError — a java.lang.Error that Flutter's MethodChannel handler
+        // does NOT catch, so the whole app hard-crashes here. Catch Throwable and fail
+        // the call cleanly via result.error so Dart gets a PlatformException it can
+        // handle (the app already degrades gracefully on that path).
+        try {
         zoomSDK.initialize(
                 context,
                 new ZoomSDKInitializeListener() {
@@ -158,6 +166,11 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
                     }
                 },
                 initParams);
+        } catch (Throwable t) {
+            // Includes UnsatisfiedLinkError when Zoom's native libs are unavailable.
+            System.out.println("ZoomMeeting: Native Zoom SDK init failed: " + t);
+            result.error("ZOOM_INIT_NATIVE_ERROR", t.getMessage(), null);
+        }
     }
 
     private void joinMeeting(MethodCall methodCall, MethodChannel.Result result) {
