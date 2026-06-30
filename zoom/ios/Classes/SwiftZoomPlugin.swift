@@ -85,6 +85,13 @@ import MobileRTC
         context.bundleResPath = pluginBundlePath
         MobileRTC.shared().initialize(context)
 
+        // Clear any persisted "Always show this preview when joining" preference.
+        // The SDK's default-UI green room writes that checkbox to UserDefaults and
+        // reads it back on launch, which can override disableShowVideoPreview(...)
+        // and make the preview stick across restarts (reproducible on BrowserStack,
+        // where keychain/defaults state is unreliable).
+        clearPersistedVideoPreviewPreference()
+
         // Set up root navigation controller for Zoom UI mode
         if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }),
            let rootViewController = window.rootViewController {
@@ -116,6 +123,20 @@ import MobileRTC
         auth?.sdkAuth()
     }
     
+    // Remove the persisted video-preview-when-joining preference from UserDefaults
+    // so a previously-checked "Always show this preview when joining" box can't keep
+    // forcing the green room after the user (or our API call) has disabled it.
+    private func clearPersistedVideoPreviewPreference() {
+        let defaults = UserDefaults.standard
+        for key in defaults.dictionaryRepresentation().keys {
+            let lower = key.lowercased()
+            if lower.contains("preview") && (lower.contains("video") || lower.contains("join")) {
+                defaults.removeObject(forKey: key)
+            }
+        }
+        defaults.synchronize()
+    }
+
     public func meetingStatus(call: FlutterMethodCall, result: FlutterResult) {
         
         let meetingService = MobileRTC.shared().getMeetingService()
@@ -420,11 +441,19 @@ import MobileRTC
     public func onMobileRTCAuthReturn(_ returnValue: MobileRTCAuthError) {
 
         if returnValue == .success {
+            // Disable the pre-join video preview ("green room") as soon as auth
+            // succeeds, while getMeetingSettings() is guaranteed non-nil. Doing it
+            // only inside joinMeeting() races against SDK init: if settings is nil
+            // there the call is a silent no-op, the preview appears with "Always
+            // show this preview when joining" checked-by-default, and tapping Join
+            // persists that preference so it sticks across app restarts.
+            MobileRTC.shared().getMeetingSettings()?.disableShowVideoPreview(whenJoinMeeting: true)
+
             self.result?([0, 0])
         } else {
             self.result?([1, 0])
         }
-        
+
         self.result = nil
     }
     
