@@ -17,7 +17,8 @@ import MobileRTC
   }
 
   var authenticationDelegate: AuthenticationDelegate
-  var eventSink: FlutterEventSink? 
+  var eventSink: FlutterEventSink?
+  var qualitySink: FlutterEventSink?
   public static func register(with registrar: FlutterPluginRegistrar) {
     let messenger = registrar.messenger()
     let channel = FlutterMethodChannel(name: "plugins.webcare/zoom_channel", binaryMessenger: messenger)
@@ -26,6 +27,11 @@ import MobileRTC
 
     let eventChannel = FlutterEventChannel(name: "plugins.webcare/zoom_event_stream", binaryMessenger: messenger)
     eventChannel.setStreamHandler(instance)
+
+    // In-meeting network quality events (onUserNetworkStatusChanged), kept on a
+    // separate channel so the status stream's [status, message] shape is untouched.
+    let qualityChannel = FlutterEventChannel(name: "plugins.webcare/zoom_quality_stream", binaryMessenger: messenger)
+    qualityChannel.setStreamHandler(ZoomQualityStreamHandler(plugin: instance))
 
     // Forward UIKit rotation events to MobileRTC during meetings (see ZoomOrientationGate).
     ZoomRotationForwarding.install()
@@ -344,7 +350,58 @@ import MobileRTC
 
         eventSink(getStateMessage(state))
     }
-    
+
+    public func onUserNetworkStatusChanged(_ type: MobileRTCComponentType, level: MobileRTCNetworkQuality, userID: UInt, uplink: Bool) {
+        guard let qualitySink = qualitySink else {
+            return
+        }
+
+        let event: [String: Any] = [
+            "component": componentName(type),
+            "quality": qualityName(level),
+            "uplink": uplink,
+            "userId": userID,
+        ]
+
+        if Thread.isMainThread {
+            qualitySink(event)
+        } else {
+            DispatchQueue.main.async { qualitySink(event) }
+        }
+    }
+
+    private func componentName(_ type: MobileRTCComponentType) -> String {
+        switch type {
+        case .audio:
+            return "audio"
+        case .video:
+            return "video"
+        case .share:
+            return "share"
+        default:
+            return "default"
+        }
+    }
+
+    private func qualityName(_ level: MobileRTCNetworkQuality) -> String {
+        switch level {
+        case .veryBad:
+            return "verybad"
+        case .bad:
+            return "bad"
+        case .notGood:
+            return "notgood"
+        case .normal:
+            return "normal"
+        case .good:
+            return "good"
+        case .excellent:
+            return "excellent"
+        default:
+            return "unknown"
+        }
+    }
+
     public func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
         self.eventSink = events
         
@@ -470,5 +527,30 @@ import MobileRTC
         let message = ""
          
         return message
+    }
+}
+
+/// Stream handler for plugins.webcare/zoom_quality_stream. The plugin instance is
+/// already the FlutterStreamHandler for the status channel, so the quality channel
+/// needs its own handler; it just parks the sink on the plugin, whose
+/// MobileRTCMeetingServiceDelegate implementation emits the events.
+class ZoomQualityStreamHandler: NSObject, FlutterStreamHandler {
+    private weak var plugin: SwiftZoomPlugin?
+
+    init(plugin: SwiftZoomPlugin) {
+        self.plugin = plugin
+    }
+
+    func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
+        plugin?.qualitySink = events
+        // The delegate is normally set by the status channel's onListen; set it here
+        // too so quality events don't depend on subscription order.
+        MobileRTC.shared().getMeetingService()?.delegate = plugin
+        return nil
+    }
+
+    func onCancel(withArguments arguments: Any?) -> FlutterError? {
+        plugin?.qualitySink = nil
+        return nil
     }
 }

@@ -39,6 +39,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
     /// when the Flutter Engine is detached from the Activity
     private MethodChannel channel;
     private EventChannel meetingStatusChannel;
+    private EventChannel meetingQualityChannel;
     private Context context;
     private EventChannel.EventSink pendingEventSink;
     @Override
@@ -60,6 +61,12 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
                 pendingEventSink = null;
             }
         });
+
+        // In-meeting network quality events. The handler resolves InMeetingService
+        // lazily on subscribe, so it can be registered before SDK init as long as
+        // Dart only subscribes once a meeting is being joined.
+        meetingQualityChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), "plugins.webcare/zoom_quality_stream");
+        meetingQualityChannel.setStreamHandler(new QualityStreamHandler());
     }
 
     @Override
@@ -86,6 +93,7 @@ public class ZoomPlugin implements FlutterPlugin, MethodCallHandler,ActivityAwar
     public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
         channel.setMethodCallHandler(null);
         meetingStatusChannel.setStreamHandler(null);
+        meetingQualityChannel.setStreamHandler(null);
         pendingEventSink = null;
     }
 

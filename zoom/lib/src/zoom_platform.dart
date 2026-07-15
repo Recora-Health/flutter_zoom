@@ -40,6 +40,10 @@ abstract class ZoomPlatform extends PlatformInterface {
     throw UnimplementedError('onMeetingStatus() has not been implemented.');
   }
 
+  Stream<dynamic> onNetworkQuality() {
+    throw UnimplementedError('onNetworkQuality() has not been implemented.');
+  }
+
   Future<void> leaveMeeting() async {
     throw UnimplementedError('leaveMeeting() has not been implemented.');
   }

@@ -14,5 +14,11 @@ class Zoom {
 
   Stream<dynamic> get onMeetingStateChanged => ZoomPlatform.instance.onMeetingStatus();
 
+  /// In-meeting network quality changes (onUserNetworkStatusChanged), as maps of
+  /// {component: "audio"|"video"|"share", quality: "verybad"|"bad"|"notgood"|
+  /// "normal"|"good"|"excellent"|"unknown", uplink: bool, userId: int}.
+  /// Subscribe after init(), once a meeting is being joined.
+  Stream<dynamic> get onNetworkQuality => ZoomPlatform.instance.onNetworkQuality();
+
   Future<void> leaveMeeting() async => ZoomPlatform.instance.leaveMeeting();
 }

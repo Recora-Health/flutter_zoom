@@ -6,6 +6,11 @@ class MethodChannelZoom extends ZoomPlatform {
 
   /// The event channel used to interact with the native platform.
   final EventChannel eventChannel = EventChannel('plugins.webcare/zoom_event_stream');
+
+  /// In-meeting network quality events. Emits maps of
+  /// {component, quality, uplink, userId}; subscribe only after init()
+  /// (on Android the native handler resolves InMeetingService on subscribe).
+  final EventChannel qualityChannel = EventChannel('plugins.webcare/zoom_quality_stream');
   @override
   Future<List> initZoom(ZoomOptions options) async {
     var optionMap = new Map<String, String>();
@@ -73,6 +78,11 @@ class MethodChannelZoom extends ZoomPlatform {
   @override
   Stream<dynamic> onMeetingStatus() {
     return eventChannel.receiveBroadcastStream();
+  }
+
+  @override
+  Stream<dynamic> onNetworkQuality() {
+    return qualityChannel.receiveBroadcastStream();
   }
 
   @override
