@@ -371,12 +371,14 @@ import MobileRTC
     }
 
     private func componentName(_ type: MobileRTCComponentType) -> String {
-        switch type {
-        case .audio:
+        // Match on raw values: the Swift importer's renaming of the all-caps
+        // ObjC cases (MobileRTCComponentType_AUDIO/VIDEO/SHARE) is unreliable.
+        switch type.rawValue {
+        case 3:
             return "audio"
-        case .video:
+        case 4:
             return "video"
-        case .share:
+        case 5:
             return "share"
         default:
             return "default"
