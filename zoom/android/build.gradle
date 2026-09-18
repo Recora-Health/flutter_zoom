@@ -5,12 +5,12 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven { url "https://maven.aliyun.com/repository/jcenter" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.7.3'
-        classpath 'org.jetbrains.compose:compose-gradle-plugin:1.7.0'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.23'
+        // Inside a Flutter app the host app's AGP (declared in its settings.gradle
+        // plugins block) wins; this classpath only matters for standalone builds
+        // of this module. The module is Java-only, so no Kotlin/Compose plugin.
+        classpath 'com.android.tools.build:gradle:9.1.0'
     }
 }
 
@@ -18,7 +18,6 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
-        maven { url "https://maven.aliyun.com/repository/jcenter" }
 
         flatDir {
             dirs project(':zoom').file('libs')
@@ -31,27 +30,22 @@ apply from: 'libs/versions.gradle'
 
 android {
     namespace 'com.webcare.zoom'
-    compileSdkVersion 36
-    buildToolsVersion = "36.0.0"
+    compileSdk 36
 
-    viewBinding {
-        enabled = true
+    buildFeatures {
+        viewBinding = true
     }
 
     defaultConfig {
-        minSdkVersion 28
-        targetSdkVersion 35
+        minSdk 28
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        versionCode 1
-        versionName "1.0"
-        multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         consumerProguardFiles 'proguard.cfg'
     }
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-        disable 'InvalidPackage'
+    lint {
+        checkReleaseBuilds = false
+        abortOnError = false
+        disable += 'InvalidPackage'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17

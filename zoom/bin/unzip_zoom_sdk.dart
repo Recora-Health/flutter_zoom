@@ -30,7 +30,13 @@ void main(List<String> args) async {
       print("zoom package not found!");
       return;
     }
-    location = zoomFileUri;
+    // rootUri is relative (e.g. "../../../flutter_zoom/zoom") when the app
+    // consumes this package via a `path:` dependency; resolve it against the
+    // package_config.json location so the SDK lands inside this package
+    // instead of a mirrored directory next to the app.
+    final packageConfigUri = Uri.file(File(packageConfigPath).absolute.path);
+    location = packageConfigUri.resolve(zoomFileUri).toString();
+    if (location.endsWith('/')) location = location.substring(0, location.length - 1);
   }
   if (Platform.isWindows) {
     location = location.replaceFirst("file:///", "");

@@ -1,3 +1,10 @@
+## 3.0.1
+* Android: support Gradle 9.3.1 / AGP 9.1.0 / KGP 2.4.0 (Flutter 3.47.4) with the AGP 9 opt-outs `android.newDsl=false` and `android.builtInKotlin=false`; modern `compileSdk`/`minSdk`/`buildFeatures`/`lint` DSL; Kotlin stdlib aligned to 2.4.0
+* Android: the global R8 options (`-dontoptimize`, `-dontobfuscate`, `-optimizations`) are removed from the consumer proguard rules (AGP 9 rejects them) and must now be set in the host app's `proguard-rules.pro`
+* Android: removed the unused `libs/build.gradle` and the library manifest's versionCode/versionName/installLocation
+* iOS: podspec platform raised to iOS 15.0 (MobileRTC 7.0.5 minimum); simulator builds exclude `i386 x86_64` since the xcframeworks ship arm64 slices only
+* Zoom Meeting SDK stays at 7.0.5
+
 ## 2.0.0
 * BREAKING: Unified zoom_platform_interface into main zoom package
 * Removed Git URL dependency, resolving gradle cache issues

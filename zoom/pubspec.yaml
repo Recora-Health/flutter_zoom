@@ -1,19 +1,21 @@
 name: zoom
 description: A Flutter plugin for the Zoom Client SDK.
-version: 3.0.0
+version: 3.0.1
 publish_to: none
 
 environment:
-  sdk: ">=3.5.0 <4.0.0"
-  flutter: ">=3.29.3 <4.0.0"
+  sdk: ">=3.9.0 <4.0.0"
+  flutter: ">=3.47.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   plugin_platform_interface: ^2.0.0
+  # Used by bin/unzip_zoom_sdk.dart, which consumers run via `dart run zoom:unzip_zoom_sdk`,
+  # so it must be a regular dependency.
+  args: ^2.4.2
 
 dev_dependencies:
-  args: ^2.4.2
   flutter_test:
     sdk: flutter
 

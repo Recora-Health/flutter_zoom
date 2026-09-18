@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'zoom'
-  s.version          = '0.0.5'
+  s.version          = '3.0.0'
   s.summary          = 'A new flutter plugin project.'
   s.description      = <<-DESC
 A new flutter plugin project.
@@ -15,10 +15,11 @@ A new flutter plugin project.
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.platform = :ios, '8.0'
+  # MobileRTC 7.0.5 MinimumOSVersion is 15.0 (matches the app Podfile / Flutter 3.47 template).
+  s.platform = :ios, '15.0'
 
-  # Flutter.framework does not contain a i386 slice.
-  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-framework MobileRTC -framework zoomcml', 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  # The vendored xcframeworks only ship arm64 + arm64-simulator slices.
+  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-framework MobileRTC -framework zoomcml', 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 x86_64' }
   s.swift_version = '5.0' 
   
   s.preserve_paths = 'MobileRTC.xcframework', 'zoomcml.xcframework', 'MobileRTCResources.bundle'
