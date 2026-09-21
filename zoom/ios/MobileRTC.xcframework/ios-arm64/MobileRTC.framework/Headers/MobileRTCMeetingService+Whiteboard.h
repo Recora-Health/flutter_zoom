@@ -23,6 +23,32 @@
 - (MobileRTCCannotShareReasonType)canStartShareWhiteboard;
 
 /**
+ * @brief Determines whether the current user can create a new whiteboard.
+ * @return YES if the current user can create a new whiteboard. Otherwise, this function returns NO.
+ */
+- (BOOL)canStartShareNewWhiteboard;
+
+/**
+ * @brief Starts sharing a new whiteboard.
+ * @return If the function succeeds, it returns MobileRTCSDKError_Success. Otherwise, this function returns an error.
+ * @warning The function is only for Custom UI.
+ */
+- (MobileRTCSDKError)startNewWhiteboardShare;
+
+/**
+ * @brief Determines whether the current user can stop sharing the new whiteboard.
+ * @return YES if the current user can stop sharing the new whiteboard. Otherwise, this function returns NO.
+ */
+- (BOOL)canStopWhiteboardShare;
+
+/**
+ * @brief When self sharing whiteboard, stop self; when self not sharing, stop all others.
+ * @return If the function succeeds, it returns MobileRTCSDKError_Success. Otherwise, this function returns an error.
+ * @note Valid only for user custom interface mode.
+ */
+- (MobileRTCSDKError)stopWhiteboardShare;
+
+/**
  * @brief Sets parent view controller for whiteboard board view and whiteboard canvas.
  * @param parentVC The view controller used to present ViewController. If parentVC is nil, whiteboard will dismiss.
  * @warning The function is only for Custom UI. This method is a prerequisite for using whiteboard. Suggest to call this function in "onMeetingStateChange:" for inMeeting status.

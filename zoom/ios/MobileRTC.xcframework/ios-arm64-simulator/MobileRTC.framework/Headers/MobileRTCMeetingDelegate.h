@@ -1,6 +1,7 @@
 /**
  * @file MobileRTCMeetingDelegate.h
  * @brief Delegate protocol for handling meeting events and notifications.
+ * The AI Companion brand has been retired. AI-powered features are now more deeply integrated throughout Zoom Workplace. Existing APIs and SDKs that reference AI Companion will continue to function as before to ensure backward compatibility.
  */
 
 #import <Foundation/Foundation.h>
@@ -870,6 +871,10 @@ DEPRECATED_MSG_ATTRIBUTE("Use onUserNetworkStatusChanged:level:userID:uplink: in
 /**
  * @brief The share status changes.
  * @param shareInfo Sharing status.
+ * @note When status is Sharing_Self_Send_Begin or Sharing_Other_Share_Begin,
+ *       [shareInfo getContentType] can be MobileRTCShareContentType_UNKNOWN temporarily.
+ *       Do not treat UNKNOWN at this stage as the finalized share content type.
+ *       Wait for -onShareContentChanged: to get the finalized content type.
  */
 
 - (void)onSinkSharingStatus:(MobileRTCSSharingSourceInfo*_Nonnull)shareInfo;
@@ -1707,6 +1712,7 @@ DEPRECATED_MSG_ATTRIBUTE("Use onUserNetworkStatusChanged:level:userID:uplink: in
 
 #pragma mark - MobileRTCVideoRawDataDelegate
 @class MobileRTCRenderer;
+@class MobileRTCVideoPixelBufferExtraInfo;
 /**
  * @protocol MobileRTCVideoRawDataDelegate
  * @brief This class is used to receive video raw data.
@@ -1716,13 +1722,49 @@ DEPRECATED_MSG_ATTRIBUTE("Use onUserNetworkStatusChanged:level:userID:uplink: in
 @optional
 
 /**
+ * @brief This method is used to receive video's NV12 data (@c CVPixelBufferRef)
+ *        together with rich per-frame metadata.
+ *
+ * Prefer this selector over the legacy
+ * @c -onMobileRTCRender:framePixelBuffer:rotation: when you need access to
+ * sender-side face ROI metadata or any future per-frame fields. The
+ * @c MobileRTCVideoPixelBufferExtraInfo container is designed to absorb
+ * future additions without further selector churn.
+ *
+ * @note If your delegate implements both this selector and the legacy
+ *       @c -onMobileRTCRender:framePixelBuffer:rotation: selector, both
+ *       will be called for every frame. New code should implement only
+ *       this @c extraInfo: variant.
+ *
+ * @param renderer The @c MobileRTCRenderer instance.
+ * @param pixelBuffer NV12 @c CVPixelBufferRef for the frame. The buffer
+ *                    is released by the SDK after this callback returns;
+ *                    call @c CVPixelBufferRetain to retain it for
+ *                    asynchronous use.
+ * @param extraInfo Per-frame metadata container; non-null. See
+ *                  @c MobileRTCVideoPixelBufferExtraInfo for current
+ *                  fields (rotation, faceROIInfo).
+ */
+- (void)onMobileRTCRender:(MobileRTCRenderer *_Nonnull)renderer
+        framePixelBuffer:(CVPixelBufferRef _Nullable )pixelBuffer
+               extraInfo:(MobileRTCVideoPixelBufferExtraInfo *_Nonnull)extraInfo;
+
+/**
  * @brief This method is used to receive video's NV12 data(CVPixelBufferRef).
+ * @deprecated Use -onMobileRTCRender:framePixelBuffer:extraInfo: instead.
+ *             The new selector delivers the same @c CVPixelBufferRef along
+ *             with a @c MobileRTCVideoPixelBufferExtraInfo container that
+ *             exposes face ROI metadata and is designed to absorb future
+ *             per-frame fields without further selector churn. While this
+ *             legacy selector continues to function, it should not be
+ *             implemented together with the @c extraInfo: variant on the
+ *             same delegate - both would be called for every frame.
  * @param pixelBuffer Video's CVPixelBufferRef data.
  * @param renderer The MobileRTCRenderer’s object.
  */
 - (void)onMobileRTCRender:(MobileRTCRenderer *_Nonnull)renderer
         framePixelBuffer:(CVPixelBufferRef _Nullable )pixelBuffer
-                rotation:(MobileRTCVideoRawDataRotation)rotation;
+                rotation:(MobileRTCVideoRawDataRotation)rotation DEPRECATED_MSG_ATTRIBUTE("Use -onMobileRTCRender:framePixelBuffer:extraInfo: instead");
 
 /**
  * @brief This method is used to receive video's YUV420 data.

@@ -1,3 +1,8 @@
+## 3.0.2
+* Zoom Meeting SDK updated: Android 7.0.5 -> 7.1.6 (mobilertc.aar 7.1.6.41900), iOS 7.0.5 -> 7.1.5 (MobileRTC/zoomcml/MobileRTCScreenShare xcframeworks + MobileRTCResources.bundle 7.1.5.37603). No plugin API changes; the SDK APIs the plugin uses are unchanged in 7.1.x.
+* Android: androidx.activity 1.11.0 and constraintlayout 2.2.1 / core 1.1.1 to match the 7.1.6 SDK module; no new dependencies were introduced by 7.1.6.
+* `unzip_zoom_sdk` download links must point at the 7.1.x binaries (mobilertc.aar, MobileRTC device + simulator) before this version is pinned by an app.
+
 ## 3.0.1
 * Android: support Gradle 9.3.1 / AGP 9.1.0 / KGP 2.4.0 (Flutter 3.47.4) with the AGP 9 opt-outs `android.newDsl=false` and `android.builtInKotlin=false`; modern `compileSdk`/`minSdk`/`buildFeatures`/`lint` DSL; Kotlin stdlib aligned to 2.4.0
 * Android: the global R8 options (`-dontoptimize`, `-dontobfuscate`, `-optimizations`) are removed from the consumer proguard rules (AGP 9 rejects them) and must now be set in the host app's `proguard-rules.pro`

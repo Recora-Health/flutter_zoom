@@ -1,6 +1,7 @@
 /**
  * @file MobileRTCConstants.h
  * @brief Defines all constants, enumerations, and data types used throughout the Zoom SDK.
+ * The AI Companion brand has been retired. AI-powered features are now more deeply integrated throughout Zoom Workplace. Existing APIs and SDKs that reference AI Companion will continue to function as before to ensure backward compatibility.
  */
 
 /**

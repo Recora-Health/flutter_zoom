@@ -1,6 +1,7 @@
 /**
  * @file MobileRTCMeetingService+InMeeting.h
  * @brief Meeting+InMeeting service functionality and management.
+ * The AI Companion brand has been retired. AI-powered features are now more deeply integrated throughout Zoom Workplace. Existing APIs and SDKs that reference AI Companion will continue to function as before to ensure backward compatibility.
  */
 
 #import <MobileRTC/MobileRTC.h>

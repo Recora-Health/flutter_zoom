@@ -19,8 +19,7 @@
  * @param height The height of the raw data for each frame of the video.
  * @param dataLength The data length of the raw data for each frame of the video.
  * @param rotation The rotation of the raw data for each frame of the video.
- * @param format The format of the raw data for each frame of the video.
  */
-- (void)sendVideoFrame:(char *)frameBuffer width:(NSUInteger)width height:(NSUInteger)height dataLength:(NSUInteger)dataLength rotation:(MobileRTCVideoRawDataRotation)rotation format:(MobileRTCFrameDataFormat)format;
+- (void)sendVideoFrame:(char *)frameBuffer width:(NSUInteger)width height:(NSUInteger)height dataLength:(NSUInteger)dataLength rotation:(MobileRTCVideoRawDataRotation)rotation;
 @end
 

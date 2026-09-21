@@ -4,6 +4,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "MobileRTCFaceROIInfo.h"
 
 /**
  * @class MobileRTCVideoRawData
@@ -55,6 +56,25 @@
  * @brief The timestamp of the video data.
  */
 @property(nonatomic, strong, nullable)  NSDate *timeStamp;
+
+/**
+ * @brief Per-frame face ROI metadata reported by the sender.
+ *
+ * Always non-null; inspect @c -getFaceCount to determine whether any
+ * face was reported. The accessor is a self-contained snapshot
+ * captured when the delegate fires, so it may be safely retained and
+ * used asynchronously after the callback returns - the underlying
+ * @c MobileRTCVideoRawData frame does not need to outlive it.
+ *
+ * @note The same per-frame face ROI metadata is also delivered to
+ *       @c -onMobileRTCRender:framePixelBuffer:extraInfo: via
+ *       @c MobileRTCVideoPixelBufferExtraInfo.faceROIInfo, for
+ *       delegates that consume @c CVPixelBuffer-shaped frames instead
+ *       of YUV I420.
+ *
+ * @note Face ROI is only supported on video streams.
+ */
+@property(nonatomic, strong, readonly, nonnull) MobileRTCFaceROIInfo *faceROIInfo;
 
 /**
  * @brief Determines if adding a reference is allowed.

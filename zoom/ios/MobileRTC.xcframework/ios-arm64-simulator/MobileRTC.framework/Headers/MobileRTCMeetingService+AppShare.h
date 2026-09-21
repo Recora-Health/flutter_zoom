@@ -81,6 +81,9 @@
 - (NSUInteger)getShareSourceID;
 /**
  * @brief Gets the content type of the sharing Source Info.
+ * @note In early share status callbacks, for example, @c Sharing_Self_Send_Begin or @c Sharing_Other_Share_Begin,
+ *       this value can be @c MobileRTCShareContentType_UNKNOWN temporarily.
+ *       The finalized content type is available after -onShareContentChanged: is received.
  * @return The sharing Source Info content type.
  */
 - (MobileRTCShareContentType)getContentType;

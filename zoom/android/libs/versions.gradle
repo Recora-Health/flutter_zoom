@@ -11,8 +11,8 @@ ext.libs = [
         windowVersion: '1.1.0',
         fragmentVersion: '1.4.1',
         fragmentXVersion: '1.4.1',
-        activityxVersion: '1.6.1',
-        activityKtxVersion: '1.6.1',
+        activityxVersion: '1.11.0',
+        activityKtxVersion: '1.11.0',
         lifecycleCommonJavaVersion: '2.5.1',
 
         // Compose versions
@@ -46,7 +46,7 @@ ext.libs = [
         exifinterfaceVersion: '1.3.6',
         lifecycleProcessVersion: '2.9.1',
         concurrentFuturesVersion: '1.1.0',
-        constraintlayoutCoreVersion: '1.0.4',
+        constraintlayoutCoreVersion: '1.1.1',
         activityComposeVersion: '1.11.0',
         playServicesBaseVersion: '18.5.0',
 
@@ -88,7 +88,7 @@ ext.libs = [
         guavaVersion: '33.2.0-jre',
         appcompatVersion: '1.6.1',
         recyclerviewVersion: '1.2.1',
-        constraintlayoutVersion: '2.1.0',
+        constraintlayoutVersion: '2.2.1',
         vectordrawableVersion: '1.1.0',
         startupVersion: '1.2.0-alpha02',
         splashScreenVersion: '1.0.1',

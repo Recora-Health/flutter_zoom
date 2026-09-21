@@ -1,6 +1,7 @@
 /**
  * @file MobileRTCAICQueryHelper.h
  * @brief AI Companion query helper for intelligent meeting features.
+ * The AI Companion brand has been retired. AI-powered features are now more deeply integrated throughout Zoom Workplace. Existing APIs and SDKs that reference AI Companion will continue to function as before to ensure backward compatibility.
  */
 
 #import <Foundation/Foundation.h>
@@ -165,8 +166,15 @@ typedef NS_ENUM(NSUInteger, MobileRTCAICompanionQuerySettingOptions) {
 @interface MobileRTCApproveStartQueryHandler : NSObject
 /**
  * @brief Gets the requester's user ID.
+ * @return The requester user ID. It may return 0 in cross-instance callback cases.
  */
 @property (nonatomic, assign, readonly) NSUInteger senderUserID;
+
+/**
+ * @brief Gets the requester's display name.
+ * @return The requester display name. Returns an empty string if unavailable.
+ */
+- (NSString *)getRequestUserName;
 /**
  * @brief Approves the request.
  * @return If the function succeeds, it returns MobileRTCSDKError_Success. Otherwise, this function returns an error.
@@ -228,6 +236,12 @@ typedef NS_ENUM(NSUInteger, MobileRTCAICompanionQuerySettingOptions) {
  * @brief Gets the requester's user ID.
  */
 @property (nonatomic, assign) NSUInteger senderUserID;
+
+/**
+ * @brief Gets the requester's display name.
+ * @return The requester display name. Returns an empty string if unavailable.
+ */
+- (NSString *)getRequestUserName;
 
 /**
  * @brief Approves the request.

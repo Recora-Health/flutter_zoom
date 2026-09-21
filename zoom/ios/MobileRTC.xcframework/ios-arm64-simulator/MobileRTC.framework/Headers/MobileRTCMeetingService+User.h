@@ -263,4 +263,12 @@
  */
 - (BOOL)canBeCoOwner:(NSUInteger)userId;
 
+/**
+ * @brief Requests the avatar download for a specified user.
+ * @param userid The user's ID whose avatar the SDK requests.
+ * @return If the function succeeds, it returns MobileRTCSDKError_Success. Otherwise, this function returns an error.
+ * @note Valid for both ZOOM style and user custom interface mode. Valid for both normal user and webinar attendee.
+ */
+- (MobileRTCSDKError)requestAvatarForUser:(NSUInteger)userid;
+
 @end

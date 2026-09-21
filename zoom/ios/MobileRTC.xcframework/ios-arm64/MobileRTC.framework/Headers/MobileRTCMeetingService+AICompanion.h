@@ -1,6 +1,7 @@
 /**
  * @file MobileRTCMeetingService+AICompanion.h
  * @brief Meeting+AICompanion service functionality and management.
+ * The AI Companion brand has been retired. AI-powered features are now more deeply integrated throughout Zoom Workplace. Existing APIs and SDKs that reference AI Companion will continue to function as before to ensure backward compatibility.
  */
 
 #import <MobileRTC/MobileRTC.h>
@@ -46,6 +47,11 @@ NS_ASSUME_NONNULL_BEGIN
  * @return The request user ID.
  */
 -(NSUInteger)getRequestUserID;
+/**
+ * @brief Gets the display name of the user who requests the host to turn the AI Companion features on or off.
+ * @return The request user display name. Returns an empty string if unavailable.
+ */
+- (NSString *)getRequestUserName;
 /**
  * @brief Determines if the request is to turn the AI Companion features on or off.
  * @return YES if turn on the AI Companion features. Otherwise, NO to turn off.

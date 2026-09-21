@@ -1,6 +1,7 @@
 /**
  * @file MobileRTCAICSmartSummaryHelper.h
  * @brief AI Companion smart summary helper for meeting summaries.
+ * The AI Companion brand has been retired. AI-powered features are now more deeply integrated throughout Zoom Workplace. Existing APIs and SDKs that reference AI Companion will continue to function as before to ensure backward compatibility.
  */
 
 #import <Foundation/Foundation.h>
@@ -46,10 +47,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface MobileRTCApproveStartSmartSummaryHandler : NSObject
 /**
- * @brief Gets the user ID of requester.
- * @return The user ID of requester.
+ * @brief Gets the requester's user ID.
+ * @return The requester's user ID. It may return 0 in cross-instance callback cases.
  */
 - (NSUInteger)getSenderUserID;
+
+/**
+ * @brief Gets the requester's display name.
+ * @return The requester's display name. Returns an empty string if unavailable.
+ */
+- (NSString *)getRequestUserName;
 
 /**
  * @brief Approves the request.

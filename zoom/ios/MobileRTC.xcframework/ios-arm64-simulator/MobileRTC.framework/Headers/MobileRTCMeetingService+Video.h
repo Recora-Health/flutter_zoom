@@ -247,10 +247,20 @@
 - (BOOL)isFollowHostVideoOrderOn;
 
 /**
- * @brief Gets the follow host video order array currently.
- * @return UserId array.
+ * @brief Gets the host video order list.
+ * @return UserId array, or nil if the host has not updated the video order.
+ * @note This method only returns the order list based on the host's video order (hostVideoOrder).
+ * If the host has not updated the video order, this list will be empty.
  */
 - (NSArray <NSNumber *>* _Nullable)getVideoOrderList;
+
+/**
+ * @brief Gets the local video order list.
+ * @return UserId array, or nil if the local video order hasn't been received yet.
+ * @note This list reflects the local video order as last received via the onLocalVideoOrderUpdated callback.
+ * The local video order is updated whenever onLocalVideoOrderUpdated is triggered.
+ */
+- (NSArray <NSNumber *>* _Nullable)getLocalVideoOrderList;
 
 /**
  * @brief Stops the incoming video.

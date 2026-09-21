@@ -1,6 +1,7 @@
 /**
  * @file MobileRTCBORole.h
  * @brief Breakout room role management and user status definitions.
+ * The AI Companion brand has been retired. AI-powered features are now more deeply integrated throughout Zoom Workplace. Existing APIs and SDKs that reference AI Companion will continue to function as before to ensure backward compatibility.
  */
 
 #import <Foundation/Foundation.h>
@@ -157,6 +158,18 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
  */
 @property(nonatomic,assign)unsigned int nUserConfigMaxRoomUserLimits;
 
+/**
+ * @brief Enables or disables auto-starting AI Companion for host or co-host in breakout rooms.
+ * @note This is effective only when \link MobileRTCBOCreator::isAICompanionSupported \endlink returns YES.
+ */
+@property(nonatomic, assign) BOOL isAICompanionEnabled;
+
+/**
+ * @brief Enables or disables auto-starting transcription in breakout rooms.
+ * @note This is effective only when \link MobileRTCBOCreator::isTranscriptionSupported \endlink returns YES.
+ */
+@property(nonatomic, assign) BOOL isTranscriptionEnabled;
+
 @end
 
 /**
@@ -310,6 +323,18 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
  * @return The download status.
  */
 - (MobileRTCBOPreAssignBODataStatus)getWebPreAssignBODataStatus;
+
+/**
+ * @brief Checks whether AI Companion can be enabled in breakout rooms.
+ * @return YES if AI Companion is supported for breakout rooms. Otherwise, NO.
+ */
+- (BOOL)isAICompanionSupported;
+
+/**
+ * @brief Checks whether transcription can be enabled in breakout rooms.
+ * @return YES if transcription is supported for breakout rooms. Otherwise, NO.
+ */
+- (BOOL)isTranscriptionSupported;
 
 @end
 
